@@ -1,0 +1,152 @@
+<!--Permohonan Permit Ruang Udara (Strata)-->
+<?xml version="1.0" encoding="windows-1252" ?>
+<workflow id="http://xmlns.oracle.com/etanah/StrataMelaka/PermitRuangUdara">
+
+    <stage id = "agihtugas" currentAction="Agih Tugasan" distribute="true">
+        <txncode id="PPRUS">
+            <page id="1" title="Agih Tugasan">strata/agihTugasan</page>
+            <page id="2" title="Penyerah">strata/maklumat_penyerah</page>
+            <instruction>Sila agihkan tugasan ini kepada yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    <stage id = "kemasukan" listener="etanah.view.strata.validator.PermitRuangUdaraValidator" currentAction="Kemasukan">
+        <txncode id="PPRUS">
+            <page id="1" title="Penyerah">strata/maklumat_penyerah</page>
+            <page id="2" title="Pemohon">strata/kemasukan_pemohon</page>
+            <page id="3" title="Hakmilik">strata/maklumat_tanah?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id = "g_sedialaporan" listener="etanah.view.strata.validator.LaporanTanahRuangUdaraValidator" currentAction="Sedia Laporan Tanah" >
+        <txncode id="PPRUS">
+            <page id="1" title="Pemohon">strata/kemasukan_pemohon?maklumatPemohonReadOnly</page>
+            <page id="2" title="Hakmilik">strata/maklumat_tanah?perihalTanahRuangUdara</page>
+            <page id="3" title="Bangunan">strata/maklumat_bangunan</page>
+            <page id="4" title="Imej Laporan">strata/maklumat_bangunan?showMuatNaikImej</page>
+            <page id="5" title="Hal hal lain">strata/Hal_halLain</page>
+            <page id="6" title="Permit Ruang Udara">strata/permit_RuangUdara</page>
+            <page id="7" title="Pelan Lokasi">strata/mlk/gis</page>
+            <validator>validator</validator>
+            <!--nak kena jana dokumen -->
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+
+            <reports>
+                <report generator="STRLaporanTanahPermitRuangUdara_MLK.rdf" prefix="VDOC" code="LT"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id = "semaklaporan" currentAction="Semak Laporan Tanah" pushback="true">
+        <txncode id="PPRUS">
+            <page id="1" title="Laporan Tanah">strata/jana?laporanTanahRuangUdara</page>
+            <validator>validator</validator>
+            <instruction>Sekiranya terdapat kesalahan, sila klik butang 'Semak Semula'.</instruction>
+            <!--STRLaporanTanahPermitRuangUdara_MLK.rdf-->
+<!--            <reports>
+                <report generator="STRLaporanTanahPermitRuangUdara_MLK.rdf" prefix="VDOC" code="LT"/>
+            </reports>-->
+        </txncode>
+    </stage>
+
+    <stage id = "drafkertasptg" currentAction="Sedia Kertas Pertimbangan PTG">
+        <txncode id="PPRUS">
+            <page id="1" title="Kertas Pertimbangan PTG">strata/KertasPermit_RuangUdara</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id = "semakkertasptg" currentAction="Semak Kertas Pertimbangan PTG" pushback="true" listener="etanah.view.strata.validator.SyorPPRUSValidation" report="true" advanceRule="true">
+        <txncode id="PPRUS">
+            <page id="1" title="Kertas Pertimbangan PTG">strata/KertasPermit_RuangUdara</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat berkaitan. Sekiranya terdapat kesalahan, sila klik butang 'Semak Semula' dan tugasan akan diagihkan semula ke Pembantu Tadbir. Jika tidak, klik butang 'Selesai' untuk dihantar tugasan ke peringkat seterusnya.</instruction>
+         <!--<reports>
+                <report generator="STRKertasPTGPermitRuangUdaraLulus_MLK.rdf" prefix="VDOC" code="KPRUL"/>
+            </reports>-->
+        </txncode>
+    </stage>
+
+    <stage id = "syorkertasptg" currentAction="Syor Kertas PTG" pushback="true">
+        <txncode id="PPRUS">
+            <page id="1" title="Kertas Pertimbangan PTG">strata/KertasPermit_RuangUdara?semak</page>
+            <validator>validator</validator>
+            <instruction>Sila semak Kertas Pertimbangan PTG.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id = "keputusan" currentAction="Keputusan PTG" listener="etanah.view.strata.validator.KeputusanPPRUSValidation" report="true" advanceRule="true">
+        <txncode id="PPRUS">
+            <page id="1" title="Kertas Pertimbangan PTG">strata/KertasPermit_RuangUdara?semak</page>
+            <validator>validator</validator>
+            <instruction>Sila semak Kertas Pertimbangan PTG dan klik tab Keputusan untuk membuat keputusan.</instruction>
+            <outcomes>
+                <outcome label=" Lulus" value="L">
+ <!--                   <reports>
+                        <report generator="STRKertasPTGPermitRuangUdaraLulus_MLK.rdf" prefix="VDOC" code="KPRUL"/>
+                    </reports>-->
+                </outcome>
+
+                <outcome label=" Tolak" value="T">
+          <!--          <reports>
+                        <report generator="STRKertasPTGPermitRuangUdaraTolak_MLK.rdf" prefix="VDOC" code="KPRUT"/>
+                    </reports>-->
+                </outcome>
+
+            </outcomes>
+
+        </txncode>
+    </stage>
+    
+    
+    <stage id = "surattolak" currentAction="Sedia Surat Tolak" listener="etanah.view.strata.validator.JanaReportValidator" report="true" advanceRule="true">
+        <txncode id="PPRUS">
+            <page id="1" title="Surat Makluman">strata/tandatanganDokumen</page>
+            <!--<page id="2" title="Surat Makluman">strata/jana?viewReport</page>-->
+            <validator>validator</validator>
+            <instruction>Sila cetak surat makluman.</instruction>
+            <!--            <reports>
+                <report generator="STRSBayaranPermitRuangUdara_MLK.rdf" prefix="VDOC" code="SKRU"/>
+            </reports>-->
+        </txncode>
+    </stage>
+    
+  
+    <stage id = "sediasuratmakluman" currentAction="Sedia Surat Makluman" listener="etanah.view.strata.validator.JanaReportValidator" report="true">
+        <txncode id="PPRUS">
+            <page id="1" title="Surat Makluman">strata/tandatanganDokumen</page>
+            <!--<page id="1" title="Tandatangan Surat">strata/tandatanganDokumen</page>-->
+            <!--<page id="2" title="Surat Makluman">strata/jana?viewReport</page>-->
+            <validator>validator</validator>
+            <instruction>Sila Semak Surat Makluman.</instruction>
+            <!--            <reports>
+                <report generator="STRSBayaranPermitRuangUdara_MLK.rdf" prefix="VDOC" code="SKRU"/>
+            </reports>-->
+        </txncode>
+    </stage>
+
+    <stage id = "terimabayaran" currentAction="Terima Bayaran" distribute="true">
+        <txncode id="PPRUS">
+            <page id="1" title="Terima Bayaran">kaunter/BayaranPerihal</page>
+            <page id="2" title="Permit Ruang Udara">strata/permit_RuangUdara</page>
+            <instruction>Sila Klik Butang Bayar</instruction>
+        </txncode>
+    </stage>
+
+    <stage id = "semakpermit" currentAction="Semak Permit" listener="etanah.view.strata.validator.JanaValidator" report="true">
+        <txncode id="PPRUS">
+            <!--<page id="1" title="Tandatangan Surat">strata/tandatanganDokumen</page>-->
+            <page id="1" title="Digital Sign">pelupusan/dokumen_tandatangan</page>
+            <!--<page id="3" title="Permit">strata/jana?viewReport</page>-->
+            <validator>validator</validator>
+            <instruction>Sila klik Jana Dokumen dan semak permit.</instruction>
+            <reports>
+                <!--<report generator="STRB4DPermitRuangUdara_MLK.rdf" prefix="VDOC" code="PRU"/>-->
+                <!--<report generator="STRSPermit_MLK.rdf" prefix="VDOC" code="SMPRU"/>-->
+            </reports>
+        </txncode>
+    </stage>
+
+
+</workflow>

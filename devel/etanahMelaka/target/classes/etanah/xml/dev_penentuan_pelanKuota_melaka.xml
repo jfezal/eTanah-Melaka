@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<!--
+    Document   : dev_penentuan_pelanKuota_melaka.xml
+    Created on : December 6, 2010, 12:24 PM
+    Author     : nursyazwani
+    Description:
+        Purpose of the document follows.
+-->
+
+<workflow id="http://xmlns.oracle.com/etanahdev/Bpel_MohonPelanKuota/Ht_MohonPelanKuota">
+<!--<workflow id="http://xmlns.oracle.com/etanahdev/Bpel_PelanKuota/PPK1">-->
+<!--<workflow id="http://xmlns.oracle.com/etanahdev/pembangunan/PenentuanPelanKuota">-->
+    <!--Penentuan Pelan Kuota-->
+    
+    <stage id="kemasukancdgnpelankuota" currentAction="Kemasukan Cadangan Pelan Kuota">
+        <txncode id="PPK">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon</page>
+            <page id="5" title="Kertas Pertimbangan">pembangunan/melaka/kertasRingkasPertimbanganJKBB</page>            
+            <page id="6" title="Nota/Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat-maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+    <stage id="sediacdgnpelankuota" currentAction="Sedia Cadangan Pelan Kuota">
+        <txncode id="PPK">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Kertas Pertimbangan">pembangunan/melaka/kertasRingkasPertimbanganJKBB</page>            
+            <page id="6" title="Nota/Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat-maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+    <stage id="semakpelanringkasan" currentAction="Semak Pelan dan Ringkasan" advanceRule="true" listener="etanah.view.pembangunan.validator.notaValidator">
+        <txncode id="PPK">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Kertas Pertimbangan">pembangunan/melaka/kertasRingkasPertimbanganJKBB</page>
+            <page id="6" title="Nota/Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat-maklumat yang dipaparkan.</instruction>
+            <outcomes>
+                <outcome label="Setuju" value="A"/>
+                <outcome label="Ada Pindaan" value="AN"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="pindaPelan" currentAction="Pindaan Ke Pelukis Pelan">
+        <txncode id="PPK">
+            <page id="1" title="Arahan Pindaan">pembangunan/ulasanPindaan</page>
+            <page id="2" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="3" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="4" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="5" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="6" title="Kertas Pertimbangan">pembangunan/melaka/kertasRingkasPertimbanganJKBB</page>
+            <page id="7" title="Nota/Minit">/pembangunan/melaka/notaBaru</page>           
+            <validator>validator</validator>
+            <instruction>Sila Hantar Tugasan Ke Pelukis Pelan.</instruction>           
+        </txncode>
+    </stage>
+    <stage id="sediapelan" currentAction="Sedia Pelan Kuota" advanceRule="true">
+        <txncode id="PPK">
+            <page id="1" title="Arahan Pindaan">pembangunan/ulasanPindaan</page>
+            <page id="2" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="3" title="Maklumat Tanah">pembangunan/maklumat_hakmilik</page>
+            <page id="4" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="5" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="6" title="Kertas Pertimbangan">pembangunan/melaka/kertasRingkasPertimbanganJKBB?showForm2</page>
+            <page id="7" title="Nota/Minit">/pembangunan/melaka/notaBaru</page>            
+            <validator>validator</validator>
+            <instruction>Sila sediakan Pelan Kuota.</instruction>
+        </txncode>
+    </stage>   
+    <stage id="semakpelanringkasantptg" currentAction="Semak Pelan dan Ringkasan" advanceRule="true" listener="etanah.view.pembangunan.validator.notaValidator">
+        <txncode id="PPK">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Kertas Pertimbangan">pembangunan/melaka/kertasRingkasPertimbanganJKBB</page>
+            <page id="6" title="Nota/Minit">/pembangunan/melaka/notaBaru</page>
+            <!--<page id="6" title="Pindaan Pelukis Pelan">pembangunan/agihan_tugas</page>-->
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat-maklumat yang dipaparkan.</instruction>
+            <outcomes>
+                <outcome label="Setuju" value="A"/>
+                <outcome label="Ada Pindaan" value="AN"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="pindaPelan3" currentAction="Pindaan Ke Pelukis Pelan">
+        <txncode id="PPK">
+            <page id="1" title="Arahan Pindaan">pembangunan/ulasanPindaan</page>
+            <page id="2" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="3" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="4" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="5" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="6" title="Kertas Pertimbangan">pembangunan/melaka/kertasRingkasPertimbanganJKBB</page>
+            <page id="7" title="Nota/Minit">/pembangunan/melaka/notaBaru</page>           
+            <validator>validator</validator>
+            <instruction>Sila Hantar Tugasan Ke Pelukis Pelan.</instruction>           
+        </txncode>
+    </stage>
+    <stage id="sediapelan3" currentAction="Sedia Pelan Kuota" advanceRule="true">
+        <txncode id="PPK">
+            <page id="1" title="Arahan Pindaan">pembangunan/ulasanPindaan</page>
+            <page id="2" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="3" title="Maklumat Tanah">pembangunan/maklumat_hakmilik</page>
+            <page id="4" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="5" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="6" title="Kertas Pertimbangan">pembangunan/melaka/kertasRingkasPertimbanganJKBB?showForm2</page>
+            <page id="7" title="Nota/Minit">/pembangunan/melaka/notaBaru</page>            
+            <validator>validator</validator>
+            <instruction>Sila sediakan Pelan Kuota.</instruction>
+        </txncode>
+    </stage>
+    <stage id="cetakringkasan" currentAction="Cetakan Kertas Ringkasan Pertimbangan PTG">
+        <txncode id="PPK">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Kertas Pertimbangan">pembangunan/melaka/kertasRingkasPertimbanganJKBB?showForm2</page>
+            <page id="6" title="Nota/Minit">/pembangunan/melaka/notaBaru</page>
+            <!--<page id="6" title="Pelukis Pelan">pembangunan/agihan_tugas?showForm11</page>-->
+            <!--<page id="5" title="Rencana JKBB">pembangunan/melaka/kertasPertimbanganPTG?showForm2</page>-->
+            <validator>validator</validator>
+            <instruction>Sila Jana Dokumen untuk Perakuan Pegawai dan Pengarah.</instruction>
+            <reports>
+                <report generator="DEVKRJKBB_MLK.rdf" prefix="VDOC" code="KRP"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="perakuanptg" currentAction="Perakuan PTG" advanceRule="true" listener="etanah.view.pembangunan.validator.notaValidator">
+        <txncode id="PPK">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Kertas Pertimbangan">pembangunan/melaka/kertasRingkasPertimbanganJKBB?showForm2</page>
+            <page id="6" title="Nota/Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan perakuan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Setuju" value="A"/>
+                <outcome label="Ada Pindaan" value="AN"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="pindaPelan2" currentAction="Pindaan Ke Pelukis Pelan">
+        <txncode id="PPK">
+            <page id="1" title="Arahan Pindaan">pembangunan/ulasanPindaan</page>
+            <page id="2" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="3" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="4" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="5" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="6" title="Kertas Pertimbangan">pembangunan/melaka/kertasRingkasPertimbanganJKBB</page>
+            <page id="7" title="Nota/Minit">/pembangunan/melaka/notaBaru</page>           
+            <validator>validator</validator>
+            <instruction>Sila Hantar Tugasan Ke Pelukis Pelan.</instruction>           
+        </txncode>
+    </stage>
+    <stage id="sediapelan2" currentAction="Sedia Pelan Kuota" advanceRule="true">
+        <txncode id="PPK">
+            <page id="1" title="Arahan Pindaan">pembangunan/ulasanPindaan</page>
+            <page id="2" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="3" title="Maklumat Tanah">pembangunan/maklumat_hakmilik</page>
+            <page id="4" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="5" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="6" title="Kertas Pertimbangan">pembangunan/melaka/kertasRingkasPertimbanganJKBB?showForm2</page>
+            <page id="7" title="Nota/Minit">/pembangunan/melaka/notaBaru</page>            
+            <validator>validator</validator>
+            <instruction>Sila sediakan Pelan Kuota.</instruction>
+        </txncode>
+    </stage>
+    <stage id="sediajkbbrekodkpsn" currentAction="Sedia Kertas Ringkasan Pertimbangan JKBB dan Rekod Keputusan" finalize="true" >
+        <txncode id="PPK">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Kertas Pertimbangan">pembangunan/melaka/kertasRingkasPertimbanganJKBB?showForm2</page>            
+            <page id="7" title="Nota/Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila jana dan Kertas Ringkas JKBB dan masukkan keputusan Jawatankuasa.</instruction>
+            <outcomes>
+                <outcome label="Tiada Perubahan" value="XC"/>
+                <outcome label="Perlu Pindaan" value="PD"/>
+            </outcomes>
+            <reports>
+                <report generator="DEVKRJKBB_MLK.rdf" prefix="VDOC" code="KRP"/>
+            </reports>
+        </txncode>
+    </stage>    
+    <stage id="sediasuratkelulusan" currentAction="Sedia Surat Kelulusan">
+        <txncode id="PPK">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Kertas Pertimbangan">pembangunan/melaka/kertasRingkasPertimbanganJKBB?showForm2</page>
+            <page id="6" title="Tandatangan">pembangunan/tarikhTandantangan?showForm6</page>
+            <page id="7" title="Nota/Minit">/pembangunan/melaka/notaBaru</page>            
+            <validator>validator</validator>
+            <instruction>Sila jana Surat Kelulusan untuk Pemohon dan minta pemohon menghantar pelan berdasarkan kelulusan.</instruction>
+            <reports>
+                <report generator="DEV_SrtKpsnPPK_MLK.rdf" prefix="VDOC" code="SLPK"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="sediasuratiringanendos" currentAction="Sedia Surat Iringan dan Hantar Endosan Pelan">
+        <txncode id="PPK">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Kertas Pertimbangan">pembangunan/melaka/kertasRingkasPertimbanganJKBB?showForm2</page>
+            <page id="6" title="Tandatangan">pembangunan/tarikhTandantangan?showForm6</page>
+            <page id="7" title="Nota/Minit">/pembangunan/melaka/notaBaru</page>           
+            <validator>validator</validator>
+            <instruction>Sila jana Surat Iringan untuk Perakuan/Endosan Pengarah.</instruction>
+            <reports>
+                <report generator="DEV_SrtEndosPPK_MLK.rdf" prefix="VDOC" code="SIPK"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="semakendospelan" currentAction="Semak Surat Dan Pelan Kuota">
+        <txncode id="PPK">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Kertas Pertimbangan">pembangunan/melaka/kertasRingkasPertimbanganJKBB?showForm2</page>           
+            <page id="6" title="Nota/Minit">/pembangunan/melaka/notaBaru</page>           
+            <validator>validator</validator>
+            <instruction>Sila semak surat dan pelan kuota.</instruction>           
+        </txncode>
+    </stage>
+    <stage id="perakuanendosptg" currentAction="Perakuan PTG" listener="etanah.view.pembangunan.validator.PPKValidator">
+        <txncode id="PPK">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Kertas Pertimbangan">pembangunan/melaka/kertasRingkasPertimbanganJKBB?showForm2</page>
+            <page id="6" title="Nota/Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila endos Pelan Kuota.</instruction>
+        </txncode>
+    </stage> 
+</workflow>

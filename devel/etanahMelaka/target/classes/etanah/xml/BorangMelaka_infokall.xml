@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<workflow id="http://xmlns.oracle.com/bple_mlk/reg/hw_mlkperserahan" createValidator="etanah.daftar.PermohonanHakmilikCV">
+   
+    <stage id="agih_tugas" finalize="false" distribute="true" >
+        
+        <txncode id="PB" >
+            <page id="1" title="Agih Tugasan">agihTugasan</page>
+            <instruction>Sila agihkan tugasan ini kepada yang berkenaan.</instruction>
+        </txncode>
+        <txncode id="416C" >
+            <page id="1" title="Agih Tugasan">agihTugasan</page>
+            <instruction>Sila agihkan tugasan ini kepada yang berkenaan.</instruction>
+        </txncode>
+          <txncode id="CPB" >
+            <page id="1" title="Agih Tugasan">agihTugasan</page>
+            <instruction>Sila agihkan tugasan ini kepada yang berkenaan.</instruction>
+        </txncode>
+        <txncode id="ROSB" >
+            <page id="1" title="Agih Tugasan">agihTugasan</page>
+            <instruction>Sila agihkan tugasan ini kepada yang berkenaan.</instruction>
+        </txncode>
+        
+        <txncode id="GDPJT" daysToComplete="2">
+
+            <page id="1" title="Agih Tugasan">agihTugasan</page>
+            <instruction>Sila agihkan tugasan ini kepada yang berkenaan.</instruction>
+        </txncode>
+        <txncode id="PMBUD" >
+            <page id="1" title="Agih Tugasan">agihTugasan</page>
+            <instruction>Sila agihkan tugasan ini kepada yang berkenaan.</instruction>
+        </txncode>
+      
+        
+        <txncode id="TMAMB" >
+            <page id="1" title="Agih Tugasan">agihTugasan</page>
+            <instruction>Sila agihkan tugasan ini kepada yang berkenaan.</instruction>
+        </txncode>
+        <txncode id="PMHHB" >
+            <page id="1" title="Agih Tugasan">agihTugasan</page>
+            <instruction>Sila agihkan tugasan ini kepada yang berkenaan.</instruction>
+        </txncode>
+        <txncode id="JPB" >
+            <page id="1" title="Agih Tugasan">agihTugasan</page>
+            <instruction>Sila agihkan tugasan ini kepada yang berkenaan.</instruction>
+        </txncode>
+        
+        <txncode id="GDWM" >
+            <page id="1" title="Agih Tugasan">agihTugasan</page>
+            <instruction>Sila agihkan tugasan ini kepada yang berkenaan.</instruction>
+        </txncode>
+        
+
+    </stage>
+    
+    
+    
+    <!--      stage keputusan-->
+    
+    
+   
+        
+    <stage id="kemasukan" finalize="false" viewable="pendaftar"
+           listener="etanah.view.daftar.validator.ReportValidatorV2"
+           currentAction="kemasukan" pushback="true" nextStageButton="Hantar Pendaftar">
+        <txncode id="PB" >
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan?paparanMaklumatPermohonanDaftar</page>
+            <page id="2" title="Maklumat Hakmilik Permohonan">common/maklumat_hakmilik_permohonan?senaraiHakmilik</page>
+            <page id="3" title="Maklumat Pihak Kepentingan">daftar/pihak_kepentingan</page>
+            <page id="4" title="Maklumat Borang">daftar/nota/nota_daftarV2</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Syor Daftar" value="SD"/>
+                <outcome label="Syor Tolak" value="ST"/>
+                <outcome label="Syor Gantung" value="SG"/>
+            </outcomes>
+            <reports>
+                <report generator="REGVDocPB.rdf" prefix="VDOC" code="VDOC"/>
+            </reports>
+        </txncode>
+        <txncode id="416C" >
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan?paparanMaklumatPermohonanDaftar</page>
+            <page id="2" title="Maklumat Hakmilik Permohonan">common/maklumat_hakmilik_permohonan?senaraiHakmilik</page>
+            <page id="3" title="Maklumat Pihak Kepentingan">daftar/pihak_kepentingan</page>
+            <page id="4" title="Maklumat Borang">daftar/nota/nota_daftarV2</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Syor Daftar" value="SD"/>
+                <outcome label="Syor Tolak" value="ST"/>
+                <outcome label="Syor Gantung" value="SG"/>
+            </outcomes>
+            <reports>
+                <report generator="REGVDocPB.rdf" prefix="VDOC" code="VDOC"/>
+            </reports>
+        </txncode>
+      
+      <txncode id="CPB" daysToComplete="2">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan?paparanMaklumatPermohonanDaftar</page>
+            <page id="2" title="Maklumat Hakmilik Permohonan">common/maklumat_hakmilik_permohonan?senaraiHakmilik</page>
+            <page id="3" title="Maklumat Pihak">daftar/pihak_kepentingan</page>
+<!--             <page id="3" title="Maklumat Pihak Berkepentingan">pindah_milik?maklumatPihakBekepentingan</page>-->
+            <page id="4" title="Maklumat Certificated Person">daftar/nota/nota_daftarV2</page>
+
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Syor Daftar" value="SD"/>
+                <outcome label="Syor Tolak" value="ST"/>
+                <outcome label="Syor Gantung" value="SG"/>
+            </outcomes>
+<!--            <reports>
+                <report generator="REGVDocPMT_002.rdf" prefix="VDOC" code="VDOC"/>
+            </reports>-->
+        </txncode>
+        
+        <txncode id="GDPJT" daysToComplete="2">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan?paparanMaklumatPermohonanDaftar</page>
+            <page id="2" title="Maklumat Hakmilik Permohonan">common/maklumat_hakmilik_permohonan?senaraiHakmilik</page>
+            <page id="3" title="Perserahan Terlibat">daftar/nota/nota_daftar_batal</page>
+            <page id="4" title="Maklumat Suratcara">daftar/nota/nota_daftarV2</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Syor Daftar" value="SD"/>
+                <outcome label="Syor Tolak" value="ST"/>
+                <outcome label="Syor Gantung" value="SG"/>
+            </outcomes>
+            <reports>
+                <report generator="REGVDocGDPJT.rdf" prefix="VDOC" code="VDOC"/>
+            </reports>
+        </txncode>
+        
+       
+        
+        <txncode id="TMAMB" >
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan?paparanMaklumatPermohonanDaftar</page>
+            <page id="2" title="Maklumat Hakmilik Permohonan">common/maklumat_hakmilik_permohonan?senaraiHakmilik</page>
+            <page id="3" title="Perserahan Terlibat">daftar/nota/nota_daftar_batal</page>
+            <page id="4" title="Maklumat Borang">daftar/nota/nota_daftarV2</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Syor Daftar" value="SD"/>
+                <outcome label="Syor Tolak" value="ST"/>
+                <outcome label="Syor Gantung" value="SG"/>
+            </outcomes>
+            <reports>
+                <report generator="REGVDocTMAMB.rdf" prefix="VDOC" code="VDOC"/>
+            </reports>
+        </txncode>
+        
+        <txncode id="PMHHB" >
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan?paparanMaklumatPermohonanDaftar</page>
+            <page id="2" title="Maklumat Hakmilik Permohonan">common/maklumat_hakmilik_permohonan?senaraiHakmilik</page>
+            <page id="3" title="Perserahan Terlibat">daftar/nota/nota_daftar_batal</page>
+            <page id="4" title="Maklumat Borang">daftar/nota/nota_daftarV2</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Syor Daftar" value="SD"/>
+                <outcome label="Syor Tolak" value="ST"/>
+                <outcome label="Syor Gantung" value="SG"/>
+            </outcomes>
+            <reports>
+                <report generator="REGVDocPMHHB.rdf" prefix="VDOC" code="VDOC"/>
+            </reports>
+        </txncode>
+        <txncode id="JPB" >
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan?paparanMaklumatPermohonanDaftar</page>
+            <page id="2" title="Maklumat Hakmilik Permohonan">common/maklumat_hakmilik_permohonan?senaraiHakmilik</page>
+            <page id="3" title="Urusan Terlibat">daftar/nota/nota_daftar_batal</page>
+            <page id="4" title="Maklumat Suratcara">daftar/nota/nota_daftarV2</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Syor Daftar" value="SD"/>
+                <outcome label="Syor Tolak" value="ST"/>
+                <outcome label="Syor Gantung" value="SG"/>
+            </outcomes>
+            <reports>
+                <report generator="REGVDocJPB.rdf" prefix="VDOC" code="VDOC"/>
+            </reports>
+        </txncode>
+        
+        <txncode id="GDWM" >
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan?paparanMaklumatPermohonanDaftar</page>
+            <page id="2" title="Maklumat Hakmilik Permohonan">common/maklumat_hakmilik_permohonan?senaraiHakmilik</page>
+            <page id="3" title="Maklumat Pihak">daftar/pihak_kepentingan</page>
+            <page id="4" title="Maklumat Urusniaga">daftar/maklumat_urusniaga</page>
+            <page id="5" title="Maklumat Suratcara">daftar/nota/nota_daftarV2</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Syor Daftar" value="SD"/>
+                <outcome label="Syor Tolak" value="ST"/>
+                <outcome label="Syor Gantung" value="SG"/>
+            </outcomes>
+            <reports>
+                <report generator="REGVDocGDWM.rdf" prefix="VDOC" code="VDOC"/>
+            </reports>
+        </txncode>
+               
+        <txncode id="PMBUD" >
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan?paparanMaklumatPermohonanDaftar</page>
+            <page id="2" title="Maklumat Hakmilik Permohonan">common/maklumat_hakmilik_permohonan?senaraiHakmilik</page>
+            <page id="3" title="Urusan Terlibat">daftar/nota/nota_daftar_batal</page>
+            <page id="4" title="Maklumat Pihak">daftar/pihak_kepentingan</page>
+            <page id="5" title="Maklumat Borang">daftar/nota/nota_daftarV2</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Syor Daftar" value="SD"/>
+                <outcome label="Syor Tolak" value="ST"/>
+                <outcome label="Syor Gantung" value="SG"/>
+            </outcomes>
+            <reports>
+                <report generator="REGVDocPMBUD.rdf" prefix="VDOC" code="VDOC"/>
+            </reports>
+        </txncode>
+        
+        <txncode id="ROSB" >
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan?paparanMaklumatPermohonanDaftar</page>
+            <page id="2" title="Maklumat Hakmilik Permohonan">common/maklumat_hakmilik_permohonan?senaraiHakmilik</page>
+            <page id="3" title="Maklumat Pihak Kepentingan">daftar/pihak_kepentingan</page>
+            <page id="4" title="Maklumat Borang">daftar/nota/nota_daftarV2</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Syor Daftar" value="SD"/>
+                <outcome label="Syor Tolak" value="ST"/>
+                <outcome label="Syor Gantung" value="SG"/>
+            </outcomes>
+            <reports>
+                <report generator="REGVDocROSB.rdf" prefix="VDOC" code="VDOC"/>
+            </reports>
+        </txncode>
+        
+        
+       
+        
+            
+        
+    
+    </stage>
+    
+    <stage id="keputusan" listener="etanah.view.daftar.validator.PendaftaranValidation" finalize="true" 
+           pushback="true" nextStageButton="DAFTAR" currentAction="keputusan" advanceRule="true" report="true">
+        <!--SCREEN DEFAULT (6)-->
+        <txncode id="PB" >
+            <page id="1" title="Dokumen Verifikasi">common/maklumat_permohonan?showForm3</page>
+            <instruction>Sila buat semakan pada Dokumen Verifikasi (v-doc) beserta dokumen fizikal.</instruction>
+            <outcomes>
+                <outcome label="Daftar" value="D">
+                    <report generator="REGSuratDaftar001.rdf" code="SD"/>
+                </outcome>
+                <outcome label="Tolak" value="T">
+                    <report generator="REGSuratTolak001.rdf" code="ST"/>
+                </outcome>
+                <outcome label="Gantung" value="G">
+                    <report generator="REGSuratGantung001.rdf" code="SGT"/>
+                </outcome>
+            </outcomes>
+
+        </txncode>
+        <txncode id="416C" >
+            <page id="1" title="Dokumen Verifikasi">common/maklumat_permohonan?showForm3</page>
+            <instruction>Sila buat semakan pada Dokumen Verifikasi (v-doc) beserta dokumen fizikal.</instruction>
+            <outcomes>
+                <outcome label="Daftar" value="D">
+                    <report generator="REGSuratDaftar001.rdf" code="SD"/>
+                </outcome>
+                <outcome label="Tolak" value="T">
+                    <report generator="REGSuratTolak001.rdf" code="ST"/>
+                </outcome>
+                <outcome label="Gantung" value="G">
+                    <report generator="REGSuratGantung001.rdf" code="SGT"/>
+                </outcome>
+            </outcomes>
+
+        </txncode>
+        
+        <txncode id="CPB" >
+            <page id="1" title="Dokumen Verifikasi">common/maklumat_permohonan?showForm3</page>
+            <instruction>Sila buat semakan pada Dokumen Verifikasi (v-doc) beserta dokumen fizikal.</instruction>
+            <outcomes>
+                <outcome label="Daftar" value="D">
+                    <report generator="REGSuratDaftar001.rdf" code="SD"/>
+                </outcome>
+                <outcome label="Tolak" value="T">
+                    <report generator="REGSuratTolak001.rdf" code="ST"/>
+                </outcome>
+                <outcome label="Gantung" value="G">
+                    <report generator="REGSuratGantung001.rdf" code="SGT"/>
+                </outcome>
+            </outcomes>
+
+        </txncode>
+            
+        <txncode id="PMBUD" >
+            <page id="1" title="Dokumen Verifikasi">common/maklumat_permohonan?showForm3</page>
+            <instruction>Sila buat semakan pada Dokumen Verifikasi (v-doc) beserta dokumen fizikal.</instruction>
+            <outcomes>
+                <outcome label="Daftar" value="D">
+                    <report generator="REGSuratDaftar001.rdf" code="SD"/>
+                </outcome>
+                <outcome label="Tolak" value="T">
+                    <report generator="REGSuratTolak001.rdf" code="ST"/>
+                </outcome>
+                <outcome label="Gantung" value="G">
+                    <report generator="REGSuratGantung001.rdf" code="SGT"/>
+                </outcome>
+            </outcomes>
+
+        </txncode>
+        <txncode id="GDPJT" daysToComplete="2">
+            <page id="1" title="Dokumen Verifikasi">common/maklumat_permohonan?showForm3</page>
+            <instruction>Sila buat semakan pada Dokumen Verifikasi (v-doc) beserta dokumen fizikal.</instruction>
+            <outcomes>
+                <outcome label="Daftar" value="D">
+                    <report generator="REGSuratDaftar001.rdf" code="SD"/>
+                </outcome>
+                <outcome label="Tolak" value="T">
+                    <report generator="REGSuratTolak001.rdf" code="ST"/>
+                </outcome>
+                <outcome label="Gantung" value="G">
+                    <report generator="REGSuratGantung001.rdf" code="SGT"/>
+                </outcome>
+            </outcomes>
+
+        </txncode>
+        <txncode id="JPB" >
+            <page id="1" title="Mohon Kemuka Dokumen">common/mohon_kemuka_doc</page>
+            <page id="2" title="Dokumen Verifikasi">common/maklumat_permohonan?showForm3</page>
+            <instruction>Sila buat semakan pada Dokumen Verifikasi (v-doc) beserta dokumen fizikal.</instruction>
+            <outcomes>
+                <outcome label="Daftar" value="D">
+                    <report generator="REGSuratDaftar001.rdf" code="SD"/>
+                </outcome>
+                <outcome label="Tolak" value="T">
+                    <report generator="REGSuratTolak001.rdf" code="ST"/>
+                </outcome>
+                <outcome label="Gantung" value="G">
+                    <report generator="REGSuratGantung001.rdf" code="SGT"/>
+                </outcome>
+            </outcomes>
+
+        </txncode>
+            
+        <txncode id="GDWM">            
+            <page id="1" title="Dokumen Verifikasi">common/maklumat_permohonan?showForm3</page>
+            <instruction>Sila buat semakan pada Dokumen Verifikasi (v-doc) beserta dokumen fizikal.</instruction>
+            <outcomes>
+                <outcome label="Daftar" value="D">
+                    <report generator="REGSuratDaftar001.rdf" code="SD"/>
+                </outcome>
+                <outcome label="Tolak" value="T">
+                    <report generator="REGSuratTolak001.rdf" code="ST"/>
+                </outcome>
+                <outcome label="Gantung" value="G">
+                    <report generator="REGSuratGantung001.rdf" code="SGT"/>
+                </outcome>
+            </outcomes>            
+        </txncode>
+        
+        <txncode id="ROSB">            
+            <page id="1" title="Dokumen Verifikasi">common/maklumat_permohonan?showForm3</page>
+            <instruction>Sila buat semakan pada Dokumen Verifikasi (v-doc) beserta dokumen fizikal.</instruction>
+            <outcomes>
+                <outcome label="Daftar" value="D">
+                    <report generator="REGSuratDaftar001.rdf" code="SD"/>
+                </outcome>
+                <outcome label="Tolak" value="T">
+                    <report generator="REGSuratTolak001.rdf" code="ST"/>
+                </outcome>
+                <outcome label="Gantung" value="G">
+                    <report generator="REGSuratGantung001.rdf" code="SGT"/>
+                </outcome>
+            </outcomes>            
+        </txncode>
+        
+        <txncode id="TMAMB">            
+            <page id="1" title="Dokumen Verifikasi">common/maklumat_permohonan?showForm3</page>
+            <instruction>Sila buat semakan pada Dokumen Verifikasi (v-doc) beserta dokumen fizikal.</instruction>
+            <outcomes>
+                <outcome label="Daftar" value="D">
+                    <report generator="REGSuratDaftar001.rdf" code="SD"/>
+                </outcome>
+                <outcome label="Tolak" value="T">
+                    <report generator="REGSuratTolak001.rdf" code="ST"/>
+                </outcome>
+                <outcome label="Gantung" value="G">
+                    <report generator="REGSuratGantung001.rdf" code="SGT"/>
+                </outcome>
+            </outcomes>            
+        </txncode>
+        
+         <txncode id="PMHHB" >
+                <page id="1" title="Dokumen Verifikasi">common/maklumat_permohonan?showForm3</page>
+                <instruction>Sila buat semakan pada Dokumen Verifikasi (v-doc) beserta dokumen fizikal.</instruction>
+                <outcomes>
+                    <outcome label="Daftar" value="D">
+                        <report generator="REGSuratDaftar001.rdf" code="SD"/>
+                    </outcome>
+                    <outcome label="Tolak" value="T">
+                        <report generator="REGSuratTolak001.rdf" code="ST"/>
+                    </outcome>
+                    <outcome label="Gantung" value="G">
+                        <report generator="REGSuratGantung001.rdf" code="SGT"/>
+                    </outcome>
+                </outcomes>
+
+            </txncode>
+   
+        
+    </stage>
+            
+</workflow>

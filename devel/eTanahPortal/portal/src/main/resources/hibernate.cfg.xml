@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <!--<property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>-->
+    <property name="hibernate.query.factory_class">org.hibernate.hql.classic.ClassicQueryTranslatorFactory</property>
+    <property name="hibernate.current_session_context_class">managed</property>
+    <property name="hibernate.show_sql">false</property>
+    <property name="hibernate.generate_statistics">false</property>
+    <property name="hibernate.use_sql_comments">false</property>
+    <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+    <property name="hibernate.c3p0.acquire_increment">1</property>
+    <property name="hibernate.c3p0.idle_test_period">300</property>
+    <property name="hibernate.c3p0.timeout">1800</property>
+    <property name="hibernate.c3p0.max_size">25</property>
+    <property name="hibernate.c3p0.min_size">1</property>
+    <property name="hibernate.cache.use_query_cache">false</property>
+    <property name="hibernate.cache.region.jbc2.query.localonly">false</property>
+    <property name="hibernate.cache.use_second_level_cache">false</property>
+    <property name="hibernate.cache.provider_class">com.tangosol.coherence.hibernate.CoherenceCacheProvider</property>
+    <property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
+    <property name="hibernate.connection.url">${hibernate.connection.url}</property>
+    <property name="hibernate.connection.username">${hibernate.connection.username}</property>
+    <property name="hibernate.connection.password">${hibernate.connection.password}</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+    <mapping class="com.theta.portal.model.Department"/>
+    <mapping class="com.theta.portal.model.Employee"/>
+    <mapping class="com.theta.portal.model.HelpdeskAssign"/>
+    <mapping class="com.theta.portal.model.HelpdeskContractor"/>
+    <mapping class="com.theta.portal.model.HelpdeskContractorDocuments"/>
+    <mapping class="com.theta.portal.model.HelpdeskHistory"/>
+    <mapping class="com.theta.portal.model.HelpdeskReport"/>
+    <mapping class="com.theta.portal.model.HelpdeskReportLog"/>
+    <mapping class="com.theta.portal.model.HelpdeskStage"/>
+    <mapping class="com.theta.portal.model.HelpdeskReportDocuments"/>
+    <mapping class="com.theta.portal.model.HelpdeskTechnical"/>
+    <mapping class="com.theta.portal.model.HelpdeskTechnicalDocuments"/>
+    <mapping class="com.theta.portal.model.Position"/>
+    <mapping class="com.theta.portal.model.PtdOffice"/>
+    <mapping class="com.theta.portal.model.RefHardwareType"/>
+    <mapping class="com.theta.portal.model.RefHelpdeskContractorStatus"/>
+    <mapping class="com.theta.portal.model.RefHelpdeskFlag"/>
+    <mapping class="com.theta.portal.model.RefHelpdeskHistoryType"/>
+    <mapping class="com.theta.portal.model.RefHelpdeskReportStatus"/>
+    <mapping class="com.theta.portal.model.RefHelpdeskStage"/>
+    <mapping class="com.theta.portal.model.RefHelpdeskStageRole"/>
+    <mapping class="com.theta.portal.model.RefHelpdeskTechnicalStatus"/>
+    <mapping class="com.theta.portal.model.RefHelpdeskType"/>
+    <mapping class="com.theta.portal.model.RefHelpdeskType"/>
+    <mapping class="com.theta.portal.model.RefSubmodulType"/>
+    <mapping class="com.theta.portal.model.RefItemType"/>
+    <mapping class="com.theta.portal.model.RefUserType"/>
+    <mapping class="com.theta.portal.model.UserRole"/>
+    <mapping class="com.theta.portal.model.UserTable"/>
+    <mapping class="com.theta.portal.model.Vendor"/>
+  </session-factory>
+</hibernate-configuration>

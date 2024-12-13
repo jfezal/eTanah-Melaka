@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<workflow id="http://xmlns.oracle.com/etanahn9/PenguatkuasaanM/Seksyen427">
+    <!--
+    Document   : Seksyen427.xml
+    Created on : March 19, 2010, 4:12 PM
+    Author     : farah.shafilla
+    Description: Purpose of the document follows.
+    -->
+    <stage id="Maklum_aduan" currentAction="Maklum Aduan" >
+        <txncode id="427">
+            <page id="1" title="Maklumat Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Pencerobohan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Maklumat Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm2</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes ulasanOnly="true" title="Keputusan/Arahan"/>
+        </txncode>
+    </stage>
+    <stage id="Maklum_arahan" currentAction="Maklum Arahan">
+        <txncode id="427">
+            <page id="1" title="Maklumat Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Pencerobohan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Maklumat Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm2</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes ulasanOnly="false" title="Keputusan/Arahan"/>
+        </txncode>
+    </stage>
+    <stage id="Sedia_laporan" currentAction="Sedia Laporan">
+        <txncode id="427">
+            <page id="1" title="Maklumat Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Pencerobohan">/penguatkuasaan/maklumat_lokasi_aduan?showForm</page>
+            <page id="3" title="Maklumat Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm</page>
+            <page id="4" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm</page>
+            <outcomes>
+                <outcome label="Ada Kes" value="AK"/>
+                <outcome label="Tiada Kes" value="TK"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="Semak_laporan" finalize="true" currentAction="Semak Laporan">
+        <txncode id="427">
+            <page id="1" title="Maklumat Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Pencerobohan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Maklumat Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm2</page>
+            <page id="4" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Lengkap" value="LK"/>
+                <outcome label="Tidak Lengkap" value="TL"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="Arah_buka_ks" currentAction="Buka Kertas Siasatan">
+        <txncode id="427">
+            <page id="1" title="Maklumat Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Pencerobohan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Maklumat Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm2</page>
+            <page id="4" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes ulasanOnly="true" title="Keputusan/Arahan"></outcomes>
+        </txncode>
+    </stage>
+    <stage id="KebenaranPTG" currentAction="Kebenaran Bertulis PTG">
+        <txncode id="422">
+            <page id="1" title="Maklumat Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Pencerobohan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Maklumat Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm2</page>
+            <page id="4" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <instruction>Sila semak maklumat yang berkaitan dan buat keputusan/arahan.</instruction>
+            <outcomes ulasanOnly="true" title="Keputusan"/>
+        </txncode>
+    </stage>
+    <stage id="Sedia_ks" currentAction="Sedia Kertas Siasatan">
+        <txncode id="427">
+            <page id="1" title="Maklumat Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Pencerobohan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Maklumat Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm2</page>
+            <page id="4" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <page id="5" title="Maklumat Kertas Siasatan">/penguatkuasaan/draf_siasatan?showForm</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes ulasanOnly="false" title="Keputusan/Arahan"></outcomes>
+        </txncode>
+    </stage>
+    <stage id="Semak_ks" finalize="true" currentAction="Semak Kertas Siasatan">
+        <txncode id="427">
+            <page id="1" title="Maklumat Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Pencerobohan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Maklumat Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm2</page>
+            <page id="4" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <page id="5" title="Maklumat Kertas Siasatan">/penguatkuasaan/draf_siasatan?showForm2</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Lengkap" value="LK"/>
+                <outcome label="Tidak Lengkap" value="TL"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="Terima_ks_izin_dakwa" currentAction="Mohon Izin Pendakwaan">
+        <txncode id="427">
+            <page id="1" title="Maklumat Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Pencerobohan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Maklumat Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm2</page>
+            <page id="4" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <page id="5" title="Maklumat Kertas Siasatan">/penguatkuasaan/draf_siasatan?showForm2</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes ulasanOnly="true" title="Keputusan/Arahan"></outcomes>
+        </txncode>
+    </stage>
+    <stage id="Maklum_tindakan_PP" currentAction="Maklum Tindakan">
+        <txncode id="427">
+            <page id="1" title="Maklumat Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Pencerobohan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Maklumat Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm2</page>
+            <page id="4" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <page id="5" title="Maklumat Kertas Siasatan">/penguatkuasaan/draf_siasatan?showForm2</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes ulasanOnly="true" title="Keputusan/Arahan"></outcomes>
+        </txncode>
+    </stage>
+    <stage id="Sedia_borang_dakwa" currentAction="Sedia Borang Dakwa">
+        <txncode id="427">
+            <page id="1" title="Maklumat Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Pencerobohan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Maklumat Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm2</page>
+            <page id="4" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <page id="5" title="Maklumat Kertas Siasatan">/penguatkuasaan/draf_siasatan?showForm2</page>
+            <page id="6" title="Keputusan Mahkamah">/penguatkuasaan/mahkamah?showForm</page>
+            <!--<page id="7" title="Bukti Penyampaian Notis">/bukti_penyampaian?showForm</page>-->
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+    <stage id="Maklum_tarikh_sebutan" currentAction="Maklum Tarikh Sebutan">
+        <txncode id="427">
+            <page id="1" title="Maklumat Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Maklumat Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm2</page>
+            <page id="3" title="Laporan Polis">/penguatkuasaan/ringkasan_laporan_polis?showForm2</page>
+            <page id="4" title="Maklumat Kertas Siasatan">/penguatkuasaan/draf_siasatan?showForm2</page>
+            <page id="5" title="Keputusan Mahkamah">/penguatkuasaan/mahkamah?showForm2</page>
+            <instruction>Sila semak maklumat yang berkaitan dan buat keputusan/arahan.</instruction>
+            <outcomes ulasanOnly="false" title="Keputusan"/>
+        </txncode>
+    </stage>
+    <stage id="Kpsn_mahkamah" currentAction="Keputusan Mahkamah">
+        <txncode id="427">
+            <page id="1" title="Maklumat Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Maklumat Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm2</page>
+            <page id="3" title="Laporan Polis">/penguatkuasaan/ringkasan_laporan_polis?showForm2</page>
+            <page id="4" title="Maklumat Kertas Siasatan">/penguatkuasaan/draf_siasatan?showForm2</page>
+            <page id="5" title="Keputusan Mahkamah">/penguatkuasaan/mahkamah?showForm</page>
+            <instruction>Sila semak maklumat yang berkaitan dan buat keputusan/arahan.</instruction>
+            <outcomes ulasanOnly="false" title="Keputusan"/>
+        </txncode>
+    </stage>
+    <stage id="Maklum_syorTK" currentAction="Maklum Keputusan dan Syor">
+        <txncode id="427">
+            <page id="1" title="Maklumat Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Maklumat Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm2</page>
+            <page id="3" title="Laporan Polis">/penguatkuasaan/ringkasan_laporan_polis?showForm2</page>
+            <instruction>Sila semak maklumat yang berkaitan dan buat keputusan/arahan.</instruction>
+            <outcomes ulasanOnly="true" title="Keputusan"/>
+        </txncode>
+    </stage>
+    <stage id="Peraku_syor" currentAction="Peraku Syor">
+        <txncode id="427">
+            <page id="1" title="Maklumat Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Maklumat Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm2</page>
+            <page id="3" title="Laporan Polis">/penguatkuasaan/ringkasan_laporan_polis?showForm2</page>
+            <instruction>Sila semak maklumat yang berkaitan dan buat keputusan/arahan.</instruction>
+            <outcomes ulasanOnly="true" title="Keputusan"/>
+        </txncode>
+    </stage>
+    <stage id="Maklum_syor" currentAction="Maklum Syor"  listener="etanah.view.penguatkuasaan.validator.CompleteTaskValidator" >
+        <txncode id="427">
+            <page id="1" title="Maklumat Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Maklumat Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm2</page>
+            <page id="3" title="Laporan Polis">/penguatkuasaan/ringkasan_laporan_polis?showForm2</page>
+            <instruction>Sila semak maklumat yang berkaitan dan buat keputusan/arahan.</instruction>
+            <outcomes ulasanOnly="false" title="Keputusan"/>
+        </txncode>
+    </stage>
+</workflow>

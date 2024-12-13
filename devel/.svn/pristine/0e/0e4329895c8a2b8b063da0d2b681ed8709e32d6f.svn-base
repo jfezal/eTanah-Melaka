@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : dis_catit_masuk_mcl.xml
+    Created on : October 5, 2012, 5:02 PM
+    Author     : Admin
+    Description:
+        Purpose of the document follows.
+-->
+
+
+<workflow id="http://xmlns.oracle.com/Pelupusan/BPeLPAT1/MCMMCL">
+
+    <stage id="kemasukan" currentAction="Kemasukan Maklumat" report="true" listener="etanah.view.stripes.pelupusan.validator.CatitTanahValidator,etanah.view.stripes.pelupusan.validator.ReportV2Validator">
+        <txncode id="MMMCL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan</page>
+            <page id="003" title="Tandatangan Dokumen">pelupusan/tandatangan_dokumenV2</page>
+            <page id="004" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan</instruction>
+            <outcomes>
+                <outcome label="QT" value="YQ"/>
+                <outcome label="FT" value="YT"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <!-- noting permohonan registration; pass ke pendaftaran, ada stage dlm bpel (sysdaftar), lepas pendaftaran selesai system akan push ke stage seterusnya -->
+
+    <stage id="agihan_tugas" currentAction="Agihan Tugas" distribute="true">
+        <txncode id="MMMCL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="004" title="Agihan Tugas">pelupusan/agihTugasanV2</page>
+            <page id="005" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila arahkan tugas seterusnya kepada yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    <stage id="g_charting_permohonan" currentAction="Laporan Pelan dan Charting" report="true" listener="etanah.view.stripes.pelupusan.validator.ReportV2Validator">
+        <txncode id="MMMCL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <!--<page id="004" title="Laporan Pelukis Pelan">pelupusan/laporan_pelanV2</page>-->
+            <page id="004" title="Laporan Pelukis Pelan">/common/laporan/pelan/java/LaporanPelukisPelanNewActionBean?showForm</page> 
+            <page id="005" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila charting pada lot tanah yang dipohon dan sediakan laporan pelan.</instruction>
+        </txncode>
+    </stage>
+    <stage id ="semak_charting" currentAction="Semakan Laporan Pelan dan Charting" distribute="true" pushback="true" listener="etanah.view.stripes.pelupusan.validator.MohonFasaGISValidator">
+        <txncode id="MMMCL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Laporan Pelukis Pelan">pelupusan/laporan_pelanV2?viewOnlyLaporanPelan</page>
+            <page id="004" title="Agihan Tugas">pelupusan/agihTugasanV2</page>
+            <page id="005" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat permohonan dan masukkan keputusan semakan pada bahagian keputusan.</instruction>
+        </txncode>
+    </stage>
+    <stage id="laporan_tanah" currentAction="Sedia Laporan Tanah" report="true" listener="etanah.view.stripes.pelupusan.validator.ReportV2Validator">
+        <txncode id="MMMCL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <!--<page id="003" title="Laporan Tanah">pelupusan/laporan_tanahV2</page>-->
+              <page id="003" title="Laporan Tanah">/common/laporan/tanah/laporantanahNewActionBean</page>
+            <page id="004" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat-maklumat yang berkenaan di bahagian Laporan Tanah: Perihal Tanah, Bersempadan, Keadaan Tanah, Perihal Lot-lot Bersempadan, Dalam Kawasan, dan Ulasan Penolong Pegawai Tanah.</instruction>
+        </txncode>
+    </stage>
+    <stage id="semakan_laporan_tanah" currentAction="Semakan Laporan Tanah" pushback="true">
+        <txncode id="MMMCL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="004" title="Laporan Tanah">pelupusan/laporan_tanahV2?viewOnlyLaporanTanahPPTKanan</page>
+            <page id="005" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat permohonan..</instruction>
+        </txncode>
+    </stage>
+    <stage id="sedia_rencana" currentAction="Sedia Draf Rencana">
+        <txncode id="MMMCL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan</page>
+            <page id="003" title="Laporan Tanah">pelupusan/laporan_tanahV2?viewOnlyLaporanTanah</page>
+            <page id="004" title="Draf Rencana">pelupusan/draf_pertimbangan_ptd_catit_mcl/kemasukan</page>
+            <page id="005" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    <stage id="semak_rencana" currentAction="Semak Draf Rencana" report="true" pushback="true" listener="etanah.view.stripes.pelupusan.validator.ReportV2Validator">
+        <txncode id="MMMCL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Laporan Tanah">pelupusan/laporan_tanahV2?viewOnlyLaporanTanah</page>
+            <page id="004" title="Draf Rencana">pelupusan/draf_pertimbangan_ptd_catit_mcl/kemasukan</page>
+            <!--<page id="005" title="Tandatangan Dokumen">pelupusan/tandatangan_dokumenV2</page>-->
+            <page id="005" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+            <!-- <reports>
+                <report generator="DISKRPMCMCLH_MLK.rdf" prefix="VDOC" code="RENC"/>
+            </reports>-->
+        </txncode>
+    </stage>
+    <stage id="perakuan_ptd" currentAction="Keputusan Pentadbir Tanah" advanceRule="true" finalize="true" report="true" listener="etanah.view.stripes.pelupusan.validator.CatitTanahValidator,etanah.view.stripes.pelupusan.validator.ReportV2Validator">
+        <txncode id="MMMCL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan</page>
+            <!--<page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>-->
+            <page id="003" title="Laporan Tanah">pelupusan/laporan_tanahV2?viewOnlyLaporanTanah</page>
+            <page id="004" title="Draf Rencana">pelupusan/draf_pertimbangan_ptd_catit_mcl?viewRencanaOnly</page>
+            <page id="005" title="Tandatangan Dokumen">pelupusan/tandatangan_dokumenV2</page>
+            <page id="006" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan dan masukkan keputusan permohonan pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Lulus" value="L"/>
+                <outcome label="Tolak" value="T"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="agihan_tugas_kpsn" currentAction="Agihan Tugas Keputusan" distribute="true">
+        <txncode id="MMMCL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="004" title="Agihan Tugas">pelupusan/agihTugasanV2</page>
+            <page id="005" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila arahkan tugas seterusnya kepada yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    <stage id="g_charting_keputusan" currentAction="Sedia Charting">
+        <txncode id="MMMCL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Charting Keputusan">pelupusan/chartingKelulusan</page>
+            <page id="004" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila arahkan tugas seterusnya kepada yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    <stage id="semak_charting_kpsn" currentAction="Semakan Charting" pushback="true" advanceRule="true" listener="etanah.view.stripes.pelupusan.validator.ManualProposedOutcomeValidator">
+        <txncode id="MMMCL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Charting Keputusan">pelupusan/chartingKelulusan</page>
+            <page id="004" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila arahkan tugas seterusnya kepada yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    <stage id="sedia_surat_tolak" currentAction="Sedia Surat Tolak" report="true" listener="etanah.view.stripes.pelupusan.validator.ReportV2Validator">
+        <txncode id="MMMCL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Tandatangan Dokumen">pelupusan/tandatangan_dokumenV2?showFormForPTD</page>
+            <page id="005" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila sediakan surat tolak permohonan.</instruction>
+<!--            <reports>
+                <report generator="DISMCMMMCLG_MLK.rdf" prefix="VDOC" code="STP"/>
+            </reports>-->
+        </txncode>
+    </stage>
+    <stage id="semak_surat_tolak" currentAction="Semak Surat Tolak" pushback="true" advanceRule="true">
+        <txncode id="MMMCL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak surat tolak permohonan.</instruction>
+        </txncode>
+    </stage>
+    <!-- batal noting pendaftaran; pass ke pendaftaran, tamat di pendaftaran -->
+    <stage id="tahun_hm_daftar" currentAction="Tahun Hakmilik Daftar" advanceRule="true" listener="etanah.view.stripes.pelupusan.validator.JabatanPenilaianValidator">
+        <txncode id="MMMCL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Hakmilik">common/maklumat_hakmilik_permohonan</page>
+            <page id="005" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat-maklumat berkenaan.</instruction>
+            <outcomes>
+                <outcome label="Nilaian Nominal" value="96"/>
+                <outcome label="Nilaian Semula" value="95"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="sedia_surat_penilaian" currentAction="Dapatkan Penilaian Tanah" report="true">
+        <txncode id="MMMCL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Jabatan Penilaian">pelupusan/sedia_jabatan?showFormPHLP</page>
+<!--            <page id="004" title="Tandatangan Dokumen">pelupusan/tandatangan_dokumenV2</page>-->
+            <page id="004" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila sediakan surat minta penilaian tanah dari JPPH.</instruction>
+            <reports>
+                <report generator="DISSMPTMCMMCL_MLK.rdf" prefix="VDOC" code="8JPP"/>
+            </reports>
+        </txncode>
+    </stage>
+    <!-- test skrin smpi sini ajo 07102012-->
+    <stage id="surat_kelulusan_brg5A1" currentAction="Sedia Surat Kelulusan dan Borang 5A" report="true" listener="etanah.view.stripes.pelupusan.validator.ReportV2Validator">
+        <txncode id="MMMCL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Surat Kelulusan">pelupusan/laporanMasuk_MCL</page>
+            <page id="004" title="Borang 5A">pelupusan/borang5A_MCL</page>
+            <page id="005" title="Tandatangan Dokumen">pelupusan/tandatangan_dokumenV2</page>
+            <page id="006" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila sediakan surat kelulusan permohonan dan borang 5A.</instruction>
+            <!-- <reports>
+                 <report generator="DISSMMMCLL_MLK.rdf" prefix="VDOC" code="SL"/>
+                <report generator="DISB5A_MLK.rdf" prefix="VDOC" code="N5A"/>
+                <report generator="DISNotisB5AMCMMMCL_MLK.rdf" prefix="VDOC" code="SL"/>
+
+            </reports>-->
+        </txncode>
+    </stage>
+    <stage id="surat_kelulusan_brg5A" currentAction="Sedia Surat Kelulusan dan Borang 5A" report="true" listener="etanah.view.stripes.pelupusan.validator.ReportV2Validator">
+        <txncode id="MMMCL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Penilaian">pelupusan/laporanNilaianMCL</page>
+            <page id="004" title="Pengiraan Notis 5A">pelupusan/pengiraan_notis_5a_mcl</page>
+            <page id="005" title="Surat Kelulusan">pelupusan/laporanMasuk_MCL</page>
+            <page id="006" title="Borang 5A">pelupusan/borang5A_MCL</page>
+            <page id="007" title="Tandatangan Dokumen">pelupusan/tandatangan_dokumenV2</page>
+            <page id="008" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila sediakan surat kelulusan permohonan dan borang 5A.</instruction>
+            <!-- <reports>
+                 <report generator="DISSMMMCLL_MLK.rdf" prefix="VDOC" code="SL"/>
+                <report generator="DISB5A_MLK.rdf" prefix="VDOC" code="N5A"/>
+                <report generator="DISNotisB5AMCMMMCL_MLK.rdf" prefix="VDOC" code="SL"/>
+
+            </reports>-->
+        </txncode>
+    </stage>
+    <stage id="bayaran_brg5A" currentAction="Bayaran Kelulusan 5A" distribute="true">
+        <txncode id="MMMCL">
+            <page id="001" title="Kaunter">kaunter/BayaranPerihal</page>
+            <validator>validator</validator>
+            <instruction>Sila pilih Jenis Bayaran dan klik Butang Simpan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="maklum_bayaran" currentAction="Maklum Bayaran" listener="etanah.view.stripes.pelupusan.validator.CatitTanahValidator">
+        <txncode id="MMMCL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat bayaran.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="sedia_jadual" currentAction="Sedia Jadual Hakmilik" report="true" listener="etanah.view.stripes.pelupusan.validator.CatitTanahValidator,etanah.view.stripes.pelupusan.validator.ReportV2Validator">
+        <txncode id="MMMCL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Penyediaan Suratan Hakmilik">pelupusan/surat_hakmilik_MCL_sementara</page>
+            <page id="004" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat bayaran.</instruction>
+            <!--<reports>
+                <report generator="DISSMMMCLL_MLK.rdf" prefix="VDOC" code="SL"/>
+            </reports>-->
+        </txncode>
+    </stage>
+    <!-- noting kelulusan registration; pass ke pendaftaran, ada stage dlm bpel (sysdaftar), lepas pendaftaran selesai system akan push ke stage seterusnya -->
+
+
+    <stage id="agihan_tugas_lot" currentAction="Agihan Tugas" distribute="true">
+        <txncode id="MMMCL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Agihan Tugas">pelupusan/agihTugasanV2</page>
+            <page id="004" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila agihkan tugas seterusnya kepada yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="g_charting_lot" currentAction="Charting Kemaskini">
+        <txncode id="MMMCL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <!-- <page id="004" title="Lot Indeks">pelupusan/index?showForm2</page>--> <!-- TODO: tambah button charting ft kat sini -->
+            <page id="003" title="Charting">pelupusan/gisIntegration?showForm2</page>
+            <page id="004" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila kemaskini maklumat charting.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="semak_charting_lot" currentAction="Semakan Charting Kemaskini" pushback="true">
+        <txncode id="MMMCL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <!--<page id="004" title="Lot Indeks">pelupusan/index?showForm2</page>--> <!-- TODO: tambah button charting ft kat sini -->
+            <page id="003" title="Charting">pelupusan/gisIntegration?showForm3</page>
+            <page id="004" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat charting.</instruction>
+        </txncode>
+    </stage>
+
+</workflow>

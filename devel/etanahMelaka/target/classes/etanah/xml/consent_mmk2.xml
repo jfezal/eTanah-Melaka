@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!--PMMK1=Hartanah;PMMK2=Pesaka-->
+<workflow id = "http://xmlns.oracle.com/BPEL_Consent3/Project1/mmk2">
+    <stage id="Stage1" currentAction="Kemasukan Maklumat/Cetakan" listener="etanah.view.consent.validator.PihakBerkepentinganValidation,etanah.view.consent.validator.SyerValidation,etanah.view.consent.validator.ReportValidator">
+        <txncode id="PMMK2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan</page>
+            <page id="04" title="Maklumat Agensi">consent/jabatan_teknikal</page>
+            <page id="05" title="Maklumat Tandatangan">consent/tandatangan</page>
+            <validator>validator</validator>            
+            <instruction>Sila masukkan maklumat, imbas dokumen, pilih pegawai untuk menandatangani kemudian jana dan cetak dokumen yang berkenaan.</instruction>
+            <reports>
+                <report generator="CONSSrtUlasanTeknikal_MMK_MLK.rdf" code="SUT"/>
+            </reports>
+        </txncode>
+        <validator></validator>
+        <report></report>
+    </stage>
+    <stage id="Stage2" currentAction="Kemasukan Maklumat" listener="etanah.view.consent.validator.PihakBerkepentinganValidation,etanah.view.consent.validator.SyerValidation" pushback="true">
+        <txncode id="PMMK2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan</page>
+            <page id="06" title="Maklumat Kertas Risalat">consent/kertas_risalat_mmkn</page>
+            <page id="07" title="Maklumat Kertas Ringkas">consent/kertas_ringkas_mmkn</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat kertas risalat dan kertas ringkasan MMK.</instruction>
+            <reports>
+                <report generator="CONS_Risalat_MMK1.rdf" code="RIS"/>
+                <report generator="CONS_Ringkas_MMK2.rdf" code="RMN"/>
+            </reports>
+        </txncode>
+        <validator></validator>
+        <report></report>
+    </stage>
+    <stage id="Stage3" currentAction="Semakan Maklumat" pushback="true">
+        <txncode id="PMMK2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan</page>
+            <page id="06" title="Maklumat Kertas Risalat">consent/kertas_risalat_mmkn</page>
+            <page id="07" title="Maklumat Kertas Ringkas">consent/kertas_ringkas_mmkn</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan</instruction>
+            <reports>
+                <report generator="CONS_Risalat_MMK1.rdf" code="RIS"/>
+                <report generator="CONS_Ringkas_MMK2.rdf" code="RMN"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="Stage4" currentAction="Semakan Maklumat" pushback="true">
+        <txncode id="PMMK2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan</page>
+            <page id="06" title="Maklumat Kertas Risalat">consent/kertas_risalat_mmkn</page>
+            <page id="07" title="Maklumat Kertas Ringkas">consent/kertas_ringkas_mmkn</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan</instruction>
+            <reports>
+                <report generator="CONS_Risalat_MMK1.rdf" code="RIS"/>
+                <report generator="CONS_Ringkas_MMK2.rdf" code="RMN"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="Stage5" currentAction="Kemasukan Syor" pushback="true">
+        <txncode id="PMMK2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="06" title="Maklumat Kertas Risalat">consent/kertas_risalat_mmkn</page>
+            <page id="07" title="Maklumat Kertas Ringkas">consent/kertas_ringkas_mmkn</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan syor pada bahagian keputusan.</instruction>
+            <reports>
+                <report generator="CONS_Risalat_MMK1.rdf" code="RIS"/>
+                <report generator="CONS_Ringkas_MMK2.rdf" code="RMN"/>
+            </reports>
+            <outcomes>
+                <outcome label="Syor Lulus" value="SL"/>
+                <outcome label="Syor Tolak" value="ST"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="Stage6" currentAction="Kemasukan Perakuan/Cetakan" pushback="true" listener="etanah.view.stripes.consent.IntegrationEmmkn">
+        <txncode id="PMMK2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="06" title="Maklumat Kertas Risalat">consent/kertas_risalat_mmkn</page>
+            <page id="07" title="Maklumat Kertas Ringkas">consent/kertas_ringkas_mmkn</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan perakuan pada bahagian keputusan kemudian jana dan cetak dokumen yang berkenaan.</instruction>
+            <reports>
+                <report generator="CONS_Risalat_MMK1.rdf" code="RIS"/>
+                <report generator="CONS_Ringkas_MMK2.rdf" code="RMN"/>
+            </reports>
+            <outcomes>
+                <outcome label="Peraku" value="P"/>
+                <outcome label="Tidak Peraku" value="TP"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="Stage7" currentAction="Kemasukan Keputusan" advanceRule="true" listener="etanah.view.consent.validator.KeputusanValidation">
+        <txncode id="PMMK2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="05" title="Keputusan MMKN">consent/rekod_keputusan</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan keputusan bagi permohonan ini.</instruction>
+        </txncode>
+    </stage>
+    <stage id="Stage8" currentAction="Cetakan" listener="etanah.view.consent.validator.ReportValidator">
+        <txncode id="PMMK2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="04" title="Keputusan MMKN">consent/rekod_keputusan?viewOnlyRekodKeputusan</page>
+            <page id="05" title="Maklumat Tandatangan">consent/tandatangan</page>
+            <validator>validator</validator>
+            <instruction>Sila pilih pegawai untuk menandatangani kemudian jana dan cetak dokumen yang berkenaan.</instruction>
+            <reports>
+                <report generator="CONS_SRT_KEB_PMMMK_P_MLK.rdf" code="SK"/>
+            </reports>
+        </txncode>
+    </stage>
+</workflow>

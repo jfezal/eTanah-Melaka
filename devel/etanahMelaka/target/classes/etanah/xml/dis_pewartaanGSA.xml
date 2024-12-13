@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : dis_pewartaanGSA.xml
+    Created on : March 1, 2012, 4:55 PM
+    Author     : Admin
+    Modified   : Navin
+    Description:
+        Purpose of the document follows.
+-->
+
+<workflow id="http://xmlns.oracle.com/PelulusanMelaka/PewartaanTanahGSA/PewartaanTanahGSA">
+    
+    <stage id="01Kemasukan" currentAction="Arahan Pendaftaran Kemasukan">
+        <txncode id="PWGSA">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Arahkan Tugas">pelupusan/agihTugasanV2</page>
+            <page id="003" title="Nota">penguatkuasaan/notaBaru</page>           
+            <validator></validator>
+            <instruction>Sila arahkan tugas kepada pembantu tadbir.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="02TrmArhDaftKmskn" currentAction="Terima Arahan Dan Daftar Kemasukan">
+        <txncode id="PWGSA">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2</page>
+            <page id="004" title="Rekod Keputusan">pelupusan/rekod_keputusanMMKV2</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>    
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat-maklumat berkenaan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="agih_tugasPP" currentAction="Agihan Tugas" distribute="true">
+        <txncode id="PWGSA" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Agihan Tugas">pelupusan/agihTugasanV2</page>
+            <page id="005" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila Agihkan Tugasan Kepada Pelukis Pelan yang Berkenaan.</instruction>
+            <report></report>
+        </txncode>
+    </stage>
+    <stage id="g_charting_permohonan" currentAction="Kemasukan Charting" report="true" listener="etanah.view.stripes.pelupusan.validator.ReportV2Validator">
+        <txncode id="PWGSA">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Laporan Pelan">pelupusan/laporan_pelanV2</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila sediakan laporan pelan dan charting.</instruction>
+        </txncode>
+    </stage>
+	<stage id="g_charting_keputusan" currentAction="Charting Keputusan">
+        <txncode id="PWGSA" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Charting Keputusan MMK">pelupusan/rekod_keputusanMMKV2?viewOnlyRekodKeputusan</page>
+            <page id="004" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila Lakukan Charting Keputusan.</instruction>
+            <report></report>
+        </txncode>
+    </stage>	
+    <stage id="semak_charting_keputusan" currentAction="Semak Charting Keputusan" advanceRule="true" pushback="true">
+    <txncode id="PWGSA" daysToComplete="2">
+       <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+       <page id="002" title="Tanah">pelupusan/maklumat_tanahV3?viewForm</page>
+       <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+       <page id="004" title="Charting Keputusan MMK">pelupusan/rekod_keputusanMMKV2?viewOnlyRekodKeputusan</page>
+       <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+        <validator>validator</validator>
+        <instruction>Sila Semak charting pada Tanah Yang Dipohon.</instruction>
+    </txncode>
+</stage>
+
+    <stage id="04ArhnPenyediaanPU" currentAction="Arahan Penyediaan PU">
+        <txncode id="PWGSA">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <!--<page id="004" title="Laporan Pelukis Pelan">pelupusan/laporan_pelanV2?viewOnlyLaporanPelan</page>-->
+            <page id="005" title="Arahkan Tugas">pelupusan/agihTugasanV2</page>
+            <page id="006" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila arahkan penolong pentadbir tanah untuk menyediakan permohonan sijil bebas ukur.</instruction>
+        </txncode>
+    </stage>
+    <stage id="sedia_PU" currentAction="Penyediaan Permohonan Sijil Bebas Ukur" report="true">
+        <txncode id="PWGSA">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+			<page id="004" title="Permintaan Ukur">pelupusan/PUV2</page>
+			<page id="005" title="Tandatangan Dokumen">pelupusan/tandatangan_dokumenV2</page>
+            <page id="006" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila sediakan permohonan sijil bebas ukur.</instruction>
+            <reports>
+                <!--<report generator="DISSBUPWGSA_MLK.rdf" prefix="VDOC" code="SBU"/>-->
+				<report generator="DISBPU_MLK.rdf" prefix="VDOC" code="PU"/>
+				<report generator="DISSrtIringanPUPWGSA_MLK.rdf" prefix="VDOC" code="OC"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="semak_PU" currentAction="Semak Permohonan Sijil Bebas Ukur" report="true" pushback="true">
+        <txncode id="PWGSA">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+			<page id="004" title="Permintaan Ukur">pelupusan/PUV2?viewOnly</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila sediakan permohonan sijil bebas ukur.</instruction>
+            <reports>
+				<report generator="DISBPU_MLK.rdf" prefix="VDOC" code="PU"/>
+				<report generator="DISSrtIringanPUPWGSA_MLK.rdf" prefix="VDOC" code="OC"/>
+                <!--<report generator="DISSBUPWGSA_MLK.rdf" prefix="VDOC" code="SBU"/>-->
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="05SediaPermhnSBU" currentAction="Penyediaan Permohonan Sijil Bebas Ukur" report="true">
+        <txncode id="PWGSA">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+			<page id="004" title="Permintaan Ukur">pelupusan/PUV2?viewOnlyPU</page>
+			<!--<page id="005" title="Tandatangan Dokumen">pelupusan/tandatangan_dokumenV2</page>-->
+            <page id="006" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila sediakan permohonan sijil bebas ukur.</instruction>
+            <reports>
+                <report generator="DISSBUPWGSAPTD_MLK.rdf" prefix="VDOC" code="SBU"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="06TrmPermhnSBU" currentAction="Terima Permohonan Sijil Bebas Ukur" report="true">
+        <txncode id="PWGSA">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+			<!--<page id="004" title="Permintaan Ukur">pelupusan/PUV2?viewOnly</page>-->
+			<page id="005" title="Tandatangan Dokumen">pelupusan/tandatangan_dokumenV2?showFormForPTG</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator></validator>
+            <instruction>Sila semak maklumat-maklumat berkenaan.</instruction>
+			<reports>
+                    <report generator="DISSIBUU_MLK.rdf" prefix="VDOC" code="SIPBU"/>
+					<report generator="DISSBUPWGSA_MLK.rdf" prefix="VDOC" code="SBU"/>
+            </reports>
+        </txncode>
+    </stage>
+    
+    <stage id="07LulusPerSBU" currentAction="Semakan Permohonan Sijil Bebas Ukur" pushback="true">
+        <txncode id="PWGSA">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator></validator>
+            <instruction>Sila semak maklumat-maklumat berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="08TrmSBU" currentAction="Terima Permohonan Sijil Bebas Ukur">
+        <txncode id="PWGSA">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator></validator>
+            <instruction>Sila semak maklumat-maklumat berkenaan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="09SedPUutkPW" currentAction="Sedia Permohonan Ukur untuk PW">
+        <txncode id="PWGSA">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Permohonan Ukur">pelupusan/PUV2</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator></validator>
+            <instruction>Sila semak maklumat-maklumat berkenaan.</instruction>
+        </txncode>
+    </stage>
+    
+    <!--    <stage id="10TrmPW" currentAction="Terima PW">
+        <txncode id="PWGSA">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Permohonan Ukur">pelupusan/PUNew</page>
+            <page id="004" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator></validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>-->
+    
+    <stage id="11SedDrafWarta" currentAction="Sedia Draf Warta">
+        <txncode id="PWGSA">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Draf Warta">pelupusan/sedia_draf_war</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator></validator>
+            <instruction>Sila imbas pelan deposit dan sediakan draf warta.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="12SmkDraf" currentAction="Semak Draf Warta" pushback="true">
+        <txncode id="PWGSA">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Draf Warta">pelupusan/sedia_draf_war</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator></validator>
+            <instruction>Sila semak draf warta.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="13TrmSmkDrafWarta" currentAction="Terima Dan Semak Draf Warta" pushback="true">
+        <txncode id="PWGSA">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Draf Warta">pelupusan/sedia_draf_war</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator></validator>
+            <instruction>Sila semak draf warta.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="14SmkSyorDrafWarta" currentAction="Semak Draf Warta" pushback="true" report="true">
+        <txncode id="PWGSA">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Draf Warta">pelupusan/sedia_draf_war</page>
+			<page id="005" title="Tandatangan Dokumen">pelupusan/tandatangan_dokumenV2?showFormForPTG</page>
+            <page id="006" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator></validator>
+            <instruction>Sila semak dan jana draf warta.</instruction>
+            <reports>
+                <report generator="DISPWGSAWP_MLK.rdf" prefix="VDOC" code="DWP"/>
+                <!--<report generator="DISSrtPWGSAWP_MLK.rdf" prefix="VDOC" code="SWT"/>-->
+            </reports>
+        </txncode>
+    </stage>
+    
+    <stage id="15TrmdanHntrkpdPnshatUndg" currentAction="Terima Dan Hantar Kepada Penasihat Undang-undang">
+        <txncode id="PWGSA">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Draf Warta">pelupusan/sedia_draf_war</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator></validator>
+            <instruction>Terima Warta Dan Hantar Kepada Penasihat Undang-undang.</instruction>           
+        </txncode>
+    </stage>
+    
+    
+    <stage id="16KmskndanImbsPnrmnWarta" currentAction="Semak Draf Warta">
+        <txncode id="PWGSA">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Warta">pelupusan/draf_wartaGSA</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator></validator>
+            <instruction>Sila imbas warta dan maklum kepada agensi berkenaan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="17TrmWarta" currentAction="Semak Draf Warta">
+        <txncode id="PWGSA">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <!--<page id="004" title="Warta">pelupusan/draf_wartaGSA?viewForm</page>-->
+			<page id="004" title="Warta">pelupusan/draf_wartaGSA?viewForm</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator></validator>
+            <instruction>Sila semak maklumat-maklumat berkenaan.</instruction>
+        </txncode>
+    </stage>
+    <stage id="agih_rekod_index" currentAction="Arahkan PPT Rekod Dalam Lot Index" distribute="true">
+        <txncode id="PWGSA" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Agihan Tugas">pelupusan/agihTugasanV2</page>
+            <page id="004" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Arahan Rekod Lot Index.</instruction>
+            <report></report>
+        </txncode>
+    </stage>
+    <stage id="18MklmnWartaRkdIndx" currentAction="Semak Draf Warta">
+        <txncode id="PWGSA">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Warta">pelupusan/draf_wartaGSA?viewForm</page>
+            <page id="005" title="Arahkan Tugas">pelupusan/agihTugasanV2</page>
+            <!--            <page id="004" title="Charting">pelupusan/chartingKelulusan</page>-->
+            <page id="006" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator></validator>
+            <instruction>Makluman Warta.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="19MklmnWartadanChartg" currentAction="Semak Draf Warta dan Charting">
+        <txncode id="PWGSA">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Warta">pelupusan/draf_wartaGSA?viewForm</page>
+            <page id="005" title="Charting">pelupusan/chartingKelulusan</page>
+            <page id="006" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator></validator>
+            <instruction>Sila charting yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="20MklmnWartaRkdIndx" currentAction="Makluman Warta">
+        <txncode id="PWGSA">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Warta">pelupusan/draf_wartaGSA?viewForm</page>
+            <!--            <page id="004" title="Charting">pelupusan/chartingKelulusan</page>-->
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator></validator>
+            <instruction>Makluman Warta</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="21TrmWarta" currentAction="Terima Warta">
+        <txncode id="PWGSA">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Warta">pelupusan/draf_wartaGSA?viewForm</page>
+            <!--            <page id="004" title="PT Indeks">pelupusan/index</page>-->
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator></validator>
+            <instruction>Terima Warta.</instruction>
+        </txncode>
+    </stage>    
+</workflow>
+

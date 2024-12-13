@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : dis_permohonan_pajakan_lombong.xml
+    Created on : August 10, 2011, 4:05 PM
+    Author     : shah
+    Description:
+        Purpose of the document follows.
+-->
+<workflow id="http://xmlns.oracle.com/PelupusanMelakaBPEL_1/PelupusanMelakaPAT_01/PajakanLombong">
+
+    <stage id="01kemasukan" currentAction="Kemasukan Maklumat" listener="etanah.view.stripes.pelupusan.validator.MaklumanPermohonanValidator">
+        <txncode id="PJLB" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <!--change for getting maklumat tanah from permohonan sebelum -->
+<!--            <page id="002" title="Tanah">pelupusan/maklumat_tanah</page>-->
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan</page>
+            <page id="005" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="02agihan_tugas" currentAction="Agihan Tugas" report="true" distribute="true">
+        <txncode id="PJLB" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <!--            <page id="002" title="Tanah">pelupusan/maklumat_tanah?showForm2</page>-->
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Jabatan Teknikal dan YB ADUN">pelupusan/sedia_jabatan</page>
+            <page id="006" title="Agihan Tugas">pelupusan/agihTugasanV2</page>
+            <page id="007" title="Nota">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila arahkan tugas seterusnya kepada yang berkenaan.</instruction>
+            <reports>
+                <report generator="DISSUTPJLBPTG_MLK.rdf" prefix="VDOC" code="SUT"/>
+                <report generator="DISSMUYBPJLBPTG_MLK.rdf" prefix="VDOC" code="SUA"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="g_charting_permohonan" currentAction="Kemasukan Laporan Pelukis Pelan" report="true">
+        <txncode id="PJLB" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Laporan Pelukis Pelan">pelupusan/laporan_pelukis_pelan</page>
+            <page id="006" title="Nota">/pengambilan/notaBaru</page>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+            <validator>validator</validator>
+            <reports>
+                <report generator="DISLPPPHLA_MLK.rdf" prefix="VDOC" code="LPE"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="022agihan_tugas" currentAction="Semakan Laporan Pelukis Pelan" report="true">
+        <txncode id="PJLB" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Laporan Pelukis Pelan">pelupusan/laporan_pelukis_pelan</page>
+            <page id="006" title="Nota">/pengambilan/notaBaru</page>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+            <validator>validator</validator>
+            <reports>
+                <report generator="DISLPPPHLA_MLK.rdf" prefix="VDOC" code="LPE"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="kenalpasti_jabatan_teknikal" currentAction="Kenalpasti Jabatan Teknikal" report="true" listener="etanah.view.stripes.pelupusan.validator.UrusanBahanBatuanReportValidator,etanah.view.stripes.common.JTeknikalValidator">
+        <txncode id="PJLB" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <!--            <page id="002" title="Tanah">pelupusan/maklumat_tanah?showForm2</page>-->
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Jabatan Teknikal dan YB ADUN">pelupusan/sedia_jabatan</page>
+            <page id="007" title="Nota">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila arahkan tugas seterusnya kepada yang berkenaan.</instruction>
+            <!--<reports>
+                <report generator="ACQSrtMhnPenilaianAwalJPPH_MLK.rdf" prefix="VDOC" code="8JTK"/>
+            </reports>-->
+        </txncode>
+    </stage>
+
+    <stage id="03laporan_tanah" currentAction="Sedia Laporan Tanah dan Draf JSMN" report="true" listener="etanah.view.stripes.pelupusan.validator.JabatanTeknikalValidator">
+        <txncode id="PJLB" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Ulasan Teknikal dan YB ADUN">pelupusan/jabatan_teknikal12?terimaUlasan</page>
+            <!--<page id="006" title="Laporan Tanah">pelupusan/laporan_tanahV2</page>-->
+              <page id="006" title="Laporan Tanah">/common/laporan/tanah/laporantanahNewActionBean</page>
+            <page id="007" title="Draf JSMN">pelupusan/draf_jkm/jkmPage</page>
+            <page id="008" title="Tandatangan Manual">pelupusan/tandatangan_dokumenV2?showFormForPTG</page>
+            <page id="009" title="Nota">/pengambilan/notaBaru</page>
+
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat-maklumat yang berkenaan di bahagian Laporan Tanah: Perihal Tanah (Tanah Kerajaan), Bersempadan, Keadaan Tanah, Latar belakang Tanah, Tanah Sekeliling, dan Ulasan Penolong Pegawai Tanah</instruction>
+            <reports>
+                <report generator="DISLTPJLB_MLK.rdf" prefix="VDOC" code="LT"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="04semak_laporan_tanah" currentAction="Semak Laporan Tanah" advanceRule="true" pushback="true">
+        <txncode id="PJLB" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Laporan Tanah">pelupusan/laporan_tanahV2?viewOnlyLaporanTanahPPTKanan</page>
+            <page id="006" title="Draf JSMN">pelupusan/draf_jkm/jkmPage</page>
+            <page id="007" title="Nota">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat-maklumat yang berkenaan.</instruction>
+
+        </txncode>
+    </stage>
+
+    <stage id="05semak_draf_jkm" currentAction="Semak Draf JSMN" advanceRule="true" pushback="true">
+        <txncode id="PJLB" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Laporan Tanah">pelupusan/laporan_tanahV2?viewOnlyLaporanTanah</page>
+            <page id="006" title="Draf JSMN">pelupusan/draf_jkm/jkmPage</page>
+            <page id="007" title="Nota">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat-maklumat yang berkenaan.</instruction>
+
+        </txncode>
+    </stage>
+
+    <stage id="06perakuan_draf_jkm" currentAction="Perakuan Draf JSMN" advanceRule="true">
+        <txncode id="PJLB" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Laporan Tanah">pelupusan/laporan_tanahV2?viewOnlyLaporanTanah</page>
+            <page id="006" title="Draf JSMN">pelupusan/draf_jkm/jkmPage</page>
+            <page id="007" title="Tandatangan Manual">pelupusan/tandatangan_dokumenV2?showFormForPTG</page>
+            <page id="007" title="Nota">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat-maklumat yang berkenaan.</instruction>
+
+        </txncode>
+    </stage>
+
+    <stage id="07sedia_dokumen" currentAction="Sedia Dokumen" advanceRule="true" report="true">
+        <txncode id="PJLB" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Laporan Tanah">pelupusan/laporan_tanahV2?viewOnlyLaporanTanah</page>
+            <page id="006" title="Draf JSMN">pelupusan/draf_jkm/jkmPage</page>
+            <page id="008" title="Nota">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat-maklumat yang berkenaan.</instruction>
+            <reports>
+                <report generator="DISKJKMPJLB_MLK.rdf" prefix="VDOC" code="JKM"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="08rekod_keputusan_jkm" currentAction="Rekod Keputusan JSMN" distribute="true">
+        <txncode id="PJLB" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Keputusan JSMN">pelupusan/keputusan_jkmineral</page>
+            <page id="006" title="Agihan Tugas">pelupusan/agihTugasanV2</page>
+            <page id="007" title="Nota">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="09sedia_draf_mmkn" currentAction="Sedia Draf MMKN">
+        <txncode id="PJLB" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Keputusan JSMN">pelupusan/keputusan_jkmineral?viewForm</page>
+            <page id="006" title="Draf MMKN">pelupusan/draf_jkm/mmknPage?viewFormMMKN</page>
+            <page id="007" title="Tandatangan Manual">pelupusan/tandatangan_dokumenV2?showFormForPTG</page>
+            <page id="008" title="Nota">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+
+        </txncode>
+    </stage>
+
+    <stage id="10semak_draf_mmkn1" currentAction="Semakan Draf MMKN" pushback="true">
+        <txncode id="PJLB">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Draf MMKN">pelupusan/draf_jkm/mmknPage?viewFormMMKN</page>
+            <page id="006" title="Nota">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="10semak_draf_mmkn2" currentAction="Semakan Draf MMKN">
+        <txncode id="PJLB">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Draf MMKN">pelupusan/draf_jkm/mmknPage?viewFormMMKN</page>
+            <page id="006" title="Nota">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="11SemakanMMK" currentAction="Terima dan Semak Risalat MMKN" report="true" advanceRule="true">
+        <txncode id="PJLB">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Draf MMKN">pelupusan/draf_jkm/mmknPage?viewFormMMKN</page>
+            <page id="006" title="Tandatangan Manual">pelupusan/tandatangan_dokumenV2?showFormForPTG</page>
+            <page id="006" title="Nota">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan.</instruction>
+            <reports>
+                <report generator="DISKMMKNPJLB_MLK.rdf" prefix="VDOC" code="RMN"/>
+                <report generator="DISSUMMMKNPJLB_MLK.rdf" prefix="VDOC" code="8PAQ"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="12SemakanMMK" currentAction="Semakan Draf MMKN">
+        <txncode id="PJLB">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Draf MMKN">pelupusan/draf_jkm/mmknPage?viewFormMMKN</page>
+            <page id="006" title="Nota">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="13SemakanMMK" currentAction="Semakan Draf MMKN" pushback="true">
+        <txncode id="PJLB">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Draf MMKN">pelupusan/draf_jkm/mmknPage?viewFormMMKN</page>
+            <page id="006" title="Nota">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="14SemakanMMK" currentAction="Semakan Draf MMKN" advanceRule="true" pushback="true" report="true">
+        <txncode id="PJLB">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Draf MMKN">pelupusan/draf_jkm/mmknPage?viewFormMMKN</page>
+            <page id="006" title="Nota">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan.</instruction>
+            <outcomes>
+                <outcome label="Tiada Pindaan" value="XN"/>
+                <outcome label="Perlu Pindaan" value="AN"/>
+                <outcome label="Semak Semula Pindaan" value="SN"/>
+            </outcomes>
+            <reports>
+                <report generator="DISKMMKNPJLB_MLK.rdf" prefix="VDOC" code="RMN"/>
+                <report generator="DISSUMMMKNPJLB_MLK.rdf" prefix="VDOC" code="8PAQ"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--<stage id="pindaan_draf_mmkn" currentAction="Pindaan Draf MMKN" report="true">
+        <txncode id="PJLB">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanah?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Draf MMKN">pelupusan/draf_jkm/mmknPage?viewFormMMKN</page>
+            <page id="006" title="Tandatangan Manual">pelupusan/tandatangan_dokumenV2?showFormForPTG</page>
+            <validator>validator</validator>
+            <instruction>Sila pinda dan semak maklumat - maklumat yang berkenaan..</instruction>
+            <reports>
+                <report generator="DISKMMKNPJLB_MLK.rdf" prefix="VDOC" code="RMN"/>
+            </reports>
+        </txncode>
+    </stage>-->
+
+    <stage id="PerakuanMMK" currentAction="Perakuan PTG Risalat MMKN" pushback="true" listener="etanah.view.stripes.pelupusan.validator.IntegrationEMMKNV2">
+        <txncode id="PJLB">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Draf MMKN">pelupusan/draf_jkm/mmknPage?viewFormMMKN</page>
+            <page id="006" title="Nota">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="RekodMMKN" currentAction="Rekod Keputusan MMKN" listener="etanah.view.stripes.pelupusan.validator.ManualProposedOutcomeValidator" advanceRule="true">
+        <txncode id="PJLB">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Keputusan MMKN">pelupusan/mesyuarat</page>
+            <page id="006" title="Nota">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+            <outcomes>
+                <outcome label="Lulus" value="L"/>
+                <outcome label="Tolak" value="T"/>
+            </outcomes>
+            <reports>
+                <report generator="DISSPJLBL_MLK.rdf" prefix="VDOC" code="SL"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="A01Terima_kpsn" currentAction="Terima Keputusan MMKN">
+        <txncode id="PJLB">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Keputusan MMKN">pelupusan/mesyuarat</page>
+            <page id="006" title="Agihan Tugas">pelupusan/agihTugasanV2</page>
+            <page id="007" title="Nota">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="g_charting_keputusan" currentAction="Charting Keputusan">
+        <txncode id="PJLB">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Keputusan MMKN">pelupusan/mesyuarat</page>
+            <page id="006" title="Charting">pelupusan/chartingKelulusan</page>
+            <page id="007" title="Nota">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="A02Semakan" currentAction="Semakan Charting Keputusan" advanceRule="true">
+        <txncode id="PJLB">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Keputusan MMKN">pelupusan/mesyuarat</page>
+            <page id="006" title="Charting">pelupusan/chartingKelulusan</page>
+            <page id="007" title="Nota">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+            <outcomes>
+                <outcome label="Lulus" value="L"/>
+                <outcome label="Tolak" value="T"/>
+            </outcomes>
+        </txncode>
+    </stage>
+
+    <!--<stage id="sedia_surat_tolak" currentAction="Sedia Surat Penolakan" report="true">
+        <txncode id="PJLB" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Keputusan MMKN">pelupusan/mesyuarat?viewKeputusan</page>
+            <page id="006" title="Surat Penolakan">pelupusan/surat_tolak</page>
+            <page id="007" title="Tandatangan Manual">pelupusan/tandatangan_dokumenV2?showFormForPTG</page>
+            <page id="008" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila sediakan surat penolakan permohonan.</instruction>
+            <reports>
+                <report generator="DISSPJLBG_MLK.rdf" prefix="VDOC" code="STP"/>
+            </reports>
+        </txncode>
+    </stage>-->
+
+    <stage id="16arahan_tugas" currentAction="Arahan Tugas" distribute="true">
+        <txncode id="PJLB">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Agihan Tugas">pelupusan/agihTugasanV2</page>
+            <page id="006" title="Nota">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila arahkan tugas kepada yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="17sedia_borang_f" currentAction="Sedia Borang F" report="true">
+        <txncode id="PJLB">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Borang F">pelupusan/borangF</page>
+            <page id="006" title="Nota">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+            <reports>
+                <report generator="DISBF_MLK.rdf" prefix="VDOC" code="BFE"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="18semak_borang_f" currentAction="Semak Borang F" advanceRule="true">
+        <txncode id="PJLB">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Borang F">pelupusan/borangF</page>
+            <page id="006" title="Nota">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+            <outcomes>
+                <outcome label="Tiada Pindaan" value="XN"/>
+                <outcome label="Perlu Pindaan" value="AN"/>
+            </outcomes>
+        </txncode>
+    </stage>
+
+    <stage id="19pindaan_borang_f" currentAction="Pindaan Borang F" advanceRule="true" report="true">
+        <txncode id="PJLB">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Borang F">pelupusan/borangF</page>
+            <page id="006" title="Nota">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+            <outcomes>
+                <outcome label="Semak Semula Pindaan" value="SN"/>
+            </outcomes>
+            <reports>
+                <report generator="DISBF_MLK.rdf" prefix="VDOC" code="BFE"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="20tandatangan_borang_f" currentAction="Tandatangan Borang F">
+        <txncode id="PJLB">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Borang F">pelupusan/borangF</page>
+            <page id="006" title="Nota">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="21sedia_surat_kelulusan" currentAction="Sedia Surat Kelulusan" report="true">
+        <txncode id="PJLB">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Borang F">pelupusan/borangF</page>
+            <page id="006" title="Nota">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+            <reports>
+                <report generator="DISSPJLBL_MLK.rdf" prefix="VDOC" code="SL"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="22semak_surat" currentAction="Semak Surat Kelulusan" report="true">
+        <txncode id="PJLB">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Borang F">pelupusan/borangF</page>
+            <page id="006" title="Nota">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+            <reports>
+                <report generator="DISSPJLBL_MLK.rdf" prefix="VDOC" code="SL"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="23semak_surat" currentAction="Semak Surat Kelulusan" report="true">
+        <txncode id="PJLB">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Borang F">pelupusan/borangF</page>
+            <page id="006" title="Nota">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+            <reports>
+                <report generator="DISSPJLBL_MLK.rdf" prefix="VDOC" code="SL"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="24cetak_surat" currentAction="Cetak Surat Kelulusan" report="true">
+        <txncode id="PJLB">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Lesen Mencarigali/Penjelajahan">pelupusan/lesen_terdahulu?viewForm</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Butir-Butir Melombong">pelupusan/butir_butir_cadangan?viewForm</page>
+            <page id="005" title="Borang F">pelupusan/borangF</page>
+            <page id="006" title="Nota">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+            <reports>
+                <report generator="DISSPJLBL_MLK.rdf" prefix="VDOC" code="SL"/>
+            </reports>
+        </txncode>
+    </stage>
+
+</workflow>
+

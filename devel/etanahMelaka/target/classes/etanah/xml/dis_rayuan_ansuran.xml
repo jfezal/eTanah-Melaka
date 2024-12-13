@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : dis_rayuan_ansuran.xml
+    Created on : June 21, 2011, 11:48 AM
+    Author     : Akmal
+    Description:
+        Purpose of the document follows.
+-->
+
+<workflow id="http://xmlns.oracle.com/PelupusanPAT2/PelupusanRayuan/RayuanAnsuran">
+
+    <stage id="01SemakPermohonan" currentAction="Kemasukan Maklumat" listener="etanah.view.stripes.pelupusan.validator.AnsuranValidation">
+        <txncode id="RAYA">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Rayuan">pelupusan/maklumat_rayuan</page>
+            <page id="003" title="Ansuran">pelupusan/rayuan_ansuran?showFormPTD</page>          
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="02SediaSuratLulus" currentAction="Sedia Surat Lulus" report="true">
+        <txncode id="RAYA">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="003" title="Ansuran">pelupusan/rayuan_ansuran</page>
+            <page id="004" title="Surat Kelulusan">pelupusan/surat_rayuanNS</page> 
+            <page id="005" title="Tandatangan Oleh">pelupusan/tandatangan_dokumenV2</page>
+            <validator>validator</validator>
+            <instruction>Sila sediakan surat kelulusan.</instruction>
+             <reports>
+                <report generator="DISSRAYAL_MLK.rdf" prefix="VDOC" code="SL"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="03TerimaBayaran" currentAction="Terima Bayaran" distribute="true" advanceRule="true">
+        <txncode id="RAYA">
+            <page id="1" title="Ansuran">pelupusan/rayuan_ansuran?bayaran</page>
+            <validator>validator</validator>    
+            <instruction>Sila bayar mengikut tempoh dan kadar yang ditetapkan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="04ArahBatal" currentAction="Arahan Tugasan">
+        <txncode id="RAYA">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <validator>validator</validator>
+            <instruction>Sila agihkan tugasan kepada Pembantu Tadbir untuk menyediakan surat pembatalan ansuran.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="05SediaSuratBatal" currentAction="Sedia Surat Batal" report="true">
+        <txncode id="RAYA">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="003" title="Surat Pembatalan">pelupusan/surat_rayuanNS</page> 
+            <page id="004" title="Tandatangan Oleh">pelupusan/tandatangan_dokumenV2</page>
+            <validator>validator</validator>
+            <instruction>Sila sediakan surat batal.</instruction>
+           <reports>
+                <report generator="DISSAPRAYA_MLK.rdf" prefix="VDOC" code="SBA"/>
+          </reports>
+        </txncode>
+    </stage>
+
+    
+</workflow>

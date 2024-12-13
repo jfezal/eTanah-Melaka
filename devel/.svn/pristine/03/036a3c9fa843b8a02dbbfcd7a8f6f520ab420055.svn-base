@@ -1,0 +1,89 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package etanah.model.ambil;
+
+import etanah.model.InfoAudit;
+import javax.persistence.Column;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name = "kod_sts_tanah")
+@SequenceGenerator(name = "seq_kod_status_tanah", sequenceName = "seq_kod_status_tanah")
+public class KodStatusTanah {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "seq_kod_status_tanah")
+    @Column(name = "kod_status")
+    private String kod;
+   
+    @Column(name = "perihal")
+    private String perihal;
+    @Column(name = "jenis_tanah")
+    private String jenisTanah;
+    @Column(name = "status")
+    private String status;
+   
+    @Embedded
+    InfoAudit infoAudit;
+
+    
+
+
+    public InfoAudit getInfoAudit() {
+        return infoAudit;
+    }
+
+    public void setInfoAudit(InfoAudit infoAudit) {
+        this.infoAudit = infoAudit;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getKod() {
+        return kod;
+    }
+
+    public void setKod(String kod) {
+        this.kod = kod;
+    }
+
+    public String getPerihal() {
+        return perihal;
+    }
+
+    public void setPerihal(String perihal) {
+        this.perihal = perihal;
+    }
+
+    public String getJenisTanah() {
+        return jenisTanah;
+    }
+
+    public void setJenisTanah(String jenisTanah) {
+        this.jenisTanah = jenisTanah;
+    }
+
+    
+    
+    
+    
+    
+    
+    
+}

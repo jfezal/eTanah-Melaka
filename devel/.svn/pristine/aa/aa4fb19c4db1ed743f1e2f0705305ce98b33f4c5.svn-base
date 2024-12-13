@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : dev_rayuan_nilaian_semula.xml
+    Created on : December 9, 2010, 10:17 AM
+    Author     : nursyazwani
+    Modified   : khairul.hazwan
+    Description:
+        Purpose of the document follows.
+-->
+
+<workflow id="http://xmlns.oracle.com/etanahdev/Bpel_RayuanNilaiSemula/Ht_RayuanNilaiSemula">
+<!--<workflow id="http://xmlns.oracle.com/etanahdev/DevMLK/RayuanNilaianSemula">-->
+    
+    <stage id="maklumanarahan" currentAction="Makluman dan Arahan PTD">
+        <txncode id="RNS">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon</page>
+            <page id="5" title="Rayuan">pelupusan/maklumat_rayuan</page>
+            <page id="6" title="Notis 5A/7G">pembangunan/rayuan_ansuran?viewNotis5aLama</page>            
+            <page id="7" title="Makluman/Arahan">pembangunan/melaka/MaklumanArahan</page>
+            <page id="8" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan makluman/arahan untuk tindakan seterusnya.</instruction>
+        </txncode>
+    </stage>
+    <stage id="cetaksuratmohonrayuan" currentAction="Sedia Surat Permohonan Rayuan">
+        <txncode id="RNS">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="6" title="Notis 5A/7G">pembangunan/rayuan_ansuran?viewNotis5aLama</page>
+            <page id="7" title="Makluman/Arahan">pembangunan/melaka/MaklumanArahan?showForm2</page>
+            <page id="8" title="Tujuan Rayuan">pembangunan/sebab_pembangunan</page>
+            <page id="9" title="Tandatangan PTD">pembangunan/tarikhTandantangan</page>
+            <page id="10" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila jana Surat Permohonan Rayuan.</instruction>
+            <reports>
+                <report generator="DEVSrtRNS_MLK.rdf" prefix="VDOC" code="SPRNS"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="semakhantarsurat" currentAction="Semak Surat Permohonan Rayuan" pushback="true">
+        <txncode id="RNS">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="6" title="Notis 5A/7G">pembangunan/rayuan_ansuran?viewNotis5aLama</page>
+            <page id="7" title="Makluman/Arahan">pembangunan/melaka/MaklumanArahan?showForm2</page>
+            <page id="8" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak Surat Permohonan Rayuan di Tab Dokumen dan hantar ke PTG.</instruction>
+        </txncode>
+    </stage>
+    <stage id="cetaksuratjpphpremium" currentAction="Terima Permohonan dan Cetak Surat Nilaian Semula">
+        <txncode id="RNS">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="6" title="Notis 5A/7G">pembangunan/rayuan_ansuran?viewNotis5aLama</page>
+            <page id="7" title="Tarikh Surat Rujukan JPPH">pembangunan/rayuan_ansuran?tarikhJana</page>
+            <page id="8" title="Tandatangan PTG">pembangunan/tarikhTandantangan?showForm2</page>
+            <page id="9" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila jana dan cetak Surat Nilaian Tanah untuk dihantar ke Jabatan Penilaian dan Perkhidmatan Harta.</instruction>
+            <reports>
+                <report generator="DEVSJPPHRNS_MLK.rdf" prefix="VDOC" code="JPPHN"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="hantarsuratjpph" currentAction="Hantar Surat Nilai Semula ke JPPH">
+        <txncode id="RNS">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="6" title="Notis 5A/7G">pembangunan/rayuan_ansuran?viewNotis5aLama</page>
+            <page id="7" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila tandatangan dan hantar Surat Nilaian Semula ke Jabatan Penilaian dan Perkhidmatan Harta.</instruction>
+        </txncode>
+    </stage>
+    <stage id="rekodkpsncetaksurat" currentAction="Kemasukan dan Cetak Surat Keputusan" finalize="true" advanceRule="true" report="true" listener="etanah.view.pembangunan.validator.SuratKeputusanValidator">
+        <txncode id="RNS">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="6" title="Notis 5A/7G Asal">pembangunan/rayuan_ansuran?viewNotis5aLama</page>
+            <page id="7" title="Nilaian Tanah">pembangunan/melaka/nilaianTanahDanPremiumBaruNotis5A</page>            
+            <page id="8" title="Notis 5A/7G Baru">pembangunan/rayuan_ansuran?viewNotis5a</page>            
+            <page id="9" title="Tandatangan PTG">pembangunan/tarikhTandantangan?showForm2</page>           
+            <page id="10" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan keputusan perubahan nilaian pada ruangan yang disediakan.</instruction>
+            <outcomes>
+                <outcome label="Premium Baru" value="NB"/>
+                <outcome label="Tiada Perubahan Premium" value="NK"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="hantarpremiumbaru" currentAction="Hantar Surat Bayaran Premium Baru" advanceRule="true" listener="etanah.view.pembangunan.validator.PindaanValidator">
+        <txncode id="RNS">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="6" title="Notis 5A/7G Asal">pembangunan/rayuan_ansuran?viewNotis5aLama</page>
+            <page id="7" title="Nilaian Tanah">pembangunan/melaka/nilaianTanahDanPremiumBaruNotis5A?viewPremiumBaru</page>         
+            <page id="8" title="Notis 5A/7G Baru">pembangunan/rayuan_ansuran?viewNotis5a</page>
+            <page id="9" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila tandatangan dan hantar Surat Bayaran Premium Baru kepada PTD.</instruction>
+        </txncode>
+    </stage>
+    <stage id="hantarsuratmakluman" currentAction="Hantar Surat Makluman ke PTD">
+        <txncode id="RNS">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="6" title="Notis 5A/7G Asal">pembangunan/rayuan_ansuran?viewNotis5aLama</page>
+            <page id="7" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak Surat Makluman di Tab Dokumen dan hantar ke PTD.</instruction>
+        </txncode>
+    </stage>
+    <stage id="terimasuratkeputusan" currentAction="Terima Keputusan Daripada PTG">
+        <txncode id="RNS">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="6" title="Notis 5A/7G Asal">pembangunan/rayuan_ansuran?viewNotis5aLama</page>
+            <page id="7" title="Nilaian Tanah">pembangunan/melaka/nilaianTanahDanPremiumBaruNotis5A?viewPremiumBaru</page>
+            <page id="8" title="Notis 5A/7G Baru">pembangunan/rayuan_ansuran?viewNotis5a</page>
+            <page id="9" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak Surat Keputusan daripada PTG.</instruction>
+        </txncode>
+    </stage>
+    <stage id="sediasuratkelulusanb5a" currentAction="Sedia Surat Kelulusan dan Notis 5A/7G" report="true" listener="etanah.view.pembangunan.validator.SuratKeputusanValidator">
+        <txncode id="RNS">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="6" title="Notis 5A/7G Asal">pembangunan/rayuan_ansuran?viewNotis5aLama</page>
+            <page id="7" title="Nilaian Tanah">pembangunan/melaka/nilaianTanahDanPremiumBaruNotis5A?viewPremiumBaru</page>
+            <page id="8" title="Notis 5A/7G Baru">pembangunan/rayuan_ansuran?viewNotis5a</page>
+            <page id="9" title="Tandatangan PTD">pembangunan/tarikhTandantangan</page>
+            <page id="10" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila jana Surat Kelulusan dan Notis 5A/7G.</instruction>
+        </txncode>
+    </stage>
+    <stage id="cetaksuratkelulusanb5a" currentAction="Semak Surat Kelulusan dan Notis 5A/7G" pushback="true" listener="etanah.view.pembangunan.validator.SuratKeputusanValidator">
+        <txncode id="RNS">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="6" title="Notis 5A/7G Asal">pembangunan/rayuan_ansuran?viewNotis5aLama</page>
+            <page id="7" title="Nilaian Tanah">pembangunan/melaka/nilaianTanahDanPremiumBaruNotis5A?viewPremiumBaru</page>
+            <page id="8" title="Notis 5A/7G Baru">pembangunan/rayuan_ansuran?viewNotis5a</page>           
+            <page id="9" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak dan cetak Surat Kelulusan dan Notis 5A/7G.</instruction>
+        </txncode>
+    </stage>
+    
+    
+<!--    <stage id = "terimabayaran" currentAction="Terima Bayaran">
+        <txncode id="RNS">
+            <page id="1" title="Terima Bayaran">kaunter/BayaranPerihal</page>
+            <instruction>Sila Klik Butang Jana Dokumen.</instruction>
+        </txncode>
+    </stage>-->
+<!--    <stage id="agihanpupt" currentAction="Agihan Tugas Penolong Pegawai Tanah">
+        <txncode id="RNS">
+            <page id="1" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <page id="2" title="Agihan Tugas">pembangunan/agihan_tugas?showForm2</page>
+            <page id="3" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="4" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="5" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="6" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <validator>validator</validator>
+            <instruction>Sila agihkan tugasan ini kepada Pen. Pegawai Tanah yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    <stage id="g_penyediaan_pu_pt" currentAction="Sedia PU dan No PT">
+        <txncode id="RNS">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Sedia No PT">pembangunan/noPT_noPU</page>
+            <page id="6" title="Sedia Permohonan Ukur">pembangunan/pu</page>
+            <page id="7" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat-maklumat yang berkaitan pada ruangan yang disediakan. Kemudian, sila jana dokumen bagi Permohonan Ukur dan  Surat Iringan.</instruction>
+            <reports>
+                <report generator="DEVBPU_MLK.rdf" prefix="VDOC" code="PU"/>
+                <report generator="DEVSIPU_MLK.rdf" prefix="VDOC" code="SIPU"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="g_semak_pu" currentAction="Semak PU dan No PT" pushback="true">
+        <txncode id="RNS">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="No PT">pembangunan/noPT_noPU</page>
+            <page id="6" title="Permohonan Ukur">pembangunan/pu?showForm3</page>
+            <page id="7" title="Semak PU">pembangunan/melaka/semakPU</page>
+            <page id="8" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat-maklumat yang dipaparkan.</instruction>
+        </txncode>
+    </stage>
+    <stage id="sahkan_pu" currentAction="Sahkan PU">
+        <txncode id="RNS">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="No PT">pembangunan/noPT_noPU</page>
+            <page id="6" title="Permohonan Ukur">pembangunan/pu?showForm3</page>
+            <page id="7" title="Sahkan PU">pembangunan/melaka/sahkanPU</page>
+            <page id="8" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila sahkan dokumen berkaitan.</instruction>
+        </txncode>
+    </stage>
+    <stage id="g_hantar_pu" currentAction="Penghantaran PU dan No PT">
+        <txncode id="RNS">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="No PT">pembangunan/noPT_noPU</page>
+            <page id="6" title="Penghantaran PU ke DMS">pembangunan/pu?showForm2</page>
+            <page id="7" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak penyediaan PU dan hantar PU ke JUPEM.</instruction>
+        </txncode>
+    </stage>
+    <stage id="cetakprahitungtatatur12d" currentAction="Imbas Pelan Prahitung, Pelan Tatatur dan Borang 12D" advanceRule="true" listener="etanah.view.pembangunan.validator.PindaanValidator">listener for HT
+        <txncode id="RNS">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="No PT">pembangunan/noPT_noPU?showForm2</page>
+            <page id="6" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila imbas Pelan Prahitung dengan No PT, Pelan Tatatur yang diluluskan dan Borang 12D di Tab Dokumen.</instruction>
+        </txncode>
+    </stage>
+    <stage id="endorsanprahitungtatatur12dptd" currentAction="Endorsan Pelan Prahitung, Pelan Tatatur dan Borang 12D">
+        <txncode id="RNS">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <page id="7" title="Endorsan dan Kelulusan">pembangunan/melaka/EndorsanKelulusan</page>
+            <validator>validator</validator>
+            <instruction>Sila beri edorsan kepada Pelan Prahitung, Pelan Tatatur dan kelulusan Borang 12D.</instruction>
+            <outcomes>
+                <outcome label="Endors" value="EN"/>
+                <outcome label="Tidak Endors" value="ET"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="terimaprahitungtatarur12d" currentAction="Terima Pelan Prahitung, Pelan Tatatur dan Borang 12D">
+        <txncode id="RNS">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="No PT">pembangunan/noPT_noPU?showForm2</page>
+            <page id="6" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak Pelan Prahitung dengan No PT, Pelan Tatatur yang diluluskan dan Borang 12D di Tab Dokumen.</instruction>
+        </txncode>
+    </stage>
+    <stage id="endorsanprahitungtatatur12dptg" currentAction="Endorsan Pelan Prahitung, Pelan Tatatur dan Borang 12D" advanceRule="true" listener="etanah.view.pembangunan.validator.PindaanValidator">listener for HP
+        <txncode id="RNS">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <page id="7" title="Endorsan dan Kelulusan">pembangunan/melaka/EndorsanKelulusan</page>
+            <validator>validator</validator>
+            <instruction>Sila beri edorsan kepada Pelan Prahitung, Pelan Tatatur dan kelulusan Borang 12D.</instruction>
+            <outcomes>
+                <outcome label="Endors" value="EN"/>
+                <outcome label="Tidak Endors" value="ET"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="terimab2dokumen" currentAction="Terima Pelan B2, Sijil Akuan Lembaga Jurukur, Hakmilik Asal, Resit Cukai Tanah dan Lampiran A" listener="etanah.view.pembangunan.validator.InitiateHSPSValidator">
+        <txncode id="RNS">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <page id="7" title="Endorsan dan Kelulusan">pembangunan/melaka/EndorsanKelulusan</page>
+            <validator>validator</validator>
+            <instruction>Sila semak Pelan B2, Sijil Akuan Lembaga Jurukur, Hakmilik Asal, Resit Cukai Tanah dan Lampiran A.</instruction>
+        </txncode>
+    </stage>
+    <stage id="g_charting_keputusan" currentAction="Charting Keputusan" listener="etanah.view.pembangunan.validator.ChartingNotification">
+        <txncode id="RNS">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Charting Keputusan">pembangunan/chartingKelulusan</page>
+            <page id="6" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat-maklumat yang berkaitan pada ruangan yang disediakan.</instruction>
+        </txncode>
+    </stage>
+    <stage id="g_terima_pa_b1" currentAction="Terima PA dan B1" listener="etanah.view.pembangunan.validator.TerimaB1PANotification">
+        <txncode id="RNS">
+            <page id="1" title="Terima PA dan B1">pembangunan/agihan_tugas?showForm2</page>
+            <page id="2" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="3" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="4" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="5" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="6" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak Pelan Akui dan B1 di Tab Dokumen dan Agih Tugas kepada Pen Pegawai Tanah berkenaan.</instruction>
+        </txncode>
+    </stage>
+    <stage id="g_semak_pa_b1" currentAction="Semak B1, PA dan Senarai Hakmilik Bersyarat">
+        <txncode id="RNS">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Semak PA dan B1">pembangunan/agihan_tugas?showForm6</page>
+            <page id="6" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <page id="6" title="Senarai Hakmilik Bersyarat">pembangunan/senarai_hakmilik_bersyarat</page>
+            <validator>validator</validator>
+            <instruction>Sila semak Pelan Akui dan B1 dan Senarai Hakmilik Bersyarat.</instruction>
+        </txncode>
+    </stage>
+    <stage id="g_hantar_pa_b1" currentAction="Semak B1, PA dan Senarai Hakmilik Bersyarat" pushback="true" listener="etanah.view.pembangunan.validator.InitiateHKPSValidator">
+        <txncode id="RNS">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Hantar PA dan B1">pembangunan/agihan_tugas?showForm7</page>
+            <page id="6" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <page id="6" title="Senarai Hakmilik Bersyarat">pembangunan/senarai_hakmilik_bersyarat</page> need new page
+            <validator>validator</validator>
+            <instruction>Sila semak Pelan Akui dan B1 dan Senarai Hakmilik Bersyarat. Hantar dokumen ke DMS.</instruction>
+        </txncode>
+    </stage>-->
+</workflow>

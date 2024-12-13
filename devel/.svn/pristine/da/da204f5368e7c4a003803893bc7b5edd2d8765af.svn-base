@@ -1,0 +1,39 @@
+<decorators defaultdir="/WEB-INF/decorators">
+    <excludes>
+        <pattern>/*tab=true*</pattern>
+        <pattern>/*popup=true*</pattern>
+        <pattern>/helpdesk/statistik/report*</pattern> <!-- for viewing document -->
+
+    </excludes>
+    <decorator name="main" page="main_layout.jsp">
+        <pattern>/WEB-INF/jsp/helpdesk/*</pattern>
+        <pattern>/WEB-INF/jsp/statistik/*</pattern>
+        <pattern>/WEB-INF/jsp/utiliti/*</pattern>
+        <pattern>/WEB-INF/jsp/login.jsp</pattern>
+        <pattern>/WEB-INF/jsp/admin/*</pattern>
+
+    </decorator>
+    <decorator name="portal" page="portal_layout.jsp">
+        <pattern>/WEB-INF/jsp/index.jsp</pattern>
+<!--        <pattern>/WEB-INF/jsp/portal/semakanStatusPermohonan.jsp</pattern>
+        <pattern>/WEB-INF/jsp/portal/semakanStatusTukarGanti1.jsp</pattern>
+        <pattern>/WEB-INF/jsp/portal/senaraiSemakDokumen.jsp</pattern>
+        <pattern>/WEB-INF/jsp/portal/tentangEtanah.jsp</pattern>-->
+    </decorator> 
+    <decorator name="internal" page="internal_portal.jsp">
+        <!--<pattern>/WEB-INF/jsp/internal_portal.jsp</pattern>-->
+        <pattern>/WEB-INF/jsp/portal/tentang_etanah.jsp</pattern>
+        <pattern>/WEB-INF/jsp/portal/semakan_status_permohonan.jsp</pattern>
+        <pattern>/WEB-INF/jsp/portal/semakan_status_tukar_ganti.jsp</pattern>
+        <pattern>/WEB-INF/jsp/portal/senarai_semak_dokumen.jsp</pattern>
+        <pattern>/WEB-INF/jsp/portal/semakan_akaun.jsp</pattern>
+        <pattern>/WEB-INF/jsp/portal/soalan_lazim.jsp</pattern>
+    </decorator> 
+    <decorator name="login" page="login_layout.jsp">
+        <pattern>/WEB-INF/jsp/login/*</pattern>
+    </decorator>  
+    <decorator name="default" page="error_layout.jsp">
+    </decorator>     
+</decorators>
+
+

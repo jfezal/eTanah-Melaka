@@ -1,0 +1,162 @@
+.normaltext {  font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #333333}
+.smalltext {  font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #333333}
+.normaluzma {  font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #CBA274}
+.normalblue {  font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #19338F}
+.normalyellow {  font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #FF9900}
+.normalgreen {  font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #009900}
+.normalred {  font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #FF0000}
+.boldyellow {  font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #FF9900}
+.superyellow {  font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif; font-size: 21px; font-weight: bold; color: #003366}
+.newsdate {  font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #FF9900}
+.btm_text {  font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #CBA274}
+.boldblue {  font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #003366}
+.boldlightblue {  font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #0066FF}
+.bottomtext {  font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #00A677}
+.normalwhite {  font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #FFFFFF}
+.boldwhite {  font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #FFFFFF}
+.normal_bold {  font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #333333}
+.head_title {  font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #333333}
+.redbold {  font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #FF0000}
+
+
+A:link    {text-decoration: underline; color: #333333;}
+A:visited {text-decoration: underline; color: #333333;}
+A:active  {text-decoration: underline; color: #333333;}
+A:hover   {text-decoration: underline; color: #333333;}
+
+A.menu:link    {text-decoration: none; font-weight: bold; color: #003366;}
+A.menu:visited {text-decoration: none; font-weight: bold; color: #003366;}
+A.menu:active  {text-decoration: none; font-weight: bold; color: #003366;}
+A.menu:hover   {text-decoration: none; font-weight: bold; color: #0066FF;}
+
+A.menu_home:link    {text-decoration: none; font-weight: bold; color: #FFFFFF;}
+A.menu_home:visited {text-decoration: none; font-weight: bold; color: #FFFFFF;}
+A.menu_home:active  {text-decoration: none; font-weight: bold; color: #FFFFFF;}
+A.menu_home:hover   {text-decoration: none; font-weight: bold; color: #003366;}
+
+A.menu_blue:link    {text-decoration: none; color: #333333;}
+A.menu_blue:visited {text-decoration: none; color: #333333;}
+A.menu_blue:active  {text-decoration: none; color: #333333;}
+A.menu_blue:hover   {text-decoration: none; color: #0066FF;}
+
+A.menu_news:link    {text-decoration: underline; color: #333333;}
+A.menu_news:visited {text-decoration: underline;; color: #333333;}
+A.menu_news:active  {text-decoration: underline; color:#333333;}
+A.menu_news:hover   {text-decoration: none; color: #FF9900;}
+
+A.more:link    {text-decoration: none; color: #FF9900;}
+A.more:visited {text-decoration: none; color: #FF9900;}
+A.more:active  {text-decoration: none; color: #FF9900;}
+A.more:hover   {text-decoration: underline; color: #003366;}
+
+A.more2:link    {text-decoration: none; color: #333333;}
+A.more2:visited {text-decoration: none; color: #333333;}
+A.more2:active  {text-decoration: none; color: #333333;}
+A.more2:hover   {text-decoration: underline; color: #00A677;}
+
+A.search:link    {text-decoration: none; color: #FFFFFF;}
+A.search:visited {text-decoration: none; color: #FFFFFF;}
+A.search:active  {text-decoration: none; color: #FFFFFF;}
+A.search:hover   {text-decoration: underline; color: #FFFFFF;}
+
+A.article:link    {text-decoration: none; color: #333333;}
+A.article:visited {text-decoration: none; color: #333333;}
+A.article:active  {text-decoration: none; color: #333333;}
+A.article:hover   {text-decoration: none; color: #3333C4;}
+
+.copyright { color: #FFFFFC }
+
+dl { width: 204px; }
+dl,dd { margin: 0; background: #AFBCF1; }
+dt { background: #50609E; font-family: Trebuchet MS; font-size: 13px; padding: 5px; margin-left:0; margin-right:0; margin-bottom:1px; margin-top:1px}
+dd a { color: #000000; }
+dd { font-size: 13px; }
+ul { list-style: none; padding: 5px; margin-left:0px }
+
+.mainDiv
+{
+  width:170px;
+}
+.topItem
+{
+  width:170px;
+  height:22px;
+  cursor:pointer;
+  background: #E7E8EA;
+  text-decoration: none;
+  color: #333333; 
+  font-size: 12px; 
+  font-family:"Trebuchet MS";
+ 
+}
+
+
+.dropMenu
+{
+  background:#E7E8EA;
+  border-top:1px #E7E8EA;
+  border-left:1px #E7E8EA;
+  border-right:1px #E7E8EA;
+  border-bottom:1px #E7E8EA;
+}
+
+.subMenu
+{
+   display:none;
+}
+.subItem
+{
+   padding-left:5px;
+   cursor:pointer;
+   font-weight:normal;
+   text-decoration:none;
+   color:#666666; 
+   font-size: 12px; 
+   font-family:"Trebuchet MS";
+   
+}
+
+.subItem a
+{
+   text-decoration:none;
+   color:#666666;
+   font-size: 12px; 
+   font-family:"Trebuchet MS";
+}
+
+.subItemOver
+{
+   cursor:pointer;
+   color:#B2B2B2;
+   font-size: 12px; 
+   font-family:"Trebuchet MS";
+   text-decoration:underline;
+   padding-left:5px;
+  }
+
+.subItemOver  a
+{
+   font-size: 12px; 
+   font-family:"Trebuchet MS";
+    color:#666666;
+   
+}
+
+
+.drop
+{
+   border-left:1px solid #333333;
+   border-right:1px solid #333333;	
+}
+
+.form_errors {
+    color: #ff0000;
+    font-size: 11px;
+    /*padding-bottom: 10px;*/
+    font-weight: bold;
+}
+
+.form_errors li {
+    list-style: circle;
+    font-size: 10px;
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<!--<workflow id="http://xmlns.oracle.com/etanahdev/Bpel_Rayuan/rayuan">-->
+<workflow id="http://xmlns.oracle.com/PindaanKanun/Rayuan_SBMS/Rayuan_SBMS">
+    <stage id="kemasukan" currentAction="kemasukan">
+        <txncode id="RYN">         
+            <page id="1" title="Maklumat Permohonan">rayuan/maklumatPermohonanRayuan</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat-maklumat rayuan pada ruangan yang telah disediakan.</instruction>            
+        </txncode>
+    </stage>
+    
+    
+</workflow>

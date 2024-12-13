@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<workflow id="http://xmlns.oracle.com/apps_49_mlk/proj_49_mlk/ht_49_mlk">
+    <!--
+    Document   : sek49_mlk.xml
+    Created on : October 4, 2010, 11:54 AM
+    Author     : aminah.abdmutalib
+    Modify by  : sitifariza.hanim (03032011)
+    Description: Purpose of the document follows.
+    -->
+
+    <stage id="maklum_aduan" currentAction="Maklum Aduan" listener="etanah.view.penguatkuasaan.validator.NotaTindakanValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <!--            <page id="4" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm</page>
+            <page id="6" title="Jenis Hakisan">/penguatkuasaan/maklumat_hakisan_tanah</page>
+            <page id="4" title="Laporan Siasatan Awalan">/penguatkuasaan/maklumat_laporan_awal</page>-->
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat aduan, Lokasi Aduan dan masukkan maklumat kertas minit/nota.</instruction>
+        </txncode>
+    </stage>
+    <stage id="agih_tugasan1" distribute="true" currentAction="Agihan Tugas" listener="etanah.view.penguatkuasaan.validator.NotaTindakanValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <page id="4" title="Agihan Tugas">/penguatkuasaan/agihTugasanV2</page>
+            <validator>validator</validator>
+            <instruction>Sila semak arahan dan buat pengagihan tugasan.</instruction>
+        </txncode>
+    </stage>
+    <stage id="g_charting_permohonan" currentAction="Charting" listener="etanah.view.penguatkuasaan.validator.NotaTindakanValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Hakisan Hakmilik">/penguatkuasaan/laporan_tanah?showForm</page>
+            <page id="4" title="Charting">/penguatkuasaan/charting</page>
+            <page id="5" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila laksanakan charting permohonan.</instruction>
+            <!--            <reports>
+                <report generator="ENFLTNH49_MLK.rdf" prefix="VDOC" code="LTNH"/>
+            </reports>-->
+        </txncode>
+    </stage>
+    <stage id="g_semak_permohonan" currentAction="Semak Laporan" advanceRule="true" pushback="true" distribute="true" listener="etanah.view.penguatkuasaan.validator.NotaTindakanValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Hakisan Hakmilik">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <page id="4" title="Semak Charting">/penguatkuasaan/charting?showForm2</page>
+            <page id="5" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <page id="6" title="Agihan Tugas">/penguatkuasaan/agihTugasanV2</page>
+            <instruction>Sila semak maklumat berkaitan dan buat keputusan.</instruction>
+            <validator>validator</validator>
+            <outcomes>
+                <outcome label="Lengkap" value="L"/>
+                <outcome label="Tidak Lengkap" value="T"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="sedia_laporan1" currentAction="Sedia Laporan" listener="etanah.view.penguatkuasaan.validator.NotaTindakanValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Laporan Tanah">/penguatkuasaan/mohon_lapor_tanah?showForm</page>
+            <page id="4" title="Laporan Siasatan Awalan">/penguatkuasaan/maklumat_laporan_awal</page>
+            <page id="5" title="Laporan Tanah GIS">/penguatkuasaan/charting?showForm8</page>
+            <page id="6" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat laporan tanah, laporan siasatan awalan dan laporan tanah GIS dan masukkan arahan.</instruction>
+            <reports>
+                <report generator="ENFLTNH49_MLK.rdf" prefix="VDOC" code="LTNH"/>
+                <report generator="ENFLAWAL_MLK.rdf" prefix="VDOC" code="LAWAL"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="semak_laporan1" currentAction="Semak Laporan" pushback="true" listener="etanah.view.penguatkuasaan.validator.NotaTindakanValidator">
+        <txncode id="49" simpanDanJana="false">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Laporan Tanah">/penguatkuasaan/mohon_lapor_tanah?showForm3</page>
+            <page id="4" title="Laporan Siasatan Awalan">/penguatkuasaan/maklumat_laporan_awal?showForm2</page>
+            <page id="5" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Semak laporan dan syor cadangan.</instruction>
+            <reports>
+                <report generator="ENFLTNH49_MLK.rdf" prefix="VDOC" code="LTNH"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="semak_laporan2" currentAction="Semak Laporan" pushback="true" advanceRule="true" listener="etanah.view.penguatkuasaan.validator.NotaTindakanValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Laporan Tanah">/penguatkuasaan/mohon_lapor_tanah?showForm2</page>
+            <page id="4" title="Laporan Siasatan Awalan">/penguatkuasaan/maklumat_laporan_awal?showForm2</page>
+            <page id="5" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <page id="6" title="Jenis Hakisan">/penguatkuasaan/maklumat_hakisan_tanah</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat berkaitan dan buat keputusan.</instruction>
+            <outcomes>
+                <outcome label="Ada Hakisan" value="AH"/>
+                <outcome label="Tiada Hakisan" value="TH"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="arah_siasat_tuantnh" currentAction="Arah Siasatan" listener="etanah.view.penguatkuasaan.validator.NotaTindakanValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Laporan Tanah">/penguatkuasaan/mohon_lapor_tanah?showForm2</page>
+            <page id="4" title="Laporan Siasatan Awalan">/penguatkuasaan/maklumat_laporan_awal?showForm2</page>
+            <page id="5" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan arahan untuk siasatan.</instruction>
+            <outcomes ulasanOnly="false" title="Arahan/Keputusan"/>
+        </txncode>
+    </stage>
+    <stage id="arah_notis_2ab" currentAction="Arah Sedia Notis" listener="etanah.view.penguatkuasaan.validator.NotaTindakanValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Laporan Tanah">/penguatkuasaan/mohon_lapor_tanah?showForm2</page>
+            <page id="4" title="Laporan Siasatan Awalan">/penguatkuasaan/maklumat_laporan_awal?showForm2</page>
+            <page id="5" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan arahan untuk pengeluaran Borang 2A,2B.</instruction>
+            <outcomes ulasanOnly="false" title="Arahan/Keputusan"/>
+        </txncode>
+    </stage>
+    <stage id="sedia_notis_2ab" currentAction="Sedia Notis" listener="etanah.view.penguatkuasaan.validator.NotaTindakanValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Laporan Tanah">/penguatkuasaan/mohon_lapor_tanah?showForm2</page>
+            <page id="4" title="Laporan Siasatan Awalan">/penguatkuasaan/maklumat_laporan_awal?showForm2</page>
+            <page id="5" title="Enkuiri">/penguatkuasaan/maklumat_laporan_enkuiri?showForm</page>
+            <page id="6" title="Notis 2B">/penguatkuasaan/maklumat_notis?showForm7</page>
+            <page id="7" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat enkuiri dan notis 2B, klik jana dokumen untuk jana Borang 2A dan 2B.</instruction>
+            <outcomes ulasanOnly="false" title="Arahan/Keputusan"/>
+            <reports>
+                <report generator="ENFB2A49_MLK.rdf" prefix="VDOC" code="2A"/>
+                <report generator="ENFB2B49_MLK.rdf" prefix="VDOC" code="2B"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="semak_notis_2ab" currentAction="Semak Notis" pushback="true" listener="etanah.view.penguatkuasaan.validator.NotaTindakanValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Laporan Tanah">/penguatkuasaan/mohon_lapor_tanah?showForm2</page>
+            <page id="4" title="Laporan Siasatan Awalan">/penguatkuasaan/maklumat_laporan_awal?showForm2</page>
+            <page id="5" title="Enkuiri">/penguatkuasaan/maklumat_laporan_enkuiri?showForm2</page>
+            <page id="6" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak notis Notis 2A/2B dan maklumat yang berkaitan.</instruction>
+            <outcomes ulasanOnly="false" title="Arahan/Keputusan"/>
+        </txncode>
+    </stage>
+    <stage id="bukti_penyampaian_2ab" currentAction="Bukti Penyampaian" listener="etanah.view.penguatkuasaan.validator.NotaTindakanValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Laporan Tanah">/penguatkuasaan/mohon_lapor_tanah?showForm2</page>
+            <page id="4" title="Laporan Siasatan Awalan">/penguatkuasaan/maklumat_laporan_awal?showForm2</page>
+            <page id="5" title="Enkuiri">/penguatkuasaan/maklumat_laporan_enkuiri?showForm2</page>
+            <page id="6" title="Notis Penyampaian">/penguatkuasaan/notis_bukti_penyampaian?showForm</page>
+            <page id="7" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila kemaskini /imbas bukti penyampaian notis.</instruction>
+            <outcomes ulasanOnly="false" title="Arahan/Keputusan"/>
+        </txncode>
+    </stage>
+    <stage id="sedia_siasat_tuantnh" currentAction="Sedia Siasatan" listener="etanah.view.penguatkuasaan.validator.NotaTindakanValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Laporan Tanah">/penguatkuasaan/mohon_lapor_tanah?showForm2</page>
+            <page id="4" title="Laporan Siasatan Awalan">/penguatkuasaan/maklumat_laporan_awal?showForm2</page>
+            <page id="5" title="Enkuiri">/penguatkuasaan/maklumat_laporan_enkuiri?showForm2</page>
+            <page id="6" title="Kehadiran Enkuiri">/penguatkuasaan/maklumat_enkuiri?showForm</page>
+            <page id="7" title="Notis Penyampaian">/penguatkuasaan/notis_bukti_penyampaian?showForm2</page>
+            <page id="8" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan arahan.</instruction>
+            <outcomes ulasanOnly="false" title="Arahan"/>
+        </txncode>
+    </stage>
+    <stage id="kpsn_siasatan" currentAction="Keputusan Siasatan" advanceRule="true" listener="etanah.view.penguatkuasaan.validator.InitiateTMAKValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Laporan Tanah">/penguatkuasaan/mohon_lapor_tanah?showForm2</page>
+            <page id="4" title="Laporan Siasatan Awalan">/penguatkuasaan/maklumat_laporan_awal?showForm2</page>
+            <page id="5" title="Enkuiri">/penguatkuasaan/maklumat_laporan_enkuiri?showForm2</page>
+            <page id="6" title="Notis Penyampaian">/penguatkuasaan/notis_bukti_penyampaian?showForm2</page>
+            <page id="7" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan keputusan siasatan</instruction>
+            <outcomes>
+                <outcome label="Siasat Semula" value="SI"/>
+                <outcome label="Hakisan Penuh : Serah dalam tempoh" value="HK"/>
+                <outcome label="Hakisan Penuh : Tidak serah dalam tempoh" value="HA"/>
+                <outcome label="Hakisan Sebahagian : Serah dalam tempoh" value="HS"/>
+                <outcome label="Hakisan Sebahagian : Tidak serah dalam tempoh" value="HE"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="sedia_pengecualian_upahukur" currentAction="Sedia Keputusan Siasatan" finalize ="true" listener="etanah.view.penguatkuasaan.validator.NotaTindakanValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Laporan Tanah">/penguatkuasaan/mohon_lapor_tanah?showForm2</page>
+            <page id="4" title="Laporan Siasatan Awalan">/penguatkuasaan/maklumat_laporan_awal?showForm2</page>
+            <page id="5" title="Sijil Pengecualian  Bayaran Ukur">/penguatkuasaan/sijilPengecualianUkur?showForm</page>
+            <page id="6" title="Permohonan Ukur">/penguatkuasaan/pu1?showForm</page>
+            <!--<page id="7" title="Maklumat Keputusan">/penguatkuasaan/maklumat_keputusan?showForm</page>-->
+            <page id="7" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat Sijil Pengecualian Bayaran Ukur.</instruction>
+            <reports>
+                <report generator="ENFSBUU_MLK.rdf" prefix="VDOC" code="SPU"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="kpsn_pengecualian_upahukur" currentAction="Keputusan Pengecualian Upah UKur" listener="etanah.view.penguatkuasaan.validator.NotaTindakanValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Laporan Tanah">/penguatkuasaan/mohon_lapor_tanah?showForm2</page>
+            <page id="4" title="Laporan Siasatan Awalan">/penguatkuasaan/maklumat_laporan_awal?showForm2</page>
+            <page id="5" title="Sijil Pengecualian Bayaran Ukur">/penguatkuasaan/sijilPengecualianUkur?showForm2</page>
+            <page id="6" title="Permohonan Ukur">/penguatkuasaan/pu1?showForm2</page>
+            <page id="7" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila tandatangan sijil pembebasan upah ukur.</instruction>
+            <outcomes ulasanOnly="false" title="Keputusan/Arahan"/>
+        </txncode>
+    </stage>
+    <stage id="g_charting_keputusan" currentAction="Charting Keputusan" advanceRule="true" listener="etanah.view.penguatkuasaan.validator.NotaTindakanValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Laporan Tanah">/penguatkuasaan/mohon_lapor_tanah?showForm2</page>
+            <page id="4" title="Laporan Siasatan Awalan">/penguatkuasaan/maklumat_laporan_awal?showForm2</page>
+            <page id="5" title="Sijil Pengecualian Bayaran Ukur">/penguatkuasaan/sijilPengecualianUkur?showForm2</page>
+            <page id="6" title="Permohonan Ukur">/penguatkuasaan/pu1?showForm2</page>
+            <page id="7" title="Maklumat Keputusan">/penguatkuasaan/maklumat_keputusan?showForm</page>
+            <page id="8" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila laksana charting kelulusan dan masukkan laporan.</instruction>
+            <outcomes ulasanOnly="false" title="Keputusan/Arahan"/>
+        </txncode>
+    </stage>
+    <stage id="g_charting_keputusan_p" currentAction="Semakan PU" listener="etanah.view.penguatkuasaan.validator.NotaTindakanValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Laporan Tanah">/penguatkuasaan/mohon_lapor_tanah?showForm2</page>
+            <page id="4" title="Laporan Siasatan Awalan">/penguatkuasaan/maklumat_laporan_awal?showForm2</page>
+            <page id="5" title="Sijil Pengecualian Bayaran Ukur">/penguatkuasaan/sijilPengecualianUkur?showForm2</page>
+            <page id="6" title="Permohonan Ukur">/penguatkuasaan/pu1?showForm2</page>
+            <page id="7" title="Maklumat Keputusan">/penguatkuasaan/maklumat_keputusan?showForm</page>
+            <page id="8" title="Kembali PU">/penguatkuasaan/charting?showForm12</page>
+            <page id="9" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak PU.</instruction>
+            <outcomes ulasanOnly="false" title="Keputusan/Arahan"/>
+        </txncode>
+    </stage>
+    <stage id="g_laporan_tanah_l" currentAction="Lakaran Kasar" listener="etanah.view.penguatkuasaan.validator.NotaTindakanValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Laporan Tanah">/penguatkuasaan/mohon_lapor_tanah?showForm2</page>
+            <page id="4" title="Laporan Siasatan Awalan">/penguatkuasaan/maklumat_laporan_awal?showForm2</page>
+            <page id="5" title="Sijil Pengecualian Bayaran Ukur">/penguatkuasaan/sijilPengecualianUkur?showForm2</page>
+            <page id="6" title="Permohonan Ukur">/penguatkuasaan/pu1?showForm2</page>
+            <page id="7" title="Maklumat Keputusan">/penguatkuasaan/maklumat_keputusan?showForm</page>
+            <page id="8" title="Lakaran Kasar">/penguatkuasaan/charting?showForm11</page>
+            <page id="9" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila kemaskini luas baru dan buat lakaran kasar.</instruction>
+            <outcomes ulasanOnly="false" title="Keputusan/Arahan"/>
+        </txncode>
+    </stage>
+    <stage id="terima_pengecualian_upahukur" currentAction="Terima Pengecualian Upah Ukur" listener="etanah.view.penguatkuasaan.validator.NotaTindakanValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Laporan Tanah">/penguatkuasaan/mohon_lapor_tanah?showForm2</page>
+            <page id="4" title="Laporan Siasatan Awalan">/penguatkuasaan/maklumat_laporan_awal?showForm2</page>
+            <page id="5" title="Sijil Pengecualian Bayaran Ukur">/penguatkuasaan/sijilPengecualianUkur?showForm2</page>
+            <page id="6" title="Permohonan Ukur">/penguatkuasaan/pu1?showForm2</page>
+            <page id="7" title="Maklumat Keputusan">/penguatkuasaan/maklumat_keputusan?showForm2</page>
+            <page id="8" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila imbas Sijil Pembebasan Upah Ukur yang diterima.</instruction>
+            <outcomes ulasanOnly="false" title="Keputusan/Arahan"/>
+        </txncode>
+    </stage>
+
+    <stage id="g_charting_semak" currentAction="Semak Charting Kelulusan" distribute="true" pushback="true" listener="etanah.view.penguatkuasaan.validator.NotaTindakanValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Laporan Tanah">/penguatkuasaan/mohon_lapor_tanah?showForm2</page>
+            <page id="4" title="Laporan Siasatan Awalan">/penguatkuasaan/maklumat_laporan_awal?showForm2</page>
+            <page id="5" title="Maklumat Keputusan">/penguatkuasaan/maklumat_keputusan?showForm2</page>
+            <page id="6" title="Sijil Pengecualian Bayaran Ukur">/penguatkuasaan/sijilPengecualianUkur?showForm2</page>
+            <page id="7" title="Permohonan Ukur">/penguatkuasaan/pu1?showForm2</page>
+            <page id="8" title="Semak Charting">/penguatkuasaan/charting?showForm2</page>
+            <page id="9" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <page id="10" title="Agihan Tugas">/penguatkuasaan/agihTugasanV2</page>
+            <instruction>Sila semak laporan charting kelulusan.</instruction>
+            <validator>validator</validator>
+            <outcomes ulasanOnly="false" title="Keputusan/Arahan"/>
+        </txncode>
+    </stage>
+    <stage id="g_penyediaan_pu" currentAction="Sedia Pelan Ukur GIS" listener="etanah.view.penguatkuasaan.validator.NotaTindakanValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Laporan Tanah">/penguatkuasaan/mohon_lapor_tanah?showForm2</page>
+            <page id="4" title="Laporan Siasatan Awalan">/penguatkuasaan/maklumat_laporan_awal?showForm2</page>
+            <page id="5" title="Dokumen Iringan">penguatkuasaan/dokumen_iringan?showForm</page>
+            <page id="6" title="Sediakan PU GIS">/penguatkuasaan/charting?showForm5</page>
+            <page id="7" title="Sedia surat iringan PU">/penguatkuasaan/pu1?showForm3</page>
+            <page id="8" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <instruction>Sila buat kemasukan, jana dan hantar Borang Permohonan Ukur</instruction>
+            <validator>validator</validator>
+            <outcomes ulasanOnly="false" title="Keputusan/Arahan"/>
+            <reports>
+                <report generator="ENFBPU_MLK.rdf" prefix="VDOC" code="PU"/>
+                <report generator="ENFSIPU_MLK.rdf" prefix="VDOC" code="SIPU"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="g_semak_pu" currentAction="Semak Pelan Ukur" pushback="true" listener="etanah.view.penguatkuasaan.validator.NotaTindakanValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Laporan Tanah">/penguatkuasaan/mohon_lapor_tanah?showForm2</page>
+            <page id="4" title="Laporan Siasatan Awalan">/penguatkuasaan/maklumat_laporan_awal?showForm2</page>
+            <page id="5" title="Sijil Pengecualian Bayaran Ukur">/penguatkuasaan/sijilPengecualianUkur?showForm2</page>
+            <page id="6" title="Permohonan Ukur">/penguatkuasaan/pu1?showForm2</page>
+            <page id="7" title="Semak PU GIS">/penguatkuasaan/charting?showForm6</page>
+            <page id="8" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <instruction>Sila buat semakan Permohonan Ukur.</instruction>
+            <validator>validator</validator>
+            <outcomes ulasanOnly="false" title="Keputusan/Arahan"/>
+        </txncode>
+    </stage>
+    <stage id="sahkan_pu" currentAction="Pengesahan Pelan Ukur" listener="etanah.view.penguatkuasaan.validator.NotaTindakanValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Laporan Tanah">/penguatkuasaan/mohon_lapor_tanah?showForm2</page>
+            <page id="4" title="Laporan Siasatan Awalan">/penguatkuasaan/maklumat_laporan_awal?showForm2</page>
+            <page id="5" title="Sijil Pengecualian Bayaran Ukur">/penguatkuasaan/sijilPengecualianUkur?showForm2</page>
+            <page id="6" title="Permohonan Ukur">/penguatkuasaan/pu1?showForm2</page>
+            <page id="7" title="Sahkan PU">/penguatkuasaan/charting?showForm7</page>
+            <page id="8" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <instruction>Sila sahkan Permohonan Ukur.</instruction>
+            <validator>validator</validator>
+            <outcomes ulasanOnly="false" title="Keputusan/Arahan"/>
+        </txncode>
+    </stage>
+    <stage id="g_hantar_pu" currentAction="Hantar Pelan Ukur" listener="etanah.view.penguatkuasaan.validator.NotaTindakanValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Laporan Tanah">/penguatkuasaan/mohon_lapor_tanah?showForm2</page>
+            <page id="4" title="Laporan Siasatan Awalan">/penguatkuasaan/maklumat_laporan_awal?showForm2</page>
+            <page id="5" title="Permohonan Ukur">/penguatkuasaan/pu1?showForm2</page>
+            <page id="6" title="PU GIS ke JUPEM">/penguatkuasaan/charting?showForm10</page>
+            <page id="7" title="Terima B1">/penguatkuasaan/charting?showForm9</page>
+            <!--<page id="8" title="Terima PA Jupem">/penguatkuasaan/hantarGISFail</page>-->
+            <page id="8" title="Maklumat Keputusan">/penguatkuasaan/maklumat_keputusan?showForm2</page>
+            <page id="9" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <instruction>Sila buat penghantaran PU ke Jupem.</instruction>
+            <validator>validator</validator>
+            <outcomes ulasanOnly="false" title="Keputusan/Arahan"/>
+        </txncode>
+    </stage>
+   
+    <stage id="arah_kemaskini_hasil" currentAction="Arah Kemaskini Hasil" advanceRule="true" listener="etanah.view.penguatkuasaan.validator.NotaTindakanValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Laporan Tanah">/penguatkuasaan/mohon_lapor_tanah?showForm2</page>
+            <page id="4" title="Laporan Siasatan Awalan">/penguatkuasaan/maklumat_laporan_awal?showForm2</page>
+            <page id="5" title="Sijil Pengecualian Bayaran Ukur">/penguatkuasaan/sijilPengecualianUkur?showForm2</page>
+            <page id="6" title="Permohonan Ukur">/penguatkuasaan/pu1?showForm2</page>
+            <page id="7" title="Maklumat Keputusan">/penguatkuasaan/maklumat_keputusan?showForm2</page>
+            <page id="9" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <instruction>Sila arah unit hasil supaya kemaskini rekod hasil.</instruction>
+            <validator>validator</validator>
+            <outcomes>
+                <outcome label="PU Lengkap" value="L"/>
+                <outcome label="PU Tidak Lengkap" value="T"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="kemaskini_hasil" currentAction="Kemaskini Rekod Hasil" listener="etanah.view.penguatkuasaan.validator.NotaTindakanValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Laporan Tanah">/penguatkuasaan/mohon_lapor_tanah?showForm2</page>
+            <page id="4" title="Laporan Siasatan Awalan">/penguatkuasaan/maklumat_laporan_awal?showForm2</page>
+            <page id="5" title="Sijil Pengecualian Bayaran Ukur">/penguatkuasaan/sijilPengecualianUkur?showForm2</page>
+            <page id="6" title="Maklumat Keputusan">/penguatkuasaan/maklumat_keputusan?showForm2</page>
+            <page id="7" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <instruction>Sila semak maklumat berkaitan.</instruction>
+            <validator>validator</validator>
+            <outcomes ulasanOnly="false" title="Keputusan/Arahan"/>
+        </txncode>
+    </stage>
+    <!-- <stage id="g_terima_pa_b1" currentAction="Terima B1" listener="etanah.view.penguatkuasaan.validator.NotaTindakanValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Laporan Tanah">/penguatkuasaan/mohon_lapor_tanah?showForm2</page>
+            <page id="4" title="Permohonan Ukur">/penguatkuasaan/pu1?showForm2</page>
+            <page id="5" title="Terima B1">/penguatkuasaan/charting?showForm9</page>
+            <page id="6" title="Terima PA Jupem">/penguatkuasaan/hantarGISFail</page>
+            <page id="7" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <instruction>Sila laksanakan penerimaan B1 dan semak penerimaan dokumen dalam tab dokumen.</instruction>
+            <outcomes ulasanOnly="false" title="Keputusan/Arahan"/>
+        </txncode>
+    </stage>-->
+    <stage id="arah_daftar_hmsambungan" currentAction="Arah Daftar HMSambungan" listener="etanah.view.penguatkuasaan.validator.InitiateHKSTAValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Laporan Tanah">/penguatkuasaan/mohon_lapor_tanah?showForm2</page>
+            <page id="4" title="Laporan Siasatan Awalan">/penguatkuasaan/maklumat_laporan_awal?showForm2</page>
+            <page id="5" title="Maklumat Keputusan">/penguatkuasaan/maklumat_keputusan?showForm2</page>
+            <page id="6" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Arahan Daftar Hakmilik Sambungan kepada Pendaftaran.</instruction>
+            <outcomes ulasanOnly="false" title="Keputusan/Arahan"/>
+        </txncode>
+    </stage>
+    <stage id="agih_tugasan2" currentAction="Agihan Tugas" distribute="true" listener="etanah.view.penguatkuasaan.validator.NotaTindakanValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Laporan Tanah">/penguatkuasaan/mohon_lapor_tanah?showForm2</page>
+            <page id="4" title="Laporan Siasatan Awalan">/penguatkuasaan/maklumat_laporan_awal?showForm2</page>
+            <page id="5" title="Maklumat Keputusan">/penguatkuasaan/maklumat_keputusan?showForm2</page>
+            <page id="6" title="Hakmilik">/penguatkuasaan/laporan_tanah?showForm5</page>
+            <page id="7" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <page id="8" title="Agihan Tugas">/penguatkuasaan/agihTugasanV2</page>
+            <validator>validator</validator>
+            <instruction>Sila semak arahan dan buat pengagihan tugasan.</instruction>
+        </txncode>
+    </stage>
+    <!--    <stage id="kemaskini_mukim_indek" currentAction="Kemaskini Rekod" listener="etanah.view.penguatkuasaan.validator.NotaTindakanValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Laporan Tanah">/penguatkuasaan/mohon_lapor_tanah?showForm2</page>
+            <page id="4" title="Permohonan Ukur">/penguatkuasaan/pu1?showForm2</page>
+            <page id="5" title="Lot Indeks">/penguatkuasaan/mukim_indek?showForm2</page>
+            <page id="6" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <instruction>Sila semak pelan hakmilik baru dan buat keputusan/arahan.</instruction>
+            <outcomes ulasanOnly="false" title="Keputusan/Arahan"/>
+        </txncode>
+    </stage>-->
+    <stage id="g_charting_ft" currentAction="Charting Akhir" listener="etanah.view.penguatkuasaan.validator.NotaTindakanValidator">
+        <txncode id="49">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Laporan Tanah">/penguatkuasaan/mohon_lapor_tanah?showForm2</page>
+            <page id="4" title="Laporan Siasatan Awalan">/penguatkuasaan/maklumat_laporan_awal?showForm2</page>
+            <page id="5" title="Charting Akhir">/penguatkuasaan/mukim_indek?showForm</page>
+            <page id="6" title="Maklumat Keputusan">/penguatkuasaan/maklumat_keputusan?showForm2</page>
+            <page id="7" title="Hakmilik">/penguatkuasaan/laporan_tanah?showForm5</page>
+            <page id="8" title="Nota/Kertas Minit">/penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila laksanakan charting akhir.</instruction>
+            <outcomes ulasanOnly="false" title="Keputusan/Arahan"/>
+        </txncode>
+    </stage>
+</workflow>
+
+

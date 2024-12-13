@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!--
+    Document   : pendudukanSementara_Pemulihan.xml
+    Created on : Mac 21, 2011, 3:42 AM
+    Author     : massita
+    Description:
+        Purpose of the document follows.
+-->
+
+<workflow id="http://xmlns.oracle.com/E_TANAH/ACQUISITION_MLK/HWACQPEMULIHAN">
+
+    <!--ptpengambilan-->
+    <stage id="01Kemasukan" currentAction="Carian Permohonan Terdahulu Dan Kemasukan Maklumat Pemohon">
+        <txncode id="PTPT">
+            <!--<page id="1" title="Carian Permohonan Terdahulu" >pengambilan/penarikanBalik?showForm</page>-->
+            <!--<page id="1" title="Pengambilan NS">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <page id="2" title="Carian Permohonan Terdahulu NS">pengambilan/pemulihanTanahCarianPendudukanSementara?showForm</page>-->
+            <page id="1" title="Carian Permohonan Terdahulu">pengambilan/pemulihanTanahCarianPendudukanSementara?showForm</page>
+            <page id="2" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="3" title="Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="4" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan_Terdahulu</page>
+            <page id="5" title="Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <page id="6" title="Pengambilan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <!--KptPengambilan1-->
+    <stage id="02Semakan" currentAction="Semakan Permohonan" pushback="true">
+        <txncode id="PTPT">
+            <page id="1" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan_Terdahulu</page>
+            <page id="4" title="Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <page id="5" title="Pengambilan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <!--pptd1-->
+    <stage id="03MaklumAgih" currentAction="Maklum Permohonan Kepada Penolong Pegawai Tanah Kanan" pushback="true">
+        <txncode id="PTPT">
+            <page id="1" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan_Terdahulu</page>
+            <page id="4" title="Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <page id="5" title="Pengambilan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <!--<page id="6" title="Makluman Permohonan">pengambilan/notifikasiMelaka?maklumPenolongPegawaiTanah</page>-->
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <!--kpptanah-->
+    <stage id="04AgihanTugas" currentAction="Agih Tugasan Kepada Penolong Pegawai Tanah" distribute="true" pushback="true">
+        <txncode id="PTPT">
+            <page id="1" title="Makluman Permohonan">pengambilan/notifikasiMelaka?maklumPenolongPegawaiTanah</page>
+            <page id="1" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan_Terdahulu</page>
+            <page id="4" title="Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <page id="5" title="Pengambilan">pengambilan/maklumat_pendudukanSementara?showForm2</page>
+            <page id="7" title="Agihan Tugasan">pengambilan/agihTugasan</page>
+            <page id="8" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila agihkan tugasan ini kepada yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <!--pptanah-->
+    <stage id="06SediaLaporan" currentAction="Penyediaan Laporan Kerosakan Tanah" pushback="true">
+        <txncode id="PTPT">
+            <page id="1" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan_Terdahulu</page>
+            <page id="4" title="Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <page id="5" title="Pengambilan">pengambilan/maklumat_pendudukanSementara?showForm2</page>
+            <!--<page id="6" title="Laporan Kerosakan Tanah">pengambilan/LaporanPemulihanTanah_Sblm?showForm</page>-->
+            <page id="6" title="Laporan Kerosakan Tanah">pengambilan/pampasanPhlla</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <!--kpptanah-->
+    <stage id="07SemakLapor" pushback="true" currentAction="Semakan Laporan Kerosakan Tanah" pushback="true">
+        <txncode id="PTPT">
+            <page id="1" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan_Terdahulu</page>
+            <page id="4" title="Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <page id="5" title="Pengambilan">pengambilan/maklumat_pendudukanSementara?showForm2</page>
+            <!--<page id="6" title="Laporan Kerosakan Tanah">pengambilan/LaporanPemulihanTanah_Sblm</page>-->
+            <page id="6" title="Laporan Kerosakan Tanah">pengambilan/pampasanPhlla</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <!--pptd1-->
+    <stage id="08Semak" pushback="true" currentAction="Semakan Laporan Kerosakan Tanah" pushback="true">
+        <txncode id="PTPT">
+            <page id="1" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan_Terdahulu</page>
+            <page id="4" title="Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <page id="5" title="Pengambilan">pengambilan/maklumat_pendudukanSementara?showForm2</page>
+            <!--<page id="6" title="Laporan Kerosakan Tanah">pengambilan/LaporanPemulihanTanah_Sblm</page>-->
+            <page id="6" title="Laporan Kerosakan Tanah">pengambilan/pampasanPhlla</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <!--kptpengambilan1-->
+    <stage id="09TerimaLaporan" currentAction="Terima Laporan Kerosakan Tanah" pushback="true">
+        <txncode id="PTPT">
+            <page id="1" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan_Terdahulu</page>
+            <page id="4" title="Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <page id="5" title="Pengambilan">pengambilan/maklumat_pendudukanSementara?showForm2</page>
+            <!--<page id="6" title="Laporan Kerosakan Tanah">pengambilan/LaporanPemulihanTanah_Sblm</page>-->
+            <page id="6" title="Laporan Kerosakan Tanah">pengambilan/pampasanPhlla</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <!--pptd1-->
+    <stage id="10TetapBicara" currentAction="Tetapkan Tarikh Perbicaraan" pushback="true">
+        <txncode id="PTPT">
+            <page id="1" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan_Terdahulu</page>
+            <page id="4" title="Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <page id="5" title="Pengambilan">pengambilan/maklumat_pendudukanSementara?showForm2</page>
+            <!--<page id="7" title="Tetapkan Tarikh">pengambilan/penerimaan_borang_sblm</page>-->
+            <page id="7" title="Tetapkan Tarikh">pengambilan/penerimaan_borang</page>
+            <page id="8" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQSuratPanggilBicaraPTPT_MLK.rdf" prefix="VDOC" code="SPBG"/>
+                <!--<report generator="ACQNotaBicara_MLK.rdf" prefix="VDOC" code="NBG"/>-->
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="11JanaSurat" currentAction="Jana Surat untuk Panggil Perbicaraan" pushback="true">
+        <txncode id="PTPT">
+            <page id="1" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan_Terdahulu</page>
+            <page id="4" title="Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <page id="5" title="Pengambilan">pengambilan/maklumat_pendudukanSementara?showForm2</page>
+            <!--<page id="6" title="Tetapkan Tarikh">pengambilan/penerimaan_borang_sblm</page>-->
+            <page id="7" title="Tetapkan Tarikh">pengambilan/penerimaan_borang</page>
+            <page id="7" title="Jana Surat Panggil Bicara">pengambilan/notifikasiMelaka?janaSuratPanggilBicara</page>
+            <page id="8" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila klik pada button 'Jana Dokumen' untuk menjana surat panggil bicara</instruction>
+            <reports>
+                <report generator="ACQSuratPanggilBicaraPTPT_MLK.rdf" prefix="VDOC" code="SPBG"/>
+                <!--<report generator="ACQNotaBicara_MLK.rdf" prefix="VDOC" code="NBG"/>-->
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="12CetakNota" currentAction="Cetak Nota Perbincangan" pushback="true">
+        <txncode id="PTPT">
+            <page id="1" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan_Terdahulu</page>
+            <page id="4" title="Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <page id="5" title="Pengambilan">pengambilan/maklumat_pendudukanSementara?showForm2</page>
+            <!--<page id="6" title="Tetapkan Tarikh">pengambilan/penerimaan_borang_sblm</page>-->
+            <page id="7" title="Tetapkan Tarikh">pengambilan/penerimaan_borang</page>
+            <page id="7" title="Nota Perbincangan">pengambilan/notifikasiMelaka?cetakNotaPerbincangan</page>
+            <page id="8" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila klik ke button 'Dokumen' untuk mencetak nota perbincangan</instruction>
+            <reports>
+                <!--<report generator="ACQSuratPanggilBicaraPTPT_MLK.rdf" prefix="VDOC" code="SPBG"/>-->
+                <report generator="ACQNotaBicaraPTPT_MLK.rdf" prefix="VDOC" code="8PAN"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--kpptpengambilan-->
+    <stage id="12_1Perbincangan_Tawaran" currentAction="Perbincangan Tawaran" pushback="true">
+        <txncode id="PTPT">
+            <page id="1" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan_Terdahulu</page>
+            <page id="4" title="Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <page id="5" title="Pengambilan">pengambilan/maklumat_pendudukanSementara?showForm2</page>
+            <!--<page id="6" title="Laporan Kerosakan Tanah">pengambilan/LaporanPemulihanTanah_Sblm</page>-->
+            <page id="6" title="Laporan Kerosakan Tanah">pengambilan/pampasanPhlla</page>
+            <page id="6" title="Pampasan">pengambilan/depositPemulihan</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila klik ke button 'Dokumen' untuk mencetak nota perbincangan</instruction>
+        </txncode>
+    </stage>
+
+    <!--pptd1-->
+    <stage id="13KeputusanBicara" advanceRule="true" currentAction="Maklum Keputusan Perbicaraan" pushback="true">
+        <txncode id="PTPT">
+            <page id="1" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan_Terdahulu</page>
+            <page id="4" title="Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <page id="5" title="Pengambilan">pengambilan/maklumat_pendudukanSementara?showForm2</page>
+            <!--<page id="6" title="Laporan Kerosakan Tanah">pengambilan/LaporanPemulihanTanah_Sblm</page>-->
+            <page id="6" title="Laporan Kerosakan Tanah">pengambilan/pampasanPhlla</page>
+            <page id="6" title="Pampasan">pengambilan/depositPemulihan</page>
+            <page id="6" title="Perbicaraan">pengambilan/notifikasiMelaka?maklumKeputusanBicara</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Setuju" value="A"/>
+                <outcome label="Tidak Setuju" value="XA"/>
+            </outcomes>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="14JanaSurat" currentAction="Jana Surat Maklum Agensi Sediakan Bayaran" pushback="true">
+        <txncode id="PTPT">
+            <page id="1" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan_Terdahulu</page>
+            <page id="4" title="Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <page id="5" title="Pengambilan">pengambilan/maklumat_pendudukanSementara?showForm2</page>
+            <!--<page id="6" title="Laporan Kerosakan Tanah">pengambilan/LaporanPemulihanTanah_Sblm</page>-->
+            <page id="6" title="Laporan Kerosakan Tanah">pengambilan/pampasanPhlla</page>
+            <page id="6" title="Pampasan">pengambilan/depositPemulihan</page>
+            <page id="6" title="Maklum Agensi Sedia Bayaran">pengambilan/MaklumSediaBayaran?showForm2</page>
+            <page id="007" title="Tandatangan Manual">pengambilan/tandatangan_dokumenV2</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>sila klik pada button 'jana dokumen' untuk jana surat arahan bayaran</instruction>
+            <reports>
+                <!--<report generator="ACQSrtArahByr_MLK.rdf" prefix="VDOC" code="SEAP"/>-->
+                <report generator="ACQSrtArahByrPTPT_MLK.rdf" prefix="VDOC" code="SEAP"/>
+                <report generator="ACQSrtAmbilCekPTPT_MLK.rdf" prefix="VDOC" code="SBPC"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="15SediaAffidavit" currentAction="Penyediaan Affidavit" pushback="true">
+        <txncode id="PTPT">
+            <!--<page id="1" title="Deraf Perintah">pengambilan/perintah_sblm?showForm1</page>-->
+            <!--<page id="1" title="Afidavit">pengambilan/affidavit</page>
+            <page id="2" title="Saman Dalam Kamar">/pengambilan/samanPemula?showForm1</page>
+            <page id="6" title="Saman Dalam Kamar">/pengambilan/samanPemula?showForm</page>
+            <page id="3" title="Deraf Perintah">pengambilan/perintah?showForm3</page>
+            <page id="3" title="Deraf Perintah">pengambilan/perintah?showForm2</page>
+            <page id="3" title="Deraf Perintah">pengambilan/perintah?showForm1</page>-->
+            <page id="1" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan_Terdahulu</page>
+            <page id="4" title="Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <page id="5" title="Pengambilan">pengambilan/maklumat_pendudukanSementara?showForm2</page>
+            <page id="6" title="Laporan Kerosakan Tanah">pengambilan/pampasanPhlla</page>
+            <!--<page id="6" title="Laporan Kerosakan Tanah">pengambilan/LaporanPemulihanTanah_Sblm</page>-->
+            <!--<page id="6" title="Deraf Perintah">pengambilan/derafPerintahPtsp?showForm3</page>-->
+            <page id="7" title="Affidavit">pengambilan/affidavitMahkamahPtsp</page>
+            <page id="007" title="Tandatangan Manual">pengambilan/tandatangan_dokumenV2</page>
+            <!--<page id="8" title="Saman Dalam Kamar">pengambilan/samanDalamKamar?showForm3</page>-->
+            <page id="9" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>sila isikan maklumat pada ruang yang disediakan</instruction>
+            <reports>
+                <report generator="ACQSrtPermohonanKpdMahkPTPT_MLK.rdf" prefix="VDOC" code="8MAN"/>
+                <!--<report generator="ACQSamanDalamKamar_MLK.rdf" prefix="VDOC" code="SDKM"/>-->
+                <report generator="ACQAffidavitDepositCek_MLK.rdf" prefix="VDOC" code="8MAS"/>
+                <!--<report generator="ACQDrafPerintah_MLK.rdf" prefix="VDOC" code="8MAJ"/>-->
+                <report generator="ACQSrtArahByrPTPT_MLK.rdf" prefix="VDOC" code="SEAP"/>
+                <report generator="ACQSrtAmbilCekPTPT_MLK.rdf" prefix="VDOC" code="SBPC"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptd-->
+    <stage id="16KpsnMahkamah" currentAction="Keputusan Mahkamah" pushback="true">
+        <txncode id="PTPT">
+            <!--<page id="1" title="Maklum Agensi Sedia Bayaran">pengambilan/MaklumSediaBayaran?showForm2</page>-->
+            <!--<page id="2" title="Akaun Terima Bayaran/ Cek/Resit">pengambilan/akaunTerimaBayaran?showForm</page>-->
+            <page id="1" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan_Terdahulu</page>
+            <page id="4" title="Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <page id="5" title="Pengambilan">pengambilan/maklumat_pendudukanSementara?showForm2</page>
+            <page id="6" title="Laporan Kerosakan Tanah">pengambilan/pampasanPhlla</page>
+            <!--<page id="6" title="Laporan Kerosakan Tanah">pengambilan/LaporanPemulihanTanah_Sblm</page>-->
+            <!--<page id="6" title="Deraf Perintah">pengambilan/derafPerintahPtsp?showForm3</page>-->
+            <page id="7" title="Affidavit">pengambilan/affidavitMahkamahPtsp</page>
+            <!--<page id="8" title="Saman Dalam Kamar">pengambilan/samanDalamKamar?showForm3</page>-->
+            <page id="9" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>sila klik pada button 'jana dokumen' untuk jana surat arahan bayaran</instruction>
+            <outcomes>
+                <outcome label="Pampasan - Tambah" value="PV"/>
+                <outcome label="Pampasan - Kekal" value="PZ"/>
+            </outcomes>
+            <reports>
+                <!--<report generator="ACQSrtKpsn_MLK.rdf" prefix="VDOC" code="KMD"/>-->
+                <report generator="ACQSrtArahByrPTPT_MLK.rdf" prefix="VDOC" code="SEAP"/>
+                <report generator="ACQSrtAmbilCekPTPT_MLK.rdf" prefix="VDOC" code="SBPC"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--pptd-->
+    <stage id="17ArahanMaklumanKpsn" currentAction="Arahan Makluman Keputusan Mahkamah" pushback="true">
+        <txncode id="PTPT">
+            <!--<page id="1" title="Maklum Agensi Sedia Bayaran">pengambilan/MaklumSediaBayaran?showForm2</page>-->
+            <!--<page id="2" title="Akaun Terima Bayaran/ Cek/Resit">pengambilan/akaunTerimaBayaran?showForm</page>-->
+            <page id="1" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan_Terdahulu</page>
+            <page id="4" title="Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <page id="5" title="Pengambilan">pengambilan/maklumat_pendudukanSementara?showForm2</page>
+            <page id="6" title="Laporan Kerosakan Tanah">pengambilan/pampasanPhlla</page>
+            <!--<page id="6" title="Laporan Kerosakan Tanah">pengambilan/LaporanPemulihanTanah_Sblm</page>-->
+            <!--<page id="6" title="Deraf Perintah">pengambilan/derafPerintahPtsp?showForm3</page>-->
+            <page id="7" title="Affidavit">pengambilan/affidavitMahkamahPtsp</page>
+            <!--<page id="8" title="Saman Dalam Kamar">pengambilan/samanDalamKamar?showForm3</page>-->
+            <page id="9" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>sila klik pada button 'jana dokumen' untuk jana surat arahan bayaran</instruction>
+            <reports>
+                <report generator="ACQSrtArahByrPTPT_MLK.rdf" prefix="VDOC" code="SEAP"/>
+                <report generator="ACQSrtAmbilCekPTPT_MLK.rdf" prefix="VDOC" code="SBPC"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="18JanaSuratBayaran" currentAction="Jana Surat Bayaran" pushback="true" finalize="true">
+        <txncode id="PTPT">
+            <page id="1" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan_Terdahulu</page>
+            <page id="4" title="Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <page id="5" title="Pengambilan">pengambilan/maklumat_pendudukanSementara?showForm2</page>
+            <!--<page id="6" title="Laporan Kerosakan Tanah">pengambilan/LaporanPemulihanTanah_Sblm</page>-->
+            <page id="6" title="Laporan Kerosakan Tanah">pengambilan/pampasanPhlla</page>
+            <page id="6" title="Maklum Agensi Sedia Bayaran">pengambilan/MaklumSediaBayaran?showForm2</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <!--<page id="2" title="Akaun Terima Bayaran/ Cek/Resit">pengambilan/akaunTerimaBayaran?showForm</page>-->
+            <validator>validator</validator>
+            <instruction>sila klik pada button 'jana dokumen' untuk jana surat arahan bayaran</instruction>
+            <reports>
+                <report generator="ACQSrtArahByrPTPT_MLK.rdf" prefix="VDOC" code="SEAP"/>
+                <report generator="ACQSrtAmbilCekPTPT_MLK.rdf" prefix="VDOC" code="SBPC"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+<!--<stage id="16JanaSurat" currentAction="Jana Surat Maklum Agensi Sediakan Bayaran">
+        <txncode id="PTPT">
+             <page id="1" title="Maklum Agensi Sedia Bayaran">pengambilan/MaklumSediaBayaran?showForm2</page>
+             <page id="2" title="Akaun Terima Bayaran/ Cek/Resit">pengambilan/akaunTerimaBayaran?showForm</page>
+             <validator>validator</validator>
+             <instruction>sila klik pada button 'jana dokumen' untuk jana surat arahan bayaran</instruction>
+             <reports>
+                <report generator="ACQSrtArahByr_MLK.rdf" prefix="VDOC" code="SEAP"/>
+             </reports>
+        </txncode>
+    </stage>-->
+</workflow>

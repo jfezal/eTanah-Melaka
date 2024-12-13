@@ -1,0 +1,124 @@
+<!--pindaan_strata-->
+
+<?xml version="1.0" encoding="windows-1252" ?>
+<workflow id="http://xmlns.oracle.com/PS/PPBBB/Ht_PPBBB">
+
+    <stage id = "kemasukan" listener="etanah.view.strata.validator.PermohonanBangunanValidator" currentAction="Kemasukan"  finalize="true" >
+        <txncode id="PHPP">
+            <page id="1" title="Penyerah">strata/maklumat_penyerah</page>
+            <page id="2" title="Pemohon">strata/kemasukan_pemohon</page>
+            <page id="3" title="Hakmilik">strata/maklumat_tanah?showForm2</page>
+            <page id="4" title="Jadual Petak">strata/jadualPetakExcel?showFormPBB</page>
+            <page id="5" title="Projek">strata/projek</page>
+            <page id="6" title="Perbadanan Pengurusan">strata/badanPengurusan</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+    <stage id = "semak_kemasukan" currentAction="Semak Kemasukan"  listener="etanah.view.strata.validator.SemakPermohonanBngnValidator" pushback="true">
+        <txncode id="PHPP">
+            <page id="1" title="Penyerah">strata/maklumat_penyerah</page>
+            <page id="2" title="Pemohon">strata/kemasukan_pemohon?maklumatPemohonReadOnly</page>
+            <page id="3" title="Hakmilik">strata/maklumat_tanah?showForm2</page>
+            <page id="4" title="Jadual Petak">strata/jadualPetakExcel?showFormPBB</page>
+            <page id="5" title="Projek">strata/projek?showForm2</page>
+            <page id="6" title="Perbadanan Pengurusan">strata/badanPengurusan?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat permohonan. Sekiranya terdapat kesalahan, sila klik butang 'Semak Semula' dan tugasan akan diagihkan semula ke Pembantu Tadbir. Jika tidak, klik butang 'Selesai' untuk dihantar tugasan ke peringkat seterusnya.</instruction>
+        </txncode>
+    </stage>
+    <stage id = "sedialaporan" listener="etanah.view.strata.validator.LaporanTanahValidator" currentAction="Sedia Laporan Tanah" report="true">
+        <txncode id="PHPP">
+            <page id="1" title="Hakmilik">strata/maklumat_tanah?showForm2</page>
+            <page id="3" title="Siasatan Tanah">strata/laporanTanah</page>
+            <page id="4" title="Sempadan">strata/laporanSempadan</page>
+            <page id="4" title="Imej Laporan">strata/maklumat_bangunan?showMuatNaikImej</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="STRLaporanTanahMelaka.rdf" prefix="VDOC" code="LT"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id = "g_semaklaporan" currentAction="Semak Laporan Tanah" listener="etanah.view.strata.validator.LPRNValidator" pushback="true">
+        <txncode id="PHPP">
+            <page id="2" title="Laporan Tanah">strata/jana?laporanTanahRuangUdara</page>
+            <instruction>Sekiranya terdapat kesalahan, sila klik butang 'Semak Semula'.</instruction>           
+        </txncode>
+    </stage>
+    <stage id = "sedia_kertas_pertimbangan" listener="etanah.view.strata.validator.KertasPertimbanganValidation" currentAction="Sedia Kertas Pertimbangan PTG">
+        <txncode id="PHPP">
+            <page id="1" title="Bayaran">strata/jenis_bayaran?maklumatBayaranNs</page>
+            <page id="2" title="Kertas Pertimbangan PTG">strata/kertas</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+    <stage id = "semak_kertas_pertimbangan" currentAction="Semak Kertas Pertimbangan PTG" pushback="true" listener="etanah.view.strata.validator.LPRNValidator">
+        <txncode id="PHPP">
+            <page id="1" title="Kertas Pertimbangan PTG">strata/kertas?showForm2</page>
+            <page id="2" title="Maklumat Emel">strata/emel</page>
+            <instruction>Sila semak Kertas Pertimbangan PTG. Sekiranya terdapat kesalahan, sila klik butang 'Semak Semula' dan tugasan akan diagihkan semula ke Pembantu Tadbir.Jika tidak, klik butang 'Selesai' untuk dihantar tugasan ke peringkat seterusnya.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id = "keputusan" currentAction="Keputusan PTG" report="true" listener="etanah.view.strata.validator.KeputusanValidation" advanceRule="true" >
+        <txncode id="PHPP">
+            <page id="1" title="Kertas Pertimbangan PTG">strata/kertas?showFormReadOnly</page>
+            <validator>validator</validator>
+            <instruction>Sila semak Kertas Pertimbangan PTG dan klik tab Keputusan untuk membuat keputusan.</instruction>
+            <outcomes>
+                <outcome label=" Lulus" value="L">
+                </outcome>
+                <outcome label=" Tolak" value="T">
+                </outcome>
+            </outcomes>
+        </txncode>
+    </stage>
+
+    <stage id = "kemasukan_jupem" currentAction="Sedia Surat Permohonan kepada JUPEM" report="true">
+        <txncode id="PHPP">
+            <page id="1" title="Surat Permohonan PA(B)">strata/pelan?mohonJupem</page>
+            <instruction>Sila klik tab dokumen untuk semak surat permohonan.</instruction>
+            <reports>
+                <report generator="STRSMohonJupem.rdf" prefix="VDOC" code="SMJ"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id = "terima_jupem" currentAction="Terima Pelan" >
+        <txncode id="PHPP">
+            <page id="1" title="Terima Pelan">strata/pelan?terimaPelan</page>
+            <instruction>Sila jana dokumen sebelum selesai.</instruction>          
+        </txncode>
+    </stage>
+    
+    <stage id = "cetak_pelan" currentAction="Sedia Surat Lulus " listener="etanah.view.strata.validator.HTBValidator" report="true">
+        <txncode id="PHPP">
+            <page id="1" title="Penyediaan Surat">strata/jana?suratLulusTolak1</page>
+            <instruction>Sila jana dokumen sebelum selesai.</instruction>   
+        </txncode>
+    </stage>
+    
+    <stage id = "pendaftaran_hakmilik" currentAction="Pendaftaran Hakmilik Strata"  listener="etanah.view.strata.validator.CompleteValidator" report="true"  finalize="true" >
+        <txncode id="PHPP" daysToComplete="2">
+            <page id="1" title="Hakmilik">strata/maklumat_tanah?showForm2</page>
+            <page id="2" title="Pendaftaran Hakmilik Strata">strata/maklumat_hakmilik_permohonan?showFormHm</page>
+            <page id="3" title="Perbadanan Pengurusan">strata/badanPengurusan?showForm2</page>
+            <!--<page id="4" title="Pelan Lokasi">strata/mlk/gis?showPelanLokasi</page>-->
+            <instruction>Sila Jana Dokumen Hakmilik Strata.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id = "surat_tolak" report="true" currentAction="Sedia Surat Tolak" finalize="true" >
+        <txncode id="PHPP">
+            <page id="1" title="Surat Makluman">strata/sebabTolak</page>
+            <instruction>Sila klik Butang Jana Dokumen.</instruction>
+            <reports>
+                <report generator="STRSTolakPecahBahagiMLK.rdf" prefix="VDOC" code="STBP"/>
+            </reports>
+
+        </txncode>
+    </stage>
+
+</workflow>
+

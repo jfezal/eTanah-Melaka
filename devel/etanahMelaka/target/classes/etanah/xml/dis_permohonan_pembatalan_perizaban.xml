@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<!--
+    Document   : permohonan_pembatalan_perizaban.xml
+    Created on : May 24, 2010, 4:28 PM
+    Author     : sitifariza.hanim
+    Description:
+        Purpose of the document follows.
+-->
+
+<workflow id="http://xmlns.oracle.com/PelupusanBPEL/PelupusanMelaka/PembatalanPerizaban">
+
+    <stage id="Stage1" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanah</page>
+            <page id="003" title="Maklumat Permohonan Perizaban Terdahulu">pelupusan/maklumat_pemohon1</page>
+            <page id="004" title="Maklumat Pembatalan">pelupusan/perizaban?showForm1</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="Stage2" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanah?showForm2</page>
+            <page id="003" title="Maklumat Permohonan Perizaban Terdahulu">pelupusan/maklumat_pemohon1</page>
+            <page id="004" title="Maklumat Pembatalan">pelupusan/perizaban?showForm1</page>
+            <page id="005" title="Laporan Pelukis Pelan">pelupusan/laporan_pelukis_pelan</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="Stage3" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanah?showForm2</page>
+            <page id="003" title="Maklumat Permohonan Perizaban Terdahulu">pelupusan/maklumat_pemohon1</page>
+            <page id="004" title="Maklumat Pembatalan">pelupusan/perizaban?showForm1</page>
+            <page id="005" title="Maklumat Jabatan Teknikal">pelupusan/jabatan_teknikal12?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="Stage4" currentAction="Semakan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanah?showForm2</page>
+            <page id="003" title="Maklumat Permohonan Perizaban Terdahulu">pelupusan/maklumat_pemohon1</page>
+            <page id="004" title="Maklumat Pembatalan">pelupusan/perizaban?showForm1</page>
+            <page id="005" title="Maklumat Jabatan Teknikal">pelupusan/jabatan_teknikal12?showForm2</page>
+            <page id="006" title="Agihan Tugas">pelupusan/agihTugasanV2</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan yang berkenaan.</instruction>
+            <outcomes>
+                <outcome label="Lengkap" value="LK"/>
+                <outcome label="Tidak Lengkap" value="TL"/>
+            </outcomes>
+       </txncode>
+    </stage>
+
+    <stage id="Stage5" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanah?showForm2</page>
+            <page id="003" title="Maklumat Permohonan Perizaban Terdahulu">pelupusan/maklumat_pemohon1</page>
+            <page id="004" title="Maklumat Pembatalan">pelupusan/perizaban?showForm1</page>
+            <!--<page id="005" title="Laporan Tanah">pelupusan/laporan_tanah</page>-->
+              <page id="005" title="Laporan Tanah">/common/laporan/tanah/laporantanahNewActionBean</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="Stage6" currentAction="Semakan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanah?showForm2</page>
+            <page id="003" title="Maklumat Permohonan Perizaban Terdahulu">pelupusan/maklumat_pemohon1</page>
+            <page id="004" title="Maklumat Pembatalan">pelupusan/perizaban?showForm1</page>
+            <page id="005" title="Laporan Tanah">pelupusan/laporan_tanah</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan yang berkenaan.</instruction>
+            <outcomes>
+                <outcome label="Lengkap" value="LK"/>
+                <outcome label="Tidak Lengkap" value="TL"/>
+            </outcomes>
+        </txncode>
+    </stage>
+
+    <stage id="Stage7" currentAction="Semakan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanah</page>
+            <page id="003" title="Maklumat Permohonan Perizaban Terdahulu">pelupusan/maklumat_pemohon1</page>
+            <page id="004" title="Maklumat Pembatalan">pelupusan/perizaban?showForm1</page>
+            <page id="005" title="Laporan Tanah">pelupusan/laporan_tanah</page>
+            <page id="006" title="Risalat MMKN">pelupusan/ulasan_mmk?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="Stage8" currentAction="Semakan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanah</page>
+            <page id="003" title="Maklumat Permohonan Perizaban Terdahulu">pelupusan/maklumat_pemohon1</page>
+            <page id="004" title="Maklumat Pembatalan">pelupusan/perizaban?showForm1</page>
+            <page id="005" title="Laporan Tanah">pelupusan/laporan_tanah</page>
+            <page id="006" title="Risalat MMKN">pelupusan/ulasan_mmk?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan yang berkenaan.</instruction>
+            <outcomes>
+                <outcome label="Lengkap" value="LK"/>
+                <outcome label="Tidak Lengkap" value="TL"/>
+            </outcomes>
+        </txncode>
+    </stage>
+
+    <stage id="Stage9" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanah</page>
+            <page id="003" title="Maklumat Permohonan Perizaban Terdahulu">pelupusan/maklumat_pemohon1</page>
+            <page id="004" title="Maklumat Pembatalan">pelupusan/perizaban?showForm1</page>
+            <page id="005" title="Laporan Tanah">pelupusan/laporan_tanah</page>
+            <page id="006" title="Risalat MMKN">pelupusan/ulasan_mmk?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan dan masukkan perakuan pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Peraku" value="P"/>
+                <outcome label="Tidak Peraku" value="TP"/>
+            </outcomes>
+        </txncode>
+    </stage>
+
+    <stage id="Stage10" currentAction="Semakan Maklumat">
+        <txncode id="PBRZ">
+        <page id="001" title="Keputusan">pelupusan/mesyuarat</page>
+        <validator>validator</validator>
+        <instruction>Sila semak semua maklumat-maklumat permohonan dan masukkan perakuan pada bahagian keputusan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="Stage11" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Draf Warta Cadangan Pembatalan">pelupusan/draf_warta_tanah_rizab?showForm1</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="Stage12" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Draf Warta Cadangan Pembatalan">pelupusan/draf_warta_tanah_rizab?showForm1</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan yang berkenaan.</instruction>
+            <outcomes>
+                <outcome label="Disah" value="DS"/>
+                <outcome label="Tidak Disahkan" value="XD"/>
+            </outcomes>
+        </txncode>
+    </stage>
+
+    <stage id="Stage13" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <!--<page id="001" title="Surat Warta">pelupusan/</page>-->
+             <page id="001" title="Draf Warta Cadangan Pembatalan">pelupusan/draf_warta_tanah_rizab?showForm1</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="Stage14" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Draf Warta Cadangan Pembatalan">pelupusan/draf_warta_tanah_rizab?showForm1</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan yang berkenaan dan masukkan perakuan pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Peraku" value="P"/>
+                <outcome label="Tidak Peraku" value="TP"/>
+            </outcomes>
+        </txncode>
+    </stage>
+
+   <!-- <stage id="Stage15" currentAction="Penerimaan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Draf Warta Cadangan Pembatalan">pelupusan/draf_warta_tanah_rizab?showForm1</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>-->
+
+    <stage id="Stage15" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Kemaskini Maklumat Warta">pelupusan/draf_warta_tanah_rizab?showForm3</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="Stage16" currentAction="Penerimaan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Draf Warta Cadangan Pembatalan">pelupusan/draf_warta_tanah_rizab?showForm1</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="Stage17" currentAction="Pamer Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Draf Warta Cadangan Pembatalan">pelupusan/draf_warta_tanah_rizab?showForm1</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="Stage18" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Draf Warta Pembatalan">pelupusan/draf_warta_tanah_rizab?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="Stage19" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Draf Warta Pembatalan">pelupusan/draf_warta_tanah_rizab?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan yang berkenaan.</instruction>
+            <outcomes>
+                <outcome label="Disah" value="DS"/>
+                <outcome label="Tidak Disahkan" value="XD"/>
+            </outcomes>
+        </txncode>
+    </stage>
+
+    <stage id="Stage20" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <!--<page id="001" title="Surat Warta">pelupusan/</page>-->
+            <page id="002" title="Draf Warta Pembatalan">pelupusan/draf_warta_tanah_rizab?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan yang berkenaan.</instruction>
+            <outcomes>
+                <outcome label="Disah" value="DS"/>
+                <outcome label="Tidak Disahkan" value="XD"/>
+            </outcomes></txncode>
+    </stage>
+
+    <stage id="Stage21" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Draf Warta Pembatalan">pelupusan/draf_warta_tanah_rizab?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan yang berkenaan dan masukkan perakuan pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Peraku" value="P"/>
+                <outcome label="Tidak Peraku" value="TP"/>
+            </outcomes>
+        </txncode>
+    </stage>
+
+   <!-- <stage id="Stage22" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Draf Warta Pembatalan">pelupusan/draf_warta_tanah_rizab?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan yang berkenaan.</instruction>
+        </txncode>
+    </stage>-->
+
+    <stage id="Stage22" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Kemaskini Maklumat Warta">pelupusan/draf_warta_tanah_rizab?showForm3</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="Stage23" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Warta Pembatalan">pelupusan/draf_warta_tanah_rizab?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="Stage24" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Warta Pembatalan">pelupusan/draf_warta_tanah_rizab?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="Stage25" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Charting">chart/charting?showFormTab</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="Stage26" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Warta Pembatalan">pelupusan/draf_warta_tanah_rizab?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+   <!-- <stage id="Stage28" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Warta Pembatalan">pelupusan/draf_warta_tanah_rizab?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan yang berkenaan.</instruction>
+            <outcomes>
+                <outcome label="Lulus" value="L"/>
+                <outcome label="Tolak" value="T"/>
+            </outcomes>
+        </txncode>
+    </stage>-->
+
+    <stage id="Stage27" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Keputusan">pelupusan/mesyuarat</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="Stage28" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Warta Pembatalan">pelupusan/draf_warta_tanah_rizab?showForm2</page>
+            <page id="002" title="Agihan Tugas">pelupusan/agihTugasanV2</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="Stage29" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Warta Pembatalan">pelupusan/draf_warta_tanah_rizab?showForm2</page>
+            <page id="002" title="Agihan Tugas">pelupusan/agihTugasanV2</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="Stage30" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Warta Pembatalan">pelupusan/draf_warta_tanah_rizab?showForm2</page>
+            <page id="002" title="Agihan Tugas">pelupusan/agihTugasanV2</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="Stage31" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Warta Pembatalan">pelupusan/draf_warta_tanah_rizab?showForm2</page>
+            <page id="002" title="Agihan Tugas">agihTugasan</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="Stage32" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Permohonan Ukur">pembangunan/pu</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="Stage33" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Permohonan Ukur">pembangunan/pu</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+            <outcomes>
+                <outcome label="Lengkap" value="LK"/>
+                <outcome label="Tidak Lengkap" value="TL"/>
+            </outcomes>
+        </txncode>
+    </stage>
+
+    <stage id="Stage34" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <validator>validator</validator>
+            <instruction>Terima Pelan Warta.</instruction>
+        </txncode>
+    </stage>
+
+     <stage id="Stage35" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Agihan Tugas">agihTugasan</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="Stage36" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Nota Siasatan">pelupusan/sebab_penangguhan</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="Stage37" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Nota Siasatan">pelupusan/sebab_penangguhan</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan yang berkenaan.</instruction>
+            <outcomes>
+                <outcome label="Lengkap" value="LK"/>
+                <outcome label="Tidak Lengkap" value="TL"/>
+            </outcomes>
+        </txncode>
+    </stage>
+
+    <stage id="Stage38" currentAction="Kemasukan Maklumat">
+        <txncode id="PBRZ">
+            <page id="001" title="Nota Siasatan">pelupusan/sebab_penangguhan</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan yang berkenaan dan masukkan perakuan pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Peraku" value="P"/>
+                <outcome label="Tidak Peraku" value="TP"/>
+            </outcomes>
+        </txncode>
+    </stage>
+
+  <!--  <stage id="Stage39" currentAction="Kemasukan Maklumat">
+       <txncode id="PBRZ">
+            <page id="001" title="Integrasi ke Sistem e-MMKN">pelupusan/mesyuarat</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+-->
+    <stage id="Stage39" currentAction="Kemasukan Maklumat">
+       <txncode id="PBRZ">
+            <page id="001" title="Keputusan e-MMKN">pelupusan/mesyuarat</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="Stage40" currentAction="Kemasukan Maklumat">
+       <txncode id="PBRZ">
+            <page id="001" title="Surat Keputusan">pelupusan/surat_keputusan</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+</workflow>

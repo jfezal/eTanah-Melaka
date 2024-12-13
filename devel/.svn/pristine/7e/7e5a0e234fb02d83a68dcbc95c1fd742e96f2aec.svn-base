@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<workflow id="http://xmlns.oracle.com/Hasil1/Project1/HW_mlk_sek">
+    <stage id="Kemasukan_Maklumat" currentAction="Kemasukan Maklumat" listener="etanah.view.hasil.validator.RemisyenValidation">
+        <txncode id="REMSB" daysToComplete="2">
+            <page id="1" title="Hakmilik">common/maklumat_hakmilik_single</page>
+            <page id="2" title="Maklumat Tambahan">hasil/maklumat_tambah_SBM</page>
+            <page id="3" title="Tuan Tanah">common/maklumat_pemohon</page>
+            <page id="4" title="Sokongan">common/hasilSokongan</page>
+            <page id="5" title="Perihal Cukai">common/perihalCukai</page>
+            <page id="6" title="Sejarah Permohonan">hasil/sejarah</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat-maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+    <stage id="Pengesahan_Maklumat" currentAction="Pengesahan Maklumat" listener="etanah.view.hasil.validator.RemisyenValidation" pushback="true">
+        <txncode id="REMSB" daysToComplete="2">
+            <page id="1" title="Hakmilik">common/maklumat_hakmilik_single</page>
+            <page id="2" title="Maklumat Tambahan">hasil/maklumat_tambah_SBM</page>
+            <page id="3" title="Tuan Tanah">common/maklumat_pemohon</page>
+            <page id="4" title="Sokongan">common/hasilSokongan</page>
+            <page id="5" title="Perihal Cukai">common/perihalCukai</page>
+            <page id="6" title="Sejarah Permohonan">hasil/sejarah</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat-maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Disemak" value="SM"/>
+                <!--<outcome label="Tidak Disemak" value="TS"/>-->
+             </outcomes>
+        </txncode>
+    </stage>
+    <stage id="Kelulusan" currentAction="Kemasukan Keputusan" finalize="true" listener="etanah.view.hasil.validator.RemisyenValidation,etanah.hasil.workflow.ProsesRemisyen,etanah.hasil.workflow.ProsesEndorsan" pushback="true">
+        <txncode id="REMSB" daysToComplete="2">
+            <page id="1" title="Hakmilik">common/maklumat_hakmilik_single</page>
+            <page id="2" title="Maklumat Tambahan">hasil/maklumat_tambah_SBM</page>
+            <page id="3" title="Tuan Tanah">common/maklumat_pemohon</page>
+            <page id="4" title="Sokongan">common/hasilSokongan</page>
+            <page id="5" title="Perihal Cukai">common/perihalCukai</page>
+            <page id="6" title="Sejarah Permohonan">hasil/sejarah</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan dan masukkan perakuan pada bahagian keputusan</instruction>
+            <outcomes>
+                <outcome label="Lulus" value="L"/>
+                <outcome label="Tolak" value="T"/>
+            </outcomes>            
+        </txncode>        
+    </stage>
+    <stage id = "endorsan">
+        <txncode id="REMSB">
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label=" Lulus" value="L"/>
+                <outcome label=" Tolak" value="T"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="Cetak_Surat" currentAction="Cetakan" report="true" listener="etanah.hasil.workflow.ProsesSuratKeputusan">
+        <txncode id="REMSB" daysToComplete="1">
+            <page id="1" title="Hakmilik">common/maklumat_hakmilik_single</page>
+            <page id="2" title="Maklumat Tambahan">hasil/maklumat_tambah_SBM?showForm2</page>
+            <page id="3" title="Tuan Tanah">common/maklumat_pemohon?showForm2</page>
+            <page id="4" title="Sokongan">common/hasilSokongan?showForm2</page>
+            <page id="5" title="Perihal Cukai">common/perihalCukai</page>
+            <page id="6" title="Sejarah Permohonan">hasil/sejarah</page>
+            <validator>validator</validator>
+            <instruction>Sila klik butang Jana Dokumen untuk cetak surat keputusan.</instruction>
+            <!--<reports>
+                <report generator="hasilRayuanKurangCukaiML.rdf" prefix="VDOC" code="SKPN"/>
+            </reports>-->
+        </txncode>
+    </stage>
+</workflow>

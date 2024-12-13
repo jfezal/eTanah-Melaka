@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<workflow id="http://xmlns.oracle.com/E_TANAH/ACQUISITION/HWACQSEK31A">
+<!--<stage id="Kemasukan">-->
+<stage id="03">
+    <txncode id="831A" >
+            <page id="1" title="Keputusan Mesyuarat JKKPT" >pengambilan/pendaftaranSuratKuasaWakil?showForm</page>
+            <page id="2" title="Borang I" >pengambilan/pendaftaranSuratKuasaWakil?showForm1</page>
+            <!--<page id="2" title="Dokumen Semakan" >pengambilan/penarikanBalik?showForm1</page>-->
+            <!--<page id="3" title="Keputusan" >pengambilan/penarikanBalik?showForm2</page>-->
+            <validator>validator</validator>
+            <instruction>Sila agihkan tugasan ini kepada yang berkenaan.</instruction>
+            <outcomes>
+                <outcome label="Lulus" value="L"/>
+                <outcome label="Tidak Lulus" value="TL"/>
+            </outcomes>
+      <!--  <report>
+            <report generator="ACQ_Surat_R30_NS.rdf" prefix="VDOC" code="VDOC">
+        </report>-->
+   </txncode>
+</stage>
+</workflow>

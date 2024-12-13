@@ -1,0 +1,174 @@
+
+
+<workflow id="http://xmlns.oracle.com/Application1/Sek4_Aduan/Sek4_Aduan_Kemasukan">
+    <stage id="kemasukan" currentAction="Kemasukan Permohonan" report="true" listener="etanah.view.stripes.pengambilan.sek4aduan.validator.KemasukanValidator">
+        <txncode id="SEK4A">
+            <page id="1" title="Ringkasan Aduan">/pengambilan/aduan_kerosakan/ringkasan_aduan</page>          
+            <page id="2" title="Maklumat Pemaju">/pengambilan/aduan_kerosakan/pemaju</page> 
+            <page id="3" title="Maklumat Penerima">/pengambilan/aduan_kerosakan/penerima</page>      
+            <page id="4" title="Tandatangan Manual">/pengambilan/tandatangan_manual?suratKemasukanFormAduan</page>  
+            <page id="5" title="Nota/Kertas Minit">/pengambilan/notaBaru</page> 
+            <validator>validator</validator>
+            <reports>
+                <report generator="ACQSTA.rdf" prefix="VDOC" code="STA"/>
+            </reports>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+   
+    <stage id="semak_surat" currentAction="Semakan Permohonan" pushback="true">
+        <txncode id="SEK4A">
+            <page id="1" title="Ringkasan Aduan">/pengambilan/aduan_kerosakan/ringkasan_aduan</page> 
+            <page id="2" title="Maklumat Pemaju">/pengambilan/aduan_kerosakan/pemaju</page> 
+            <page id="3" title="Maklumat Penerima">/pengambilan/aduan_kerosakan/penerima</page>   
+            <page id="5" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+                        
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>            
+            </reports>
+        </txncode>
+    </stage>
+    
+    <stage id="agih_tugas" currentAction="Agihan Tugas" distribute="true" pushback="true">
+        <txncode id="SEK4A">
+            <page id="1" title="Ringkasan Aduan">/pengambilan/aduan_kerosakan/semak/maklumat_asas</page>
+            <page id="2" title="Agihan Tugas">pengambilan/aduan_kerosakan/agihanTugasan</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="laporan_tanah" currentAction="Penyediaan Laporan Tanah">
+        <txncode id="SEK4A">
+            <page id="1" title="Ringkasan Aduan">/pengambilan/aduan_kerosakan/semak/maklumat_asas</page>          
+            <page id="004" title="Laporan Tanah">/common/laporan/tanah/laporantanahNewActionBean</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <reports>
+                <report generator="ACQLT_MLK.rdf" prefix="VDOC" code="LTPD"/>    
+            </reports>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+    <stage id="semak_laporanTanah" currentAction="Semakan Laporan Tanah" pushback="true">       
+        <txncode id="SEK4A">
+            <page id="1" title="Ringkasan Aduan">/pengambilan/aduan_kerosakan/semak/maklumat_asas</page>         
+            <page id="004" title="Laporan Tanah">/common/laporan/tanah/laporantanahNewActionBean</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <reports>
+                <report generator="ACQLT_MLK.rdf" prefix="VDOC" code="LTPD"/>
+            </reports>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>    
+    <stage id="sedia_surat" currentAction="Sedia Surat Panggilan" report="true" listener="etanah.view.stripes.pengambilan.sek4aduan.validator.SediaBorangEValidator">
+        <txncode id="SEK4A">
+            <page id="1" title="Ringkasan Aduan">/pengambilan/aduan_kerosakan/semak/maklumat_asas</page>
+            <page id="2" title="Maklumat Pemaju">/pengambilan/aduan_kerosakan/pemaju</page> 
+            <page id="3" title="Maklumat Penerima">/pengambilan/aduan_kerosakan/penerima</page>  
+            <page id="4" title="Maklumat Perbincangan">/pengambilan/aduan_kerosakan/sedia_surat</page> 
+            <page id="5" title="Tandatangan Manual">/pengambilan/tandatangan_manual?borangEAduanForm</page>      
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+          
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+    <stage id="semak_tandatangan" currentAction="Semak Dan TandaTangan Surat Panggilan" report="true" listener="etanah.view.stripes.pengambilan.sek4aduan.validator.SediaBorangEValidator">
+        <txncode id="SEK4A">
+            <page id="1" title="Ringkasan Aduan">/pengambilan/aduan_kerosakan/semak/maklumat_asas</page>
+            <page id="2" title="Maklumat Pemaju">/pengambilan/aduan_kerosakan/pemaju</page> 
+            <page id="3" title="Maklumat Penerima">/pengambilan/aduan_kerosakan/penerima</page>    
+            <page id="4" title="Maklumat Perbincangan">/pengambilan/aduan_kerosakan/sedia_surat</page>                   
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="rekod_kpsn_mmkn" currentAction="Terima dan Imbas Warta" distribute="true">       
+        <txncode id="SEK4A">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Keputusan MMKN">/pengambilan/common/rekodKpsnMMKActionBean</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>  
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="sedia_surat_pembyrn" currentAction="Sedia Surat Pembayaran" pushback="false" report="true">
+        <txncode id="SEK4A">
+            <page id="1" title="Ringkasan Aduan">/pengambilan/aduan_kerosakan/semak/maklumat_asas</page>                               
+            <page id="2" title="Maklumat Pemaju">/pengambilan/aduan_kerosakan/pemaju</page> 
+            <page id="3" title="Maklumat Penerima">/pengambilan/aduan_kerosakan/penerima</page>   
+            <page id="4" title="Surat Arahan Bayar">/pengambilan/aduan_kerosakan/sedia_surat_pembayaran</page>
+            <page id="5" title="Tandatangan Manual">/pengambilan/tandatangan_manual?aduanAB</page>
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Peringkat penyediaan surat arahan pembayaran kepada agensi/pemaju.</instruction>
+            <reports>
+                <report generator="ACQSrtArhnByrn_MLK.rdf" prefix="VDOC" code="AB"/> 
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="semak_tandatangan_surat_pembyrn" currentAction="Semak Dan Tandatangan Surat Pembayaran" listener="etanah.view.stripes.pengambilan.sek4aduan.validator.SemakTandatanganArahanBayaranValidator" report="true">
+        <txncode id="SEK4A">
+            <page id="1" title="Ringkasan Aduan">/pengambilan/aduan_kerosakan/semak/maklumat_asas</page>
+            <page id="2" title="Maklumat Pemaju">/pengambilan/aduan_kerosakan/pemaju</page> 
+            <page id="3" title="Maklumat Penerima">/pengambilan/aduan_kerosakan/penerima</page>   
+            <page id="4" title="Surat Arahan Bayar">/pengambilan/aduan_kerosakan/sedia_surat_pembayaran</page>
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQSrtArhnByrn_MLK.rdf" prefix="VDOC" code="AB"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="rekod_bayaran_sedia_surat" currentAction="Rekod Bayaran Dan Sedia Surat" distribute="true">
+        <txncode id="SEK4A">
+            <page id="1" title="Ringkasan Aduan">/pengambilan/aduan_kerosakan/semak/maklumat_asas</page>
+            <page id="2" title="Rekod Terimaan Bayaran">/pengambilan/aduan_kerosakan/rekod_bayaran_sedia_surat</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="semak_tandatangan_pembyrn" currentAction="Semak Dan Tandatangan Bayaran" listener="etanah.view.stripes.pengambilan.sek4aduan.validator.SemakTandatanganPembayaranValidator" report="true">
+        <txncode id="SEK4A">
+            <page id="1" title="Ringkasan Aduan">/pengambilan/aduan_kerosakan/semak/maklumat_asas</page>
+            <page id="2" title="Maklumat Pemaju">/pengambilan/aduan_kerosakan/pemaju</page> 
+            <page id="3" title="Maklumat Penerima">/pengambilan/aduan_kerosakan/penerima</page>  
+            <page id="4" title="Rekod Terimaan Bayaran">/pengambilan/aduan_kerosakan/rekod_bayaran_sedia_surat?showFormView</page>
+            <page id="5" title="Tandatangan Manual">/pengambilan/tandatangan_manual?aduanSBPC</page>
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Peringkat penyedian surt panggilan terimaan tuntutan pampasan.</instruction>
+            <reports>
+                <report generator="ACQSrtAmbilCek_MLK.rdf" prefix="VDOC" code="SBPC"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="rekod_terimaCek" currentAction="Rekod Terima Cek" distribute="true">
+        <txncode id="SEK4A">
+            <page id="1" title="Ringkasan Aduan">/pengambilan/aduan_kerosakan/semak/maklumat_asas</page>
+            <page id="2" title="Rekod Serahan Cek">/pengambilan/aduan_kerosakan/rekod_terima_cek</page>
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+   
+    
+</workflow>
+
+
+

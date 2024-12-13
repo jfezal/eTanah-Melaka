@@ -1,0 +1,4 @@
+java.naming.factory.initial=weblogic.jndi.WLInitialContextFactory
+java.naming.provider.url=${bpel.server.t3}
+java.naming.security.principal=weblogic
+java.naming.security.credentials=etanah123

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<workflow id="http://xmlns.oracle.com/PS/SIJILSUBMC/Ht_SIJILSUBMC">
+   
+
+    <stage id="agih_tugasan" finalize="false" distribute="true" currentAction="Agih Tugasan">
+        <txncode id="SUBMC">
+            <page id="1" title="Agih Tugasan">strata/agihTugasan</page>
+            <page id="2" title="Penyerah">strata/maklumat_penyerah</page>
+            <instruction>Sila agihkan tugasan ini kepada yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id = "kemasukan" currentAction="Kemasukan" >
+        <txncode id="SUBMC">
+            <page id="1" title="Penyerah">strata/maklumat_penyerah</page>
+            <page id="2" title="Pemohon">strata/kemasukan_pemohon</page>
+            <page id="3" title="Hakmilik">strata/maklumat_tanah?showForm2</page>
+            <page id="4" title="Maklumat Sub Perbadanan Pengurusan">/pendaftaran/KemasukanSubMC</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id = "sedia_suratSah" currentAction="Sedia Surat Sah JUPEM" pushback="true"  report="true">
+        <txncode id="SUBMC">
+            <page id="1" title="Penyerah">strata/maklumat_penyerah</page>
+            <page id="2" title="Pemohon">strata/kemasukan_pemohon</page>
+            <page id="3" title="Hakmilik">strata/maklumat_tanah?showForm2</page>
+            <page id="4" title="Maklumat Sub Perbadanan Pengurusan">/pendaftaran/KemasukanSubMC</page>
+            <page id="5" title="Maklumat Surat Sah JUPEM">strata/pelan?mohonJupem</page>
+            <instruction>Sila Jana Surat Sah ke JUPEM.</instruction>
+            <reports>
+                <report generator="STRSMohonJupem_SUBMC.rdf" prefix="VDOC" code="SMJ"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id = "sedia_kertas_pertimbangan" currentAction="Sedia Kertas Pertimbangan" report="true">
+        <txncode id="SUBMC">
+            <page id="1" title="Kertas Pertimbangan PTG">strata/kertas</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="STRKertasPTG_SUBMC.rdf" prefix="VDOC" code="KPT"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id = "syor_kertas_pertimbangan" currentAction="Syor Kertas Pertimbangan" report="true" pushback="true">
+        <txncode id="SUBMC">
+            <page id="1" title="Kertas Pertimbangan PTG">strata/kertas?showForm2</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="STRKertasPTG_SUBMC.rdf" prefix="VDOC" code="KPT"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id = "keputusan" currentAction="Keputusan" report="true" listener="etanah.view.strata.validator.KeputusanValidation" pushback="true" advanceRule="true" >
+        <txncode id="SUBMC">
+            <page id="1" title="Kertas Pertimbangan PTG">strata/kertas?showFormReadOnly</page>
+            <validator>validator</validator>
+            <instruction>Sila semak Kertas Pertimbangan PTG dan klik tab Keputusan untuk membuat keputusan.</instruction>
+            <outcomes>
+                <outcome label=" Lulus" value="L">
+                </outcome>
+                <outcome label=" Tolak" value="T">
+                </outcome>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id = "surat_lulus" currentAction="Sedia Makluman Kelulusan" report="true">
+        <txncode id="SUBMC">
+            <page id="1" title="Penyerah">strata/maklumat_penyerah</page>
+            <page id="2" title="Pemohon">strata/kemasukan_pemohon</page>
+            <page id="3" title="Hakmilik">strata/maklumat_tanah?showForm2</page>
+            <page id="4" title="Maklumat Surat">strata/sebabTolak?tolakSUBMC</page>
+            <page id="4" title="Kemasukan Bayaran">/pendaftaran/KemasukanSubMC?showFormBayaran</page>
+            <instruction>Sila Jana Surat Kelulusan dan Bayaran.</instruction>
+            <reports>
+                <report generator="STRSuratLulus_MLK.rdf" prefix="VDOC" code="SKL"/>
+                <report generator="STRBayaranSUBMC_MLK.rdf" prefix="VDOC" code="BFF"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id = "bayaran" finalize="true" currentAction="Bayaran SUB-MC">
+        <txncode id="SUBMC">
+            <page id="1" title="Terima Bayaran">kaunter/BayaranPerihal</page>
+            <instruction>Sila Klik Butang Bayar.</instruction>
+        </txncode>
+    </stage>
+    <stage id = "jana_sijil" finalize="true" report="true" currentAction="Jana Sijil" listener="etanah.view.strata.validator.CompleteValidator">
+        <txncode id="SUBMC">
+            <page id="1" title="Penyerah">strata/maklumat_penyerah</page>
+            <page id="2" title="Pemohon">strata/kemasukan_pemohon</page>
+            <page id="3" title="Hakmilik">strata/maklumat_tanah?showForm2</page>
+            <instruction>Sila Jana Sijil Sub - Perbadanan Pengurusan.</instruction>
+            <reports>
+                <report generator="STRSijilSUBMC_MLK.rdf" prefix="VDOC" code="SUBMC"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id = "surat_tolak" finalize="true" report="true" currentAction="Sedia Surat Penolakan" listener="etanah.view.strata.validator.CompleteValidator">
+        <txncode id="SUBMC">
+            <page id="1" title="Penyerah">strata/maklumat_penyerah</page>
+            <page id="2" title="Pemohon">strata/kemasukan_pemohon</page>
+            <page id="3" title="Hakmilik">strata/maklumat_tanah?showForm2</page>
+            <page id="4" title="Maklumat Surat">strata/sebabTolak?tolakSUBMC</page>
+            <instruction>Sila Jana Surat Surat Penolakan.</instruction>
+            <reports>
+                <report generator="STRSuratTolak_MLK.rdf" prefix="VDOC" code="STLK"/>
+            </reports>
+        </txncode>
+    </stage>
+</workflow>

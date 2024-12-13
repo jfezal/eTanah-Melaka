@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<workflow id="http://xmlns.oracle.com/PelulusanMelaka/PHLL/PHLL--patpunya/dah tak guna">
+
+<!--     <stage id="01TrmAduan" currentAction="Terima Aduan">
+        <txncode id="PBHL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Agihan Tugas">pelupusan/agihTugasanV2</page>
+            <page id="003" title="Nota">penguatkuasaan/notaBaru</page>        
+            <validator>validator</validator>
+            <instruction>Sila arahkan tugas untuk memasukkan aduan.</instruction>
+        </txncode>
+    </stage>
+    <stage id="02KmsknButir" currentAction="Kemasukan Permohonan">
+        <txncode id="PBHL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah Pemohon">pelupusan/pihak_kepentingan</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang</page>
+            <page id="006" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan dan agih tugasan kepada Pelukis Pelan</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="03ArahPPTD" currentAction="Arahan Tugas">
+        <txncode id="PBHL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Agihan Tugas">pelupusan/agihTugasanV2</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <instruction>Sila arahkan tugas.</instruction>
+            <validator>validator</validator>
+          <reports>
+                <report generator="DISLPPBHL_MLK.rdf" prefix="VDOC" code="LPE"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="04ArahPenPegTnh" currentAction="Agihan Tugas" distribute="true">
+        <txncode id="PBHL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Agihan Tugas">pelupusan/agihTugasanV2</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <instruction>Sila arahkan tugas.</instruction>
+            <validator>validator</validator>
+        </txncode>
+    </stage>
+    
+    <stage id="05AghnTgs" currentAction="Agihan Tugas">
+        <txncode id="PBHL" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Agihan Tugas">pelupusan/agihTugasanV2</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila arahkan tugas.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="06KmsknLapChrtg" currentAction="Kemasukan Laporan Charting">
+        <txncode id="PBHL" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Laporan Pelukis Pelan">pelupusan/laporan_pelukis_pelan</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila sedia laporan pelan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="07Semakan" currentAction="Semakan Laporan Pelan" report="true">
+        <txncode id="PBHL" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Laporan Pelukis Pelan">pelupusan/laporan_pelukis_pelan</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat-maklumat berkenaan.</instruction>
+            <reports>
+                <report generator="DISLPPHLP_MLK.rdf" prefix="VDOC" code="LPE"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="08KmsknLap" currentAction="Sedia Laporan Tanah">
+        <txncode id="PBHL" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Laporan Tanah">pelupusan/laporan_tanahV2</page>
+            <page id="005" title="Laporan Nilaian">pelupusan/laporanNilaian</page>
+            <page id="006" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila sedia laporan tanah.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="09SmknLap" currentAction="Semakan Laporan Tanah" pushback="true">
+        <txncode id="PBHL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Laporan Tanah">pelupusan/laporan_tanah4?showForm2</page>
+            <page id="005" title="Laporan Nilaian">pelupusan/laporanNilaian?viewForm</page>
+            <page id="006" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat-maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="10SmkLapTnh" currentAction="Semakan Laporan Tanah" pushback="true">
+        <txncode id="PBHL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Laporan Tanah">pelupusan/laporan_tanah4?showForm2</page>
+            <page id="005" title="Laporan Nilaian">pelupusan/laporanNilaian?viewForm</page>
+            <page id="006" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat-maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="11PenydnKrts" currentAction="Penyediaan Kertas Pertimbangan PTD">
+        <txncode id="PBHL" daysToComplete="14">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Laporan Tanah">pelupusan/laporan_tanah4?showForm2</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="12SmkKrtsPrtmbgn" currentAction="Semak Kertas Pertimbangan PTD" pushback="true">
+        <txncode id="PBHL">
+             <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Laporan Tanah">pelupusan/laporan_tanah4?showForm2</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="13TrmLap" currentAction="Terima Laporan" pushback="true">
+        <txncode id="PBHL">
+             <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Laporan Tanah">pelupusan/laporan_tanah4?showForm2</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="14HntrKptsn" currentAction="Hantar Keputusan Tolak" report="true">
+        <txncode id="PBHL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Tandatangan">pelupusan/tandatangan_dokumenV2</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila janakan surat tolak.</instruction>
+            <reports>
+                <report generator="DISSMTPTD_MLK.rdf" prefix="VDOC" code="SMT"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    
+    <stage id="15TtpknTrkh" currentAction="Penyediaan Notis 2A">
+        <txncode id="PBHL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Borang 2A">pelupusan/borang2A_notisMengenaiSiasatan</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan semua maklumat-maklumat permohonan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="16MnyrhdanMnyiarkn" currentAction="Menyerah dan Menyiarkan Notis 2A" report="true">
+        <txncode id="PBHL">
+             <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Borang 2A">pelupusan/borang2A_notisMengenaiSiasatan</page>
+            <page id="005" title="Tandatangan">pelupusan/tandatangan_dokumenV2</page>
+            <page id="006" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila jana notis 2A untuk menyerahkan dan menyiarkan maklumat-maklumat berkenaan.</instruction>
+            <reports>
+                <report generator="DISSMBStn_MLK.rdf" prefix="VDOC" code="MBST"/>
+                <report generator="DISSMStn_MLK.rdf" prefix="VDOC" code="SMST"/>
+                <report generator="DISSMStn1_MLK.rdf" prefix="VDOC" code="SMST1"/>
+                <report generator="DISB2A_MLK.rdf" prefix="VDOC" code="B2A"/>
+            </reports>
+        </txncode>
+    </stage>
+    
+    <stage id="17BtSiasatan" currentAction="Buat Siasatan" advanceRule="true">
+        <txncode id="PBHL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Borang 2A">pelupusan/borang2A_notisMengenaiSiasatan</page>
+            <page id="005" title="Kertas Siasatan">pelupusan/Kertas_stasatan</page>
+            <page id="006" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila buat siasatan.</instruction>
+             <outcomes>
+                <outcome label="Terima" value="A"/>
+                <outcome label="Tolak" value="XA"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    
+    <stage id="18PrntahTlk" currentAction="Perintah hantar keputusan tolak" report="true">
+        <txncode id="PBHL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Agihan Tugas">pelupusan/agihTugasanV2</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila perintahkan untuk sedia surat penolakan.</instruction>
+        </txncode>
+    </stage>  
+    
+     <stage id="19SdknSrt" currentAction="Sedia Surat Penolakan" report="true">
+        <txncode id="PBHL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila jana surat penolakan.</instruction>
+             <reports>
+                <report generator="DISSMTPTD_MLK.rdf" prefix="VDOC" code="SMT"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="20PrntahBtlHL" currentAction="Perintah Batal HL">
+        <txncode id="PBHL" daysToComplete="2">
+             <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Agihan Tugas">pelupusan/agihTugasanV2</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="21SedPrnth" currentAction="Sedia Perintah dan Hantar Pihak Berkepentingan(Serah DHKK)">
+        <txncode id="PBHL" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="22SedButir" currentAction="Sedia Butir-butir H/M">
+        <txncode id="PBHL" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="23TrmHMHntrPrnth" currentAction="Terima dan Hantar Perintah">
+        <txncode id="PBHL" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Agihan Tugas">pelupusan/agihTugasanV2</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila arahkan tugas.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="24ArhSedknPU" currentAction="Arah Sediakan PU">
+        <txncode id="PBHL" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Agihan Tugas">pelupusan/agihTugasanV2</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila arahkan tugas.</instruction>
+        </txncode>
+    </stage>
+
+
+    <stage id="25SedPU" currentAction="Penyediaan Surat PU" report="true">
+        <txncode id="PBHL" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="003" title="Permohonan Ukur">pelupusan/PUNew</page>
+            <page id="004" title="Tandatangan">pelupusan/tandatangan_dokumenV2</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan.</instruction>
+            <reports>
+                <report generator="DISSMBU_MLK.rdf" prefix="VDOC" code="SBU"/>
+                <report generator="DISBPU_MLK.rdf" prefix="VDOC" code="OC"/>
+                <report generator="DISBorangPU_MLK.rdf" prefix="VDOC" code="PU"/>  
+            </reports>
+        </txncode>
+    </stage>
+    
+    <stage id="26Jupem" currentAction="Semak dan Hantar Ke JUPEM" pushback="true">
+        <txncode id="PBHL" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="003" title="Permohonan Ukur">pelupusan/PUNew</page>
+            <page id="004" title="Tandatangan">pelupusan/tandatangan_dokumenV2</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="27MklmPln" currentAction="Maklum Pelan B1">
+        <txncode id="PBHL" daysToComplete="2">
+              <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="28Chrtg" currentAction="Charting">
+        <txncode id="PBHL" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila charting pembatalan haklalulalang.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="29HntrModul" currentAction="Hantar Ke Modul Pendaftaran">
+        <txncode id="PBHL" daysToComplete="2">
+             <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila sediakan maklumat-maklumat berkenaan.</instruction>
+            <report></report>
+        </txncode>
+    </stage>
+    
+     
+    <stage id="30PlngknDHKK" currentAction="Pulangkan DHKK">
+        <txncode id="PBHL" daysToComplete="2">
+             <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila sediakan maklumat-maklumat berkenaan.</instruction>
+            <report></report>
+        </txncode>
+    </stage>-->
+    <stage id="02KmsknAduan" currentAction="Kemasukan Aduan">
+        <txncode id="PBHL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang</page>
+            <page id="004" title="Sebab Pembatalan">pelupusan/rayuan</page>
+            <page id="006" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan dan agih tugasan kepada Pelukis Pelan</instruction>
+        </txncode>
+    </stage>
+    <stage id="03ArahPPTD" currentAction="Arahan Tugas">
+        <txncode id="PBHL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang</page>
+            <page id="004" title="Sebab Pembatalan">pelupusan/rayuan</page>
+<!--            <page id="004" title="Agihan Tugas">pelupusan/agihTugasanV2</page>-->
+            <page id="005" title="Nota">pengambilan/notaBaru</page>
+            <instruction>Sila arahkan tugas.</instruction>
+            <validator>validator</validator>
+        </txncode>
+    </stage>
+    <stage id="04ArahPenPegTnh" currentAction="Arah Penolong Pegawai Tanah">
+        <txncode id="PBHL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Sebab Pembatalan">pelupusan/rayuan</page>
+            <page id="005" title="Nota">pengambilan/notaBaru</page>
+            <instruction>Sila arahkan tugas.</instruction>
+            <validator>validator</validator>
+        </txncode>
+    </stage>
+    
+    <stage id="05AghnTgs" currentAction="Agihan Tugas" distribute="true">
+        <txncode id="PBHL" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Sebab Pembatalan">pelupusan/rayuan</page>
+            <page id="005" title="Agihan Tugas">pelupusan/agihTugasanV2</page>
+            <page id="006" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila agihkan tugas kepada yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="g_charting_permohonan" currentAction="Kemasukan Laporan Pelukis Pelan" report="true">
+        <txncode id="PBHL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Laporan Pelukis Pelan">pelupusan/laporan_pelukis_pelan</page>
+            <page id="005" title="Nota">pengambilan/notaBaru</page>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+            <validator>validator</validator>
+            <reports>
+                <report generator="DISLPPPBHL_MLK.rdf" prefix="VDOC" code="LPE"/>
+            </reports>
+        </txncode>
+    </stage>
+    
+    <stage id="07Semakan" currentAction="Semakan Laporan Pelan" pushback="true">
+        <txncode id="PBHL" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Laporan Pelukis Pelan">pelupusan/laporan_pelukis_pelan?showForm2</page>
+            <page id="005" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat-maklumat berkenaan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="08KmsknLap" currentAction="Sedia Laporan Tanah" report="true">
+        <txncode id="PBHL" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Laporan Tanah">pelupusan/laporan_tanahV2</page>
+            <page id="005" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila sedia laporan tanah.</instruction>
+            <reports>
+                <report generator="DISLTPBHL_MLK.rdf" prefix="VDOC" code="LT"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="09SmknLap" currentAction="Semakan Laporan Tanah" pushback="true">
+        <txncode id="PBHL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Laporan Tanah">pelupusan/laporan_tanahV2?viewOnlyLaporanTanahPPTKanan</page>
+            <page id="005" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat-maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="10SmkLapTnh" currentAction="Semakan Laporan Tanah" pushback="true">
+        <txncode id="PBHL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Laporan Tanah">pelupusan/laporan_tanahV2?viewOnlyLaporanTanah</page>
+            <page id="005" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat-maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="11PenydnKrts" currentAction="Penyediaan Kertas Pertimbangan PTD">
+        <txncode id="PBHL" daysToComplete="14">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Draf Pertimbangan">pelupusan/draf_ptd_pbhl</page>
+            <page id="005" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="12SmkKrtsPrtmbgn" currentAction="Semak Kertas Pertimbangan PTD" pushback="true" report="true">
+        <txncode id="PBHL">
+             <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Draf Pertimbangan">pelupusan/draf_ptd_pbhl</page>
+            <page id="005" title="Tandatangan">pelupusan/tandatangan_dokumenV2</page>
+            <page id="006" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan</instruction>
+            <reports>
+                <report generator="DISKPTDPBHL_MLK.rdf" prefix="VDOC" code="RENC"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="13TrmLap" currentAction="Terima Laporan" advanceRule="true">
+        <txncode id="PBHL">
+             <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Draf Pertimbangan">pelupusan/draf_ptd_pbhl?showFormPTD</page>
+            <page id="005" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+            <outcomes>
+                <outcome label="Buat Siasatan" value="BS"/>
+                <outcome label="Tiada Siasatan" value="XS"/>
+            </outcomes>
+        </txncode>
+    </stage>
+
+    <stage id="14HntrKptsn" currentAction="Hantar Keputusan Tolak" report="true" advanceRule="true">
+        <txncode id="PBHL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Tandatangan">pelupusan/tandatangan_dokumenV2</page>
+            <page id="005" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila janakan surat tolak.</instruction>
+             <reports>
+                <report generator="DISSMTPTDPBHL_MLK.rdf" prefix="VDOC" code="SMT"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="15TtpknTrkh" currentAction="Penyediaan Notis 2A">
+        <txncode id="PBHL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Borang 2A">pelupusan/borang2A_notisMengenaiSiasatan</page>
+            <page id="005" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan semua maklumat-maklumat permohonan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="16MnyrhdanMnyiarkn" currentAction="Menyerah dan Menyiarkan Notis 2A" report="true">
+        <txncode id="PBHL">
+             <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Borang 2A">pelupusan/borang2A_notisMengenaiSiasatan</page>
+            <page id="005" title="Tandatangan">pelupusan/tandatangan_dokumenV2</page>
+            <page id="006" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila jana notis 2A untuk menyerahkan dan menyiarkan maklumat-maklumat berkenaan.</instruction>
+           <reports>
+                <report generator="DISSMBStnPBHL_MLK.rdf" prefix="VDOC" code="MBST"/>
+                <report generator="DISSMStnPBHL_MLK.rdf" prefix="VDOC" code="SMST"/>
+                <report generator="DISSMStn1PBHL_MLK.rdf" prefix="VDOC" code="SMST1"/>
+                <report generator="DISB2APBHL_MLK.rdf" prefix="VDOC" code="B2A"/>
+            </reports>
+        </txncode>
+    </stage>
+    
+    <stage id="17BtSiasatan" currentAction="Buat Siasatan" advanceRule="true">
+        <txncode id="PBHL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Borang 2A">pelupusan/borang2A_notisMengenaiSiasatan</page>
+            <page id="005" title="Kertas Siasatan">pelupusan/Kertas_stasatan</page>
+            <page id="006" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila buat siasatan.</instruction>
+             <outcomes>
+                <outcome label="Tolak" value="T"/>
+                <outcome label="Lulus" value="L"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    
+    <stage id="18AghnTgs" currentAction="Agihan Tugasan">
+        <txncode id="PBHL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Agihan Tugas">pelupusan/agihTugasanV2</page>
+            <page id="005" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila perintahkan untuk sedia surat penolakan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="g_charting_keputusan" currentAction="Charting Kelulusan">
+        <txncode id="PBHL" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Charting">pelupusan/chartingKelulusan</page>
+            <page id="005" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila charting yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="18bSmkn" currentAction="Semakan Charting" pushback="true" advanceRule="true" listener="etanah.view.stripes.pelupusan.validator.ManualProposedOutcomeValidator">
+        <txncode id="PBHL" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Charting">pelupusan/chartingKelulusan</page>
+            <page id="005" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila charting yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    
+     <stage id="19SdknSrt" currentAction="Sedia Surat Penolakan" report="true" advanceRule="true">
+        <txncode id="PBHL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Tandatangan">pelupusan/tandatangan_dokumenV2</page>
+            <page id="005" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila jana surat penolakan.</instruction>
+             <reports>
+                <report generator="DISSMTPBHL_MLK.rdf" prefix="VDOC" code="STP"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="20PrntahBtlHL" currentAction="Perintah Batal HL">
+        <txncode id="PBHL" daysToComplete="2">
+             <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <!--<page id="004" title="Agihan Tugas">pelupusan/agihTugasanV2</page>-->
+            <page id="005" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="21SedPrnth" currentAction="Sedia Perintah dan Hantar Pihak Berkepentingan(Serah DHKK)">
+        <txncode id="PBHL" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="21aTrmDHKK" currentAction="Terima DHKK">
+        <txncode id="PBHL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila imbas maklumat DHKK.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="22SedButir" currentAction="Sedia Butir-butir H/M" listener="etanah.view.stripes.pelupusan.validator.CatitTanahValidator">
+        <txncode id="PBHL" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="23TrmHMHntrPrnth" currentAction="Terima dan Hantar Perintah">
+        <txncode id="PBHL" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+<!--            <page id="004" title="Agihan Tugas">pelupusan/agihTugasanV2</page>-->
+            <page id="005" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila hantarkan tugas.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="24ArhSedknPU" currentAction="Arah Sediakan PU">
+        <txncode id="PBHL" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Agihan Tugas">pelupusan/agihTugasanV2</page>
+            <page id="005" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila arahkan tugas.</instruction>
+        </txncode>
+    </stage>
+
+
+    <stage id="25SedPU" currentAction="Penyediaan PU">
+        <txncode id="PBHL" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Sedia Permintaan Ukur">pelupusan/PUV2</page>
+            <page id="005" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="26Semakan" currentAction="Semakan PU" report="true" advanceRule="true" pushback="true">
+        <txncode id="PBHL" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Sedia Permintaan Ukur">pelupusan/PUV2?viewForm</page>
+            <page id="005" title="Tandatangan">pelupusan/tandatangan_dokumenV2</page>
+            <page id="006" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+            <reports> 
+                <report generator="DISSBUUPBHL_MLK.rdf" prefix="VDOC" code="SPU"/>
+                <report generator="DISSIPUPBHL_MLK.rdf" prefix="VDOC" code="SIPU"/>
+                <report generator="DISSBPUPBHL_MLK.rdf" prefix="VDOC" code="PU"/>
+            </reports>
+            <outcomes>
+                <outcome label="Lengkap" value="LK"/>
+                <outcome label="Tidak Lengkap" value="TL"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    
+    <stage id="26aHntrkeJUPEM" currentAction="Hantar PU ke JUPEM">
+        <txncode id="PBHL" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohon1?viewPemohon</page>
+            <page id="004" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <!--<page id="005" title="Permintaan Ukur">pelupusan/PUV2?viewSahPU</page>-->
+            <page id="006" title="PU GIS ke JUPEM">pelupusan/gisIntegration?showForm10</page>
+            <page id="007" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="27MklmPln" currentAction="Makluman Pelan B1">
+        <txncode id="PBHL" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <!--<page id="006" title="Agihan Tugas">pelupusan/agihTugasanV2</page>-->
+            <page id="004" title="Penerimaan PA/B1">pelupusan/gisIntegration?showForm8</page>
+            <page id="005" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="g_charting_kemaskini" currentAction="Kemaskini Charting">
+        <txncode id="PBHL" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Charting">pelupusan/chartingKelulusan</page>
+            <page id="005" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila charting yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="g_charting_pembatalan" currentAction="Pembatalan Charting">
+        <txncode id="PBHL" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Charting">pelupusan/chartingKelulusan</page>
+            <page id="005" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila charting yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="29Semakan" currentAction="Semakan Charting" pushback="true" listener="etanah.view.stripes.pelupusan.validator.CatitTanahValidator">
+        <txncode id="PBHL" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Charting">pelupusan/chartingKelulusan</page>
+            <page id="005" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila charting yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="30PlgknDHKK" currentAction="Pulangkan DHKK">
+        <txncode id="PBHL" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="31SmpknDHKK" currentAction="Sampaikan DHKK">
+        <txncode id="PBHL" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah dan Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="003" title="Maklumat Lalulalang">pelupusan/pihak_kepentingan_lalulalang?showFormDisplay</page>
+            <page id="004" title="Nota">pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+</workflow>

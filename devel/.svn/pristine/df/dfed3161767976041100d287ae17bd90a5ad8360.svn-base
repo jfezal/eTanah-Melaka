@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!--<workflow id = "http://xmlns.oracle.com/Workflow/ConsentMelaka/KM">-->
+<workflow id = "http://xmlns.oracle.com/Workflow/ConsentMelaka/KM_melaka">
+    <stage id="Stage1" currentAction="Kemasukan Maklumat" listener="etanah.view.consent.validator.PihakBerkepentinganValidation,etanah.view.consent.validator.SyerValidation">
+        <txncode id="PMKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan?showEditPenyerah</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan</page>
+            <page id="04" title="Maklumat Pindah Milik">consent/maklumat_pindahmilik</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat dan imbas dokumen yang berkenaan.</instruction>
+        </txncode>
+        <txncode id="MCKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan?showEditPenyerah</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan</page>
+            <page id="04" title="Maklumat Cagaran">consent/maklumat_pindahmilik</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat dan imbas dokumen yang berkenaan.</instruction>
+        </txncode>
+        <txncode id="PJKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan?showEditPenyerah</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan</page>
+            <page id="04" title="Maklumat Pajakan">consent/maklumat_pindahmilik</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat dan imbas dokumen yang berkenaan.</instruction>
+        </txncode>
+        <txncode id="SWKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan?showEditPenyerah</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan</page>
+            <page id="04" title="Maklumat Sewaan">consent/maklumat_pindahmilik</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat dan imbas dokumen yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    <stage id="Stage2" currentAction="Semakan Maklumat" pushback="true">
+        <txncode id="PMKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan</page>
+            <page id="04" title="Maklumat Pindah Milik">consent/maklumat_pindahmilik</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan.</instruction>
+            <outcomes>
+                <outcome label="Disemak" value="SM"/>
+            </outcomes>
+        </txncode>
+        <txncode id="MCKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan</page>
+            <page id="04" title="Maklumat Cagaran">consent/maklumat_pindahmilik</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan.</instruction>
+            <outcomes>
+                <outcome label="Disemak" value="SM"/>
+            </outcomes>
+        </txncode>
+        <txncode id="PJKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan</page>
+            <page id="04" title="Maklumat Pajakan">consent/maklumat_pindahmilik</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan.</instruction>
+            <outcomes>
+                <outcome label="Disemak" value="SM"/>
+            </outcomes>
+        </txncode>
+        <txncode id="SWKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan</page>
+            <page id="04" title="Maklumat Sewaan">consent/maklumat_pindahmilik</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan.</instruction>
+            <outcomes>
+                <outcome label="Disemak" value="SM"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id = "Stage3" currentAction="Kemasukan Syor" listener="etanah.view.consent.validator.PihakBerkepentinganValidation" pushback="true">
+        <txncode id="PMKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="04" title="Maklumat Pindah Milik">consent/maklumat_pindahmilik?showForm2</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan syor pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Disokong" value="DI"/>
+                <outcome label="Tidak Disokong" value="TI"/>
+            </outcomes>
+        </txncode>
+        <txncode id="MCKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="04" title="Maklumat Cagaran">consent/maklumat_pindahmilik?showForm2</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan syor pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Disokong" value="DI"/>
+                <outcome label="Tidak Disokong" value="TI"/>
+            </outcomes>
+        </txncode>
+        <txncode id="PJKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="04" title="Maklumat Pajakan">consent/maklumat_pindahmilik?showForm2</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan syor pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Disokong" value="DI"/>
+                <outcome label="Tidak Disokong" value="TI"/>
+            </outcomes>
+        </txncode>
+        <txncode id="SWKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="04" title="Maklumat Sewaan">consent/maklumat_pindahmilik?showForm2</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan syor pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Disokong" value="DI"/>
+                <outcome label="Tidak Disokong" value="TI"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id = "Stage4" currentAction="Semakan Maklumat" listener="etanah.view.consent.validator.PihakBerkepentinganValidation" pushback="true">
+        <txncode id="PMKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan</page>
+            <page id="04" title="Maklumat Pindah Milik">consent/maklumat_pindahmilik</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan.</instruction>
+            <outcomes>
+                <outcome label="Disemak" value="SM"/>
+            </outcomes>
+        </txncode>
+        <txncode id="MCKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan</page>
+            <page id="04" title="Maklumat Cagaran">consent/maklumat_pindahmilik</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan.</instruction>
+            <outcomes>
+                <outcome label="Disemak" value="SM"/>
+            </outcomes>
+        </txncode>
+        <txncode id="PJKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan</page>
+            <page id="04" title="Maklumat Pajakan">consent/maklumat_pindahmilik</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan.</instruction>
+            <outcomes>
+                <outcome label="Disemak" value="SM"/>
+            </outcomes>
+        </txncode>
+        <txncode id="SWKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan</page>
+            <page id="04" title="Maklumat Sewaan">consent/maklumat_pindahmilik</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan.</instruction>
+            <outcomes>
+                <outcome label="Disemak" value="SM"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id = "Stage5" currentAction="Kemasukan Perakuan" pushback="true">
+        <txncode id="PMKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="04" title="Maklumat Pindah Milik">consent/maklumat_pindahmilik?showForm2</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan perakuan pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Peraku" value="P"/>
+                <outcome label="Tidak Peraku" value="TP"/>
+            </outcomes>
+        </txncode>
+        <txncode id="MCKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="04" title="Maklumat Cagaran">consent/maklumat_pindahmilik?showForm2</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan perakuan pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Peraku" value="P"/>
+                <outcome label="Tidak Peraku" value="TP"/>
+            </outcomes>
+        </txncode>
+        <txncode id="PJKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="04" title="Maklumat Pajakan">consent/maklumat_pindahmilik?showForm2</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan perakuan pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Peraku" value="P"/>
+                <outcome label="Tidak Peraku" value="TP"/>
+            </outcomes>
+        </txncode>
+        <txncode id="SWKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="04" title="Maklumat Sewaan">consent/maklumat_pindahmilik?showForm2</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan perakuan pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Peraku" value="P"/>
+                <outcome label="Tidak Peraku" value="TP"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id = "Stage5A" currentAction="Kemasukan Perakuan" pushback="true">
+        <txncode id="PMKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="04" title="Maklumat Pindah Milik">consent/maklumat_pindahmilik?showForm2</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan perakuan pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Peraku" value="P"/>
+                <outcome label="Tidak Peraku" value="TP"/>
+            </outcomes>
+        </txncode>
+        <txncode id="MCKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="04" title="Maklumat Cagaran">consent/maklumat_pindahmilik?showForm2</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan perakuan pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Peraku" value="P"/>
+                <outcome label="Tidak Peraku" value="TP"/>
+            </outcomes>
+        </txncode>
+        <txncode id="PJKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="04" title="Maklumat Pajakan">consent/maklumat_pindahmilik?showForm2</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan perakuan pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Peraku" value="P"/>
+                <outcome label="Tidak Peraku" value="TP"/>
+            </outcomes>
+        </txncode>
+        <txncode id="SWKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="04" title="Maklumat Sewaan">consent/maklumat_pindahmilik?showForm2</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan perakuan pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Peraku" value="P"/>
+                <outcome label="Tidak Peraku" value="TP"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id = "Stage6" currentAction="Kemasukan Syor" pushback="true">
+        <txncode id="PMKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="04" title="Maklumat Pindah Milik">consent/maklumat_pindahmilik?showForm2</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan syor pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Syor Lulus" value="SL"/>
+                <outcome label="Syor Tolak" value="ST"/>
+            </outcomes>
+        </txncode>
+        <txncode id="MCKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="04" title="Maklumat Cagaran">consent/maklumat_pindahmilik?showForm2</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan syor pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Syor Lulus" value="SL"/>
+                <outcome label="Syor Tolak" value="ST"/>
+            </outcomes>
+        </txncode>
+        <txncode id="PJKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="04" title="Maklumat Pajakan">consent/maklumat_pindahmilik?showForm2</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan syor pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Syor Lulus" value="SL"/>
+                <outcome label="Syor Tolak" value="ST"/>
+            </outcomes>
+        </txncode>
+        <txncode id="SWKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="04" title="Maklumat Sewaan">consent/maklumat_pindahmilik?showForm2</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan syor pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Syor Lulus" value="SL"/>
+                <outcome label="Syor Tolak" value="ST"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id = "Stage7" currentAction="Cetakan Rencana" pushback="true">
+        <txncode id="PMKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="04" title="Maklumat Pindah Milik">consent/maklumat_pindahmilik?showForm2</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila jana dan cetak dokumen yang berkenaan.</instruction>
+            <reports>
+                <report generator="CONSPerPMilikKMM001.rdf" code="REN"/>
+            </reports>
+        </txncode>
+        <txncode id="MCKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="04" title="Maklumat Cagaran">consent/maklumat_pindahmilik?showForm2</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila jana dan cetak dokumen yang berkenaan.</instruction>
+            <reports>
+                <report generator="CONSPerCagarKMM001.rdf" code="REN"/>
+            </reports>
+        </txncode>
+        <txncode id="PJKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="04" title="Maklumat Pajakan">consent/maklumat_pindahmilik?showForm2</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila jana dan cetak dokumen yang berkenaan.</instruction>
+            <reports>
+                <report generator="CONSPerPajakKMM001.rdf" code="REN"/>
+            </reports>
+        </txncode>
+        <txncode id="SWKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="04" title="Maklumat Sewaan">consent/maklumat_pindahmilik?showForm2</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila jana dan cetak dokumen yang berkenaan.</instruction>
+            <reports>
+                <report generator="CONSPerSewaKMM001.rdf" code="REN"/>
+            </reports>
+        </txncode>
+    </stage>
+    <!--stage id = "Stage8" finalize="true" currentAction="Kemasukan Keputusan" resultDateToInsert="true"-->
+    <stage id = "Stage8" finalize="true" currentAction="Kemasukan Keputusan">
+        <txncode id="PMKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="04" title="Maklumat Pindah Milik">consent/maklumat_pindahmilik?showForm2</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan keputusan bagi permohonan ini.</instruction>
+            <outcomes>
+                <outcome label="Lulus" value="L"/>
+                <outcome label="Tolak" value="T"/>
+            </outcomes>
+        </txncode>
+        <txncode id="MCKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="04" title="Maklumat Cagaran">consent/maklumat_pindahmilik?showForm2</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan keputusan bagi permohonan ini.</instruction>
+            <outcomes>
+                <outcome label="Lulus" value="L"/>
+                <outcome label="Tolak" value="T"/>
+            </outcomes>
+        </txncode>
+        <txncode id="PJKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="04" title="Maklumat Pajakan">consent/maklumat_pindahmilik?showForm2</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan keputusan bagi permohonan ini.</instruction>
+            <outcomes>
+                <outcome label="Lulus" value="L"/>
+                <outcome label="Tolak" value="T"/>
+            </outcomes>
+        </txncode>
+        <txncode id="SWKMM" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="04" title="Maklumat Sewaan">consent/maklumat_pindahmilik?showForm2</page>
+            <page id="05" title="Maklumat Rayuan">consent/maklumat_rayuan?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan keputusan bagi permohonan ini.</instruction>
+            <outcomes>
+                <outcome label="Lulus" value="L"/>
+                <outcome label="Tolak" value="T"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id = "Stage9" currentAction="Cetakan Kelulusan" listener="etanah.view.consent.validator.TandatanganValidation">
+        <txncode id="PMKMM" daysToComplete="2">
+            <page id="01" title="Keputusan Permohonan">consent/keputusan_permohonan</page>
+            <page id="02" title="Maklumat Tandatangan">consent/tandatangan</page>
+            <page id="03" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="04" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="05" title="Maklumat Pindah Milik">consent/maklumat_pindahmilik?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila pilih pegawai untuk menandatangani kemudian jana dan cetak dokumen yang berkenaan.</instruction>
+            <reports>
+                <report generator="CONS_SRT_KEB_PMT_MLK.rdf" code="SK"/>
+            </reports>
+        </txncode>
+        <txncode id="MCKMM" daysToComplete="2">
+            <page id="01" title="Keputusan Permohonan">consent/keputusan_permohonan</page>
+            <page id="02" title="Maklumat Tandatangan">consent/tandatangan</page>
+            <page id="03" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="04" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="05" title="Maklumat Pindah Milik">consent/maklumat_pindahmilik?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila pilih pegawai untuk menandatangani kemudian jana dan cetak dokumen yang berkenaan.</instruction>
+            <reports>
+                <report generator="CONS_SRT_KEB_CGR_MLK.rdf" code="SK"/>
+            </reports>
+        </txncode>
+        <txncode id="PJKMM" daysToComplete="2">
+            <page id="01" title="Keputusan Permohonan">consent/keputusan_permohonan</page>
+            <page id="02" title="Maklumat Tandatangan">consent/tandatangan</page>
+            <page id="03" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="04" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="05" title="Maklumat Pindah Milik">consent/maklumat_pindahmilik?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila pilih pegawai untuk menandatangani kemudian jana dan cetak dokumen yang berkenaan.</instruction>
+            <reports>
+                <report generator="CONS_SRT_KEB_PJK_MLK.rdf" code="SK"/>
+            </reports>
+        </txncode>
+        <txncode id="SWKMM" daysToComplete="2">
+            <page id="01" title="Keputusan Permohonan">consent/keputusan_permohonan</page>
+            <page id="02" title="Maklumat Tandatangan">consent/tandatangan</page>
+            <page id="03" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="04" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <page id="05" title="Maklumat Pindah Milik">consent/maklumat_pindahmilik?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila pilih pegawai untuk menandatangani kemudian jana dan cetak dokumen yang berkenaan.</instruction>
+            <reports>
+                <report generator="CONS_SRT_KEB_SW_MLK.rdf" code="SK"/>
+            </reports>
+        </txncode>
+    </stage>
+</workflow>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<workflow id="http://xmlns.oracle.com/Hasil1/Project1/HW_mlk_kurang">
+    <stage id="Kemasukan_maklumat" currentAction = "Kemasukan Maklumat" listener="etanah.view.hasil.validator.PenguranganDendaValidation">
+        <txncode id="RCTN" daysToComplete = "2">
+            <page id="1" title="Tuan Tanah">common/maklumat_pemohon</page>
+            <page id="2" title="Hakmilik">hasil/maklumat_hakmilik</page>
+            <page id="3" title="Perihal Cukai">hasil/perihalCukai</page>
+            <page id="4" title="Sejarah Permohonan">hasil/sejarah</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat-maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>            
+        </txncode>
+    </stage>
+    <stage id="Pengesahan" currentAction="Semakan dan Pengesahan Maklumat" listener="etanah.view.hasil.validator.PenguranganDendaValidation" pushback="true">
+        <txncode id="RCTN" daysToComplete = "2">
+            <page id="1" title="Tuan Tanah">common/maklumat_pemohon</page>
+            <page id="2" title="Hakmilik">hasil/maklumat_hakmilik</page>
+            <page id="3" title="Perihal Cukai">hasil/perihalCukai</page>
+            <page id="4" title="Sejarah Permohonan">hasil/sejarah</page>
+            <page id="5" title="Kertas Risalat">hasil/kertas_risalat</page>
+            <page id="6" title="Kertas Ringkasan">hasil/kertas_ringkasan</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan dan masukkan perakuan pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Disemak" value="SM"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="Semak1" currentAction="Semakan dan Pengesahan Maklumat" listener="etanah.view.hasil.validator.PenguranganDendaValidation" pushback="true">
+        <txncode id="RCTN" daysToComplete = "2">
+            <page id="1" title="Tuan Tanah">common/maklumat_pemohon</page>
+            <page id="2" title="Hakmilik">hasil/maklumat_hakmilik</page>
+            <page id="3" title="Perihal Cukai">hasil/perihalCukai</page>
+            <page id="4" title="Sejarah Permohonan">hasil/sejarah</page>
+            <page id="5" title="Kertas Risalat">hasil/kertas_risalat</page>
+            <page id="6" title="Kertas Ringkasan">hasil/kertas_ringkasan</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan dan masukkan perakuan pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Disemak" value="SM"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="Laporan" currentAction="Kemasukan Laporan Tanah" listener="etanah.view.hasil.validator.PenguranganDendaValidation" pushback="true">
+        <txncode id="RCTN" daysToComplete = "2">
+            <page id="1" title="Tuan Tanah">common/maklumat_pemohon</page>
+            <page id="2" title="Hakmilik">hasil/maklumat_hakmilik</page>
+            <page id="3" title="Perihal Cukai">hasil/perihalCukai</page>
+            <page id="4" title="Sejarah Permohonan">hasil/sejarah</page>
+            <page id="5" title="Laporan Tanah">pelupusan/laporan_tanahV2</page>
+            <page id="6" title="Kertas Risalat">hasil/kertas_risalat</page>
+            <page id="7" title="Kertas Ringkasan">hasil/kertas_ringkasan</page>
+            <validator>validator</validator>
+            <instruction>Sila muatnaik atau imbas dokumen berkaitan laporan tanah.</instruction>
+        </txncode>
+    </stage>
+    <stage id="Semak" currentAction="Kemasukan Laporan Tanah" listener="etanah.view.hasil.validator.PenguranganDendaValidation" pushback="true">
+        <txncode id="RCTN" daysToComplete = "2">
+            <page id="1" title="Tuan Tanah">common/maklumat_pemohon</page>
+            <page id="2" title="Hakmilik">hasil/maklumat_hakmilik</page>
+            <page id="3" title="Perihal Cukai">hasil/perihalCukai</page>
+            <page id="4" title="Sejarah Permohonan">hasil/sejarah</page>
+            <page id="5" title="Laporan Tanah">pelupusan/laporan_tanahV2</page>
+            <page id="6" title="Kertas Risalat">hasil/kertas_risalat</page>
+            <page id="7" title="Kertas Ringkasan">hasil/kertas_ringkasan</page>
+            <validator>validator</validator>
+            <instruction>Sila muatnaik atau imbas dokumen berkaitan laporan tanah.</instruction>
+        </txncode>
+    </stage>
+    <stage id="Penyediaan_Kertas_MMK" currentAction="Penyediaan Kertas MMK" listener="etanah.view.hasil.validator.PenguranganDendaValidation" pushback="true">
+        <txncode id="RCTN" daysToComplete = "2">
+            <page id="1" title="Tuan Tanah">common/maklumat_pemohon</page>
+            <page id="2" title="Hakmilik">hasil/maklumat_hakmilik</page>
+            <page id="3" title="Perihal Cukai">hasil/perihalCukai</page>
+            <page id="4" title="Sejarah Permohonan">hasil/sejarah</page>
+            <page id="5" title="Kertas Risalat">hasil/kertas_risalat</page>
+            <page id="6" title="Kertas Ringkasan">hasil/kertas_ringkasan</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat-maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>     
+    <stage id="Perakukan" currentAction="Syor Kertas MMK" listener="etanah.view.hasil.validator.PenguranganDendaValidation" pushback="true">
+        <txncode id="RCTN" daysToComplete = "2">
+            <page id="1" title="Tuan Tanah">common/maklumat_pemohon</page>
+            <page id="2" title="Hakmilik">hasil/maklumat_hakmilik</page>
+            <page id="3" title="Perihal Cukai">hasil/perihalCukai</page>
+            <page id="4" title="Sejarah Permohonan">hasil/sejarah</page>
+            <page id="5" title="Kertas Risalat">hasil/kertas_risalat</page>
+            <page id="6" title="Kertas Ringkasan">hasil/kertas_ringkasan</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan dan masukkan perakuan pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Disyor Lulus" value="SL"/>
+            </outcomes>
+        </txncode>
+    </stage>
+     <stage id="Terima" currentAction="Terima Kertas MMK" listener="etanah.view.hasil.validator.PenguranganDendaValidation" pushback="true">
+        <txncode id="RCTN" daysToComplete = "2">
+            <page id="1" title="Tuan Tanah">common/maklumat_pemohon</page>
+            <page id="2" title="Hakmilik">hasil/maklumat_hakmilik</page>
+            <page id="3" title="Perihal Cukai">hasil/perihalCukai</page>
+            <page id="4" title="Sejarah Permohonan">hasil/sejarah</page>
+            <page id="5" title="Kertas Risalat">hasil/kertas_risalat</page>
+            <page id="6" title="Kertas Ringkasan">hasil/kertas_ringkasan</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan dan masukkan perakuan pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Disyor Lulus" value="SL"/>
+            </outcomes>
+        </txncode>
+    </stage>
+     <stage id="semak_draf_MMKN_PTG" currentAction="Semak Draf MMK" listener="etanah.view.hasil.validator.PenguranganDendaValidation" pushback="true">
+        <txncode id="RCTN" daysToComplete = "2">
+            <page id="1" title="Tuan Tanah">common/maklumat_pemohon</page>
+            <page id="2" title="Hakmilik">hasil/maklumat_hakmilik</page>
+            <page id="3" title="Perihal Cukai">hasil/perihalCukai</page>
+            <page id="4" title="Sejarah Permohonan">hasil/sejarah</page>
+            <page id="5" title="Kertas Risalat">hasil/kertas_risalat</page>
+            <page id="6" title="Kertas Ringkasan">hasil/kertas_ringkasan</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan dan masukkan perakuan pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Disemak" value="SM"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="semak_draf_MMKN_PTG2" currentAction="Semak Draf MMK" listener="etanah.view.hasil.validator.PenguranganDendaValidation" pushback="true">
+        <txncode id="RCTN" daysToComplete = "2">
+            <page id="1" title="Tuan Tanah">common/maklumat_pemohon</page>
+            <page id="2" title="Hakmilik">hasil/maklumat_hakmilik</page>
+            <page id="3" title="Perihal Cukai">hasil/perihalCukai</page>
+            <page id="4" title="Sejarah Permohonan">hasil/sejarah</page>
+            <page id="5" title="Kertas Risalat">hasil/kertas_risalat</page>
+            <page id="6" title="Kertas Ringkasan">hasil/kertas_ringkasan</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan dan masukkan perakuan pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Disemak" value="SM"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="Huraian" currentAction="Huraian Kertas MMK" listener="etanah.view.hasil.validator.PenguranganDendaValidation" pushback="true">
+        <txncode id="RCTN" daysToComplete = "2">
+            <page id="1" title="Tuan Tanah">common/maklumat_pemohon</page>
+            <page id="2" title="Hakmilik">hasil/maklumat_hakmilik</page>
+            <page id="3" title="Perihal Cukai">hasil/perihalCukai</page>
+            <page id="4" title="Sejarah Permohonan">hasil/sejarah</page>
+            <page id="5" title="Kertas Risalat">hasil/kertas_risalat</page>
+            <page id="6" title="Kertas Ringkasan">hasil/kertas_ringkasan</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan dan masukkan perakuan pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Disemak" value="SM"/>
+            </outcomes>
+        </txncode>
+    </stage>     
+    <stage id="Perakukan" currentAction="Perakukan Kertas MMK" listener="etanah.view.hasil.validator.PenguranganDendaValidation,etanah.view.hasil.validator.IntegrationEMMKNV2" pushback="true">
+        <txncode id="RCTN" daysToComplete = "2">
+            <page id="1" title="Tuan Tanah">common/maklumat_pemohon</page>
+            <page id="2" title="Hakmilik">hasil/maklumat_hakmilik</page>
+            <page id="3" title="Perihal Cukai">hasil/perihalCukai</page>
+            <page id="4" title="Sejarah Permohonan">hasil/sejarah</page>
+            <page id="5" title="Kertas Risalat">hasil/kertas_risalat?editOnlyKertasMMKPTG</page>
+            <page id="6" title="Kertas Ringkasan">hasil/kertas_ringkasan</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan dan masukkan perakuan pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Peraku" value="P"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="rekod_keputusan_MMKN_PTG" currentAction="Kemasukan Keputusan" finalize="true" listener="etanah.view.hasil.validator.PenguranganDendaValidation,etanah.hasil.workflow.ProsesPenguranganDenda,etanah.view.hasil.validator.MaklumanMlkValidation" pushback="true">
+        <txncode id="RCTN" daysToComplete = "2">
+            <page id="1" title="Tuan Tanah">common/maklumat_pemohon</page>
+            <page id="2" title="Hakmilik">hasil/maklumat_hakmilik</page>
+            <page id="3" title="Perihal Cukai">hasil/perihalCukai</page>
+            <page id="4" title="Sejarah Permohonan">hasil/sejarah</page>
+            <page id="5" title="Kertas Risalat">hasil/kertas_risalat</page>
+            <page id="6" title="Kertas Ringkasan">hasil/kertas_ringkasan</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan dan masukkan perakuan pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Lulus" value="L"/>
+                <outcome label="Tolak" value="T"/>
+            </outcomes>            
+        </txncode>
+    </stage>
+    <stage id="Cetak_Surat" currentAction="Cetakan" report="true" listener="etanah.hasil.workflow.ProsesSuratKeputusan">
+        <txncode id="RCTN" daysToComplete = "1">
+            <page id="1" title="Tuan Tanah">common/maklumat_pemohon</page>
+            <page id="2" title="Hakmilik">hasil/maklumat_hakmilik</page>
+            <page id="3" title="Perihal Cukai">hasil/perihalCukai</page>
+            <page id="4" title="Sejarah Permohonan">hasil/sejarah</page>
+            <validator>validator</validator>
+            <instruction>Sila klik butang Jana Dokumen untuk cetak surat keputusan.</instruction>
+        </txncode>
+    </stage>
+</workflow>

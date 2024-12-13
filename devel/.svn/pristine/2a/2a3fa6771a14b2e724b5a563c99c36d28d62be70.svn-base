@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<!--
+    Document   : permit_tanah_pertanian.xml
+    Updated on : Aug 5, 2011, 11:18 AM
+    Author     : shahriz
+    Description:
+        Purpose of the document follows.
+-->
+
+<workflow id="http://xmlns.oracle.com/PRMP/PRMP/HumantaskPRMPFAT">
+
+    <stage id="kemasukan" currentAction="Kemasukan Maklumat" listener="etanah.view.stripes.pelupusan.validator.MaklumanPermohonanValidator">
+        <txncode id="PRMP">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2</page>
+            <page id="004" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+            <report></report>
+        </txncode>
+    </stage>
+    <stage id="agihan_tugas" currentAction="Agihan Tugas" distribute="true">
+        <txncode id="PRMP">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2</page>
+            <page id="004" title="Agihan Tugas">pelupusan/agihTugasanV2</page>
+            <page id="004" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+            <report></report>
+        </txncode>
+    </stage>
+
+    <stage id="g_charting_permohonan" currentAction="Charting Permohonan" advanceRule="true" report="true">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <!--<page id="004" title="Laporan Pelukis Pelan">pelupusan/laporan_pelanV2</page>-->
+            <page id="004" title="Laporan Pelukis Pelan">/common/laporan/pelan/java/LaporanPelukisPelanNewActionBean?showForm</page> 
+            <page id="005" title="Nota">pembangunan/melaka/notaBaru</page>
+            
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+            <reports>
+                <report generator="DISLPPLPSH_MLK.rdf" prefix="VDOC" code="LPE"/>
+            </reports>
+            <outcomes>
+                <outcome label="Tiada Permohonan Bertindih" value="TD"/>
+                <outcome label="Ada Permohonan Bertindih" value="DA"/>
+            </outcomes>
+        </txncode>
+    </stage>
+
+    <stage id="sejarah_permohonan_syor_tolak" currentAction="Sejarah Permohonan Syor Tolak">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Laporan Pelukis Pelan">pelupusan/laporan_pelanV2</page>
+            <page id="005" title="Syor Tolak Awal">/pelupusan/jabatan_teknikal12?showSyorSDP</page>
+            <page id="006" title="Nota">pembangunan/melaka/notaBaru</page>
+            <instruction>Sila masukkan maklumat-maklumat yang berkenaan.</instruction>
+            <validator>validator</validator>
+        </txncode>
+    </stage>
+
+    <stage id="cadangan_tolak_ringkas" currentAction="Cadangan Tolak Ringkas">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Laporan Pelukis Pelan">pelupusan/laporan_pelanV2</page>
+            <page id="005" title="Syor Tolak Awal">/pelupusan/jabatan_teknikal12?showSyorSDP</page>
+            <page id="006" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat-maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="tolak_ringkas" currentAction="Tolak Ringkas" advanceRule="true">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <!--<page id="004" title="Laporan Tanah">pelupusan/laporan_tanahV2</page>-->
+            <!--<page id="005" title="Draf MMK">pelupusan/ulasan_mmk?showForm2</page>-->
+            <page id="004" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan</instruction>
+            <outcomes>
+                <outcome label="Proses" value="PP"/>
+                <outcome label="Tolak Ringkas" value="TR"/>
+            </outcomes>
+        </txncode>
+    </stage>
+
+    <stage id="sedia_surat_tolak" currentAction="Sedia Surat Tolak" report="true">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Surat Penolakan">pelupusan/surat_tolak</page>
+            <page id="5" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila sedia surat penolakan.</instruction>
+            <reports>
+                <report generator="DISSMTPTDH_MLK.rdf" prefix="VDOC" code="SMT"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="semak_surat_tolak" currentAction="Semakan Surat Tolak" pushback="true">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Surat Penolakan">pelupusan/surat_tolak</page>
+            <page id="005" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat permohonan dan masukkan perakuan pada bahagian keputusan.</instruction>
+
+        </txncode>
+    </stage>
+
+    <stage id="tandatangan_surat_tolak" currentAction="Tandatangan Surat Tolak">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Surat Penolakan">pelupusan/surat_tolak</page>
+            <page id="005" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="kenalpasti_jabatan_teknikal" currentAction="Kenalpasti Jabatan Teknikal" report="true" listener="etanah.view.stripes.pelupusan.validator.AdunValidator,etanah.view.stripes.common.JTeknikalValidator,etanah.view.stripes.pelupusan.validator.DisDataValidator">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Ulasan Teknikal dan YB ADUN">pelupusan/sedia_jabatan</page>
+            <page id="005" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="agihan_tugas2" currentAction="Agihan Tugas" distribute="true">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Nota">pembangunan/melaka/notaBaru</page>
+            <page id="004" title="Agihan Tugas">pelupusan/agihTugasanV2</page>
+            <validator>validator</validator>
+            <instruction>Sila arahkan tugas seterusnya kepada yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="laporan_tanah" currentAction="Laporan Tanah" report="true">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <!--<page id="004" title="Laporan Tanah">pelupusan/laporan_tanahV2</page>-->
+              <page id="004" title="Laporan Tanah">/common/laporan/tanah/laporantanahNewActionBean</page>
+            <page id="005" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak semua maklumat-maklumat yang berkenaan.</instruction>
+            <reports>
+                <report generator="DISLTPLPS_MLK_PBMT.rdf" prefix="VDOC" code="LT"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!-- <stage id="Stage11" currentAction="Integrasi e-MMKN">
+        <txncode id="PRMP">
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>-->
+
+    <stage id="semak_laporan_tanah" currentAction="Semak Laporan Tanah" pushback="true">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Laporan Tanah">pelupusan/laporan_tanahV2?viewOnlyLaporanTanahPPTKanan</page>
+            <page id="005" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="terima_ulasan_teknikal" currentAction="Terima Ulasan Teknikal">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <!--<page id="004" title="Laporan Tanah">pelupusan/laporan_tanahV2</page>-->
+            <page id="005" title="Ulasan Teknikal dan YB ADUN">pelupusan/jabatan_teknikal12?terimaUlasan</page>
+            <page id="006" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="agihan_tugas3" currentAction="Agihan Tugas" distribute="true">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Agihan Tugas">pelupusan/agihTugasanV2</page>
+            <page id="006" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila arahkan tugas seterusnya kepada yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="sedia_draf_rencana_mmkn" currentAction="Sedia Draf Rencana MMKN" report="true">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Draf Rencana MMKN">pelupusan/kertas_MMKV2</page>
+            <page id="005" title="Tandatangan Manual">pelupusan/tandatangan_dokumenV2</page>
+            <page id="006" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+            <reports>
+                <report generator="DISKMMKNPRMPPTDH_MLK.rdf" prefix="VDOC" code="RMN"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="semak_draf_rencana_mmkn1" currentAction="Semak Draf Rencana MMKN" report="true" pushback="true">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <!--            <page id="004" title="Laporan Tanah">pelupusan/laporan_tanah4</page>-->
+            <!--            <page id="005" title="Ulasan Teknikal dan YB ADUN">pelupusan/jabatan_teknikal12?terimaUlasan</page>-->
+            <page id="004" title="Draf Pertimbangan MMKN">pelupusan/kertas_MMKV2</page>
+            <page id="005" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+            <reports>
+                <report generator="DISKMMKNPRMPPTDH_MLK.rdf" prefix="VDOC" code="RMN"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="semak_draf_rencana_mmkn2" currentAction="Semak Draf Rencana MMKN" report="true" pushback="true">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <!--            <page id="004" title="Laporan Tanah">pelupusan/laporan_tanah4</page>-->
+            <page id="005" title="Ulasan Teknikal dan YB ADUN">pelupusan/jabatan_teknikal12?terimaUlasan</page>
+            <page id="006" title="Draf Pertimbangan MMKN">pelupusan/kertas_MMKV2</page>
+            <page id="007" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+            <reports>
+                <report generator="DISKMMKNPRMPPTDH_MLK.rdf" prefix="VDOC" code="RMN"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="perakuan_draf_rencana_mmkn" currentAction="Perakuan Draf Rencana MMKN" advanceRule = "true" report="true" pushback="true">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <!--            <page id="004" title="Laporan Tanah">pelupusan/laporan_tanah4</page>-->
+            <page id="004" title="Ulasan Teknikal dan YB ADUN">pelupusan/jabatan_teknikal12?terimaUlasan</page>
+            <page id="005" title="Draf Pertimbangan MMKN">pelupusan/kertas_MMKV2?editOnlyKertasMMKPTD</page>
+            <!--<page id="006" title="Ringkasan MMK">/pelupusan/kertas_ringkasMMKV2?editOnlyKertasMMKPTD</page>-->
+            <page id="006" title="Ringkasan MMK">/pelupusan/RingkasanMMKN</page>
+            <page id="007" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak surat pertimbangan dan masukkan perakuan sebelum dihantar ke PTG, tekan semak semula untuk arahkan semakan semula</instruction>
+            <outcomes>
+                <outcome label="Peraku" value="P"/>
+                <outcome label="Tidak Peraku" value="TP"/>
+            </outcomes>
+            <reports>
+                <report generator="DISKMMKNPRMPPTDH_MLK.rdf" prefix="VDOC" code="RMN"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--<stage id="Stage17" currentAction="Kemasukan Maklumat">
+        <txncode id="PRMP">
+            <page id="001" title="Bukti Penyampaian">pelupusan/pemberimilikan_tanah?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>-->
+
+    <stage id="terima_semak_risalat_mmkn" currentAction="Terima Semak Risalat MMKN" report="true">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Draf Pertimbangan MMKN">pelupusan/kertas_MMKV2?editOnlyKertasMMKPTGMLK</page>
+            <!--<page id="005" title="Ringkasan MMK">/pelupusan/kertas_ringkasMMKV2?editOnlyKertasMMKPTG</page>-->
+            <page id="005" title="Ringkasan MMK">/pelupusan/RingkasanMMKN</page>
+            <page id="006" title="Tandatangan Manual">pelupusan/tandatangan_dokumenV2?showFormForPTG</page>
+            <page id="007" title="Nota">pembangunan/melaka/notaBaru</page>
+            <reports>
+                <report generator="DISKMMKNPRMPPTGH_MLK.rdf" prefix="VDOC" code="RMN"/>
+                <report generator="DISSUMMMKN_MLK.rdf" prefix="VDOC" code="KMN"/>
+            </reports>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="semak_draf_mmkn1" currentAction="Semakan Draf MMKN" advanceRule="true" pushback="true">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Draf Pertimbangan MMKN">pelupusan/kertas_MMKV2?viewOnlyKertasMMKPTG</page>
+            <!--<page id="005" title="Ringkasan MMK">/pelupusan/kertas_ringkasMMKV2?viewOnlyKertasMMKPTG</page>-->
+            <page id="005" title="Ringkasan MMK">/pelupusan/RingkasanMMKN</page>
+            <page id="006" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="semak_draf_mmkn2" currentAction="Semakan Draf MMKN" advanceRule="true" pushback="true">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Draf Pertimbangan MMKN">pelupusan/kertas_MMKV2?viewOnlyKertasMMKPTG</page>
+            <!--<page id="005" title="Ringkasan MMK">/pelupusan/kertas_ringkasMMKV2?viewOnlyKertasMMKPTG</page>-->
+            <page id="005" title="Ringkasan MMK">/pelupusan/RingkasanMMKN</page>
+            <page id="006" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="semak_draf_mmkn3" currentAction="Semakan Draf MMKN" advanceRule="true" pushback="true" report="true">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Draf Pertimbangan MMKN">pelupusan/kertas_MMKV2?viewOnlyKertasMMKPTG</page>
+            <!--<page id="005" title="Ringkasan MMK">/pelupusan/kertas_ringkasMMKV2?viewOnlyKertasMMKPTG</page>-->
+            <page id="005" title="Ringkasan MMK">/pelupusan/RingkasanMMKN</page>
+            <!--<page id="005" title="Tandatangan Manual">pelupusan/tandatangan_dokumenV2?showFormForPTG</page>-->
+            <page id="006" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat Kertas Pertimbangan MMKN dan buat Keputusan Pindaan/Tiada Pindaan dalam Tab Keputusan.</instruction>
+            <reports>
+                <report generator="DISKMMKNPRMPPTGH_MLK.rdf" prefix="VDOC" code="RMN"/>
+            </reports>
+            <outcomes>
+                <outcome label="Tiada Pindaan" value="XN"/>
+                <outcome label="Perlu Pindaan" value="AN"/>
+                <outcome label="Pindaan di PTD" value="SE"/>
+            </outcomes>
+        </txncode>
+    </stage>
+
+    <stage id="pindaan_draf_mmkn" currentAction="Pindaan Draf MMKN">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Draf Pertimbangan MMKN">pelupusan/kertas_MMKV2?editOnlyKertasMMKPTGMLK</page>
+            <page id="005" title="Ringkasan MMK">/pelupusan/RingkasanMMKN</page>
+            <page id="006" title="Tandatangan Manual">pelupusan/tandatangan_dokumenV2</page>
+            <page id="007" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="perakuan_ptg_risalat_mmkn" currentAction="Perakuan PTG Risalat MMKN" pushback="true" listener="etanah.view.stripes.pelupusan.validator.IntegrationEMMKNV2">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Draf Pertimbangan MMKN">pelupusan/kertas_MMKV2?editOnlyKertasMMKPTG</page>
+            <!--<page id="005" title="Ringkasan MMK">/pelupusan/RingkasanMMKN</page>-->
+            <page id="005" title="Ringkasan MMK">/pelupusan/RingkasanMMKN</page>
+            <page id="006" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="rekod_keputusan_mmkn" currentAction="Rekod Keputusan MMKN" report="true" listener="etanah.view.stripes.pelupusan.validator.ReportV2Validator">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Keputusan MMKN">pelupusan/rekod_keputusanMMKV2</page>
+            <page id="005" title="Tandatangan Manual">pelupusan/tandatangan_dokumenV2?showFormForPTG</page>
+            <page id="006" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+            <reports>
+                <report generator="DISSrtKpsnMMKNH_MLK.rdf" prefix="VDOC" code="SKM"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="arahan_tugasan3" currentAction="Arahan Tugasan">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <!--            <page id="005" title="Agihan Tugas">pelupusan/agihTugasanV2</page>-->
+            <page id="004" title="Keputusan MMKN">pelupusan/rekod_keputusanMMKV2?viewOnlyRekodKeputusan</page>
+            <page id="005" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="agihan_tugas4" currentAction="Agihan Tugas" distribute="true">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Agihan Tugas">pelupusan/agihTugasanV2</page>
+            <page id="005" title="Keputusan MMKN">pelupusan/rekod_keputusanMMKV2?viewOnlyRekodKeputusan</page>
+            <page id="006" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="g_charting_keputusan" currentAction="Charting Keputusan" advanceRule="true" listener="etanah.view.stripes.pelupusan.validator.ManualProposedOutcomeValidator">
+        <txncode id="PRMP" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Keputusan MMKN">pelupusan/rekod_keputusanMMKV2?viewOnlyRekodKeputusan</page>
+            <page id="005" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila kemaskini maklumat charting pada lot tanah yang dipohon.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="semak_charting_keputusan" currentAction="Semakan Charting Keputusan" pushback="true" listener="etanah.view.stripes.pelupusan.validator.ManualProposedOutcomeValidator" advanceRule="true">
+        <txncode id="PRMP" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Keputusan MMKN">pelupusan/rekod_keputusanMMKV2?viewOnlyRekodKeputusan</page>
+            <page id="005" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila kemaskini maklumat charting pada lot tanah yang dipohon.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="sedia_surat_tolak2" currentAction="Sedia Surat Tolak" report="true">
+        <txncode id="PRMP" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Keputusan MMKN">pelupusan/rekod_keputusanMMKV2?viewOnlyRekodKeputusan</page>
+            <page id="005" title="Surat Keputusan">pelupusan/surat_tolak</page>
+            <!--            <page id="005" title="Surat Kelulusan">pelupusan/surat_kelulusan_ppru</page>-->
+            <page id="006" title="Tandatangan Dokumen">pelupusan/tandatangan_dokumenV2</page>
+            <page id="007" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak dan terima keputusan MMKN.</instruction>
+            <reports>
+                <!--                <report generator="DISSKpsnG_MLK.rdf" prefix="VDOC" code="STP"/>-->
+                <report generator="DISSPRMPSTP_MLK.rdf" prefix="VDOC" code="STP"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="semak_surat_tolak2" currentAction="Semakan Surat Tolak" pushback="true" advanceRule="true" listener="etanah.view.stripes.pelupusan.validator.ManualProposedOutcomeValidator">
+        <txncode id="PRMP" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Keputusan MMKN">pelupusan/rekod_keputusanMMKV2?viewOnlyRekodKeputusan</page>
+            <page id="005" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak dan terima keputusan MMKN.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="tandatangan_surat_tolak2" currentAction="Tandatangan Surat Tolak">
+        <txncode id="PRMP" daysToComplete="2">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Keputusan MMKN">pelupusan/rekod_keputusanMMKV2?viewOnlyRekodKeputusan</page>
+            <page id="005" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <!--    <stage id="arahan_tugasan3_1" currentAction="Arahan Tugasan ">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="005" title="Agihan Tugas">pelupusan/agihTugasanV2</page>
+            <page id="004" title="Keputusan MMKN">pelupusan/rekod_keputusanMMKV2?viewOnlyRekodKeputusan</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>-->
+
+    <stage id="sedia_surat_kelulusan" currentAction="Sedia Surat Kelulusan" report="true">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?pelupusan/surat_kelulusan_prmpviewPemohon</page>
+            <page id="004" title="Surat Kelulusan">pelupusan/surat_kelulusan_prmp</page>
+            <!--            <page id="004" title="Permit Tanah Pertanian">pelupusan/borang4d</page>-->
+            <page id="005" title="Tandatangan Manual">pelupusan/tandatangan_dokumenV2</page>
+            <page id="006" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+            <reports>
+                <report generator="DISSPRMPLH_MLK.rdf" prefix="VDOC" code="SL"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="semak_surat_kelulusan" currentAction="Semak Surat Kelulusan" pushback="true">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Surat Kelulusan">pelupusan/surat_kelulusan_prmp?showForm2</page>
+            <!--            <page id="004" title="Permit Tanah Pertanian">pelupusan/borang4d</page>-->
+            <page id="005" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="tandatangan_surat_kelulusan" currentAction="Tandatangan Surat Kelulusan">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <!--            <page id="004" title="Permit Tanah Pertanian">pelupusan/borang4d</page>-->
+            <page id="005" title="Surat Kelulusan">pelupusan/surat_kelulusan_prmp?showForm2</page>
+            <!--            <page id="005" title="Tandatangan">pelupusan/dokumen_tandatangan</page>-->
+            <page id="006" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="terima_bayaran" currentAction="Terima Bayaran">
+        <txncode id="PRMP">
+            <page id="1" title="Terima Bayaran Lesen">kaunter/BayaranPerihal</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="sedia_permit" currentAction="Sedia Permit" report="true">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Permit Tanah Pertanian">pelupusan/borang7</page>
+            <page id="005" title="Tandatangan Manual">pelupusan/tandatangan_dokumenV2</page>
+            <page id="006" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+            <reports>
+                <report generator="DISPRMPH_MLK.rdf" prefix="VDOC" code="PRMP"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="tandatangan_permit" currentAction="Tandatangan Permit">
+        <txncode id="PRMP">
+            <page id="001" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Maklumat Tanah">pelupusan/maklumat_tanahV3?showForm2</page>
+            <page id="003" title="Maklumat Pemohon">pelupusan/maklumat_pemohonV2?viewPemohon</page>
+            <page id="004" title="Permit Tanah Pertanian">pelupusan/borang7?viewForm</page>
+            <!--            <page id="005" title="Tandatangan">pelupusan/dokumen_tandatangan</page>-->
+            <page id="005" title="Nota">pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+</workflow>

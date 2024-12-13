@@ -1,0 +1,76 @@
+<!--Rayuan Perlanjutan Tempoh Bayaran Kelulusan Permohonan Strata-->
+<?xml version="1.0" encoding="windows-1252" ?>
+<workflow id="http://xmlns.oracle.com/etanah/StrataMelaka/LanjutanTempohBayar">
+
+    <stage id="agihtugas" currentAction="Agih Tugasan" distribute="true">
+        <txncode id="RBHS">
+            <page id="1" title="Agih Tugasan">strata/agihTugasan</page>
+            <page id="2" title="Penyerah">strata/maklumat_penyerah</page>
+            <instruction>Sila agihkan tugasan ini kepada yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id = "kemasukan" listener="etanah.view.strata.validator.PemohonanPindaBangunanValidator" currentAction="Kemasukan">
+        <txncode id="RBHS">
+            <page id="1" title="Penyerah">strata/maklumat_penyerah</page>
+            <page id="2" title="Pemohon">strata/RBHSMaklumatPemohon</page>
+            <page id="3" title="Hakmilik">strata/maklumat_tanah?showForm2</page>
+            <page id="4" title="Rayuan">strata/maklumat_rayuan</page>
+
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+    <stage id = "semakkertasptg" currentAction="Semak Kertas PTG" pushback="true" listener="etanah.view.strata.validator.SemakKertasValidator">
+        <txncode id="RBHS">
+            <page id="1" title="Penyerah">strata/maklumat_penyerah</page>
+            <page id="2" title="Pemohon">strata/RBHSMaklumatPemohon?readOnly</page>
+            <page id="3" title="Hakmilik">strata/maklumat_tanah?showForm2</page>
+            <page id="4" title="Rayuan">strata/maklumat_rayuan?showForm2</page>
+            <page id="5" title="Syor">strata/syorrayuan</page>
+            <page id="6" title="Tarikh Kelulusan">strata/Hal_halLain?showForm2</page>
+
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat rayuan dan masukkan Syor.</instruction>
+        </txncode>
+    </stage>
+    <stage id = "perakuan" currentAction="Perakuan" pushback="true" advanceRule="true" listener="etanah.view.strata.validator.PerakuanValidation">
+        <txncode id="RBHS">
+            <page id="1" title="Penyerah">strata/maklumat_penyerah</page>
+            <page id="2" title="Pemohon">strata/RBHSMaklumatPemohon?readOnly</page>
+            <page id="3" title="Hakmilik">strata/maklumat_tanah?showForm2</page>
+            <page id="4" title="Rayuan">strata/maklumat_rayuan?showForm2</page>
+            <page id="5" title="Syor">strata/syorrayuan?showForm2</page>
+
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat rayuan.</instruction>
+        </txncode>
+    </stage>
+    <stage id = "keputusan" currentAction="Keputusan PTG" listener="etanah.view.strata.validator.KeputusanValidation" advanceRule="true" pushback="true">
+        <txncode id="RBHS">
+            <page id="1" title="Penyerah">strata/maklumat_penyerah</page>
+            <page id="2" title="Pemohon">strata/RBHSMaklumatPemohon?readOnly</page>
+            <page id="3" title="Hakmilik">strata/maklumat_tanah?showForm2</page>
+            <page id="4" title="Rayuan">strata/maklumat_rayuan?showForm2</page>
+            <page id="5" title="Syor">strata/syorrayuan?showForm2</page>
+            <!--<page id="6" title="Tarikh">strata/Hal_halLain?showForm2</page>-->
+            
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat rayuan dan masukkan keputusan di tab 'Keputusan'.</instruction>
+            <outcomes>
+                <outcome label=" Lulus" value="L"/>
+                   <!-- <reports>
+                     <report generator="STRSLulusRayuanBayaranHMStrata_MLK.rdf" prefix="VDOC" code="RBHS1"/>
+                    </reports>-->
+                <outcome label=" Tolak" value="T"/>
+                    <!--<reports>
+                     <report generator="STRSTolakRayuanBayaranHMStrata_MLK.rdf" prefix="VDOC" code="RBHS2"/>
+                    </reports>-->
+            </outcomes>
+            <reports>
+                <report generator="STRDrafRBHS_MLK.rdf" prefix="VDOC" code="DRBHS"/>
+            </reports>
+        </txncode>
+    </stage>
+
+</workflow>

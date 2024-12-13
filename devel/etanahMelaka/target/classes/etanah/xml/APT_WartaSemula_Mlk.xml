@@ -1,0 +1,75 @@
+<workflow id="http://xmlns.oracle.com/Sek8APT/Bpel_Sek8a_10_wartasemula/wartasemula">
+
+    <stage id="WartaSemula" currentAction="Sedia Maklumat Pewartaan Semula">
+        <txncode id="PWSL">
+            <page id="1" title="Permohonan">pengambilan/common/maklumat_asas</page>
+            <page id="2" title="Tanah">pengambilan/pindaan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id="DrafWarta" currentAction="Draf Warta Semula Dan Sedia Borang D" advanceRule="true" listener="etanah.view.stripes.pengambilan.sek8a.validator.SemakBorangDTandatanganValidator" report="true">
+        <txncode id="PWSL">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Borang C dan D">/pengambilan/borang_cd</page>
+            <page id="5" title="Tandatangan Manual">/pengambilan/tandatangan_manual?borangDForm</page>
+            <page id="2" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila Jana 'Borang D' yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>            
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="SemakanWarta" currentAction="Semak Draf Warta Semula Dan Borang D" advanceRule="true">
+        <txncode id="PWSL">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Borang C dan D">/pengambilan/borang_cd</page>
+            <page id="2" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila Jana 'Borang D' yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>            
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="TandatgnDrafWarta" currentAction="Semak Warta Semula dan Tandatangan Borang D" listener="etanah.view.stripes.pengambilan.sek8a.validator.TandatanganBorangDValidator">
+        <txncode id="PWSL">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Borang C dan D">/pengambilan/borang_cd</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila Semak Dan Cetak Borang Borang D pada Tab 'Dokumen' yang telah disediakan.</instruction>            
+        </txncode>
+    </stage>
+
+    <stage id="Terima_Warta" currentAction="Terima Warta Lebihan Luas" advanceRule="true">
+        <txncode id="PWSL">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Warta Lebihan Luas">/pengambilan/common/wartaSeksyen4</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat Warta Lebihan Luas berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                
+            </reports>
+        </txncode>
+    </stage>
+    
+    <stage id="TerimaWartaPembetulan" currentAction="Terima Warta Pembetulan Dan Sediakan Pampasan" advanceRule="true">
+        <txncode id="PWSL">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Sedia Pampasan Lebihan">/pengambilan/perwartaanSemulaActionBean</page>
+            <page id="2" title="Rekod Terimaan Bayaran">/pengambilan/rekod_bayaran_sedia_surat</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat Lebihan Pampasan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                
+            </reports>
+        </txncode>
+    </stage>
+
+</workflow>
+
+

@@ -1,0 +1,186 @@
+<!--
+    Document   : MHNS_infokall.xml
+    Created on : November 29, 2012, 11:10 PM
+    Author     : Ameer
+    Description:
+        urusan jenis Perserahan MH
+-->
+
+<workflow id="http://xmlns.oracle.com/bpel_mlk/reg/hw_mlknotabetul">
+
+<!--stage kemasukan-->
+    <stage id="kemasukan" viewable="pendaftar" currentAction="kemasukan" 
+           listener="etanah.view.daftar.validator.HsbmPTValidation" 
+           report="true" nextStageButton="Hantar Pendaftar">
+  
+<!--  //Urusan..-->
+        <txncode id="HKSTA" daysToComplete="2">
+          
+            <page id="1" title="Maklumat Perserahan">daftar/common/maklumat_perserahan</page>
+            <page id="2" title="Maklumat Hakmilik">common/maklumat_hakmilik_permohonan?showForm2</page>
+            <page id="3" title="Maklumat Asas">pendaftaran/maklumat_asas</page>
+          
+            <validator>validator</validator>
+            <instruction>Sila Masukkan Maklumat Berkaitan</instruction>
+            <outcomes>
+                <outcome label="Syor Daftar" value="SD"/>
+                <outcome label="Syor Tolak" value="ST"/>
+                <outcome label="Syor Gantung" value="SG"/>
+            </outcomes>
+            <reports>
+                <report generator="REGDrafDokHMNS001.rdf" prefix="DHKK" code="DHKK" foreach="true"/>
+            </reports>
+            </txncode>
+        <txncode id="HKTHK" daysToComplete="2">
+          
+            <page id="1" title="Maklumat Perserahan">daftar/common/maklumat_perserahan</page>
+              <page id="2" title="Maklumat Hakmilik">common/view_and_compare_title</page>
+              <page id="3" title="Maklumat Pihak Kepentingan">daftar/pihak_kepentingan</page> 
+            <page id="4" title="Maklumat Urusan">daftar/gadaian?searchGadaian</page>
+            <page id="5" title="Maklumat Urusan Tidak Berkuatkuasa">daftar/gadaian?maklumatTidakBerkuatkuasa</page>
+            <validator>validator</validator>
+            <instruction>Sila Masukkan Maklumat Berkaitan</instruction>
+            <outcomes>
+                <outcome label="Syor Daftar" value="SD"/>
+                <outcome label="Syor Tolak" value="ST"/>
+                <outcome label="Syor Gantung" value="SG"/>
+            </outcomes>
+          
+        </txncode>
+        <txncode id="HTIR" daysToComplete="2">
+          
+            <page id="1" title="Maklumat Perserahan">daftar/common/maklumat_perserahan</page>
+              <page id="2" title="Maklumat Hakmilik">common/maklumat_hakmilik_permohonan?showForm2</page>
+              <page id="3" title="Maklumat Asas">pendaftaran/maklumat_asas</page>
+              
+            <validator>validator</validator>
+            <instruction>Sila Masukkan Maklumat Berkaitan</instruction>
+            <outcomes>
+                <outcome label="Syor Daftar" value="SD"/>
+                <outcome label="Syor Tolak" value="ST"/>
+                <outcome label="Syor Gantung" value="SG"/>
+            </outcomes>
+          
+        </txncode>
+        
+       <!-- <txncode id="HSTHK" daysToComplete="2">
+            
+            <page id="1" title="Maklumat Perserahan">daftar/common/maklumat_perserahan</page>
+           
+            <page id="2" title="Maklumat Hakmilik">common/view_and_compare_title</page>
+           
+            <validator>validator</validator>
+            <instruction>Sila Masukkan Maklumat Berkaitan</instruction>
+            <outcomes>
+                <outcome label="Syor Daftar" value="SD"/>
+                <outcome label="Syor Tolak" value="ST"/>
+                <outcome label="Syor Gantung" value="SG"/>
+            </outcomes>
+           
+        </txncode>-->
+             <txncode id="HKTP" daysToComplete="2">
+           
+            <page id="1" title="Maklumat Perserahan">daftar/common/maklumat_perserahan</page>
+            <page id="2" title="Maklumat Hakmilik">common/maklumat_hakmilik_permohonan?showForm2</page>
+
+            <validator>validator</validator>
+            <instruction>Sila Masukkan Maklumat Berkaitan</instruction>
+            <outcomes>
+                <outcome label="Syor Daftar" value="SD"/>
+                <outcome label="Syor Tolak" value="ST"/>
+                <outcome label="Syor Gantung" value="SG"/>
+            </outcomes>
+          
+           <reports>
+                <report generator="REGDrafDokHMNS001.rdf" prefix="DHKK" code="DHKK" foreach="true"/>
+            </reports>
+        </txncode>
+        
+    </stage>
+    
+<!--    stage pendaftar-->
+     <stage id="keputusan" 
+           listener="etanah.view.daftar.validator.HsbmValidation" 
+           finalize="true" pushback="true" report="true" 
+           currentAction="keputusan" nextStageButton="DAFTAR">
+            
+        <txncode id="HKSTA" daysToComplete="2">
+            <page id="1" title="Dokumen Verifikasi">common/maklumat_permohonan?showForm3</page>
+            <instruction>Sila buat semakan pada Draf Dokumen Hakmilik Keluaran Elektronik beserta dokumen fizikal.</instruction>
+            <outcomes>
+                <outcome label="Daftar" value="D"/>
+                <outcome label="Tolak" value="T">
+                    <report generator="REGSuratTolak001.rdf" code="ST"/>
+                </outcome>
+                <outcome label="Gantung" value="G">
+                    <report generator="REGSuratGantung001.rdf" code="SGT"/>
+                </outcome>
+            </outcomes>
+
+        </txncode>
+        
+        <txncode id="HKTHK" daysToComplete="2">
+          
+            <page id="1" title="Dokumen Verifikasi">common/maklumat_permohonan?showForm3</page>
+            <instruction>Sila buat semakan pada Draf Dokumen Hakmilik Keluaran Elektronik beserta dokumen fizikal.</instruction>
+            <outcomes>
+                <outcome label="Daftar" value="D"/>
+                <outcome label="Tolak" value="T">
+                    <report generator="REGSuratTolak001.rdf" code="ST"/>
+                </outcome>
+                <outcome label="Gantung" value="G">
+                    <report generator="REGSuratGantung001.rdf" code="SGT"/>
+                </outcome>
+            </outcomes>
+         
+        </txncode>
+        <txncode id="HTIR" daysToComplete="2">
+          
+            <page id="1" title="Dokumen Verifikasi">common/maklumat_permohonan?showForm3</page>
+            <instruction>Sila buat semakan pada Draf Dokumen Hakmilik Keluaran Elektronik beserta dokumen fizikal.</instruction>
+            <outcomes>
+                <outcome label="Daftar" value="D"/>
+                <outcome label="Tolak" value="T">
+                    <report generator="REGSuratTolak001.rdf" code="ST"/>
+                </outcome>
+                <outcome label="Gantung" value="G">
+                    <report generator="REGSuratGantung001.rdf" code="SGT"/>
+                </outcome>
+            </outcomes>
+         
+        </txncode>
+        
+         <!-- <txncode id="HSTHK" daysToComplete="2">
+        
+            <page id="1" title="Dokumen Verifikasi">common/maklumat_permohonan?showForm3</page>
+            <instruction>Sila buat semakan pada Draf Dokumen Hakmilik Keluaran Elektronik beserta dokumen fizikal.</instruction>
+            <outcomes>
+                <outcome label="Daftar" value="D"/>
+                <outcome label="Tolak" value="T">
+                    <report generator="REGSuratTolak001.rdf" code="ST"/>
+                </outcome>
+                <outcome label="Gantung" value="G">
+                    <report generator="REGSuratGantung001.rdf" code="SGT"/>
+                </outcome>
+            </outcomes>
+           
+        </txncode>-->
+         <txncode id="HKTP" daysToComplete="2">
+          
+            <page id="1" title="Dokumen Verifikasi">common/maklumat_permohonan?showForm3</page>
+            <instruction>Sila buat semakan pada Draf Dokumen Hakmilik Keluaran Elektronik beserta dokumen fizikal.</instruction>
+            <outcomes>
+                <outcome label="Daftar" value="D"/>
+                <outcome label="Tolak" value="T">
+                    <report generator="REGSuratTolak001.rdf" code="ST"/>
+                </outcome>
+                <outcome label="Gantung" value="G">
+                    <report generator="REGSuratGantung001.rdf" code="SGT"/>
+                </outcome>
+            </outcomes>
+            
+        </txncode>
+            
+    </stage>
+        
+</workflow>
