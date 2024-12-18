@@ -55,6 +55,7 @@ public class IspeksReadFileService {
         // pass the path to the file as a parameter 
         IspeksReadFileService r = new IspeksReadFileService();
         File file = new File("C:\\ispeks\\04_00030_RSP_20201214162217.txt");
+        String aa = "";
         String kat = "r";
         InfoAudit ia = new InfoAudit();
 
