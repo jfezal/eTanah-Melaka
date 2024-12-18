@@ -3309,7 +3309,7 @@ public class StrataPtService {
         return q.list();
     }
     public List<Hakmilik> findIdHakmilikByIdHakmilikIndukP(String idHakmilik) {
-        String query = "SELECT b FROM etanah.model.Hakmilik b where b.kodKategoriBangunan.kod in ('P') and b.idHakmilikInduk = :idHakmilik order by LPAD(lower(b.noPetak),10,0) asc ";
+        String query = "SELECT b FROM etanah.model.Hakmilik b where b.kodKategoriBangunan.kod in ('P','PL') and b.idHakmilikInduk = :idHakmilik order by LPAD(lower(b.noPetak),10,0) asc ";
         Session session = sessionProvider.get();
         Query q = session.createQuery(query);
         q.setString("idHakmilik", idHakmilik);

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/java/com/theta/kutipanoffline/model/entities
+END
+Akaun.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/java/com/theta/kutipanoffline/model/entities/Akaun.java
+END
+AkaunTransaksi.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/java/com/theta/kutipanoffline/model/entities/AkaunTransaksi.java
+END
+KodPeranan.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/java/com/theta/kutipanoffline/model/entities/KodPeranan.java
+END
+Pengguna.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/java/com/theta/kutipanoffline/model/entities/Pengguna.java
+END
+ResitBayaran.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/java/com/theta/kutipanoffline/model/entities/ResitBayaran.java
+END
+Config.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/java/com/theta/kutipanoffline/model/entities/Config.java
+END
+PerananPengguna.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/java/com/theta/kutipanoffline/model/entities/PerananPengguna.java
+END
+AkaunPemilik.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/java/com/theta/kutipanoffline/model/entities/AkaunPemilik.java
+END
+TransaksiBayaran.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/java/com/theta/kutipanoffline/model/entities/TransaksiBayaran.java
+END

@@ -30,13 +30,13 @@ public class PdfImageUtil {
         LOGGER.debug("Parsing image from PDF file ....");
         List<BufferedImage> result = new ArrayList<BufferedImage>();
 //        PdfDecoder decodePdf = new PdfDecoder(true);
-//        PdfDecoder.setFontReplacements(decodePdf);
-//
+ //       PdfDecoder.setFontReplacements(decodePdf);
+
 //        try {
-//            decodePdf.openPdfFileFromInputStream(is, true);
-//            for (int i = 1; i <= decodePdf.getPageCount(); i++) {
-//                BufferedImage buffImage = decodePdf.getPageAsImage(i);
-//                result.add(buffImage);
+////            decodePdf.openPdfFileFromInputStream(is, true);
+////            for (int i = 1; i <= decodePdf.getPageCount(); i++) {
+////                BufferedImage buffImage = decodePdf.getPageAsImage(i);
+////                result.add(buffImage);
 //            }
 //
 //        } catch (PdfException e) {

@@ -1,0 +1,215 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp
+END
+SijilPembebasanUkurMyEtaPP.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/SijilPembebasanUkurMyEtaPP.java
+END
+EndorsBorangDMaklumatWartaMyEtaPPResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/EndorsBorangDMaklumatWartaMyEtaPPResponse.java
+END
+DaftarPermohonanSek8MyEtaPPResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/DaftarPermohonanSek8MyEtaPPResponse.java
+END
+LampiranMyEtaPP.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/LampiranMyEtaPP.java
+END
+MaklumatPenyerah.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/MaklumatPenyerah.java
+END
+EtappPermohonanPortType.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/EtappPermohonanPortType.java
+END
+SijilPembebasanUkurMyEtaPPResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/SijilPembebasanUkurMyEtaPPResponse.java
+END
+GeneratePermohonan.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/GeneratePermohonan.java
+END
+package-info.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/package-info.java
+END
+MaklumatHakmilik.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/MaklumatHakmilik.java
+END
+DaftarPermohonanMyEtaPPBorangAMMk.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/DaftarPermohonanMyEtaPPBorangAMMk.java
+END
+ObjectFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/ObjectFactory.java
+END
+EndorsBorangKMyEtaPP.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/EndorsBorangKMyEtaPP.java
+END
+GeneratePermohonanResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/GeneratePermohonanResponse.java
+END
+EtappPermohonan.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/EtappPermohonan.java
+END
+MaklumanPenghantaranPUMyEtaPP.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/MaklumanPenghantaranPUMyEtaPP.java
+END
+MaklumatPermohonan.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/MaklumatPermohonan.java
+END
+BorangCdanMMKMyEtaPP.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/BorangCdanMMKMyEtaPP.java
+END
+MaklumatHakmilikResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/MaklumatHakmilikResponse.java
+END
+ArrayOfHakmilikPermohonanMyEtaPP.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/ArrayOfHakmilikPermohonanMyEtaPP.java
+END
+MaklumatWartaBorangBMyEtaPP.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/MaklumatWartaBorangBMyEtaPP.java
+END
+DaftarPermohonanMyEtaPPBorangAMMkResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/DaftarPermohonanMyEtaPPBorangAMMkResponse.java
+END
+ArrayOfPemilikEtaPP.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/ArrayOfPemilikEtaPP.java
+END
+EndorsBorangKMyEtaPPResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/EndorsBorangKMyEtaPPResponse.java
+END
+MaklumanPenghantaranPUMyEtaPPResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/MaklumanPenghantaranPUMyEtaPPResponse.java
+END
+HakmilikPermohonanMyEtaPP.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/HakmilikPermohonanMyEtaPP.java
+END
+BorangCdanMMKMyEtaPPResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/BorangCdanMMKMyEtaPPResponse.java
+END
+EndorsBorangDMaklumatWartaMyEtaPP.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/EndorsBorangDMaklumatWartaMyEtaPP.java
+END
+DaftarPermohonanSek8MyEtaPP.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/DaftarPermohonanSek8MyEtaPP.java
+END
+PemilikEtaPP.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/PemilikEtaPP.java
+END
+MaklumatWartaBorangBMyEtaPPResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/MaklumatWartaBorangBMyEtaPPResponse.java
+END
+MaklumatHakmilikMyEtaPP.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/MaklumatHakmilikMyEtaPP.java
+END
+ArrayOfLampiranMyEtaPP.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/ArrayOfLampiranMyEtaPP.java
+END
+MaklumatPermohonanSek4MyEtaPP.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/MaklumatPermohonanSek4MyEtaPP.java
+END
+MaklumatPermohonanSek8MyEtaPP.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/client/etapp/MaklumatPermohonanSek8MyEtaPP.java
+END

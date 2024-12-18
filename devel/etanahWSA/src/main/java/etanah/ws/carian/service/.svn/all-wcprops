@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/service
+END
+TransaksiService.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/service/TransaksiService.java
+END
+CarianHakmilikService.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/service/CarianHakmilikService.java
+END
+ListService.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/service/ListService.java
+END
+TerimaBayaranCarianService.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/service/TerimaBayaranCarianService.java
+END

@@ -88,12 +88,11 @@ public class CukaiOnlineServices {
         info.setTarikhMasuk(new Date());
         Hakmilik hakmilik;
         Akaun akaun;
-        hakmilik = findHakmilikAktif(idHakmilik);
-        //hakmilikDAO.findById(idHakmilik);
+        hakmilik = hakmilikDAO.findById(idHakmilik);
         if (hakmilik != null) {
-            akaun = findAkaunAktifbyIdHakmilik(hakmilik.getIdHakmilik());
+            akaun = hakmilik.getAkaunCukai();
         } else {
-            akaun = findAkaunAktif(idHakmilik);
+            akaun = akaunDAO.findById(idHakmilik);
             hakmilik = akaun.getHakmilik();
         }
 
@@ -177,8 +176,8 @@ public class CukaiOnlineServices {
             idHakmilik = a.getHakmilik().getIdHakmilik();
             accountNo = a.getNoAkaun();
             statusAkaun = a.getStatus().getKod();
-            if (statusAkaun.equals("A")) {
-                break;
+            if(statusAkaun.equals("A")){
+            break;
             }
         }
         if (statusAkaun.equals("B") || statusAkaun.equals("F")) {
@@ -619,40 +618,6 @@ public class CukaiOnlineServices {
 
         return noresit;
 
-    }
-
-    private Hakmilik findHakmilikAktif(String idHakmilik) {
-        Hakmilik ha = new Hakmilik();
-        String query = "SELECT a FROM etanah.model.Hakmilik a"
-                + " where a.idHakmilik = :idHakmilik and a.kodStatusHakmilik.kod = 'D' ";
-        Session session = injector.getProvider(Session.class).get();
-        Query q = session.createQuery(query);
-        q.setString("idHakmilik", idHakmilik);
-        ha = (Hakmilik) q.uniqueResult();
-        return ha;
-
-    }
-
-    private Akaun findAkaunAktif(String noAkaun) {
-        Akaun akaun = new Akaun();
-        String query = "SELECT a FROM etanah.model.Akaun a"
-                + " where a.akaun.noAkaun = :accountNo and a.status.kod= 'A' ";
-        Session session = injector.getProvider(Session.class).get();
-        Query q = session.createQuery(query);
-        q.setString("accountNo", noAkaun);
-        akaun = (Akaun) q.uniqueResult();
-        return akaun;
-    }
-
-    private Akaun findAkaunAktifbyIdHakmilik(String idHakmilik) {
-        Akaun akaun = new Akaun();
-        String query = "SELECT a FROM etanah.model.Akaun a"
-                + " where a.hakmilik.idHakmilik = :idHakmilik and a.status.kod= 'A' ";
-        Session session = injector.getProvider(Session.class).get();
-        Query q = session.createQuery(query);
-        q.setString("idHakmilik", idHakmilik);
-        akaun = (Akaun) q.uniqueResult();
-        return akaun;
     }
 
 }

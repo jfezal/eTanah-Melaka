@@ -1,9 +1,0 @@
-publicKeyFile=/nfs_apps/ISPEKS/KEY/BendahariMelaka.gpg
-publicInputFile=/nfs_apps/ISPEKS/PENYATA_PEMUNGUT/01/04_00030_PPL_20201119145601.txt
-publicOutputFile=/nfs_apps/ISPEKS/PENYATA_PEMUNGUT/01/04_00030_PPL_20201119145601.gpg
-privateKeyFile=/nfs_apps/ISPEKS/KEY/BendahariMelaka_sec.gpg
-privateInputFile=/nfs_apps/comm/ETANAH/Out/04_00030_BIL_20210112111606.gpg
-privateOutputFile=/nfs_apps/ISPEKS/in/04_00030_BIL_20210112111606.txt
-privatePassPhrase=bend_Melaka
-
-ispeks_hantar=C:/Users/mohd.faidzal/Downloads

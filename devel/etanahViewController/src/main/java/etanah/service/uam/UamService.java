@@ -2095,9 +2095,9 @@ public class UamService {
             SYSLOG.info("Byte Array of Risalat MMKN=" + reportMMKN.toString());
             if (reportRingkasanMMKN != null) {
                 SYSLOG.info("Byte Array of Ringkasan MMKN=" + reportRingkasanMMKN.toString());
-//                service.addRisalat(permohonanKertas.getInfoAudit().getTarikhMasuk(), new java.util.Date(), service.createFile(reportMMKN, "Risalat MMKN"), service.createFile(reportRingkasanMMKN, "Ringkasan MMKN"));
+                service.addRisalat(permohonanKertas.getInfoAudit().getTarikhMasuk(), new java.util.Date(), service.createFile(reportMMKN, "Risalat MMKN"), service.createFile(reportRingkasanMMKN, "Ringkasan MMKN"));
             } else {
-//                service.addRisalat(permohonanKertas.getInfoAudit().getTarikhMasuk(), new java.util.Date(), service.createFile(reportMMKN, "Risalat MMKN"), null);
+                service.addRisalat(permohonanKertas.getInfoAudit().getTarikhMasuk(), new java.util.Date(), service.createFile(reportMMKN, "Risalat MMKN"), null);
             }
         }
 

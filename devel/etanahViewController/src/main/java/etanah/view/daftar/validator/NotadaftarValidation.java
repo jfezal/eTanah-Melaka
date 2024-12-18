@@ -70,7 +70,10 @@ import org.apache.commons.lang.StringUtils;
 import org.hibernate.Transaction;
 import etanah.service.daftar.PelarasanCukaiService;
 import etanah.service.daftar.PembetulanService;
+import etanah.util.WORMUtil;
 import etanah.view.etanahActionBeanContext;
+import etanah.view.etanahContextListener;
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.concurrent.Executors;
@@ -471,6 +474,76 @@ public class NotadaftarValidation implements StageListener {
             }
 
             context.addMessage("Perserahan " + sb.toString() + " telah berjaya didaftarkan.");
+            
+            
+            //integrate with HCAP
+            //todo : save sign file to HCAP
+            LOG.debug("WORM process.....");
+            WORMUtil worm = etanahContextListener.newInstance(WORMUtil.class);
+            List<Dokumen> senaraiDokumen = new ArrayList<Dokumen>();
+            String docPath = conf.getProperty("document.path");
+            List<HakmilikPermohonan> senaraiHm = permohonan.getSenaraiHakmilik();
+            for (HakmilikPermohonan hmp : senaraiHm) {
+                Hakmilik hm = hmp.getHakmilik();
+                if (hm == null) {
+                    continue;
+                }
+                Dokumen d = hm.getDhde();
+
+                if (d != null) {
+                    String namaFizikalAsal = d.getNamaFizikal();
+                    File dhde = new File(docPath + (docPath.endsWith(File.separator) ? "" : File.separator)
+                            + namaFizikalAsal);
+                    if (dhde != null) {
+                        LOG.debug("insert into WORM [dhde]");
+                        try {
+                            int status = worm.put(dhde,
+                                    hm.getIdHakmilik(),
+                                    hm.getDaerah().getKod(), hm.getBandarPekanMukim().getbandarPekanMukim(),
+                                    null,
+                                    hm.getKodHakmilik().getKod(),
+                                    String.valueOf(hm.getNoVersiDhde() != null ? hm.getNoVersiDhde() : 0),
+                                    hm.getKodStatusHakmilik().getKod());
+                            LOG.debug("[status] =  " + status);
+                            if (status == WORMUtil.SC_CREATED
+                                    || status == WORMUtil.SC_CREATED_W_ERROR) {
+                                dhde.delete();
+                                String path = worm.buildPath(hm.getDaerah().getKod(),
+                                        hm.getBandarPekanMukim().getbandarPekanMukim(),
+                                        null,
+                                        hm.getKodHakmilik().getKod(),
+                                        String.valueOf(hm.getNoVersiDhde() != null ? hm.getNoVersiDhde() : 0)).toString();
+                                d.setNamaFizikal(path + File.separator + hm.getIdHakmilik());
+                                senaraiDokumen.add(d);
+                            }
+                        } catch (IOException ex) {
+                            ex.printStackTrace();
+                        }
+                    }
+                    File sign = new File(docPath + (docPath.endsWith(File.separator) ? "" : File.separator)
+                            + namaFizikalAsal + ".sig");
+                    if (sign.exists()) {
+                        String filename = hm.getIdHakmilik() + ".sig";
+                        try {
+                            int status = worm.put(sign,
+                                    filename,
+                                    hm.getDaerah().getKod(), hm.getBandarPekanMukim().getbandarPekanMukim(),
+                                    null,
+                                    hm.getKodHakmilik().getKod(),
+                                    String.valueOf(hm.getNoVersiDhde() != null ? hm.getNoVersiDhde() : 0),
+                                    hm.getKodStatusHakmilik().getKod());
+
+                            if (status == WORMUtil.SC_CREATED
+                                    || status == WORMUtil.SC_CREATED_W_ERROR) {
+                                sign.delete();
+                            }
+                        } catch (IOException ex) {
+                            ex.printStackTrace();
+                        }
+                    }
+                }
+            }
+            
 
             Permohonan sebelum = permohonan.getPermohonanSebelum();
 

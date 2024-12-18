@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/bin/main/java/etanah/ws/account
+END
+TransaksiInfo.class
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/bin/main/java/etanah/ws/account/TransaksiInfo.class
+END
+ICService.class
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/bin/main/java/etanah/ws/account/ICService.class
+END
+NoLotService.class
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/bin/main/java/etanah/ws/account/NoLotService.class
+END
+AccountService.class
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/bin/main/java/etanah/ws/account/AccountService.class
+END
+WebService.class
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/bin/main/java/etanah/ws/account/WebService.class
+END
+AccountInfo.class
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/bin/main/java/etanah/ws/account/AccountInfo.class
+END
+LaporInfo.class
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/bin/main/java/etanah/ws/account/LaporInfo.class
+END
+BayarInfo.class
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/bin/main/java/etanah/ws/account/BayarInfo.class
+END
+HakmilikService.class
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/bin/main/java/etanah/ws/account/HakmilikService.class
+END

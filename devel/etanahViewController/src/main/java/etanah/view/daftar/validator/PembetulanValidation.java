@@ -39,6 +39,9 @@ import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import etanah.util.WORMUtil;
+import etanah.view.etanahContextListener;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.text.ParseException;
 import java.math.*;
@@ -790,115 +793,109 @@ public class PembetulanValidation implements StageListener {
         List<Permohonan> senaraiPermohonanTerlibat = new ArrayList<Permohonan>();
         StringBuilder sb = new StringBuilder();
 
-//        if (permohonan != null && permohonan.getKeputusan() != null
-//                && permohonan.getKeputusan().getKod().equals(DAFTAR)) {
-//
-//            String idKumpulan = permohonan.getIdKumpulan();
-//            if (StringUtils.isNotBlank(idKumpulan)) {
-//                senaraiPermohonanTerlibat = permohonanService.getPermohonanByIdKump(idKumpulan);
-//            } else {
-//                senaraiPermohonanTerlibat.add(permohonan);
-//            }
-//
-//            for (Permohonan pmohon : senaraiPermohonanTerlibat) {
-//                if (pmohon == null) {
-//                    continue;
-//                }
-//                if (sb.length() > 0) {
-//                    sb.append(",");
-//                }
-//                sb.append(pmohon.getIdPermohonan());
-//                List<HakmilikPermohonan> senaraiHakmilikTerlibat = pmohon.getSenaraiHakmilik();
-//                for (HakmilikPermohonan hp : senaraiHakmilikTerlibat) {
-//                    if (hp == null || hp.getHakmilik() == null) {
-//                        continue;
-//                    }
-//                    Hakmilik hm = hp.getHakmilik();
-//                    if (hp.getDokumen2() != null) {
-//                        hm.setDhke(hp.getDokumen2());
-//                    }
-//                    if (hp.getDokumen3() != null) {
-//                        hm.setDhde(hp.getDokumen3());
-//                    }
-//                }
-//            }
-//
-//            context.addMessage("Perserahan " + sb.toString() + " telah berjaya didaftarkan.");
-//
-//            //integrate with HCAP
-//            //todo : save sign file to HCAP
-//            WORMUtil worm = etanahContextListener.newInstance(WORMUtil.class);
-//            List<Dokumen> senaraiDokumen = new ArrayList<Dokumen>();
-//            String docPath = conf.getProperty("document.path");
-//            List<HakmilikPermohonan> senaraiHm = permohonan.getSenaraiHakmilik();
-//            for (HakmilikPermohonan hmp : senaraiHm) {
-//                Hakmilik hm = hmp.getHakmilik();
-//                if (hm == null) {
-//                    continue;
-//                }
-//                Dokumen d = hm.getDhde();
-//
-//                if (d != null) {
-//                    String namaFizikalAsal = d.getNamaFizikal();
-//                    File dhde = new File(docPath + (docPath.endsWith(File.separator) ? "" : File.separator)
-//                            + namaFizikalAsal);
-//                    if (dhde != null) {
-//                        try {
-//                            int status = worm.put(dhde,
-//                                    hm.getIdHakmilik(),
-//                                    hm.getDaerah().getKod(), hm.getBandarPekanMukim().getbandarPekanMukim(),
-//                                    null,
-//                                    hm.getKodHakmilik().getKod(),
-//                                    String.valueOf(hm.getNoVersiDhde() != null ? hm.getNoVersiDhde() : 0),
-//                                    hm.getKodStatusHakmilik().getKod());
-//                            if (status == WORMUtil.SC_CREATED
-//                                    || status == WORMUtil.SC_CREATED_W_ERROR) {
-//                                // once successed create on WORM
-//                                // delete file on dms, update path dokumen
-//                                dhde.delete();
-//                                String path = worm.buildPath(hm.getDaerah().getKod(),
-//                                        hm.getBandarPekanMukim().getbandarPekanMukim(),
-//                                        null,
-//                                        hm.getKodHakmilik().getKod(),
-//                                        String.valueOf(hm.getNoVersiDhde() != null ? hm.getNoVersiDhde() : 0)).toString();
-//                                d.setNamaFizikal(path + File.separator + hm.getIdHakmilik());
-//                                senaraiDokumen.add(d);
-//
-//                                //update sejarah dokumen
-////                                  SejarahDokumen sej = sejarahDokumenDAO.findById(d.getIdDokumen());
-////                                  if (sej != null) {
-////                                       sej.setNamaFizikal(path + File.separator + hm.getIdHakmilik());
-////                                       dokumenService.saveOrUpdateSejarahDokumen(sej);
-////                                  }
-//                            }
-//                        } catch (IOException ex) {
-//                        }
-//                    }
-//                    File sign = new File(docPath + (docPath.endsWith(File.separator) ? "" : File.separator)
-//                            + namaFizikalAsal + ".sig");
-//                    if (sign.exists()) {
-//                        String filename = hm.getIdHakmilik() + ".sig";
-//                        try {
-//                            int status = worm.put(sign,
-//                                    filename,
-//                                    hm.getDaerah().getKod(), hm.getBandarPekanMukim().getbandarPekanMukim(),
-//                                    null,
-//                                    hm.getKodHakmilik().getKod(),
-//                                    String.valueOf(hm.getNoVersiDhde() != null ? hm.getNoVersiDhde() : 0),
-//                                    hm.getKodStatusHakmilik().getKod());
-//
-//                            if (status == WORMUtil.SC_CREATED
-//                                    || status == WORMUtil.SC_CREATED_W_ERROR) {
-//                                // once successed create on WORM
-//                                // delete file on dms, update path dokumen
-//                                sign.delete();
-//                            }
-//                        } catch (IOException ex) {
-//                        }
-//                    }
-//                }
-//            }
-//        }
+        if (permohonan != null && permohonan.getKeputusan() != null
+                && permohonan.getKeputusan().getKod().equals(DAFTAR)) {
+
+            String idKumpulan = permohonan.getIdKumpulan();
+            if (StringUtils.isNotBlank(idKumpulan)) {
+                senaraiPermohonanTerlibat = permohonanService.getPermohonanByIdKump(idKumpulan);
+            } else {
+                senaraiPermohonanTerlibat.add(permohonan);
+            }
+
+            for (Permohonan pmohon : senaraiPermohonanTerlibat) {
+                if (pmohon == null) {
+                    continue;
+                }
+                if (sb.length() > 0) {
+                    sb.append(",");
+                }
+                sb.append(pmohon.getIdPermohonan());
+                List<HakmilikPermohonan> senaraiHakmilikTerlibat = pmohon.getSenaraiHakmilik();
+                for (HakmilikPermohonan hp : senaraiHakmilikTerlibat) {
+                    if (hp == null || hp.getHakmilik() == null) {
+                        continue;
+                    }
+                    Hakmilik hm = hp.getHakmilik();
+                    if (hp.getDokumen2() != null) {
+                        hm.setDhke(hp.getDokumen2());
+                    }
+                    if (hp.getDokumen3() != null) {
+                        hm.setDhde(hp.getDokumen3());
+                    }
+                }
+            }
+
+            context.addMessage("Perserahan " + sb.toString() + " telah berjaya didaftarkan.");
+
+            //integrate with HCAP
+            //todo : save sign file to HCAP
+            LOG.debug("WORM process.....");
+            WORMUtil worm = etanahContextListener.newInstance(WORMUtil.class);
+            List<Dokumen> senaraiDokumen = new ArrayList<Dokumen>();
+            String docPath = conf.getProperty("document.path");
+            List<HakmilikPermohonan> senaraiHm = permohonan.getSenaraiHakmilik();
+            for (HakmilikPermohonan hmp : senaraiHm) {
+                Hakmilik hm = hmp.getHakmilik();
+                if (hm == null) {
+                    continue;
+                }
+                Dokumen d = hm.getDhde();
+
+                if (d != null) {
+                    String namaFizikalAsal = d.getNamaFizikal();
+                    File dhde = new File(docPath + (docPath.endsWith(File.separator) ? "" : File.separator)
+                            + namaFizikalAsal);
+                    if (dhde != null) {
+                        LOG.debug("insert into WORM [dhde]");
+                        try {
+                            int status = worm.put(dhde,
+                                    hm.getIdHakmilik(),
+                                    hm.getDaerah().getKod(), hm.getBandarPekanMukim().getbandarPekanMukim(),
+                                    null,
+                                    hm.getKodHakmilik().getKod(),
+                                    String.valueOf(hm.getNoVersiDhde() != null ? hm.getNoVersiDhde() : 0),
+                                    hm.getKodStatusHakmilik().getKod());
+                            LOG.debug("[status] =  " + status);
+                            if (status == WORMUtil.SC_CREATED
+                                    || status == WORMUtil.SC_CREATED_W_ERROR) {
+                                dhde.delete();
+                                String path = worm.buildPath(hm.getDaerah().getKod(),
+                                        hm.getBandarPekanMukim().getbandarPekanMukim(),
+                                        null,
+                                        hm.getKodHakmilik().getKod(),
+                                        String.valueOf(hm.getNoVersiDhde() != null ? hm.getNoVersiDhde() : 0)).toString();
+                                d.setNamaFizikal(path + File.separator + hm.getIdHakmilik());
+                                senaraiDokumen.add(d);
+                            }
+                        } catch (IOException ex) {
+                            ex.printStackTrace();
+                        }
+                    }
+                    File sign = new File(docPath + (docPath.endsWith(File.separator) ? "" : File.separator)
+                            + namaFizikalAsal + ".sig");
+                    if (sign.exists()) {
+                        String filename = hm.getIdHakmilik() + ".sig";
+                        try {
+                            int status = worm.put(sign,
+                                    filename,
+                                    hm.getDaerah().getKod(), hm.getBandarPekanMukim().getbandarPekanMukim(),
+                                    null,
+                                    hm.getKodHakmilik().getKod(),
+                                    String.valueOf(hm.getNoVersiDhde() != null ? hm.getNoVersiDhde() : 0),
+                                    hm.getKodStatusHakmilik().getKod());
+
+                            if (status == WORMUtil.SC_CREATED
+                                    || status == WORMUtil.SC_CREATED_W_ERROR) {
+                                sign.delete();
+                            }
+                        } catch (IOException ex) {
+                            ex.printStackTrace();
+                        }
+                    }
+                }
+            }
+        }
     }
 
     private void updateNoVersi(Permohonan permohonan, InfoAudit infoAudit) throws Exception {

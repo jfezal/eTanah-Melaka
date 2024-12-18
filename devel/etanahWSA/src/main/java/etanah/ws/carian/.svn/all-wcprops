@@ -1,0 +1,479 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian
+END
+CheckAccountByNoLot.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/CheckAccountByNoLot.java
+END
+DokumenInfo.class
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/DokumenInfo.class
+END
+SenaraiDokumen.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/SenaraiDokumen.java
+END
+MuatturundokumenResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/MuatturundokumenResponse.java
+END
+ListKodLotResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/ListKodLotResponse.java
+END
+package-info.class
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/package-info.class
+END
+CheckAccountStrataByParam.class
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/CheckAccountStrataByParam.class
+END
+CheckAccountByParamResponse.class
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/CheckAccountByParamResponse.class
+END
+Muatturundokumen.class
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/Muatturundokumen.class
+END
+ListKodSeksyen.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/ListKodSeksyen.java
+END
+SenaraiDokumenIdHakmilikResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/SenaraiDokumenIdHakmilikResponse.java
+END
+UpdateCarianAccount.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/UpdateCarianAccount.java
+END
+ListKodSeksyenResponse.class
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/ListKodSeksyenResponse.class
+END
+DokumenInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/DokumenInfo.java
+END
+CheckAccountStrataByNoLot.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/CheckAccountStrataByNoLot.java
+END
+CheckAccountByNoLotResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/CheckAccountByNoLotResponse.java
+END
+ListKodDaerahResponse.class
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/ListKodDaerahResponse.class
+END
+ObjectFactory.class
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/ObjectFactory.class
+END
+DokumenCarianPersendirian.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/DokumenCarianPersendirian.java
+END
+SenaraiDokumenResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/SenaraiDokumenResponse.java
+END
+ListKodSeksyenResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/ListKodSeksyenResponse.java
+END
+CheckAccountByParam.class
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/CheckAccountByParam.class
+END
+ListKodLotResponse.class
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/ListKodLotResponse.class
+END
+UpdateCarianAccountResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/UpdateCarianAccountResponse.java
+END
+CheckAccountResponse.class
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/CheckAccountResponse.class
+END
+CarianInfo.class
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/CarianInfo.class
+END
+ObjectFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/ObjectFactory.java
+END
+SenaraiDokumenIdHakmilikResponse.class
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/SenaraiDokumenIdHakmilikResponse.class
+END
+CheckAccountStrataByNoLotResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/CheckAccountStrataByNoLotResponse.java
+END
+ListKodSeksyen.class
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/ListKodSeksyen.class
+END
+CarianPersendirianOnlinePortType.class
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/CarianPersendirianOnlinePortType.class
+END
+ListKodDaerah.class
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/ListKodDaerah.class
+END
+CheckAccountByParam.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/CheckAccountByParam.java
+END
+UtilKod.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/UtilKod.java
+END
+ListKodMukim.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/ListKodMukim.java
+END
+ListKodLot.class
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/ListKodLot.class
+END
+CheckAccount.class
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/CheckAccount.class
+END
+ListKodDaerah.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/ListKodDaerah.java
+END
+SenaraiDokumenIdHakmilik.class
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/SenaraiDokumenIdHakmilik.class
+END
+CheckAccountStrataByNoLotResponse.class
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/CheckAccountStrataByNoLotResponse.class
+END
+CheckAccountByParamResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/CheckAccountByParamResponse.java
+END
+CheckAccountStrataByParam.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/CheckAccountStrataByParam.java
+END
+CheckAccount.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/CheckAccount.java
+END
+ListKodMukimResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/ListKodMukimResponse.java
+END
+._.DS_Store
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/._.DS_Store
+END
+ListKodDaerahResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/ListKodDaerahResponse.java
+END
+UtilKod.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/UtilKod.class
+END
+CheckAccountStrataByParamResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/CheckAccountStrataByParamResponse.java
+END
+CheckAccountByNoLotResponse.class
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/CheckAccountByNoLotResponse.class
+END
+CheckAccountStrataByNoLot.class
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/CheckAccountStrataByNoLot.class
+END
+SenaraiDokumenResponse.class
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/SenaraiDokumenResponse.class
+END
+ArrayOfDokumenCarianPersendirian.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/ArrayOfDokumenCarianPersendirian.java
+END
+DokumenCarianPersendirian.class
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/DokumenCarianPersendirian.class
+END
+CheckAccountResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/CheckAccountResponse.java
+END
+CarianInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/CarianInfo.java
+END
+CarianPersendirianOnlinePortType.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/CarianPersendirianOnlinePortType.java
+END
+ListKodMukimResponse.class
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/ListKodMukimResponse.class
+END
+UpdateCarianAccountResponse.class
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/UpdateCarianAccountResponse.class
+END
+ArrayOfCarianInfo.class
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/ArrayOfCarianInfo.class
+END
+ListKodHakmilik.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/ListKodHakmilik.java
+END
+package-info.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/package-info.java
+END
+CheckAccountByNoLot.class
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/CheckAccountByNoLot.class
+END
+ListKodHakmilikResponse.class
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/ListKodHakmilikResponse.class
+END
+SenaraiDokumen.class
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/SenaraiDokumen.class
+END
+CarianPersendirianOnline.class
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/CarianPersendirianOnline.class
+END
+ArrayOfUtilKod.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/ArrayOfUtilKod.java
+END
+ListKodMukim.class
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/ListKodMukim.class
+END
+UpdateCarianAccount.class
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/UpdateCarianAccount.class
+END
+ListKodHakmilikResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/ListKodHakmilikResponse.java
+END
+CarianPersendirianOnline.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/CarianPersendirianOnline.java
+END
+ListKodHakmilik.class
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/ListKodHakmilik.class
+END
+ArrayOfUtilKod.class
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/ArrayOfUtilKod.class
+END
+Muatturundokumen.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/Muatturundokumen.java
+END
+ListKodLot.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/ListKodLot.java
+END
+CheckAccountStrataByParamResponse.class
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/CheckAccountStrataByParamResponse.class
+END
+MuatturundokumenResponse.class
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/MuatturundokumenResponse.class
+END
+SenaraiDokumenIdHakmilik.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/SenaraiDokumenIdHakmilik.java
+END
+ArrayOfDokumenCarianPersendirian.class
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/ArrayOfDokumenCarianPersendirian.class
+END
+ArrayOfCarianInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/carian/ArrayOfCarianInfo.java
+END

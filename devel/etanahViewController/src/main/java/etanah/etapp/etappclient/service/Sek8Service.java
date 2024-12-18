@@ -147,7 +147,7 @@ MyeTappConfig myeTappConfig;
         permohonan = sh.setlistDokumen(permohonan, listDokumenForm);
         ObjectMapper Obj = new ObjectMapper();
         String jsonStr = Obj.writeValueAsString(permohonan);
-        s = port.hantarHakmilikSambungan(idPermohonan, jsonStr);
+       // s = port.hantarHakmilikSambungan(idPermohonan, jsonStr);
         
 //        s.setCode(res.getCode());
 //        s.setDescription(res.getDescription());

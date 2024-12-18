@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/wsdl/192.168.0.10_7009/etanah/services
+END
+CarianEnquiry.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/wsdl/192.168.0.10_7009/etanah/services/CarianEnquiry.wsdl
+END
+EtappPermohonan.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/wsdl/192.168.0.10_7009/etanah/services/EtappPermohonan.wsdl
+END
+Bayaran_Online.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/wsdl/192.168.0.10_7009/etanah/services/Bayaran_Online.wsdl
+END
+CarianPersendirian_Online.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/wsdl/192.168.0.10_7009/etanah/services/CarianPersendirian_Online.wsdl
+END
+CukaiPetakOnline.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/wsdl/192.168.0.10_7009/etanah/services/CukaiPetakOnline.wsdl
+END

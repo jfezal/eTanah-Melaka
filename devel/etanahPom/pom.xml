@@ -53,8 +53,6 @@
                 </filters>
             </build>
             <modules>
-                 <module>../eTanahIspeksClient</module>
-                 <module>../eTappClient</module>
                 <module>../etanahMelaka</module>
             </modules>
             <properties>
@@ -70,24 +68,6 @@
                 </filters>
             </build>
             <modules>
-                <module>../eTanahIspeksClient</module>
-                <module>../eTappClient</module>
-                <module>../etanahMelaka</module>
-            </modules>
-            <properties>
-                <etanah.view.profile>view-melaka</etanah.view.profile>
-            </properties>
-        </profile>
-        <profile>
-            <id>training-melaka</id>        
-            <build>
-                <filters>
-                    <filter>../etanahPom/training-melaka.properties</filter>
-                </filters>
-            </build>
-            <modules>
-                <module>../eTanahIspeksClient</module>
-                <module>../eTappClient</module>
                 <module>../etanahMelaka</module>
             </modules>
             <properties>
@@ -107,9 +87,7 @@
                 </filters>
             </build>
             <modules>
-                <module>../eTanahIspeksClient</module>
-                <module>../eTappClient</module>
-                <!--<module>../etanahMelaka</module>-->          
+                <module>../etanahMelaka</module>          
             </modules>
             <properties>
                 <etanah.view.profile>view-melaka</etanah.view.profile>
@@ -127,7 +105,6 @@
                 </filters>
             </build>
             <modules>
-                <module>../eTanahIspeksClient</module>
                 <module>../etanahMelaka</module>          
             </modules>
             <properties>
@@ -207,8 +184,8 @@
     <repositories>
         <repository>
             <id>Maven Repository</id>
-            <url>http://localhost:8188/artifactory/repo</url>
-            <!-- <url>http://10.0.1.40:8188/artifactory/repo</url>-->
+	    <url>http://localhost:8188/artifactory/repo</url>
+            <!--url>http://10.0.1.40:8188/artifactory/repo</url-->
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>

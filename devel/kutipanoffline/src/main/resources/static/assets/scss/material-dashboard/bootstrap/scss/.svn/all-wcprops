@@ -1,0 +1,233 @@
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss
+END
+_variables.scss
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_variables.scss
+END
+_navbar.scss
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_navbar.scss
+END
+_code.scss
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_code.scss
+END
+_utilities.scss
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_utilities.scss
+END
+_transitions.scss
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_transitions.scss
+END
+bootstrap.scss
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/bootstrap.scss
+END
+_media.scss
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_media.scss
+END
+_root.scss
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_root.scss
+END
+_nav.scss
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_nav.scss
+END
+_grid.scss
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_grid.scss
+END
+_forms.scss
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_forms.scss
+END
+_pagination.scss
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_pagination.scss
+END
+_popover.scss
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_popover.scss
+END
+_print.scss
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_print.scss
+END
+_buttons.scss
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_buttons.scss
+END
+_badge.scss
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_badge.scss
+END
+_list-group.scss
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_list-group.scss
+END
+_breadcrumb.scss
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_breadcrumb.scss
+END
+bootstrap-reboot.scss
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/bootstrap-reboot.scss
+END
+_mixins.scss
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_mixins.scss
+END
+_alert.scss
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_alert.scss
+END
+_functions.scss
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_functions.scss
+END
+_card.scss
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_card.scss
+END
+_tables.scss
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_tables.scss
+END
+_carousel.scss
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_carousel.scss
+END
+_jumbotron.scss
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_jumbotron.scss
+END
+_type.scss
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_type.scss
+END
+_input-group.scss
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_input-group.scss
+END
+_tooltip.scss
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_tooltip.scss
+END
+_reboot.scss
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_reboot.scss
+END
+_modal.scss
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_modal.scss
+END
+_dropdown.scss
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_dropdown.scss
+END
+_custom-forms.scss
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_custom-forms.scss
+END
+bootstrap-grid.scss
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/bootstrap-grid.scss
+END
+_progress.scss
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_progress.scss
+END
+_close.scss
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_close.scss
+END
+_button-group.scss
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_button-group.scss
+END
+_images.scss
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/eTanah/!svn/ver/3171/trunk/devel/kutipanoffline/src/main/resources/static/assets/scss/material-dashboard/bootstrap/scss/_images.scss
+END

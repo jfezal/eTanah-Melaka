@@ -101,6 +101,26 @@
                 $('#2').hide();
             }
         }
+        
+        //psbs
+        if (ursn.value == 'Permohonan dan Pendaftaran Pecah Bahagi Bangunan Selepas Penyempurnaan Blok Sementara') {
+            var pbbd = $('#pbbd:checked').val();
+            if (pbbd == "Ya") {
+                $('#1').show();
+                $('#2').hide();
+                $('#amaun3').val('0');
+
+            } else if (pbbd == "tidak") {
+                $('#2').show();
+                $('#1').hide();
+                $('#amaun2').val('0');
+            } else {
+                $('#amaun2').val('0');
+                $('#amaun3').val('0');
+                $('#1').hide();
+                $('#2').hide();
+            }
+        }
 
         if (ursn.value == 'Permohanan Pendaftaran Sijil Perbadanan Pengurusan') {
             var pbbd = $('#pppp:checked').val();
@@ -336,6 +356,7 @@
                       && actionBean.senaraiUrusanLabel ne 'Permohonan dan Pendaftaran Pecah Bahagi Bangunan Sementara'
                       && actionBean.senaraiUrusanLabel ne 'Permohonan dan Pendaftaran Pecah Bahagi Bangunan dan Tanah'
                       && actionBean.senaraiUrusanLabel ne 'Permohonan dan Pendaftaran Pecah Bahagi Bangunan'
+                      && actionBean.senaraiUrusanLabel ne 'Permohonan dan Pendaftaran Pecah Bahagi Bangunan Selepas Penyempurnaan Blok Sementara'
                       && actionBean.senaraiUrusanLabel ne 'Pembaharuan LPS' && actionBean.urusan.kodUrusan ne 'SEK4'&& actionBean.urusan.kodUrusan ne '831'}">
             <c:if test="${actionBean.urusan.labelAmaun1 != null}">
                 <p><label for="amaun1" class="labelspoc"> 
@@ -602,6 +623,32 @@
 <%--PBBS/04--%>
 <c:if test="${actionBean.kodNegeri ne 'n9' && actionBean.senaraiUrusanLabel eq 'Permohonan dan Pendaftaran Pecah Bahagi Bangunan' 
               || actionBean.senaraiUrusanLabel eq 'Permohonan dan Pendaftaran Pecah Bahagi Bangunan Sementara'}">
+      <br />            
+      <p><label class="labelspoc">Jenis Kos Rendah :&nbsp; </label>
+          <s:radio id="pbbd" name="pbbd" value="Ya" onclick="javaScript:AdaKosRendah(this.value)"> </s:radio>&nbsp;Ya &nbsp;&nbsp;
+          <s:radio id="pbbd" name="pbbd" value="tidak" onclick="javaScript:AdaKosRendah(this.value)"> </s:radio>&nbsp;Tidak </p>
+          <div id="1"> <br />
+              <p><label for="amaun1" class="labelspoc"><em>*</em>Masukkan ${actionBean.urusan.labelAmaun1}:</label>
+              <s:text name="urusan.amaun1" id="amaun2" size="12" style="text-align:right" onkeypress="return isNumberKey(event)"/>
+          </p>
+      </div>
+      <div id="2"> <br />
+          <p><label class="labelspoc">Kod Kategori Tanah : </label>
+              <s:select name="urusan.katgTanah" id="kTanah" style="width:250px;">
+                  <s:option label="1 - PERNIAGAAN"  value="1" />
+                  <s:option label="2 - KEDIAMAN"  value="2" />
+                  <s:option label="3 - PERINDUSTRIAN"  value="3" />
+                  <s:option label="4 - PEMBANGUNAN BERCAMPUR"  value="4" />
+              </s:select>
+          </p>    
+          <p><label for="amaun1" class="labelspoc"><em>*</em>Masukkan ${actionBean.urusan.labelAmaun1}:</label>
+              <s:text name="urusan.amaun2" id="amaun3" size="12" style="text-align:right" onkeypress="return isNumberKey(event)"/>
+          </p>
+      </div>
+</c:if>
+      
+<%--PSBS/04--%>
+<c:if test="${actionBean.kodNegeri ne 'n9' && actionBean.senaraiUrusanLabel eq 'Permohonan dan Pendaftaran Pecah Bahagi Bangunan Selepas Penyempurnaan Blok Sementara'}">
       <br />            
       <p><label class="labelspoc">Jenis Kos Rendah :&nbsp; </label>
           <s:radio id="pbbd" name="pbbd" value="Ya" onclick="javaScript:AdaKosRendah(this.value)"> </s:radio>&nbsp;Ya &nbsp;&nbsp;

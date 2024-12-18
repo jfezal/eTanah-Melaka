@@ -4648,7 +4648,7 @@ sortOrder = docElem.compareDocumentPosition ?
 		// We ended someplace up the tree so do a sibling check
 		return i === al ?
 			siblingCheck( a, bp[i], -1 ) :
-			siblingCheck( ap[i], b, 1 );
+			siblingCheck( ap[i], b, 1 );
 	};
 
 // Always assume the presence of duplicates if sort doesn't

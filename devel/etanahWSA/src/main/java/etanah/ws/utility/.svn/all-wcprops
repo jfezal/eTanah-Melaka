@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/utility
+END
+StatusInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/utility/StatusInfo.java
+END
+JenisHakmilik.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/utility/JenisHakmilik.java
+END
+Mukim.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/utility/Mukim.java
+END
+StagingDB.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/utility/StagingDB.java
+END
+Utility.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/utility/Utility.java
+END
+Daerah.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/utility/Daerah.java
+END
+UtilityService.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/utility/UtilityService.java
+END
+JenisDok.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/utility/JenisDok.java
+END
+MysqlDB.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/utility/MysqlDB.java
+END
+OracleDB.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/utility/OracleDB.java
+END
+KodLot.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/utility/KodLot.java
+END

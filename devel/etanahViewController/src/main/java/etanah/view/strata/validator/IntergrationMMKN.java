@@ -353,7 +353,7 @@ public class IntergrationMMKN implements StageListener {
 
 
 //                            service.addRisalat(mohonKertas.getInfoAudit().getTarikhMasuk(), new java.util.Date(), service.createFile(reportMMKN, "Risalat MMKN"), service.createFile(reportRingkasanMMKN, "Ringkasan MMKN"));
-//                service.addRisalat(mohonKertas.getInfoAudit().getTarikhMasuk(), new java.util.Date(), service.createFile(reportMMKN, "Risalat MMKN"), null);
+                service.addRisalat(mohonKertas.getInfoAudit().getTarikhMasuk(), new java.util.Date(), service.createFile(reportMMKN, "Risalat MMKN"), null);
 
             }
         }

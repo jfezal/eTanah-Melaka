@@ -775,7 +775,7 @@ public class UrusanPermohonan implements UrusanKaunter {
                 }
                 senaraiTransaksi.addAll(listTransaksi);
             } else if ("04".equals(conf.getProperty("kodNegeri"))) {
-                if (ku.getKod().equals("PBBS") || ku.getKod().equals("PBBD") || ku.getKod().equals("PBS")) {
+                if (ku.getKod().equals("PBBS") || ku.getKod().equals("PBBD") || ku.getKod().equals("PBS") || ku.getKod().equals("PSBS")) {
                     if (amaun1 != null && amaun1 != BigDecimal.ZERO) {
                         LOG.debug("--amaun1--:" + amaun1);
                         List<TransaksiValue> listTransaksi = kaunterService.calculateFeeMlkKos(ku, amaun1, tarikh1, nilai1, nilai1Senarai,

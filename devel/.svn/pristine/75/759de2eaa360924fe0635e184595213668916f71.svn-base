@@ -1,7 +1,0 @@
-# BPEL admin user
-admin.user=weblogic
-admin.pass=etanah123
-# url for server
-server.url=${bpel.server.url}
-server.t3=${bpel.server.t3}
-client.type=${bpel.client.type}

@@ -859,7 +859,7 @@ public class PermohonanKaunter2 extends AbleActionBean {
                     }
 
                 } else if (urusan.getKodUrusan().equals("PBBD") || urusan.getKodUrusan().equals("PBBS")
-                        || urusan.getKodUrusan().equals("PBS")) {
+                        || urusan.getKodUrusan().equals("PBS")  || urusan.getKodUrusan().equals("PSBS")) {
                     if ("04".equals(conf.getProperty("kodNegeri"))) {
                         /* if (!pbbd.isEmpty() && pbbd.equals("N")) {                            
                          LOG.debug("--values from JSP--:" + pbbd + " " + urusan.amaun3 + " " + urusan.amaun2 + " " + urusan.tarikh1 + " " + urusan.nilai1);

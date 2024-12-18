@@ -363,7 +363,7 @@ public class IntegrationEmmkn implements StageListener {
                 LOG.info("Byte Array of Risalat MMKN=" + reportMMKN);
                 LOG.info("Byte Array of Ringkasan MMKN=" + reportRingkasanMMKN);
 
-//                service.addRisalat(permohonanKertas.getInfoAudit().getTarikhMasuk(), new java.util.Date(), service.createFile(reportMMKN, "Risalat MMKN"), service.createFile(reportRingkasanMMKN, "Ringkasan MMKN"));
+                service.addRisalat(permohonanKertas.getInfoAudit().getTarikhMasuk(), new java.util.Date(), service.createFile(reportMMKN, "Risalat MMKN"), service.createFile(reportRingkasanMMKN, "Ringkasan MMKN"));
 
             }
         }

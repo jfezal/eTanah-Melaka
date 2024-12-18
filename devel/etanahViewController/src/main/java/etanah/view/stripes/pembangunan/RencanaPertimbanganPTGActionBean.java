@@ -120,6 +120,8 @@ public class RencanaPertimbanganPTGActionBean extends AbleActionBean {
     private List<Pemohon> selectedPemohon;
      private List<Pihak> selectedPemohonPihak;
      private List<LaporanTanah> listLaporanTanah;
+     private List<PermohonanKertasKandungan> senaraiKandungan2;
+     private PermohonanKertasKandungan kertasK2;
 
     @DefaultHandler
     public Resolution showForm() {
@@ -406,9 +408,9 @@ public class RencanaPertimbanganPTGActionBean extends AbleActionBean {
 
 //        keputusan = "Pengarah Tanah dan Galian Melaka adalah dipohon untuk menimbangkan dan membuat keputusan samada bersetuju atau sebaliknya dengan perakuan seperti di para 8 di atas.";
 
-        taskId = (String) getContext().getRequest().getSession().getAttribute("taskId");
-        stageId = currentStageId(taskId);
-        //stageId = "ulasanadunteksediajkbb";
+        //taskId = (String) getContext().getRequest().getSession().getAttribute("taskId");
+        //stageId = currentStageId(taskId);
+        stageId = "ulasanadunteksediajkbb";
     }
 
     public Resolution simpan() {
@@ -418,9 +420,9 @@ public class RencanaPertimbanganPTGActionBean extends AbleActionBean {
         InfoAudit infoAudit = new InfoAudit();
         kd = kodDokumenDAO.findById("RPPTG");
 
-        taskId = (String) getContext().getRequest().getSession().getAttribute("taskId");
-        stageId = currentStageId(taskId);
-        //stageId = "ulasanadunteksediajkbb";
+//        taskId = (String) getContext().getRequest().getSession().getAttribute("taskId");
+//        stageId = currentStageId(taskId);
+        stageId = "ulasanadunteksediajkbb";
 
         PermohonanKertas permohonanKertas = new PermohonanKertas();
         if (kertasK != null) {
@@ -543,44 +545,48 @@ public class RencanaPertimbanganPTGActionBean extends AbleActionBean {
 
         if (permohonanKertas != null) {
             /*  update datails  */
-            if (!kertasK.getKandungan().isEmpty()) {
-                for (int j = 0; j < permohonanKertas.getSenaraiKandungan().size(); j++) {
-                    kertasK = new PermohonanKertasKandungan();
-                    kertasK = permohonanKertas.getSenaraiKandungan().get(j);
-                    if (kertasK.getBil() == 1) {
-                        kertasK.setKandungan(tajuk);
-                    } else if (kertasK.getBil() == 2) {
-                        kertasK.setKandungan(tujuan);
-                    } else if (kertasK.getBil() == 3) {
-                        kertasK.setKandungan(ulasanPentadbir);
-                    } else if (kertasK.getBil() == 4) {
-                        kertasK.setKandungan(perakuan);
-                    } else if (kertasK.getBil() == 5) {
-                        kertasK.setKandungan(keputusanjkbb);
-                    } else if (kertasK.getBil() == 6) {
-                        kertasK.setKandungan(syor);
-                    } else if (kertasK.getBil() == 7) {
-                        kertasK.setKandungan(kpsnPohon);
-                    } else if (kertasK.getBil() == 8) {
-                        kertasK.setKandungan(tarikhCukai);
-                    } else if (kertasK.getBil() == 9) {
-                        kertasK.setKandungan(noResit);
-                    } else if (kertasK.getBil() == 10) {
-                        kertasK.setKandungan(pihakBerkepentingan);
-                    } else if (kertasK.getBil() == 11) {
-                        kertasK.setKandungan(lokasiTanah);
-                    } else if (kertasK.getBil() == 12) {
-                        kertasK.setKandungan(maklumatLain);
-                    }
-                    permohonanKertas.setInfoAudit(infoAudit);
-                    permohonanKertas.setCawangan(pengguna.getKodCawangan());
-                    permohonanKertas.setPermohonan(permohonan);
-                    permohonanKertas.setTajuk("RENCANA PERTIMBANGAN PTG");
-                    kertasK.setInfoAudit(infoAudit);
-                    devService.simpanPermohonanKertas(permohonanKertas);
-                    devService.simpanPermohonanKertasKandungan(kertasK);
+           if (kertasK != null) {
+                if (!kertasK.getKandungan().isEmpty()) {
+                    for (int j = 0; j < permohonanKertas.getSenaraiKandungan().size(); j++) {
+                        kertasK = new PermohonanKertasKandungan();
+                        kertasK = permohonanKertas.getSenaraiKandungan().get(j);
+                        if (kertasK.getBil() == 1) {
+                            kertasK.setKandungan(tajuk);
+                        } else if (kertasK.getBil() == 2) {
+                            kertasK.setKandungan(tujuan);
+                        } else if (kertasK.getBil() == 3) {
+                            kertasK.setKandungan(ulasanPentadbir);
+                        } else if (kertasK.getBil() == 4) {
+                            kertasK.setKandungan(perakuan);
+                        } else if (kertasK.getBil() == 5) {
+                            kertasK.setKandungan(keputusanjkbb);
+                        } else if (kertasK.getBil() == 6) {
+                            kertasK.setKandungan(syor);
+                        } else if (kertasK.getBil() == 7) {
+                            kertasK.setKandungan(kpsnPohon);
+                        } else if (kertasK.getBil() == 8) {
+                            kertasK.setKandungan(tarikhCukai);
+                        } else if (kertasK.getBil() == 9) {
+                            kertasK.setKandungan(noResit);
+                        } else if (kertasK.getBil() == 10) {
+                            kertasK.setKandungan(pihakBerkepentingan);
+                        } else if (kertasK.getBil() == 11) {
+                            kertasK.setKandungan(lokasiTanah);
+                        } else if (kertasK.getBil() == 12) {
+                            kertasK.setKandungan(maklumatLain);
+                        }
+                        permohonanKertas.setInfoAudit(infoAudit);
+                        permohonanKertas.setCawangan(pengguna.getKodCawangan());
+                        permohonanKertas.setPermohonan(permohonan);
+                        permohonanKertas.setTajuk("RENCANA PERTIMBANGAN PTG");
+                        kertasK.setInfoAudit(infoAudit);
+                        devService.simpanPermohonanKertas(permohonanKertas);
+                        devService.simpanPermohonanKertasKandungan(kertasK);
+                    }                                               
+                        
                 }
-            }
+            }    
+
         } else {
             /* first time save details   */
             permohonanKertas = new PermohonanKertas();
@@ -603,6 +609,133 @@ public class RencanaPertimbanganPTGActionBean extends AbleActionBean {
                 devService.simpanPermohonanKertasKandungan(kertasK);
             }
         }
+        
+        //checking missing listUlasan
+            String check3 = null;
+            String check4 = null;
+            String check8 = null;
+            String check9 = null;
+            String check10 = null;
+            String check11 = null;
+            String check12 = null;
+            for (int x = 0; x < permohonanKertas.getSenaraiKandungan().size(); x++) {
+                kertasK = permohonanKertas.getSenaraiKandungan().get(x);
+                if (kertasK.getBil() == 3) {
+                    check3 = "ada3";
+                }
+                if (kertasK.getBil() == 4) {
+                    check4 = "ada4";
+                }
+                if (kertasK.getBil() == 8) {
+                    check8 = "ada8";
+                }
+                if (kertasK.getBil() == 9) {
+                    check9 = "ada9";
+                }
+                if (kertasK.getBil() == 10) {
+                    check9 = "ada10";
+                }
+                if (kertasK.getBil() == 11) {
+                    check9 = "ada11";
+                }
+                if (kertasK.getBil() == 12) {
+                    check9 = "ada12";
+                }
+
+            }
+        //if(check == null){
+            if (check3 == null) {
+                //senaraiKandungan2 = devService.findKertasKandByIdKertas(permohonanKertas.getIdKertas(), 3);
+                   // if (senaraiKandungan2.isEmpty()){
+                        if (StringUtils.isNotBlank(ulasanPentadbir)) {
+                        kertasK = new PermohonanKertasKandungan();
+                        kertasK.setBil(3);
+                        kertasK.setKandungan(ulasanPentadbir);
+                        kertasK.setKertas(permohonanKertas);
+                        kertasK.setInfoAudit(infoAudit);
+                        //kertasK.setSubtajuk(pejTanah);
+                        kertasK.setCawangan(pengguna.getKodCawangan());
+                        devService.simpanPermohonanKertasKandungan(kertasK);
+                    }
+               // }
+
+            }
+            if (check4 == null) {                        
+                if (StringUtils.isNotBlank(perakuan)) {
+                    kertasK = new PermohonanKertasKandungan();
+                    kertasK.setBil(4);
+                    kertasK.setKandungan(perakuan);
+                    kertasK.setKertas(permohonanKertas);
+                    kertasK.setInfoAudit(infoAudit);
+                    kertasK.setSubtajuk(pejTanah);
+                    kertasK.setCawangan(pengguna.getKodCawangan());
+                    devService.simpanPermohonanKertasKandungan(kertasK);
+                }
+            }
+            if (check8 == null) {
+                if (StringUtils.isNotBlank(tarikhCukai)) {
+                    kertasK = new PermohonanKertasKandungan();
+                    kertasK.setBil(8);
+                    kertasK.setKandungan(tarikhCukai);
+                    kertasK.setKertas(permohonanKertas);
+                    kertasK.setInfoAudit(infoAudit);
+                    //kertasK.setSubtajuk(pejTanah);
+                    kertasK.setCawangan(pengguna.getKodCawangan());
+                    devService.simpanPermohonanKertasKandungan(kertasK);
+                }
+            }
+            if (check9 == null) {
+                //kertasK = new PermohonanKertasKandungan();
+                if (StringUtils.isNotBlank(noResit)) {
+                    kertasK = new PermohonanKertasKandungan();
+                    kertasK.setBil(9);
+                    kertasK.setKandungan(noResit);
+                    kertasK.setKertas(permohonanKertas);
+                    kertasK.setInfoAudit(infoAudit);
+                    //kertasK.setSubtajuk(pejTanah);
+                    kertasK.setCawangan(pengguna.getKodCawangan());
+                    devService.simpanPermohonanKertasKandungan(kertasK);
+                }
+            }
+            if (check10 == null) {
+                //kertasK = new PermohonanKertasKandungan();
+                if (StringUtils.isNotBlank(pihakBerkepentingan)) {
+                    kertasK = new PermohonanKertasKandungan();
+                    kertasK.setBil(10);
+                    kertasK.setKandungan(pihakBerkepentingan);
+                    kertasK.setKertas(permohonanKertas);
+                    kertasK.setInfoAudit(infoAudit);
+                    //kertasK.setSubtajuk(pejTanah);
+                    kertasK.setCawangan(pengguna.getKodCawangan());
+                    devService.simpanPermohonanKertasKandungan(kertasK);
+                }
+            }
+            if (check11 == null) {
+                //kertasK = new PermohonanKertasKandungan();
+                if (StringUtils.isNotBlank(lokasiTanah)) {
+                    kertasK = new PermohonanKertasKandungan();
+                    kertasK.setBil(11);
+                    kertasK.setKandungan(lokasiTanah);
+                    kertasK.setKertas(permohonanKertas);
+                    kertasK.setInfoAudit(infoAudit);
+                    //kertasK.setSubtajuk(pejTanah);
+                    kertasK.setCawangan(pengguna.getKodCawangan());
+                    devService.simpanPermohonanKertasKandungan(kertasK);
+                }
+            }
+            if (check12 == null) {
+                //kertasK = new PermohonanKertasKandungan();
+                if (StringUtils.isNotBlank(maklumatLain)) {
+                    kertasK = new PermohonanKertasKandungan();
+                    kertasK.setBil(12);
+                    kertasK.setKandungan(maklumatLain);
+                    kertasK.setKertas(permohonanKertas);
+                    kertasK.setInfoAudit(infoAudit);
+                    //kertasK.setSubtajuk(pejTanah);
+                    kertasK.setCawangan(pengguna.getKodCawangan());
+                    devService.simpanPermohonanKertasKandungan(kertasK);
+                }
+            }
 
         ulasanList = new ArrayList<PermohonanRujukanLuar>();
         ulasanList = devService.findUlasanJabatanTek(idPermohonan);
@@ -1078,4 +1211,24 @@ public class RencanaPertimbanganPTGActionBean extends AbleActionBean {
     public void setSelectedPemohonPihak(List<Pihak> selectedPemohonPihak) {
         this.selectedPemohonPihak = selectedPemohonPihak;
     }
+
+    public List<PermohonanKertasKandungan> getSenaraiKandungan2() {
+        return senaraiKandungan2;
+    }
+
+    public void setSenaraiKandungan2(List<PermohonanKertasKandungan> senaraiKandungan2) {
+        this.senaraiKandungan2 = senaraiKandungan2;
+    }
+
+    public PermohonanKertasKandungan getKertasK2() {
+        return kertasK2;
+    }
+
+    public void setKertasK2(PermohonanKertasKandungan kertasK2) {
+        this.kertasK2 = kertasK2;
+    }
+    
+    
+    
+    
 }

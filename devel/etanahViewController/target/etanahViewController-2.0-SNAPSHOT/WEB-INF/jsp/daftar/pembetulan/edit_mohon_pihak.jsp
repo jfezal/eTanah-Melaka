@@ -274,7 +274,7 @@ src="<%= request.getContextPath()%>/pub/scripts/jquery-1.3.2.min.js"></script>
                                 <s:text name="alamat3" id="alamat3"/>
                             </td></tr>
 
-                        <tr><td>&nbsp;</td><td class="s">${mhnphk.alamat.alamat4}</td>
+                        <tr><td>&nbsp;</td><td class="s">${actionBean.mhnphk.alamat.alamat4}</td>
                                 <td class="s">
                                 <s:text name="alamat4" id="alamat4"/>
                             </td></tr>

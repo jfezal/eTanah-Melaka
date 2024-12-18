@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
-    <system systemId="file:/C:/Users/mohd.faidzal/AppData/Local/Temp/tempdir8364030505635376353.tmp/PerkhidmatanAtasTalian_1.wsdl" uri="wsdl/PerkhidmatanAtasTalian_1.wsdl"/>
-    <system systemId="http://192.168.0.19:8081/etanahViewController/services/PerkhidmatanAtasTalian?wsdl" uri="wsdl/192.168.0.19_8081/etanahViewController/services/PerkhidmatanAtasTalian.wsdl"/>
-    <system systemId="http://10.66.130.1/etanah/services/PerkhidmatanAtasTalian?wsdl" uri="wsdl/10.66.130.1/etanah/services/PerkhidmatanAtasTalian.wsdl"/>
-    <system systemId="http://10.66.130.10:7003/etanah/services/PerkhidmatanAtasTalian?wsdl" uri="wsdl/10.66.130.10_7003/etanah/services/PerkhidmatanAtasTalian.wsdl"/>
-    <system systemId="http://localhost:8093/etanahViewController/services/PerkhidmatanAtasTalian?wsdl" uri="wsdl/localhost_8093/etanahViewController/services/PerkhidmatanAtasTalian.wsdl"/>
-    <system systemId="http://172.17.250.221:7003/etanah/services/PerkhidmatanAtasTalian?wsdl" uri="wsdl/172.17.250.221_7003/etanah/services/PerkhidmatanAtasTalian.wsdl"/>
-</catalog>

@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/account
+END
+SejarahTransService.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/account/SejarahTransService.java
+END
+AccountInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/account/AccountInfo.java
+END
+CarianAkaunInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/account/CarianAkaunInfo.java
+END
+LaporInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/account/LaporInfo.java
+END
+BayarInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/account/BayarInfo.java
+END
+HakmilikService.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/account/HakmilikService.java
+END
+TransaksiInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/account/TransaksiInfo.java
+END
+ICService.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/account/ICService.java
+END
+NoLotService.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/account/NoLotService.java
+END
+AccountService.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/account/AccountService.java
+END
+WebService.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/5400/trunk/devel/etanahWSA/src/main/java/etanah/ws/account/WebService.java
+END

@@ -308,8 +308,8 @@
                                             Utara
                                         </th>
                                         <td>
-                                            <c:if test="${actionBean.laporanTanah.sempadanUtaraMilikKerajaan ne 'T'}">Kerajaan</c:if>
-                                            <c:if test="${actionBean.laporanTanah.sempadanUtaraMilikKerajaan eq 'T'}">Milik</c:if>
+                                            <c:if test="${actionBean.laporanTanah.sempadanUtaraMilikKerajaan.toString() ne 'T'}">Kerajaan</c:if>
+                                            <c:if test="${actionBean.laporanTanah.sempadanUtaraMilikKerajaan.toString() eq 'T'}">Milik</c:if>
                                         </td>
                                         <td>
                                             <c:if test="${actionBean.laporanTanah.sempadanUtaraNoLot ne null}"> ${actionBean.laporanTanah.sempadanUtaraNoLot}&nbsp; </c:if>
@@ -325,8 +325,8 @@
                                             Selatan
                                         </th>
                                         <td>
-                                            <c:if test="${actionBean.laporanTanah.sempadanSelatanMilikKerajaan ne 'T'}">Kerajaan</c:if>
-                                            <c:if test="${actionBean.laporanTanah.sempadanSelatanMilikKerajaan eq 'T'}">Milik</c:if>
+                                            <c:if test="${actionBean.laporanTanah.sempadanSelatanMilikKerajaan.toString() ne 'T'}">Kerajaan</c:if>
+                                            <c:if test="${actionBean.laporanTanah.sempadanSelatanMilikKerajaan.toString() eq 'T'}">Milik</c:if>
                                         </td>
                                         <td>
                                             <c:if test="${actionBean.laporanTanah.sempadanSelatanNoLot ne null}"> ${actionBean.laporanTanah.sempadanSelatanNoLot}&nbsp; </c:if>
@@ -342,8 +342,8 @@
                                             Timur
                                         </th>
                                         <td>
-                                            <c:if test="${actionBean.laporanTanah.sempadanTimurMilikKerajaan ne 'T'}">Kerajaan</c:if>
-                                            <c:if test="${actionBean.laporanTanah.sempadanTimurMilikKerajaan eq 'T'}">Milik</c:if>
+                                            <c:if test="${actionBean.laporanTanah.sempadanTimurMilikKerajaan.toString() ne 'T'}">Kerajaan</c:if>
+                                            <c:if test="${actionBean.laporanTanah.sempadanTimurMilikKerajaan.toString() eq 'T'}">Milik</c:if>
                                         </td>
                                         <td>
                                             <c:if test="${actionBean.laporanTanah.sempadanTimurNoLot ne null}"> ${actionBean.laporanTanah.sempadanTimurNoLot}&nbsp; </c:if>
@@ -359,8 +359,8 @@
                                             Barat
                                         </th>
                                         <td>
-                                            <c:if test="${actionBean.laporanTanah.sempadanBaratMilikKerajaan ne 'T'}">Kerajaan</c:if>
-                                            <c:if test="${actionBean.laporanTanah.sempadanBaratMilikKerajaan eq 'T'}">Milik</c:if>
+                                            <c:if test="${actionBean.laporanTanah.sempadanBaratMilikKerajaan.toString() ne 'T'}">Kerajaan</c:if>
+                                            <c:if test="${actionBean.laporanTanah.sempadanBaratMilikKerajaan.toString() eq 'T'}">Milik</c:if>
                                         </td>
                                         <td>
                                             <c:if test="${actionBean.laporanTanah.sempadanBaratNoLot ne null}"> ${actionBean.laporanTanah.sempadanBaratNoLot}&nbsp; </c:if>
@@ -376,8 +376,8 @@
                                             Timur Laut
                                         </th>
                                         <td>
-                                            <c:if test="${actionBean.laporanTanah.sempadanTimurLautMilikKerajaan ne 'T'}">Kerajaan</c:if>
-                                            <c:if test="${actionBean.laporanTanah.sempadanTimurLautMilikKerajaan eq 'T'}">Milik</c:if>
+                                            <c:if test="${actionBean.laporanTanah.sempadanTimurLautMilikKerajaan.toString() ne 'T'}">Kerajaan</c:if>
+                                            <c:if test="${actionBean.laporanTanah.sempadanTimurLautMilikKerajaan.toString() eq 'T'}">Milik</c:if>
                                         </td>
                                         <td>
                                             <c:if test="${actionBean.laporanTanah.sempadanTimurLautNoLot ne null}"> ${actionBean.laporanTanah.sempadanTimurLautNoLot}&nbsp; </c:if>
@@ -393,8 +393,8 @@
                                             Tenggara
                                         </th>
                                         <td>
-                                            <c:if test="${actionBean.laporanTanah.sempadanTenggaraMilikKerajaan ne 'T'}">Kerajaan</c:if>
-                                            <c:if test="${actionBean.laporanTanah.sempadanTenggaraMilikKerajaan eq 'T'}">Milik</c:if>
+                                            <c:if test="${actionBean.laporanTanah.sempadanTenggaraMilikKerajaan.toString() ne 'T'}">Kerajaan</c:if>
+                                            <c:if test="${actionBean.laporanTanah.sempadanTenggaraMilikKerajaan.toString() eq 'T'}">Milik</c:if>
                                         </td>
                                         <td>
                                             <c:if test="${actionBean.laporanTanah.sempadanTenggaraNoLot ne null}"> ${actionBean.laporanTanah.sempadanTenggaraNoLot}&nbsp; </c:if>
@@ -410,8 +410,8 @@
                                             Barat Laut
                                         </th>
                                         <td>
-                                            <c:if test="${actionBean.laporanTanah.sempadanBaratLautMilikKerajaan ne 'T'}">Kerajaan</c:if>
-                                            <c:if test="${actionBean.laporanTanah.sempadanBaratLautMilikKerajaan eq 'T'}">Milik</c:if>
+                                            <c:if test="${actionBean.laporanTanah.sempadanBaratLautMilikKerajaan.toString() ne 'T'}">Kerajaan</c:if>
+                                            <c:if test="${actionBean.laporanTanah.sempadanBaratLautMilikKerajaan.toString() eq 'T'}">Milik</c:if>
                                         </td>
                                         <td>
                                             <c:if test="${actionBean.laporanTanah.sempadanBaratlautNoLot ne null}"> ${actionBean.laporanTanah.sempadanBaratlautNoLot}&nbsp; </c:if>
@@ -427,8 +427,8 @@
                                             Barat Daya
                                         </th>
                                         <td>
-                                            <c:if test="${actionBean.laporanTanah.sempadanBaratdayaMilikKerajaan ne 'T'}">Kerajaan</c:if>
-                                            <c:if test="${actionBean.laporanTanah.sempadanBaratdayaMilikKerajaan eq 'T'}">Milik</c:if>
+                                            <c:if test="${actionBean.laporanTanah.sempadanBaratdayaMilikKerajaan.toString() ne 'T'}">Kerajaan</c:if>
+                                            <c:if test="${actionBean.laporanTanah.sempadanBaratdayaMilikKerajaan.toString() eq 'T'}">Milik</c:if>
                                         </td>
                                         <td>
                                             <c:if test="${actionBean.laporanTanah.sempadanBaratdayaNoLot ne null}"> ${actionBean.laporanTanah.sempadanBaratdayaNoLot}&nbsp; </c:if>

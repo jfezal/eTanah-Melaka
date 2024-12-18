@@ -1,0 +1,12 @@
+K 10
+svn:ignore
+V 91
+*.DS_Store
+*.classpath
+*.project
+*.settings
+nb-configuration.xml
+nb_jr_remoting.cfg
+target
+
+END

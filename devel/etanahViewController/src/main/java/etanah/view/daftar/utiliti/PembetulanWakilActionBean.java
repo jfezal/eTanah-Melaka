@@ -52,6 +52,7 @@ public class PembetulanWakilActionBean extends AbleActionBean {
     private String[] dt;
     private String[] ids;
     private Pengguna pengguna;
+    private Permohonan permohonan;
     @Inject
     PermohonanService permohonanService;
     @Inject
@@ -102,19 +103,50 @@ public class PembetulanWakilActionBean extends AbleActionBean {
 
     public Resolution cari() {
         idPermohonan = (String) getContext().getRequest().getParameter("idPermohonan");
+        Pengguna pengguna = (Pengguna) getContext().getRequest().getSession().getAttribute(etanahActionBeanContext.KEY_USER);
         if (idPermohonan != null) {
-//            wakilPemberi = pendaftaranSuratKuasaService.findWakilPemberibyIdPermohonan(idPermohonan);
-            wakilK = pendaftaranSuratKuasaService.findWakilKuasa(idPermohonan);
-            if (wakilK.equals(null)) {
-                listWakilKuasaPenerima = pendaftaranSuratKuasaService.findWakilPenerimabyIdPermohonanList(idPermohonan);
-                listWakilKuasaPemberi = pendaftaranSuratKuasaService.findWakilKuasaListPemberi(idPermohonan);
-                if (listWakilKuasaPenerima.size() <= 0) {
-                    addSimpleError("Id " + idPermohonan + " yang Di Masukan Tiada Dalam Pengkalan Data. Sila Cuba lagi Dengan Id Yang Betul");
+            permohonan = permohonanService.findById(idPermohonan);
+            if (permohonan != null) {
+                wakilK = pendaftaranSuratKuasaService.findWakilKuasa(idPermohonan);
+                if (wakilK != null) {
+                    listWakilKuasaPenerima = pendaftaranSuratKuasaService.findWakilPenerimabyIdPermohonanList(idPermohonan);
+                    listWakilKuasaPemberi = pendaftaranSuratKuasaService.findWakilKuasaListPemberi(idPermohonan);      
+                } else {
+                    listWakilKuasaPenerima = pendaftaranSuratKuasaService.findWakilPenerimabyIdPermohonanList(idPermohonan);
+                    listWakilKuasaPemberi = pendaftaranSuratKuasaService.findWakilKuasaListPemberi(idPermohonan);
+                    if (listWakilKuasaPenerima.size() <= 0) {
+                       // addSimpleError("Id " + idPermohonan + " yang Di Masukan Tiada Dalam Pengkalan Data. Sila Cuba lagi Dengan Id Yang Betul");
+                       if (wakilK == null) {
+                            InfoAudit ia = new InfoAudit();
+                            ia.setDimasukOleh(pengguna);
+                            ia.setTarikhMasuk(new java.util.Date());
+                            
+                            wakilK = new WakilKuasa();
+                            wakilK.setInfoAudit(ia);
+                            wakilK.setCawangan(permohonan.getCawangan());
+                            wakilK.setPermohonan(permohonan);
+                            //TODO: Re-set idWakil
+                            wakilK.setIdWakil(permohonan.getIdPermohonan());
+                            wakilK.setAktif('Y');
+                            wakilK.setKuasaAm('T');
+                            wakilK.setKuasaGadai('T');
+                            wakilK.setKuasaKaveat('T');
+                            wakilK.setKuasaLepasGadai('T');
+                            wakilK.setKuasaLepasKaveat('T');
+                            wakilK.setKuasaPajak('T');
+                            wakilK.setKuasaPajakKecil('T');
+                            wakilK.setKuasaPindahMilik('T');
+                            wakilK.setKuasaSewa('T');
+                            wakilK.setKuasaTarikKaveat('T');
+                            wakilK.setUntukSemuaHakmilik('T');
+                            pendaftaranSuratKuasaService.saveWakilKuasa(wakilK);
+                       }
+                    }
                 }
-            } else if (!wakilK.equals(null)) {
-                listWakilKuasaPenerima = pendaftaranSuratKuasaService.findWakilPenerimabyIdPermohonanList(idPermohonan);
-                listWakilKuasaPemberi = pendaftaranSuratKuasaService.findWakilKuasaListPemberi(idPermohonan);
+            } else {
+                addSimpleError("Id " + idPermohonan + " yang Di Masukan Tiada Dalam Pengkalan Data. Sila Cuba lagi Dengan Id Yang Betul");
             }
+            
         }
         return new JSP("daftar/utiliti/pembetulan_wakil.jsp").addParameter(idPermohonan, idPermohonan);
     }
@@ -278,6 +310,38 @@ public class PembetulanWakilActionBean extends AbleActionBean {
         idPenerima = String.valueOf(wakilPenerima.getIdPenerima());
         return new JSP("daftar/utiliti/pembetulan_wakil_kemaskini.jsp");
     }
+    
+      /*public Resolution hapusPenerima() {
+        idPermohonan = (String) getContext().getRequest().getParameter("idPermohonan");
+        idPenerima = (String) getContext().getRequest().getParameter("idPenerima");
+        if (idPermohonan != null) {
+            listWakilKuasaPenerima = pendaftaranSuratKuasaService.findWakilPenerimabyIdPermohonanList(idPermohonan);  
+            if (listWakilKuasaPenerima.size() > 0) {
+                idPenerima = String.valueOf(wakilPenerima.getIdPenerima());
+                if (idPenerima != null) {
+                    wakilPenerima = wakilKuasaPenerimaDAO.findById(Long.parseLong(idPenerima));
+                    LOG.info("ID SW idPenerima" + idPermohonan);
+                    LOG.info("HAPUS idPenerima" + wakilPenerima);
+                }
+            }
+            if (idPenerima != null) {
+                wakilPenerima = wakilKuasaPenerimaDAO.findById(Long.parseLong(idPenerima));
+                LOG.info("ID SW idPenerima" + idPermohonan);
+                LOG.info("HAPUS idPenerima" + wakilPenerima);
+            }
+            
+            //WakilKuasaPenerima wp = new WakilKuasaPenerima();
+            //wp = wakilKuasaPenerimaDAO.findById(Long.parseLong(idPenerima));
+            //if (wp != null) {
+            //    pendaftaranSuratKuasaService.deletePenerima(wp);
+            //    addSimpleMessage("Maklumat penerima dihapus.");
+            //}
+       }
+       idPenerima = String.valueOf(wakilPenerima.getIdPenerima());
+       pendaftaranSuratKuasaService.deletePenerima(wakilPenerima);
+       return new JSP("daftar/utiliti/pembetulan_wakil.jsp");
+       //return new RedirectResolution(PembetulanWakilActionBean.class, "showForm").addParameter("tab", "true");
+    }*/
 
     public Resolution pilihPemberi() {
         idPermohonan = (String) getContext().getRequest().getParameter("idPermohonan");
@@ -297,6 +361,32 @@ public class PembetulanWakilActionBean extends AbleActionBean {
         idPemberi = String.valueOf(wakilPemberi.getIdPemberi());
         return new JSP("daftar/utiliti/pembetulan_wakil_kemaskini.jsp").addParameter(idPemberi, idPemberi);
     }
+    
+    /*public Resolution hapusPemberi() {
+        idPermohonan = (String) getContext().getRequest().getParameter("idPermohonan");
+        idPemberi = (String) getContext().getRequest().getParameter("idPemberi");
+        LOG.info("ID SW Pemberi" + idPermohonan);
+        LOG.info("ID Pemberi" + idPemberi);
+        if (idPermohonan != null) {
+            listWakilKuasaPemberi = pendaftaranSuratKuasaService.findWakilPemberibyIdPermohonanList(idPermohonan);  
+            if (listWakilKuasaPemberi.size() > 0) {
+                idPemberi = String.valueOf(wakilPemberi.getIdPemberi());
+                if (idPemberi != null) {
+                    wakilPemberi = wakilKuasaPemberiDAO.findById(Long.parseLong(idPemberi));
+                    LOG.info("ID SW idPenerima" + idPermohonan);
+                    LOG.info("HAPUS idPenerima" + wakilPemberi);
+                }
+            }
+            if (idPenerima != null) {
+                wakilPemberi = wakilKuasaPemberiDAO.findById(Long.parseLong(idPemberi));
+                LOG.info("ID SW idPenerima" + idPermohonan);
+                LOG.info("HAPUS idPenerima" + wakilPemberi);
+            }
+       }
+
+       pendaftaranSuratKuasaService.deletePemberi(wakilPemberi);
+       return new JSP("daftar/utiliti/pembetulan_wakil.jsp");
+    }*/
 
     public String getIdPermohonan() {
         return idPermohonan;

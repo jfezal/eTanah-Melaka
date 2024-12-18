@@ -1180,7 +1180,7 @@
                 </outcome>
             </outcomes>
 
-        </txncode>
+        </txncode>
         <txncode daysToComplete="180" id="SBSTM" >
             <page id="1" title="Dokumen Verifikasi">common/maklumat_permohonan?showForm3</page>
             <instruction>Sila buat semakan pada Dokumen Verifikasi (v-doc) beserta dokumen fizikal.</instruction>
