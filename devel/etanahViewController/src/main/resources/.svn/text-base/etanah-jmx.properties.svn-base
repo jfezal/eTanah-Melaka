@@ -1,6 +1,0 @@
-# Entries in the form of:
-# name=type=eTanah,name=the_name;full.class.name
-#ReportJMX=etanah:type=eTanah,name=Report Utility;etanah.report.ReportUtil
-ReportJMX=eTanah:type=ReportUtil;etanah.report.ReportUtil
-ConfigurationJMX=eTanah:type=Configuration;etanah.Configuration
-

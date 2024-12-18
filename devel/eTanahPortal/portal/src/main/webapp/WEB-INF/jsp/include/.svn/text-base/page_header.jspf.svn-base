@@ -1,3 +1,0 @@
-<%@ page trimDirectiveWhitespaces="true" %>
-<%@include file="taglibs.jspf"%>
-<fmt:setBundle basename="StripesResources"/>
