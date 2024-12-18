@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/2139/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/laporan
+END
+GeranStrataActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/302/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/laporan/GeranStrataActionBean.java
+END
+StrataLaporanActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/laporan/StrataLaporanActionBean.java
+END
+cetakJanaGeranStrataActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/eTanah/!svn/ver/2139/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/laporan/cetakJanaGeranStrataActionBean.java
+END
+StrataCetakSKPSK.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/laporan/StrataCetakSKPSK.java
+END
+CetakGeranStrataActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/eTanah/!svn/ver/1065/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/laporan/CetakGeranStrataActionBean.java
+END
+Geran2K3KStrataActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/laporan/Geran2K3KStrataActionBean.java
+END
+StrataTukargantiActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/laporan/StrataTukargantiActionBean.java
+END

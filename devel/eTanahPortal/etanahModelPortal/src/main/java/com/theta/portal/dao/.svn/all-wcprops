@@ -1,0 +1,191 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/eTanah/!svn/ver/3078/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao
+END
+RefHelpdeskTechnicalStatusDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/RefHelpdeskTechnicalStatusDAO.java
+END
+RefUserTypeDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/2855/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/RefUserTypeDAO.java
+END
+HelpdeskContractorDocumentsDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/HelpdeskContractorDocumentsDAO.java
+END
+RefHelpdeskStageDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/RefHelpdeskStageDAO.java
+END
+HbnCriteriaPagedListImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/HbnCriteriaPagedListImpl.java
+END
+UserTableDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/UserTableDAO.java
+END
+PagedList.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/PagedList.java
+END
+RefSubmodulTypeDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/RefSubmodulTypeDAO.java
+END
+HelpdeskReportDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/HelpdeskReportDAO.java
+END
+VendorDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/VendorDAO.java
+END
+HelpdeskReportLogDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/HelpdeskReportLogDAO.java
+END
+HelpdeskContractorDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/HelpdeskContractorDAO.java
+END
+HibernateDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/HibernateDAO.java
+END
+HbnPagedListImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/HbnPagedListImpl.java
+END
+HelpdeskAssignDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/HelpdeskAssignDAO.java
+END
+HelpdeskReportDocumentsDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/HelpdeskReportDocumentsDAO.java
+END
+EmployeeDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/EmployeeDAO.java
+END
+RefHelpdeskHistoryTypeDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/RefHelpdeskHistoryTypeDAO.java
+END
+HelpdeskHistoryDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/HelpdeskHistoryDAO.java
+END
+HelpdeskStageDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/HelpdeskStageDAO.java
+END
+RefHardwareTypeDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/RefHardwareTypeDAO.java
+END
+HelpdeskTechnicalDocumentsDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/HelpdeskTechnicalDocumentsDAO.java
+END
+RefHelpdeskReportStatusDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/RefHelpdeskReportStatusDAO.java
+END
+RefItemTypeDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/RefItemTypeDAO.java
+END
+RefHelpdeskTypeDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/RefHelpdeskTypeDAO.java
+END
+RefHelpdeskContractorStatusDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/RefHelpdeskContractorStatusDAO.java
+END
+UserRoleDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/eTanah/!svn/ver/2838/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/UserRoleDAO.java
+END
+PtdOfficeDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/PtdOfficeDAO.java
+END
+DepartmentDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/3078/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/DepartmentDAO.java
+END
+HibernateCacheableDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/HibernateCacheableDAO.java
+END
+HelpdeskTechnicalDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/dao/HelpdeskTechnicalDAO.java
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/eTanah/!svn/ver/2423/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/pembangunan/kaunter
+END
+bayaranPerihalTsMelaka.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/eTanah/!svn/ver/2423/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/pembangunan/kaunter/bayaranPerihalTsMelaka.jsp
+END
+permohonan_status.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/pembangunan/kaunter/permohonan_status.jsp
+END
+cetak_resit_bayaran_ts.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/pembangunan/kaunter/cetak_resit_bayaran_ts.jsp
+END

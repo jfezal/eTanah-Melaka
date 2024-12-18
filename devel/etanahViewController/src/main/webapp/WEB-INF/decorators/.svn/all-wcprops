@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/5103/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/decorators
+END
+default.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/decorators/default.jsp
+END
+internalLogin.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/eTanah/!svn/ver/5102/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/decorators/internalLogin.jsp
+END
+internal.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/eTanah/!svn/ver/5103/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/decorators/internal.jsp
+END
+internalKiosk.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/decorators/internalKiosk.jsp
+END
+internalmain.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/eTanah/!svn/ver/5102/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/decorators/internalmain.jsp
+END
+internal_tab.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/eTanah/!svn/ver/5102/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/decorators/internal_tab.jsp
+END

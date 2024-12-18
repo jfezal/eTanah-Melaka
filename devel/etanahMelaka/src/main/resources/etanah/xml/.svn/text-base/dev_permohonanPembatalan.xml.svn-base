@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : dev_permohonanPembatalan.xml
+    Created on : October 3, 2011, 11:34 AM
+    Author     : nursyazwani
+    Description:
+        Purpose of the document follows.
+-->
+
+<workflow id="http://xmlns.oracle.com/etanahdev/Bpel_BatalPermohonan/BatalPermohonan">
+<!--<workflow id="http://xmlns.oracle.com/etanahdev/pembangunan2/PermohonanPembatalan">-->
+    <!--Permohonan Pembatalan --> 
+    
+    <stage id="maklumanarahan" currentAction="Arahan Pembatalan" listener="etanah.view.pembangunan.validator.EndorsanPembatalanValidation"><!--need to have listener for noting pembatalan-->
+        <txncode id="PBTL">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Permohonan Sebelum">pelupusan/maklumat_rayuan</page>
+            <page id="6" title="Arahan Pembatalan">pembangunan/melaka/MaklumanArahan</page>
+            <page id="7" title="Nota/Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan arahan pembatalan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="DEVSrtArahBatal_MLK.rdf" prefix="VDOC" code="SMBTL"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="cetakrekodtrkhsuratmakluman" currentAction="Cetak Surat Makluman Pembatalan dan Rekod Tarikh Tandatangan" advanceRule="true" listener="etanah.view.pembangunan.validator.CheckPTGStagesValidator">
+        <txncode id="PBTL">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Arahan Pembatalan">pembangunan/melaka/MaklumanArahan?showForm2</page>
+            <page id="6" title="Permohonan Sebelum">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="7" title="Tarikh Tandatangan PTD">pembangunan/tarikhTandantangan</page>
+            <page id="8" title="Nota/Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila jana Surat Makluman Pembatalan kepada Pemohon, Pengarah Tanah dan Galian dan OSC. Kemudian, rekod Tarikh Tandatangan Surat Makluman Pembatalan.</instruction>
+            <reports>
+                <report generator="DEVSrtPBTL_MLK.rdf" prefix="VDOC" code="SPBTL"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="agihancharting" currentAction="Agihan Tugas Pelukis Pelan" distribute="true">
+        <txncode id="PBTL">           
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Permohonan Sebelum">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="6" title="Arahan Pembatalan">pembangunan/melaka/MaklumanArahan?showForm2</page>
+            <page id="7" title="Agihan Tugas">pembangunan/agihan_tugas</page>
+            <page id="8" title="Nota/Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila agihkan tugasan ini kepada yang berkenaan.</instruction>
+            <report></report>
+        </txncode>
+    </stage>
+    <stage id="g_charting_pembatalan" currentAction="Charting Permohonan Pembatalan">
+        <txncode id="PBTL">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Permohonan Sebelum">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="6" title="Charting Pembatalan">pembangunan/chartingKelulusan?chartingBatal</page>
+            <page id="7" title="Nota/Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat charting pembatalan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>   
+    <stage id="terimasuratbatal" currentAction="Terima Surat Makluman Pembatalan">
+        <txncode id="PBTL">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Permohonan Sebelum">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="6" title="Nota/Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak Surat Makluman Pembatalan dari PTD di Tab Dokumen.</instruction>
+        </txncode>
+    </stage>
+</workflow>

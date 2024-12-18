@@ -1,0 +1,3 @@
+jdbc.url=jdbc:oracle:thin:@10.66.130.24:1521/ETMLSTG
+jdbc.user=asset
+jdbc.pass=ASDqwe123#

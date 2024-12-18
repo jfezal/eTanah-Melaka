@@ -1,0 +1,86 @@
+<!--Perbadanan Pengurusan: Permohonan Waran Penahanan-->
+<?xml version="1.0" encoding="windows-1252" ?>
+<workflow id="http://xmlns.oracle.com/etanah/StrataMelaka/WaranPenahanan">
+
+    <stage id="agihtugas" currentAction="Agih Tugasan" distribute="true">
+        <txncode id="PWPN">
+            <page id="1" title="Agih Tugasan">strata/agihTugasan</page>
+            <page id="2" title="Penyerah">strata/maklumat_penyerah</page>
+            <instruction>Sila agihkan tugasan ini kepada yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    
+    <stage id = "kemasukan" currentAction = "Penyediaan Kertas Pertimbangan">
+        <txncode id="PWPN">
+            <page id="1" title="Penyerah">strata/maklumat_penyerah</page>
+            <page id="2" title="Perbadanan Pengurusan">strata/badanPengurusan?badanPengurusanReadOnly</page>
+            <page id="3" title="Pemilik Petak Berhutang">strata/waran?pemilikPetakBerhutang</page>
+            <page id="4" title="Pelaksana Waran">strata/pelaksana</page>
+            <page id="5" title="Stor">strata/waran?storWaran</page>
+            <page id="6" title="Pelelong">strata/pelelong</page>
+
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id = "semakkertasptg" currentAction="Semak Kertas Pertimbangan" pushback ="true">
+        <txncode id="PWPN">
+            <page id="1" title="Penyerah">strata/maklumat_penyerah</page>
+            <page id="2" title="Perbadanan Pengurusan">strata/badanPengurusan?badanPengurusanReadOnly</page>
+            <page id="3" title="Pemilik Petak Berhutang">strata/waran?pemilikPetakBerhutangReadOnly</page>
+            <page id="4" title="Pelaksana Waran">strata/pelaksana?showFormReadOnly</page>
+            <page id="5" title="Stor">strata/waran?storWaranReadOnly</page>
+            <page id="6" title="Pelelong">strata/pelelong?showFormReadOnly</page>
+            <page id="7" title="Perakuan">strata/perakuanWaran?perakuanWaranForm</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+<!--            <reports>
+                <report generator="STRLaporanTanahWaran_MLK.rdf" prefix="VDOC" code="LWRN"/>
+            </reports>-->
+        </txncode>
+    </stage>
+
+    <stage id = "perakuan" currentAction="Perakuan" pushback ="true">
+        <txncode id="PWPN">
+            <page id="1" title="Penyerah">strata/maklumat_penyerah</page>
+            <page id="2" title="Perbadanan Pengurusan">strata/badanPengurusan?badanPengurusanReadOnly</page>
+            <page id="3" title="Pemilik Petak Berhutang">strata/waran?pemilikPetakBerhutangReadOnly</page>
+            <page id="4" title="Pelaksana Waran">strata/pelaksana?showFormReadOnly</page>
+            <page id="5" title="Stor">strata/waran?storWaranReadOnly</page>
+            <page id="6" title="Pelelong">strata/pelelong?showFormReadOnly</page>
+            <page id="7" title="Perakuan">strata/perakuanWaran?perakuanWaranFormReadOnly</page>
+            <instruction>Sila semak maklumat permohonan.</instruction>
+            <!--<outcomes>
+                <outcome label="Syor Lulus" value="L"/>
+                <outcome label="Syor Tolak" value="T"/>
+            </outcomes>-->
+        </txncode>
+    </stage>
+    <stage id = "keputusan" currentAction ="Keputusan" listener="etanah.view.strata.validator.PenyediaanWaranValidator">
+        <txncode id="PWPN">
+            <page id="1" title="Penyerah">strata/maklumat_penyerah</page>
+            <page id="2" title="Perbadanan Pengurusan">strata/badanPengurusan?badanPengurusanReadOnly</page>
+            <page id="3" title="Pemilik Petak Berhutang">strata/waran?pemilikPetakBerhutangReadOnly</page>
+            <page id="4" title="Pelaksana Waran">strata/pelaksana?showFormReadOnly</page>
+            <page id="5" title="Stor">strata/waran?storWaranReadOnly</page>
+            <page id="6" title="Pelelong">strata/pelelong?showFormReadOnly</page>
+            <page id="7" title="Perakuan">strata/perakuanWaran?perakuanWaranFormReadOnly</page>
+            <instruction>Sila masukkan keputusan.</instruction>
+            <outcomes>
+                <outcome label=" Lulus" value="L"/>
+                <outcome label=" Tolak" value="T"/>
+            </outcomes>
+            <reports>
+                <report generator="STRKertasPertimbanganWaran_MLK.rdf" prefix="VDOC" code="KPWRN"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id = "semakwaran" currentAction = "Semak Waran">
+        <txncode id="PWPN">
+            <page id="1" title="Waran">strata/jana?laporanTanahRuangUdara</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+
+        </txncode>
+    </stage>
+</workflow>

@@ -1,0 +1,419 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/5265/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator
+END
+KeputusanKuatkuasaValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/KeputusanKuatkuasaValidator.java
+END
+JanaBOrang7AValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/JanaBOrang7AValidator.java
+END
+SyorPPRUSValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/5055/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/SyorPPRUSValidation.java
+END
+PendaftaranHakmilikValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/PendaftaranHakmilikValidator.java
+END
+PenguatkuasaValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/PenguatkuasaValidation.java
+END
+LanjutanTempohValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/LanjutanTempohValidation.java
+END
+PenyediaanWaranValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/PenyediaanWaranValidator.java
+END
+KemasukanWaranValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/KemasukanWaranValidator.java
+END
+SemakKertasValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/SemakKertasValidator.java
+END
+KeputusanMmknPkbkValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/eTanah/!svn/ver/5117/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/KeputusanMmknPkbkValidator.java
+END
+HTBValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/eTanah/!svn/ver/3519/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/HTBValidator.java
+END
+KeputusanPPRUSValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/KeputusanPPRUSValidation.java
+END
+PermohonanBangunanValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/eTanah/!svn/ver/3070/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/PermohonanBangunanValidator.java
+END
+P14SBLMValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/P14SBLMValidator.java
+END
+IntergrationMMKN.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/IntergrationMMKN.java
+END
+PendaftaranEndorsanValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/PendaftaranEndorsanValidation.java
+END
+WaranPenahananValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/WaranPenahananValidator.java
+END
+SediaLaporValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/SediaLaporValidator.java
+END
+KeputusanValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/4388/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/KeputusanValidation.java
+END
+BangunanKosRendahValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/eTanah/!svn/ver/941/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/BangunanKosRendahValidator.java
+END
+KertasMMK.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/KertasMMK.java
+END
+MaklumatRayuaanValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/MaklumatRayuaanValidator.java
+END
+KpsValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/KpsValidator.java
+END
+KptsnValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/KptsnValidator.java
+END
+NotifikasiKeputusanMMK.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/NotifikasiKeputusanMMK.java
+END
+BangunanKhasValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/4973/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/BangunanKhasValidator.java
+END
+JanaReportValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/4996/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/JanaReportValidator.java
+END
+PelanLokasiGISValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/PelanLokasiGISValidator.java
+END
+LaporanTanahValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/LaporanTanahValidator.java
+END
+PermitRuangUdaraValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/PermitRuangUdaraValidator.java
+END
+PemohonanPindaBangunanValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/PemohonanPindaBangunanValidator.java
+END
+LPRNValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/eTanah/!svn/ver/5265/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/LPRNValidator.java
+END
+EndosanPembatalanValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/EndosanPembatalanValidator.java
+END
+SemakPelanValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/SemakPelanValidator.java
+END
+KeputusanMMKValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/KeputusanMMKValidator.java
+END
+SifusValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/1422/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/SifusValidator.java
+END
+SemakPermohonanBngnValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/SemakPermohonanBngnValidator.java
+END
+PulangdepoValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/PulangdepoValidator.java
+END
+SediaKertasValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/SediaKertasValidator.java
+END
+InitiateToRMHSValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/InitiateToRMHSValidator.java
+END
+SediaLPRValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/SediaLPRValidator.java
+END
+terimaPABValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/terimaPABValidator.java
+END
+TerimaPabNSValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/TerimaPabNSValidator.java
+END
+KemasukanPermohonanValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/KemasukanPermohonanValidator.java
+END
+SmklValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/SmklValidator.java
+END
+PenyediaanSuratLulusTolakValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/PenyediaanSuratLulusTolakValidator.java
+END
+IntegrationEMMKNV2.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/IntegrationEMMKNV2.java
+END
+StrataValidatorService.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/StrataValidatorService.java
+END
+LaporanTanahRuangUdaraValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/LaporanTanahRuangUdaraValidator.java
+END
+PenamatanStrataValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/eTanah/!svn/ver/3563/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/PenamatanStrataValidator.java
+END
+KertasPertimbanganValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/eTanah/!svn/ver/899/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/KertasPertimbanganValidation.java
+END
+KemaskiniJadualPetakValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/KemaskiniJadualPetakValidation.java
+END
+PermohonanBangunanN9Validator.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/PermohonanBangunanN9Validator.java
+END
+PeringataanValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/PeringataanValidator.java
+END
+CompletePBBValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5262/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/CompletePBBValidator.java
+END
+LPRN2Validator.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/LPRN2Validator.java
+END
+RBHSValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/RBHSValidator.java
+END
+suratBatalValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/suratBatalValidator.java
+END
+PenamatanStrataValidator1.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/eTanah/!svn/ver/3554/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/PenamatanStrataValidator1.java
+END
+KeputusanValidation2.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/385/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/KeputusanValidation2.java
+END
+CompleteValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/2567/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/CompleteValidator.java
+END
+JanaValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/eTanah/!svn/ver/2293/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/JanaValidator.java
+END
+EndosanKelulusanValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/EndosanKelulusanValidator.java
+END
+PerakuanValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/PerakuanValidation.java
+END
+SemakLaporanValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/SemakLaporanValidator.java
+END
+SemakLPRValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/SemakLPRValidator.java
+END
+SemakStrataValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/SemakStrataValidator.java
+END
+SijilPerbadananValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/eTanah/!svn/ver/995/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/SijilPerbadananValidator.java
+END
+UlasanMMKValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/strata/validator/UlasanMMKValidator.java
+END

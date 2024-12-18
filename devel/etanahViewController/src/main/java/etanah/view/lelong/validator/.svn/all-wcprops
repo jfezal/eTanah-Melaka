@@ -1,0 +1,437 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/3241/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator
+END
+PermohoanBatalValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/eTanah/!svn/ver/2396/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/PermohoanBatalValidator.java
+END
+Semak16ITangguhValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/Semak16ITangguhValidator.java
+END
+SemakanWithdrawValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/SemakanWithdrawValidation.java
+END
+RekodPermohonanBatalValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/RekodPermohonanBatalValidator.java
+END
+CetakNotisSiasatanValidatorNew.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/CetakNotisSiasatanValidatorNew.java
+END
+Cetak16HValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/Cetak16HValidator.java
+END
+KpsnPermohonanBatalValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/KpsnPermohonanBatalValidator.java
+END
+KpsnSiasatanN9Validator.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/KpsnSiasatanN9Validator.java
+END
+SemakanPermohonanValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/eTanah/!svn/ver/3227/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/SemakanPermohonanValidator.java
+END
+SijilRujukTangguhValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/SijilRujukTangguhValidator.java
+END
+Sedai16HN9Validator.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/Sedai16HN9Validator.java
+END
+SemakRekodPenghantaranValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/SemakRekodPenghantaranValidator.java
+END
+Sedia16IN9Validator.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/Sedia16IN9Validator.java
+END
+SemakPerisytiharanTgghValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/SemakPerisytiharanTgghValidator.java
+END
+SemakPengisytiharanN9Validator.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/SemakPengisytiharanN9Validator.java
+END
+BayaranValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/BayaranValidator.java
+END
+CetakSuratLucutHakN9Validator.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/CetakSuratLucutHakN9Validator.java
+END
+Semak16HValidatorN9.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/Semak16HValidatorN9.java
+END
+LantikanPelelongValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/LantikanPelelongValidator.java
+END
+RekodNotisN9Validator.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/RekodNotisN9Validator.java
+END
+SemakSijilRujukTangguhValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/SemakSijilRujukTangguhValidator.java
+END
+SijilRujukValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/SijilRujukValidator.java
+END
+BayaranKomisyenValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/BayaranKomisyenValidator.java
+END
+KeputusanTangguhValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/eTanah/!svn/ver/3186/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/KeputusanTangguhValidator.java
+END
+NotisGantianValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/NotisGantianValidator.java
+END
+SediaSuratBakiBidaanN9Validator.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/SediaSuratBakiBidaanN9Validator.java
+END
+MuatNaik16QValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/MuatNaik16QValidator.java
+END
+SemakRekod16HValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/SemakRekod16HValidator.java
+END
+KeputusanTangguhN9Validator.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/KeputusanTangguhN9Validator.java
+END
+KemasukanPerintahValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/KemasukanPerintahValidator.java
+END
+SediaPengishtiharaanValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/SediaPengishtiharaanValidator.java
+END
+TetapTarikhSiasatanN9Validator.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/TetapTarikhSiasatanN9Validator.java
+END
+UploadAkuanN9Validator.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/UploadAkuanN9Validator.java
+END
+RekodBidaanTangguhValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/RekodBidaanTangguhValidator.java
+END
+SediaPengishtiharaanN9Validator.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/SediaPengishtiharaanN9Validator.java
+END
+SuratSiasatanValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/eTanah/!svn/ver/2184/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/SuratSiasatanValidator.java
+END
+SemakPembidaAdatValidatorN9.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/SemakPembidaAdatValidatorN9.java
+END
+SemakRekodBidaaanValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/SemakRekodBidaaanValidator.java
+END
+Cetak16ITangguhValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/Cetak16ITangguhValidator.java
+END
+CetakWartaValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/CetakWartaValidator.java
+END
+Semak16QValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/Semak16QValidator.java
+END
+SemakPembidaValidatorN9.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/SemakPembidaValidatorN9.java
+END
+KpsnTangguhValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/KpsnTangguhValidator.java
+END
+MohonTangguhValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/2166/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/MohonTangguhValidator.java
+END
+RekodBidaanValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/RekodBidaanValidator.java
+END
+Sedia16HValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/Sedia16HValidator.java
+END
+RekodBidaanN9Validator.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/RekodBidaanN9Validator.java
+END
+DrafWartaValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/DrafWartaValidator.java
+END
+Cetak16IN9Validator.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/Cetak16IN9Validator.java
+END
+MuatNaik16QTangguhValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/MuatNaik16QTangguhValidator.java
+END
+SuratLantikanValiDator.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/SuratLantikanValiDator.java
+END
+SemakPembidaValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/2964/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/SemakPembidaValidator.java
+END
+SemakSijilRujukValodator.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/SemakSijilRujukValodator.java
+END
+CetakNotisSiasatanValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/CetakNotisSiasatanValidator.java
+END
+RekodBidaanValidatorJLB.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/eTanah/!svn/ver/2950/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/RekodBidaanValidatorJLB.java
+END
+SemakPembidaTangguhValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/SemakPembidaTangguhValidator.java
+END
+SemakRekodBidaanTangguhValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/SemakRekodBidaanTangguhValidator.java
+END
+SediaPengistiharanValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/SediaPengistiharanValidator.java
+END
+CetakSuratBakiBidaanN9Validator.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/CetakSuratBakiBidaanN9Validator.java
+END
+KeputusanSiasatanValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/eTanah/!svn/ver/2272/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/KeputusanSiasatanValidator.java
+END
+CetakSuratValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/2280/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/CetakSuratValidator.java
+END
+Cetak16IValaidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/Cetak16IValaidator.java
+END
+RekodPenghantaran16HValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/RekodPenghantaran16HValidator.java
+END
+CetakBorang2AN9Validator.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/CetakBorang2AN9Validator.java
+END
+KemasukanPerintahAdatN9Validator.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/KemasukanPerintahAdatN9Validator.java
+END
+KpsnSiasatanWithdrawValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/KpsnSiasatanWithdrawValidation.java
+END
+Semak16HValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/Semak16HValidator.java
+END
+KemasukanPerintahN9Validator.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/KemasukanPerintahN9Validator.java
+END
+SediaPengistiharan2Validator.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/SediaPengistiharan2Validator.java
+END
+CetakSuratTangguhValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/CetakSuratTangguhValidator.java
+END
+KemasukanJurulelongValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/eTanah/!svn/ver/3241/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/KemasukanJurulelongValidator.java
+END
+BatalValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/lelong/validator/BatalValidation.java
+END

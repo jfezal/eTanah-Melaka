@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/eTanah/!svn/ver/1398/trunk/devel/etanahModel/src/main/java/etanah/workflow
+END
+JMSUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/workflow/JMSUtil.java
+END
+StageContext.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/workflow/StageContext.java
+END
+StageListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/workflow/StageListener.java
+END
+WorkFlowService.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/1398/trunk/devel/etanahModel/src/main/java/etanah/workflow/WorkFlowService.java
+END

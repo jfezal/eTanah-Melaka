@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/tags/form
+END
+checkbox.tag
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/tags/form/checkbox.tag
+END
+raw-form-label.tag
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/tags/form/raw-form-label.tag
+END
+raw-form-entry.tag
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/tags/form/raw-form-entry.tag
+END
+multi-column-form-row.tag
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/tags/form/multi-column-form-row.tag
+END
+raw-form-field.tag
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/tags/form/raw-form-field.tag
+END
+buttons.tag
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/tags/form/buttons.tag
+END
+file.tag
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/tags/form/file.tag
+END
+select.tag
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/tags/form/select.tag
+END
+form-field-header.jspf
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/tags/form/form-field-header.jspf
+END
+password.tag
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/tags/form/password.tag
+END
+form.tag
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/tags/form/form.tag
+END
+text.tag
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/tags/form/text.tag
+END

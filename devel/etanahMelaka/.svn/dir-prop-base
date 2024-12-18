@@ -1,0 +1,10 @@
+K 10
+svn:ignore
+V 52
+.classpath
+.project
+target
+.rebel.xml.bak
+.settings
+
+END

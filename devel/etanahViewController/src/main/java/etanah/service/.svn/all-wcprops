@@ -1,0 +1,275 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/eTanah/!svn/ver/5442/trunk/devel/etanahViewController/src/main/java/etanah/service
+END
+PelupusanPtService.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/service/PelupusanPtService.java
+END
+JupemService.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/service/JupemService.java
+END
+ConsentPtdService.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/service/ConsentPtdService.java
+END
+EnforceService.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/eTanah/!svn/ver/586/trunk/devel/etanahViewController/src/main/java/etanah/service/EnforceService.java
+END
+BPelService.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/service/BPelService.java
+END
+PengambilanMMKService.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/service/PengambilanMMKService.java
+END
+JanaHakmilikService.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/service/JanaHakmilikService.java
+END
+DmsService.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/service/DmsService.java
+END
+SemakDokumenService.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/service/SemakDokumenService.java
+END
+PengambilanAduanService.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/eTanah/!svn/ver/3600/trunk/devel/etanahViewController/src/main/java/etanah/service/PengambilanAduanService.java
+END
+PermohonanSupayaBantahanService.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/service/PermohonanSupayaBantahanService.java
+END
+AduanService.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/service/AduanService.java
+END
+HakmilikService.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/eTanah/!svn/ver/3346/trunk/devel/etanahViewController/src/main/java/etanah/service/HakmilikService.java
+END
+PihakPengambilanService.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/service/PihakPengambilanService.java
+END
+PembangunanService.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/eTanah/!svn/ver/4133/trunk/devel/etanahViewController/src/main/java/etanah/service/PembangunanService.java
+END
+SyerValidationService.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/eTanah/!svn/ver/4641/trunk/devel/etanahViewController/src/main/java/etanah/service/SyerValidationService.java
+END
+CalcTax.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/service/CalcTax.java
+END
+NotifikasiBayaranService.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/service/NotifikasiBayaranService.java
+END
+NotifikasiService.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/service/NotifikasiService.java
+END
+NotaService.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/service/NotaService.java
+END
+StrataPtService.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/eTanah/!svn/ver/5382/trunk/devel/etanahViewController/src/main/java/etanah/service/StrataPtService.java
+END
+AnsuranService.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/eTanah/!svn/ver/5304/trunk/devel/etanahViewController/src/main/java/etanah/service/AnsuranService.java
+END
+KaunterService.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/eTanah/!svn/ver/5359/trunk/devel/etanahViewController/src/main/java/etanah/service/KaunterService.java
+END
+DataHakmilikBaru.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/service/DataHakmilikBaru.java
+END
+JTeknikalService.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/eTanah/!svn/ver/2326/trunk/devel/etanahViewController/src/main/java/etanah/service/JTeknikalService.java
+END
+PendudukanSementaraMMKNService.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/1676/trunk/devel/etanahViewController/src/main/java/etanah/service/PendudukanSementaraMMKNService.java
+END
+DevIntegrationService.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/eTanah/!svn/ver/1856/trunk/devel/etanahViewController/src/main/java/etanah/service/DevIntegrationService.java
+END
+CalcTaxPelupusan.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/service/CalcTaxPelupusan.java
+END
+PengambilanService1.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/eTanah/!svn/ver/3604/trunk/devel/etanahViewController/src/main/java/etanah/service/PengambilanService1.java
+END
+BayaranPampasanService.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/service/BayaranPampasanService.java
+END
+AkaunService.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/eTanah/!svn/ver/5304/trunk/devel/etanahViewController/src/main/java/etanah/service/AkaunService.java
+END
+HakLalulalangService.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/eTanah/!svn/ver/3604/trunk/devel/etanahViewController/src/main/java/etanah/service/HakLalulalangService.java
+END
+PageAuditService.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/service/PageAuditService.java
+END
+KertasHakmilikService.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/service/KertasHakmilikService.java
+END
+PermohonanLaporanPelanService.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/service/PermohonanLaporanPelanService.java
+END
+MenuService.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/service/MenuService.java
+END
+UrusanALiranService.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/service/UrusanALiranService.java
+END
+AgensiService.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/eTanah/!svn/ver/4528/trunk/devel/etanahViewController/src/main/java/etanah/service/AgensiService.java
+END
+LaporanTanahService.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/eTanah/!svn/ver/4144/trunk/devel/etanahViewController/src/main/java/etanah/service/LaporanTanahService.java
+END
+LaporanPelukisPelanService.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/service/LaporanPelukisPelanService.java
+END
+DrafKertasMMKNService.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/service/DrafKertasMMKNService.java
+END
+PelupusanService.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/eTanah/!svn/ver/4954/trunk/devel/etanahViewController/src/main/java/etanah/service/PelupusanService.java
+END
+KodService.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/service/KodService.java
+END
+PengambilanService.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/eTanah/!svn/ver/4962/trunk/devel/etanahViewController/src/main/java/etanah/service/PengambilanService.java
+END
+RegService.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/eTanah/!svn/ver/5279/trunk/devel/etanahViewController/src/main/java/etanah/service/RegService.java
+END

@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/eTanah/!svn/ver/4860/trunk/devel/eTanahPortal/portal/src/main/java/com/theta/portal/stripes/portal
+END
+StatusTukarGantiActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/eTanah/!svn/ver/4860/trunk/devel/eTanahPortal/portal/src/main/java/com/theta/portal/stripes/portal/StatusTukarGantiActionBean.java
+END
+SemakanAkaunActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/eTanah/!svn/ver/4860/trunk/devel/eTanahPortal/portal/src/main/java/com/theta/portal/stripes/portal/SemakanAkaunActionBean.java
+END
+TentangEtanahActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/portal/src/main/java/com/theta/portal/stripes/portal/TentangEtanahActionBean.java
+END
+KutipanAgensiActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/portal/src/main/java/com/theta/portal/stripes/portal/KutipanAgensiActionBean.java
+END
+SemakanDokumenActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/eTanah/!svn/ver/4860/trunk/devel/eTanahPortal/portal/src/main/java/com/theta/portal/stripes/portal/SemakanDokumenActionBean.java
+END
+DokumenForm.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/eTanah/!svn/ver/2524/trunk/devel/eTanahPortal/portal/src/main/java/com/theta/portal/stripes/portal/DokumenForm.java
+END
+JabatanTeknikalActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/portal/src/main/java/com/theta/portal/stripes/portal/JabatanTeknikalActionBean.java
+END
+KodUrusan.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/2524/trunk/devel/eTanahPortal/portal/src/main/java/com/theta/portal/stripes/portal/KodUrusan.java
+END
+StatusPermohonanActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/eTanah/!svn/ver/4860/trunk/devel/eTanahPortal/portal/src/main/java/com/theta/portal/stripes/portal/StatusPermohonanActionBean.java
+END
+SoalanLazimActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/eTanah/!svn/ver/2519/trunk/devel/eTanahPortal/portal/src/main/java/com/theta/portal/stripes/portal/SoalanLazimActionBean.java
+END

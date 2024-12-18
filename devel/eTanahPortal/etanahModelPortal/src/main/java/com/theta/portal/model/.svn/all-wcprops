@@ -1,0 +1,179 @@
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/eTanah/!svn/ver/3359/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/model
+END
+RefHelpdeskContractorStatus.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/model/RefHelpdeskContractorStatus.java
+END
+UserRole.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/model/UserRole.java
+END
+RefHelpdeskStageRole.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/model/RefHelpdeskStageRole.java
+END
+Department.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/3079/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/model/Department.java
+END
+PtdOffice.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/model/PtdOffice.java
+END
+HelpdeskAssign.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/model/HelpdeskAssign.java
+END
+Position.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/eTanah/!svn/ver/3095/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/model/Position.java
+END
+HelpdeskTechnical.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/model/HelpdeskTechnical.java
+END
+RefHelpdeskTechnicalStatus.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/model/RefHelpdeskTechnicalStatus.java
+END
+RefUserType.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/2860/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/model/RefUserType.java
+END
+HelpdeskReportDocuments.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/model/HelpdeskReportDocuments.java
+END
+Employee.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/eTanah/!svn/ver/3095/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/model/Employee.java
+END
+HelpdeskContractorDocuments.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/model/HelpdeskContractorDocuments.java
+END
+RefHelpdeskHistoryType.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/model/RefHelpdeskHistoryType.java
+END
+RefHelpdeskStage.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/3359/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/model/RefHelpdeskStage.java
+END
+HelpdeskHistory.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/model/HelpdeskHistory.java
+END
+HelpdeskStage.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/model/HelpdeskStage.java
+END
+RefHelpdeskFlag.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/model/RefHelpdeskFlag.java
+END
+UserTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/eTanah/!svn/ver/2886/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/model/UserTable.java
+END
+RefSubmodulType.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/model/RefSubmodulType.java
+END
+HelpdeskReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/3124/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/model/HelpdeskReport.java
+END
+RefHardwareType.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/2838/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/model/RefHardwareType.java
+END
+HelpdeskTechnicalDocuments.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/model/HelpdeskTechnicalDocuments.java
+END
+RefHelpdeskReportStatus.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/model/RefHelpdeskReportStatus.java
+END
+HelpdeskReportLog.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/model/HelpdeskReportLog.java
+END
+RefItemType.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/model/RefItemType.java
+END
+Vendor.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/eTanah/!svn/ver/3124/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/model/Vendor.java
+END
+RefHelpdeskType.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/2838/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/model/RefHelpdeskType.java
+END
+HelpdeskContractor.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/eTanah/!svn/ver/3029/trunk/devel/eTanahPortal/etanahModelPortal/src/main/java/com/theta/portal/model/HelpdeskContractor.java
+END

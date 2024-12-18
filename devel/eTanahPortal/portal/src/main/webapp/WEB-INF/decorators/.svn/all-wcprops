@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/5352/trunk/devel/eTanahPortal/portal/src/main/webapp/WEB-INF/decorators
+END
+internal_error.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/eTanah/!svn/ver/4860/trunk/devel/eTanahPortal/portal/src/main/webapp/WEB-INF/decorators/internal_error.jsp
+END
+error_layout.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/eTanah/!svn/ver/5352/trunk/devel/eTanahPortal/portal/src/main/webapp/WEB-INF/decorators/error_layout.jsp
+END
+internal_portal.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/eTanah/!svn/ver/5351/trunk/devel/eTanahPortal/portal/src/main/webapp/WEB-INF/decorators/internal_portal.jsp
+END
+portal_layout.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/eTanah/!svn/ver/5351/trunk/devel/eTanahPortal/portal/src/main/webapp/WEB-INF/decorators/portal_layout.jsp
+END
+main_layout.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/eTanah/!svn/ver/3098/trunk/devel/eTanahPortal/portal/src/main/webapp/WEB-INF/decorators/main_layout.jsp
+END

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/3165/trunk/devel/eTanahPortal/portal/src/main/java/com/theta/portal/stripes/form
+END
+ListForm.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/portal/src/main/java/com/theta/portal/stripes/form/ListForm.java
+END
+ReportLogForm.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/portal/src/main/java/com/theta/portal/stripes/form/ReportLogForm.java
+END
+DMSFailForm.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/portal/src/main/java/com/theta/portal/stripes/form/DMSFailForm.java
+END
+SenaraiTugasan.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/3165/trunk/devel/eTanahPortal/portal/src/main/java/com/theta/portal/stripes/form/SenaraiTugasan.java
+END
+PenggunaForm.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/eTanah/!svn/ver/3095/trunk/devel/eTanahPortal/portal/src/main/java/com/theta/portal/stripes/form/PenggunaForm.java
+END
+SenaraiPenggunaForm.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/3081/trunk/devel/eTanahPortal/portal/src/main/java/com/theta/portal/stripes/form/SenaraiPenggunaForm.java
+END
+UserListParam.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/eTanah/!svn/ver/3095/trunk/devel/eTanahPortal/portal/src/main/java/com/theta/portal/stripes/form/UserListParam.java
+END
+DMSUploadForm.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/portal/src/main/java/com/theta/portal/stripes/form/DMSUploadForm.java
+END

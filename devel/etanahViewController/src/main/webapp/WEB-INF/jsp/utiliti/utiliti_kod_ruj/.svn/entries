@@ -1,0 +1,122 @@
+10
+
+dir
+5450
+http://103.21.32.183/svn/eTanah/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/utiliti/utiliti_kod_ruj
+http://103.21.32.183/svn/eTanah
+
+
+
+2016-02-05T17:17:15.180087Z
+5
+build
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4041cff1-7fe6-4d4d-b1a4-5117909e1e73
+
+all_kod_ruj.jsp
+file
+
+
+
+
+2016-02-05T16:11:40.000000Z
+b29393dd3593ff04d0adcd05f4c1a74e
+2016-02-05T17:17:15.180087Z
+5
+build
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4572
+
+kod_DUN
+dir
+
+kod_dokumen_agensi
+dir
+
+kod_hakmilik
+dir
+
+kod_bilik
+dir
+
+adun
+dir
+
+kod_bangsa
+dir
+
+kod_jtek
+dir
+
+kod_cawangan_jabatan
+dir
+
+kod_akaun
+dir
+
+kod_agensi_kutipan_cawangan
+dir
+
+kod_agensi_kutipan
+dir
+
+kod_dokumen
+dir
+
+kod_urusan_agensi
+dir
+
+slogan_surat
+dir
+
+kod_aliran
+dir
+
+kod_agensi
+dir
+
+kod_parlimen
+dir
+
+kod_bank
+dir
+
+kod_bpm
+dir
+
+kod_cawangan
+dir
+

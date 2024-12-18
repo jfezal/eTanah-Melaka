@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/eTanah/!svn/ver/4860/trunk/devel/eTanahPortal/portal/src/main/java/com/theta/portal/service/portal
+END
+SenaraiListService.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/4860/trunk/devel/eTanahPortal/portal/src/main/java/com/theta/portal/service/portal/SenaraiListService.java
+END
+SemakanAkaunService.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/4860/trunk/devel/eTanahPortal/portal/src/main/java/com/theta/portal/service/portal/SemakanAkaunService.java
+END
+SemakanDokumenService.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/eTanah/!svn/ver/4860/trunk/devel/eTanahPortal/portal/src/main/java/com/theta/portal/service/portal/SemakanDokumenService.java
+END
+StatusPermohonanService.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/eTanah/!svn/ver/4860/trunk/devel/eTanahPortal/portal/src/main/java/com/theta/portal/service/portal/StatusPermohonanService.java
+END
+StatusTukarGantiService.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/eTanah/!svn/ver/4860/trunk/devel/eTanahPortal/portal/src/main/java/com/theta/portal/service/portal/StatusTukarGantiService.java
+END

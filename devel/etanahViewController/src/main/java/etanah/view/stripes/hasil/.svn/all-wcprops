@@ -1,0 +1,797 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/5424/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil
+END
+CarianAkaunActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/362/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/CarianAkaunActionBean.java
+END
+RekodPenghantaran2ActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/eTanah/!svn/ver/1585/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/RekodPenghantaran2ActionBean.java
+END
+UtilitiPembatalanResitActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/eTanah/!svn/ver/5064/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/UtilitiPembatalanResitActionBean.java
+END
+TextFileReportActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/TextFileReportActionBean.java
+END
+BayaranPBTActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/BayaranPBTActionBean.java
+END
+TransactionActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/TransactionActionBean.java
+END
+ViewRemisyenActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/ViewRemisyenActionBean.java
+END
+ReleaseResitActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/ReleaseResitActionBean.java
+END
+KodCukaiActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/KodCukaiActionBean.java
+END
+KutipanTanpaDendaActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/KutipanTanpaDendaActionBean.java
+END
+BilCukaiStratactionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/2739/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/BilCukaiStratactionBean.java
+END
+AnsuranActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/AnsuranActionBean.java
+END
+CetakPelanActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/CetakPelanActionBean.java
+END
+HistoryTransactionActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/eTanah/!svn/ver/5345/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/HistoryTransactionActionBean.java
+END
+UlasanRayuanMMKNSActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/UlasanRayuanMMKNSActionBean.java
+END
+UtilitiDeleteBilCukaiActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/eTanah/!svn/ver/2729/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/UtilitiDeleteBilCukaiActionBean.java
+END
+PembatalanResitActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/eTanah/!svn/ver/4945/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/PembatalanResitActionBean.java
+END
+PertanyaanHakmilikActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/eTanah/!svn/ver/3320/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/PertanyaanHakmilikActionBean.java
+END
+KemasukanResitCukaiTanahActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/eTanah/!svn/ver/2259/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/KemasukanResitCukaiTanahActionBean.java
+END
+PembatalanResitManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/5106/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/PembatalanResitManager.java
+END
+SelenggaraHakmilikActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/SelenggaraHakmilikActionBean.java
+END
+PenyataPemungutService.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/5290/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/PenyataPemungutService.java
+END
+KutipanHasilService.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5019/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/KutipanHasilService.java
+END
+UlasanMMKNSActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/UlasanMMKNSActionBean.java
+END
+KertasRisalatMMKNActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/eTanah/!svn/ver/838/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/KertasRisalatMMKNActionBean.java
+END
+MaklumatPerihalCukaiActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/MaklumatPerihalCukaiActionBean.java
+END
+ArahanNotis6AActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/ArahanNotis6AActionBean.java
+END
+PerihalCukaiActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/PerihalCukaiActionBean.java
+END
+KutipanHasilManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/4968/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/KutipanHasilManager.java
+END
+BayaranAgensiActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5249/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/BayaranAgensiActionBean.java
+END
+MaklumatHakmilikTambahSingleActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/MaklumatHakmilikTambahSingleActionBean.java
+END
+GenerateTerima03.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/GenerateTerima03.java
+END
+KadarPenguranganMlkActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/KadarPenguranganMlkActionBean.java
+END
+KeputusanPaparRemTSActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/KeputusanPaparRemTSActionBean.java
+END
+TransactionService.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/TransactionService.java
+END
+SemakDokumenActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/SemakDokumenActionBean.java
+END
+MaklumatHakmilikActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/MaklumatHakmilikActionBean.java
+END
+UtilitiDeleteBilCukaiStrataActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/eTanah/!svn/ver/2729/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/UtilitiDeleteBilCukaiStrataActionBean.java
+END
+KemasukanMaklumatAkaunActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/KemasukanMaklumatAkaunActionBean.java
+END
+PenyediaanPembatalanEndorsanActionbean.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/PenyediaanPembatalanEndorsanActionbean.java
+END
+CukaiActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/CukaiActionBean.java
+END
+BayaranPelbagaiActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/eTanah/!svn/ver/5424/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/BayaranPelbagaiActionBean.java
+END
+PertanyaanBilCukaiActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/PertanyaanBilCukaiActionBean.java
+END
+PenyediaanEndorsanActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/PenyediaanEndorsanActionBean.java
+END
+LaporanTanahActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/LaporanTanahActionBean.java
+END
+BayaranActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/BayaranActionBean.java
+END
+SokonganActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/622/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/SokonganActionBean.java
+END
+CaraBayarService.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/CaraBayarService.java
+END
+HapusKiraActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/HapusKiraActionBean.java
+END
+UnlockActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/UnlockActionBean.java
+END
+PembatalanEndorsanService.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/eTanah/!svn/ver/4730/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/PembatalanEndorsanService.java
+END
+UlasanMMKMlkActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/UlasanMMKMlkActionBean.java
+END
+CreateIdKumpulanActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/CreateIdKumpulanActionBean.java
+END
+PKDLKeputusanMMKActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/PKDLKeputusanMMKActionBean.java
+END
+KemasukkanResitManualActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/KemasukkanResitManualActionBean.java
+END
+KutipanHasilActionBeanN9.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/KutipanHasilActionBeanN9.java
+END
+CetakanRingkasanActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/CetakanRingkasanActionBean.java
+END
+PindaanKutipanActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/2499/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/PindaanKutipanActionBean.java
+END
+BayaranBalikDepositActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/BayaranBalikDepositActionBean.java
+END
+KadarPenguranganActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/KadarPenguranganActionBean.java
+END
+PembelianPelanActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/PembelianPelanActionBean.java
+END
+KumpulanAkaunActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/KumpulanAkaunActionBean.java
+END
+LogOffActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/LogOffActionBean.java
+END
+GantianCekTakLakuActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/eTanah/!svn/ver/5290/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/GantianCekTakLakuActionBean.java
+END
+Notis6AActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/Notis6AActionBean.java
+END
+IntegrationEMMKN.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/IntegrationEMMKN.java
+END
+PermohonanHasilActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/PermohonanHasilActionBean.java
+END
+MaklumatPemohonAnsuranActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/MaklumatPemohonAnsuranActionBean.java
+END
+ModKutipService.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/ModKutipService.java
+END
+DasarActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/DasarActionBean.java
+END
+DendaTahunanActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/3083/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/DendaTahunanActionBean.java
+END
+RekodPenghantaranActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/eTanah/!svn/ver/1588/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/RekodPenghantaranActionBean.java
+END
+KutipanHasilActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/5061/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/KutipanHasilActionBean.java
+END
+KodSekolahBantuanActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/KodSekolahBantuanActionBean.java
+END
+MaklumatTambahRemSBMActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/MaklumatTambahRemSBMActionBean.java
+END
+NotisGantianActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/NotisGantianActionBean.java
+END
+SemakanTransaksiActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/SemakanTransaksiActionBean.java
+END
+RemisyenTanahActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/RemisyenTanahActionBean.java
+END
+KeputusanPaparRemSBMActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/KeputusanPaparRemSBMActionBean.java
+END
+SuratPeringatanNotis6AActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/SuratPeringatanNotis6AActionBean.java
+END
+MaklumatLainActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/MaklumatLainActionBean.java
+END
+DrafMMKNHasilActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/DrafMMKNHasilActionBean.java
+END
+PelarasanCukaiActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/PelarasanCukaiActionBean.java
+END
+StatusPembayaranActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/StatusPembayaranActionBean.java
+END
+KemaskiniMaklumatAkaunActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/eTanah/!svn/ver/2933/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/KemaskiniMaklumatAkaunActionBean.java
+END
+AkaunBaseActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/AkaunBaseActionBean.java
+END
+UlasanMMKREMRIMlkActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/UlasanMMKREMRIMlkActionBean.java
+END
+KeputusanPaparRemOthersActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/KeputusanPaparRemOthersActionBean.java
+END
+LporanTanah6AActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/LporanTanah6AActionBean.java
+END
+CetakSemulaActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/CetakSemulaActionBean.java
+END
+PindaanCaraBayaranActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/PindaanCaraBayaranActionBean.java
+END
+RemisyenManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/RemisyenManager.java
+END
+UtilityQTFTActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/4336/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/UtilityQTFTActionBean.java
+END
+RekodWartaActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/RekodWartaActionBean.java
+END
+UtilitiPembayaranNotis8A.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/1584/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/UtilitiPembayaranNotis8A.java
+END
+PelarasanActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/PelarasanActionBean.java
+END
+Penyediaan8AActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/Penyediaan8AActionBean.java
+END
+PertanyaanDepositTidakDituntutActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/PertanyaanDepositTidakDituntutActionBean.java
+END
+CukaiTahunanActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/CukaiTahunanActionBean.java
+END
+WartaActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/WartaActionBean.java
+END
+LporanTanah6A_2ActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/LporanTanah6A_2ActionBean.java
+END
+CetakBilBatchActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/CetakBilBatchActionBean.java
+END
+BilCukaiNSActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/2716/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/BilCukaiNSActionBean.java
+END
+KertasRingkasanActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/KertasRingkasanActionBean.java
+END
+JanaFailPBT.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/JanaFailPBT.java
+END
+KodSekolahBantuanService.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/KodSekolahBantuanService.java
+END
+JualanPelanActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/JualanPelanActionBean.java
+END
+PaparHakmilikPihakActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/PaparHakmilikPihakActionBean.java
+END
+CarianActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/CarianActionBean.java
+END
+KodDatoLembagaActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/KodDatoLembagaActionBean.java
+END
+DownloadAgensiActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/DownloadAgensiActionBean.java
+END
+PindaanAkaunAmanahActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/PindaanAkaunAmanahActionBean.java
+END
+NotisPeringatan6AManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/NotisPeringatan6AManager.java
+END
+KumpulanAkaunTAGActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/KumpulanAkaunTAGActionBean.java
+END
+Penyediaan8AptActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/Penyediaan8AptActionBean.java
+END
+KumpulanAkaunTAGBaruActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/eTanah/!svn/ver/2790/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/KumpulanAkaunTAGBaruActionBean.java
+END
+PertanyaanAkaunActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/PertanyaanAkaunActionBean.java
+END
+PenyediaanEndosanActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/PenyediaanEndosanActionBean.java
+END
+PindahanAkaunDepositActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/PindahanAkaunDepositActionBean.java
+END
+NotisActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/eTanah/!svn/ver/2487/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/NotisActionBean.java
+END
+CetakSemulaSuratAkuanActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/CetakSemulaSuratAkuanActionBean.java
+END
+SearchingIDKumpulanActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/SearchingIDKumpulanActionBean.java
+END
+KutipanLuarActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/KutipanLuarActionBean.java
+END
+HasilPermohonanPage.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/HasilPermohonanPage.java
+END
+MaklumatBayaranAnsuranActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/eTanah/!svn/ver/5328/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/MaklumatBayaranAnsuranActionBean.java
+END
+MaklumatBayaranBalikDepositActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/MaklumatBayaranBalikDepositActionBean.java
+END
+SejarahPermohonanActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/SejarahPermohonanActionBean.java
+END
+GenerateIdPermohonanWorkflow.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/eTanah/!svn/ver/2486/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/GenerateIdPermohonanWorkflow.java
+END
+CetakSemulaResitActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/CetakSemulaResitActionBean.java
+END
+BayaranAnsuranActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/5373/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/BayaranAnsuranActionBean.java
+END
+PindaanService.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/PindaanService.java
+END
+CarianKumpulanActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/hasil/CarianKumpulanActionBean.java
+END

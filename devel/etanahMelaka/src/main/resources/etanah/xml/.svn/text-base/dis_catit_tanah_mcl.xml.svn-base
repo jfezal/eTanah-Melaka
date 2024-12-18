@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<!--
+    Author     : afham
+    Description:
+        Purpose of the document follows.
+
+    Modified   : 30092011
+-->
+<workflow id="http://xmlns.oracle.com/PelupusanMCLMlk/PelupusanMCL/CatitTanahMCL">
+
+    <stage id="kemasukan" currentAction="Kemasukan Maklumat" listener="etanah.view.stripes.pelupusan.validator.CatitTanahValidator">
+        <txncode id="MCMCL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanah</page>
+            <page id="003" title="Pemohon">pelupusan/pihak_kepentingan</page>
+            <page id="004" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+            <report></report>
+        </txncode>
+    </stage>
+
+    <!-- noting registration; pass ke pendaftaran, ada stage dlm bpel (sysdaftar), lepas pendaftaran selesai system akan push ke stage seterusnya-->
+
+    <stage id="sedia_kertas_rencana" currentAction="Sedia Kertas Rencana Pertama">
+        <txncode id="MCMCL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanah</page>
+            <page id="003" title="Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="004" title="Draf Rencana">pelupusan/draf_pertimbangan_ptd_catit_mcl/kemasukan</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila sediakan draf kertas rencana.</instruction>
+            <report></report>
+        </txncode>
+    </stage>
+    <stage id="semak_kertas_rencana" currentAction="Semakan Kertas Rencana Pertama" pushback="true" advanceRule="true" report="true">
+        <txncode id="MCMCL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanah</page>
+            <page id="003" title="Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="004" title="Draf Rencana">pelupusan/draf_pertimbangan_ptd_catit_mcl?viewRencanaOnly</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan dan masukkan keputusan semakan di bahgian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Lengkap" value="LK"/>
+                <outcome label="Tidak lengkap" value="TL"/>
+            </outcomes>
+            <reports>
+                <report generator="DISKRPMCMCL_MLK.rdf" prefix="VDOC" code="RENC"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="keputusan_ptd" currentAction="Keputusan Pentadbir Tanah" finalize="true" advanceRule="true">
+        <txncode id="MCMCL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanah</page>
+            <page id="003" title="Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="002" title="Kertas Rencana">pelupusan/keputusan_draf_pertimbangan_ptd_catit_mcl</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan keputusan lulus atau tolak.</instruction>
+            <outcomes>
+                <outcome label="Lulus" value="L"/>
+                <outcome label="Tolak" value="T"/>
+            </outcomes>
+        </txncode>
+    </stage>
+
+    <!--    <stage id = "sedia_surat_tolak" currentAction="Surat Penolakan" listener="etanah.view.stripes.pelupusan.validator.KeputusanCatitTanahValidator">-->
+    <stage id="sedia_surat_tolak" currentAction="Sedia Surat Tolak" report="true" listener="etanah.view.stripes.pelupusan.validator.CatitTanahValidator">
+        <txncode id="MCMCL">
+            <!--<page id="001" title="Permohonan">pelupusan/surat_keputusan</page>-->
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanah</page>
+            <page id="003" title="Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="004" title="Surat Tolak">pelupusan/surat_keputusan</page>
+            <page id="005" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila sediakan surat tolak permohonan.</instruction>
+            <outcomes></outcomes>
+            <reports>
+                <report generator="DISMCMCLG_MLK.rdf" prefix="VDOC" code="STP"/>
+            </reports>
+        </txncode>
+    </stage>
+    <!-- manual process 03112011
+    <stage id = "tandatangan_surat_tolak" currentAction="Tandatangan Surat Penolakan" listener="etanah.view.stripes.pelupusan.validator.KeputusanCatitTanahValidator">
+        <txncode id="MCMCL">
+                <page id="001" title="Permohonan">pelupusan/surat_keputusan</page>
+            <validator>validator</validator>
+            <instruction>Sila sediakan surat penolakan permohonan.</instruction>
+        </txncode>
+    </stage>-->
+    <!-- batal noting registration
+    <stage id = "batal_catatan_permohonan" currentAction="Batal Catatan Permohonan MCL" listener="etanah.view.stripes.pelupusan.validator.KeputusanCatitTanahValidator">
+        <txncode id="MCMCL">
+                <page id="001" title="Permohonan">pelupusan/surat_keputusan</page>
+            <validator>validator</validator>
+            <instruction>Sila sediakan surat penolakan permohonan.</instruction>
+        </txncode>
+    </stage>
+    -->
+
+    <!-- batal noting registration; pass ke pendaftaran, tamat di pendaftaran -->
+
+    <stage id="sedia_surat_kelulusan" currentAction="Sedia Surat Kelulusan" report="true">
+        <txncode id="MCMCL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanah</page>
+            <page id="003" title="Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="004" title="Surat Kelulusan">pelupusan/suratKelulusan_MCL</page>
+            <page id="005" title="Tandatangan Dokumen">pelupusan/tandatangan_dokumenV2</page>
+            <page id="006" title="Nota">penguatkuasaan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila sediakan surat kelulusan permohonan.</instruction>
+            <outcomes></outcomes>
+            <reports>
+                <report generator="DISMCMCLL_MLK.rdf" prefix="VDOC" code="SL"/>
+            </reports>
+        </txncode>
+    </stage>
+    <!-- manual process 03112011
+    <stage id="tandatangan_surat_kelulusan" currentAction="Tandatangan Surat Kelulusan">
+        <txncode id="MCMCL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Surat">pelupusan/surat_kelulusan_catit_MCL</page>
+            <validator>validator</validator>
+            <instruction>Sila sediakan surat kelulusan permohonan.</instruction>
+        </txncode>
+    </stage>
+    --><stage id="bayaran_proses" currentAction="Bayaran Proses" distribute="true" listener="etanah.view.stripes.pelupusan.validator.CatitTanahValidator">
+        <txncode id="MCMCL">
+            <page id="001" title="Kaunter">kaunter/BayaranPerihal</page>
+            <validator>validator</validator>
+            <instruction>Sila pilih Jenis Bayaran dan klik Butang Simpan.</instruction>
+        </txncode>
+    </stage>
+    <!-- sedia kadar cukai baru - CC Hasil; view only, ada formula -->
+<!--    <stage id="sedia_cukai_baru" currentAction="Sedia Kadar Cukai Baru" listener="etanah.view.stripes.pelupusan.validator.CatitTanahValidator">
+        <txncode id="MCMCL">
+            <page id="001" title="Permohonan">common/maklumat_permohonan</page>
+            <page id="002" title="Tanah">pelupusan/maklumat_tanah</page>
+            <page id="003" title="Pemohon">pelupusan/pihak_kepentingan?showFormDisplay</page>
+            <page id="002" title="Cukai Baru">pelupusan/sedia_cukai_baru_mcl</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat cukai baru.</instruction>
+        </txncode>
+    </stage>-->
+    <!-- endosan registration; pass ke pendaftaran, tamat di pendaftaran -->
+</workflow>
+

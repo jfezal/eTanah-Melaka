@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/eTanah/!svn/ver/4884/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/pengambilan/sek8a/validator
+END
+PindaanKeputusanValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/eTanah/!svn/ver/4128/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/pengambilan/sek8a/validator/PindaanKeputusanValidator.java
+END
+SemakTandatanganEFValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/eTanah/!svn/ver/4153/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/pengambilan/sek8a/validator/SemakTandatanganEFValidator.java
+END
+TandatanganBorangDValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/eTanah/!svn/ver/3326/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/pengambilan/sek8a/validator/TandatanganBorangDValidator.java
+END
+SemakBorangDTandatanganValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/eTanah/!svn/ver/4179/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/pengambilan/sek8a/validator/SemakBorangDTandatanganValidator.java
+END
+KemasukanValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/eTanah/!svn/ver/4734/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/pengambilan/sek8a/validator/KemasukanValidator.java
+END
+SemakBorangJKTandatanganValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/eTanah/!svn/ver/4166/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/pengambilan/sek8a/validator/SemakBorangJKTandatanganValidator.java
+END
+KemukaBorangKValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/eTanah/!svn/ver/4490/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/pengambilan/sek8a/validator/KemukaBorangKValidator.java
+END
+SemakLaporanTanah8AValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/eTanah/!svn/ver/3930/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/pengambilan/sek8a/validator/SemakLaporanTanah8AValidator.java
+END
+JanaBorangCDLaporanTanahValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/eTanah/!svn/ver/4786/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/pengambilan/sek8a/validator/JanaBorangCDLaporanTanahValidator.java
+END
+SemakKemasukanADOValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/eTanah/!svn/ver/3326/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/pengambilan/sek8a/validator/SemakKemasukanADOValidator.java
+END
+SemakLaporanTanahPTGValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/eTanah/!svn/ver/4884/trunk/devel/etanahViewController/src/main/java/etanah/view/stripes/pengambilan/sek8a/validator/SemakLaporanTanahPTGValidator.java
+END

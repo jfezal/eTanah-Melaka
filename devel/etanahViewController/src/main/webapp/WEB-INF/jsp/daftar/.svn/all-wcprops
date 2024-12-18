@@ -1,0 +1,833 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/5441/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar
+END
+senarai_tuan_tanah.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/senarai_tuan_tanah.jsp
+END
+main.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/main.jsp
+END
+cetak_geran_nota.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/cetak_geran_nota.jsp
+END
+kemasukan_pihak_mcl.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/eTanah/!svn/ver/232/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_pihak_mcl.jsp
+END
+notis_kaveat.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/notis_kaveat.jsp
+END
+perserahan_swsbsa_2.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/eTanah/!svn/ver/3291/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/perserahan_swsbsa_2.jsp
+END
+partial_kodseksyen.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/eTanah/!svn/ver/748/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/partial_kodseksyen.jsp
+END
+tempohSuratKuasa.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/tempohSuratKuasa.jsp
+END
+kemasukan_maklumat_borang.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_maklumat_borang.jsp
+END
+penyerahan_hakmilik.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/penyerahan_hakmilik.jsp
+END
+kemasukan_maklumat_kaveat.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_maklumat_kaveat.jsp
+END
+kemasukan_pihak_main_kaveat_tanah.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_pihak_main_kaveat_tanah.jsp
+END
+maklumat_kutipan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/maklumat_kutipan.jsp
+END
+permohonan_kvpt.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/permohonan_kvpt.jsp
+END
+partial_koduom.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/partial_koduom.jsp
+END
+papar_pihak_kongsi_detail.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/939/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/papar_pihak_kongsi_detail.jsp
+END
+kemasukan_perincian_hakmilik.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/5441/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_perincian_hakmilik.jsp
+END
+kemasukan_perincian_hakmilik_utiliti.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/eTanah/!svn/ver/1450/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_perincian_hakmilik_utiliti.jsp
+END
+main_batal_urusan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/main_batal_urusan.jsp
+END
+paparan_dokumen_pendaftar.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/1426/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/paparan_dokumen_pendaftar.jsp
+END
+maklumat_surat.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/eTanah/!svn/ver/1239/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/maklumat_surat.jsp
+END
+kemasukan_pihak_baru_BETPB _mohon_pihak.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/eTanah/!svn/ver/1214/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_pihak_baru_BETPB%20_mohon_pihak.jsp
+END
+kemasukan_ABK.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_ABK.jsp
+END
+kemasukanSyarikatMCLBaru.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukanSyarikatMCLBaru.jsp
+END
+kemasukan_hakmilik_pihak.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_hakmilik_pihak.jsp
+END
+kemasukan_pihak_waris_edit.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/225/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_pihak_waris_edit.jsp
+END
+kemasukan_pb_pemegang_amanah.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_pb_pemegang_amanah.jsp
+END
+permohonan_status.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/permohonan_status.jsp
+END
+ismen.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/ismen.jsp
+END
+popUpKemasukanPenerimaWakil.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/popUpKemasukanPenerimaWakil.jsp
+END
+kemasukan_tuan_tanah_kaveat.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_tuan_tanah_kaveat.jsp
+END
+carian_daftar_sementara.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/carian_daftar_sementara.jsp
+END
+kemasukan_pihak_baru_BETPB.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/600/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_pihak_baru_BETPB.jsp
+END
+paparan_tuan_tanah.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/paparan_tuan_tanah.jsp
+END
+agih_tugasan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/agih_tugasan.jsp
+END
+kemasukan_seksyen_ktn.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_seksyen_ktn.jsp
+END
+carian_pt_sementara.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/carian_pt_sementara.jsp
+END
+maklumat_pemberi_penerima_suratkuasa_wakilv2.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/maklumat_pemberi_penerima_suratkuasa_wakilv2.jsp
+END
+kemaskini_senarai_pihak_berkepentingan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/eTanah/!svn/ver/228/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemaskini_senarai_pihak_berkepentingan.jsp
+END
+maklumat_fail.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/maklumat_fail.jsp
+END
+kemasukan_pihak_baru_BETPB_hakmilikPihak.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/eTanah/!svn/ver/1236/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_pihak_baru_BETPB_hakmilikPihak.jsp
+END
+bidang_kuasa.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/bidang_kuasa.jsp
+END
+perserahan_swsbsa.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/eTanah/!svn/ver/3291/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/perserahan_swsbsa.jsp
+END
+kemaskini_hakmilik_permohonan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemaskini_hakmilik_permohonan.jsp
+END
+jenis_suratkuasa.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/jenis_suratkuasa.jsp
+END
+maklumat_surat_popup.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/1240/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/maklumat_surat_popup.jsp
+END
+kemasukan_pb_jual_danaharta.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_pb_jual_danaharta.jsp
+END
+kemasukan_pihak_popup.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/eTanah/!svn/ver/5240/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_pihak_popup.jsp
+END
+kemasukan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan.jsp
+END
+partial_kodgunatanah.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/partial_kodgunatanah.jsp
+END
+kemasukan_pihak_pajakan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_pihak_pajakan.jsp
+END
+permohonan_tkr_urusan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/permohonan_tkr_urusan.jsp
+END
+kemasukan_senarai_tuan_tanah.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_senarai_tuan_tanah.jsp
+END
+papar_pihak_waris.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/papar_pihak_waris.jsp
+END
+senarai_hakmilik_ismen.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/senarai_hakmilik_ismen.jsp
+END
+bypass_keutamaan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/bypass_keutamaan.jsp
+END
+permohonan_hakmilik_baru.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/permohonan_hakmilik_baru.jsp
+END
+partial_kodbpm.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/partial_kodbpm.jsp
+END
+kemasukan_Sub.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/eTanah/!svn/ver/923/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_Sub.jsp
+END
+papar_pihak_kongsi.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/eTanah/!svn/ver/2765/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/papar_pihak_kongsi.jsp
+END
+senarai_perserahan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/senarai_perserahan.jsp
+END
+kemasukan_pb_ismen.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_pb_ismen.jsp
+END
+kemasukan_pihak_tmamd_popup.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_pihak_tmamd_popup.jsp
+END
+popUpSyaratPenerimaWakil.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/popUpSyaratPenerimaWakil.jsp
+END
+carian_gadaian.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/eTanah/!svn/ver/652/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/carian_gadaian.jsp
+END
+kemasukan_hakmilik_sebelum.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_hakmilik_sebelum.jsp
+END
+kemasukan_pihak_berkepentingan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_pihak_berkepentingan.jsp
+END
+senarai_keutamaan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/senarai_keutamaan.jsp
+END
+senarai_hakmilik_permohonan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/2394/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/senarai_hakmilik_permohonan.jsp
+END
+nota_daftar.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/nota_daftar.jsp
+END
+gadaian.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/gadaian.jsp
+END
+kemasukan_hakmilik_asal.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_hakmilik_asal.jsp
+END
+kemasukan_luas_pajakan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_luas_pajakan.jsp
+END
+kemasukan_maklumat_urusniaga.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_maklumat_urusniaga.jsp
+END
+kemaskini_penerima.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/eTanah/!svn/ver/1928/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemaskini_penerima.jsp
+END
+kemasukan_pihak_waris.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/223/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_pihak_waris.jsp
+END
+kemasukan_pihak_ten.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_pihak_ten.jsp
+END
+paparan_perihal_pembetulan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/paparan_perihal_pembetulan.jsp
+END
+kemasukan_pihak_main_amanah.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/499/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_pihak_main_amanah.jsp
+END
+kemasukan_pihak_main_tukar.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/2529/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_pihak_main_tukar.jsp
+END
+rekod_pengeluaran_kertas_hakmilik.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/rekod_pengeluaran_kertas_hakmilik.jsp
+END
+tentukanSurat.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/tentukanSurat.jsp
+END
+kemaskini_pb_partial.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemaskini_pb_partial.jsp
+END
+kemasukan_pihak_baru_pembetulan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/eTanah/!svn/ver/2558/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_pihak_baru_pembetulan.jsp
+END
+paparan_maklumat_permohonan_daftar.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/eTanah/!svn/ver/4714/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/paparan_maklumat_permohonan_daftar.jsp
+END
+main_tukar_urusan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/main_tukar_urusan.jsp
+END
+senarai_hakmilik_urusan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/senarai_hakmilik_urusan.jsp
+END
+maklumat_pemberi_penerima_suratkuasa_wakil.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/eTanah/!svn/ver/2561/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/maklumat_pemberi_penerima_suratkuasa_wakil.jsp
+END
+kemaskini_senarai_mohon_pihak.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemaskini_senarai_mohon_pihak.jsp
+END
+show_sbsasw_by_name.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/eTanah/!svn/ver/158/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/show_sbsasw_by_name.jsp
+END
+partial_kodbpm_notpopup.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/partial_kodbpm_notpopup.jsp
+END
+kemaskini_pb.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemaskini_pb.jsp
+END
+carian_syarikat_mcl.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/carian_syarikat_mcl.jsp
+END
+paparan_senarai_pb.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/paparan_senarai_pb.jsp
+END
+partial_kodbpm2.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/partial_kodbpm2.jsp
+END
+carian_reg_gantung.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/carian_reg_gantung.jsp
+END
+kemasukan_pihak_main_ismen.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_pihak_main_ismen.jsp
+END
+carian_pihak_kepentingan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/carian_pihak_kepentingan.jsp
+END
+kemasukan_belakang_kaunter.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_belakang_kaunter.jsp
+END
+perihal_pembetulan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/perihal_pembetulan.jsp
+END
+kemaskini_pemohon.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/eTanah/!svn/ver/2898/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemaskini_pemohon.jsp
+END
+maklumat_kemasukan_ismen.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/maklumat_kemasukan_ismen.jsp
+END
+permohonan_batal_urusan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/permohonan_batal_urusan.jsp
+END
+syor_cadangan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/syor_cadangan.jsp
+END
+popUpCarianPihakWakilKuasa.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/popUpCarianPihakWakilKuasa.jsp
+END
+kemasukan_bayaran.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/eTanah/!svn/ver/975/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_bayaran.jsp
+END
+cetak_geran_new.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/eTanah/!svn/ver/4196/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/cetak_geran_new.jsp
+END
+jumlah_bayaran.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/jumlah_bayaran.jsp
+END
+doc_perserahan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/doc_perserahan.jsp
+END
+carian_maklumat_fail_ismen.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/carian_maklumat_fail_ismen.jsp
+END
+paparan_maklumat_kaviet.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/paparan_maklumat_kaviet.jsp
+END
+kemasukan_pihak_berkepentingan_pindahmilik.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_pihak_berkepentingan_pindahmilik.jsp
+END
+kemasukan_pihak_waris_insert.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/224/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_pihak_waris_insert.jsp
+END
+kemasukan_perintah_partial.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_perintah_partial.jsp
+END
+kemaskini_penerima_mcl.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemaskini_penerima_mcl.jsp
+END
+Utiliti_berangkai.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/Utiliti_berangkai.jsp
+END
+kemasukan_pihak_berkepentingan_1.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_pihak_berkepentingan_1.jsp
+END
+paparan_maklumat_urusniaga.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/paparan_maklumat_urusniaga.jsp
+END
+popUpCarianPihak.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/popUpCarianPihak.jsp
+END
+penangguhan_gadaian.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/penangguhan_gadaian.jsp
+END
+kemasukan_pihak_main.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/3289/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_pihak_main.jsp
+END
+maklumat_pajakan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/maklumat_pajakan.jsp
+END
+cetak_geran.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/cetak_geran.jsp
+END
+main_swsbsa.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/eTanah/!svn/ver/154/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/main_swsbsa.jsp
+END
+kemasukan_badan_main.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/eTanah/!svn/ver/922/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_badan_main.jsp
+END
+kemasukan_perintah.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_perintah.jsp
+END
+kemasukan_pihak_mcl_popup.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_pihak_mcl_popup.jsp
+END
+kemasukan_suratkuasa_wakil.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_suratkuasa_wakil.jsp
+END
+main_rekod_kvpt.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/main_rekod_kvpt.jsp
+END
+form_permohonanRujukanLuar.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/form_permohonanRujukanLuar.jsp
+END
+kemasukan_perintah_main.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_perintah_main.jsp
+END
+partial_koduomLain.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/partial_koduomLain.jsp
+END
+pelanStrata.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/eTanah/!svn/ver/977/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/pelanStrata.jsp
+END
+popUpCarianPihak2.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/popUpCarianPihak2.jsp
+END
+maklumat_sekatan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/maklumat_sekatan.jsp
+END
+cetak_geran_strata.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/cetak_geran_strata.jsp
+END
+kemasukan_maklumat_asas.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/4169/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_maklumat_asas.jsp
+END
+kemasukan_jilid_folio.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/149/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/kemasukan_jilid_folio.jsp
+END

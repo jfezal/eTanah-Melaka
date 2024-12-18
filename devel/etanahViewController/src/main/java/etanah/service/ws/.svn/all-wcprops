@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/eTanah/!svn/ver/5292/trunk/devel/etanahViewController/src/main/java/etanah/service/ws
+END
+SenaraiKodService.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/eTanah/!svn/ver/3100/trunk/devel/etanahViewController/src/main/java/etanah/service/ws/SenaraiKodService.java
+END
+StatusSemakanAkaunService.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/5292/trunk/devel/etanahViewController/src/main/java/etanah/service/ws/StatusSemakanAkaunService.java
+END
+StatusTukarGantiByPartialService.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/2461/trunk/devel/etanahViewController/src/main/java/etanah/service/ws/StatusTukarGantiByPartialService.java
+END
+StatusPermohonanService.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/eTanah/!svn/ver/3669/trunk/devel/etanahViewController/src/main/java/etanah/service/ws/StatusPermohonanService.java
+END
+PengumumanService.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/eTanah/!svn/ver/2522/trunk/devel/etanahViewController/src/main/java/etanah/service/ws/PengumumanService.java
+END
+StatusTukarGantiService.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/eTanah/!svn/ver/2515/trunk/devel/etanahViewController/src/main/java/etanah/service/ws/StatusTukarGantiService.java
+END

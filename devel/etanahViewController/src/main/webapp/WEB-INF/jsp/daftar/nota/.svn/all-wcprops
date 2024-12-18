@@ -1,0 +1,167 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/3518/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/nota
+END
+nota_daftar_pendaftaran.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/nota/nota_daftar_pendaftaran.jsp
+END
+nota_daftar_default.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/nota/nota_daftar_default.jsp
+END
+paparan_dokumen_pendaftar.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/nota/paparan_dokumen_pendaftar.jsp
+END
+nota_daftar_maklumaturusniaga.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/nota/nota_daftar_maklumaturusniaga.jsp
+END
+nota_daftar_recreate.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/3518/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/nota/nota_daftar_recreate.jsp
+END
+nota_daftar_pembangunan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/nota/nota_daftar_pembangunan.jsp
+END
+carianNsyarat.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/nota/carianNsyarat.jsp
+END
+carian_Batal.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/eTanah/!svn/ver/1500/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/nota/carian_Batal.jsp
+END
+nota_daftar_strata.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/nota/nota_daftar_strata.jsp
+END
+nota_daftar_hasil.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/nota/nota_daftar_hasil.jsp
+END
+nota_daftar_syaratnyata.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/nota/nota_daftar_syaratnyata.jsp
+END
+borang_fail.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/nota/borang_fail.jsp
+END
+popupSelect.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/nota/popupSelect.jsp
+END
+nota_daftar_recreateV2.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/nota/nota_daftar_recreateV2.jsp
+END
+daftar_kemaskini_hakmilik.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/nota/daftar_kemaskini_hakmilik.jsp
+END
+nota_daftar_luasdancukai.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/nota/nota_daftar_luasdancukai.jsp
+END
+nota_daftar_urusanterlibat.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/nota/nota_daftar_urusanterlibat.jsp
+END
+nota_daftar_luascukaisyarat.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/nota/nota_daftar_luascukaisyarat.jsp
+END
+popupMaklumatKait.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/nota/popupMaklumatKait.jsp
+END
+nota_daftar_penguatkuasaan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/nota/nota_daftar_penguatkuasaan.jsp
+END
+nota_daftar_nofail.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/nota/nota_daftar_nofail.jsp
+END
+nota_daftar_pelupusan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/nota/nota_daftar_pelupusan.jsp
+END
+nota_daftar_pengambilan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/nota/nota_daftar_pengambilan.jsp
+END
+nota_daftar_luascukaisyarat_MELAKA.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/nota/nota_daftar_luascukaisyarat_MELAKA.jsp
+END
+popup_kodsyaratnyata.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/nota/popup_kodsyaratnyata.jsp
+END
+carianNsekatan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/nota/carianNsekatan.jsp
+END
+nota_daftar_pengambilanbatal.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/daftar/nota/nota_daftar_pengambilanbatal.jsp
+END

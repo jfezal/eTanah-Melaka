@@ -1,0 +1,2555 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/eTanah/!svn/ver/5344/trunk/devel/etanahModel/src/main/java/etanah/model
+END
+IntegrasiPermohonanDokumen.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/IntegrasiPermohonanDokumen.java
+END
+PermohonanRujukanLuarSalinan.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanRujukanLuarSalinan.java
+END
+PihakPengarah.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PihakPengarah.java
+END
+KodCaraBayaran.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodCaraBayaran.java
+END
+KodStatusPortal.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodStatusPortal.java
+END
+DokumenKewanganSiri.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/DokumenKewanganSiri.java
+END
+PermohonanAsal.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanAsal.java
+END
+KodAduanPortal.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodAduanPortal.java
+END
+KodPerintah.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodPerintah.java
+END
+KodSekatanKepentingan.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/eTanah/!svn/ver/1646/trunk/devel/etanahModel/src/main/java/etanah/model/KodSekatanKepentingan.java
+END
+SejarahDokumenKewangan.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/SejarahDokumenKewangan.java
+END
+AuditDataId.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/AuditDataId.java
+END
+PermohonanPihakKemaskini.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/eTanah/!svn/ver/2615/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanPihakKemaskini.java
+END
+SiasatanAduanImej.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/SiasatanAduanImej.java
+END
+Pemaju.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/Pemaju.java
+END
+CukaiPetak.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/1738/trunk/devel/etanahModel/src/main/java/etanah/model/CukaiPetak.java
+END
+PermohonanTuntutanKos.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanTuntutanKos.java
+END
+KodHakmilik.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodHakmilik.java
+END
+KodBilik.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodBilik.java
+END
+KodStsPembida.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodStsPembida.java
+END
+PermohonanPengguna.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanPengguna.java
+END
+JUBL.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/eTanah/!svn/ver/6/trunk/devel/etanahModel/src/main/java/etanah/model/JUBL.java
+END
+PermohonanPembetulanHakmilik.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/eTanah/!svn/ver/3381/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanPembetulanHakmilik.java
+END
+SejarahTransaksi.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/SejarahTransaksi.java
+END
+NotisPortalTransaksi.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/NotisPortalTransaksi.java
+END
+AduanPerbincangan.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/3901/trunk/devel/etanahModel/src/main/java/etanah/model/AduanPerbincangan.java
+END
+KodStatusAkaun.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodStatusAkaun.java
+END
+FasaPermohonan.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/FasaPermohonan.java
+END
+FasaPermohonanLog.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/FasaPermohonanLog.java
+END
+KodJenisBadanKenderaan.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodJenisBadanKenderaan.java
+END
+CarianHakmilik.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/CarianHakmilik.java
+END
+KodBahanBakar.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodBahanBakar.java
+END
+PermohonanSemakDokumen.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanSemakDokumen.java
+END
+AduanSiasatan.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/AduanSiasatan.java
+END
+AkaunStrata.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/3337/trunk/devel/etanahModel/src/main/java/etanah/model/AkaunStrata.java
+END
+KodKadarPremium.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/3501/trunk/devel/etanahModel/src/main/java/etanah/model/KodKadarPremium.java
+END
+KodPBT.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodPBT.java
+END
+KodStatusTerima.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodStatusTerima.java
+END
+KodDUN.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodDUN.java
+END
+PermohonanLampiranPerintah.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanLampiranPerintah.java
+END
+KodJenisPendudukan.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodJenisPendudukan.java
+END
+EnkuiriPeminjam.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/EnkuiriPeminjam.java
+END
+KodTanah.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodTanah.java
+END
+OperasiAgensi.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/OperasiAgensi.java
+END
+KodAkaun.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodAkaun.java
+END
+KodJabatan.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodJabatan.java
+END
+Alamat.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/Alamat.java
+END
+UrusanDokumen.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/3963/trunk/devel/etanahModel/src/main/java/etanah/model/UrusanDokumen.java
+END
+Permit.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/eTanah/!svn/ver/2788/trunk/devel/etanahModel/src/main/java/etanah/model/Permit.java
+END
+KodAgensiKutipanCawangan.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodAgensiKutipanCawangan.java
+END
+KodStatusEnkuiriPenguatkuasaan.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodStatusEnkuiriPenguatkuasaan.java
+END
+Notifikasi.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/Notifikasi.java
+END
+KodUrusanAgensi.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodUrusanAgensi.java
+END
+KodPerhubunganPermohonan.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodPerhubunganPermohonan.java
+END
+NotisPortalPengguna.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/NotisPortalPengguna.java
+END
+CaraBayaran.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/4967/trunk/devel/etanahModel/src/main/java/etanah/model/CaraBayaran.java
+END
+AduanOrangKenaSyak.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/AduanOrangKenaSyak.java
+END
+KodPenyerah.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodPenyerah.java
+END
+AduanPortal.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/AduanPortal.java
+END
+Kompaun.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/Kompaun.java
+END
+PermohonanPihakWakil.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanPihakWakil.java
+END
+IntegrasiPermohonan.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/IntegrasiPermohonan.java
+END
+PermohonanJentera.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanJentera.java
+END
+KodSenarai.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodSenarai.java
+END
+PermohonanKertas.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/1860/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanKertas.java
+END
+WakilHakmilik.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/WakilHakmilik.java
+END
+KodPeranan.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodPeranan.java
+END
+KodJenisPembangunan.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodJenisPembangunan.java
+END
+PermohonanKertasUlasan.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/eTanah/!svn/ver/1322/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanKertasUlasan.java
+END
+PermohonanLaporanUlasan.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanLaporanUlasan.java
+END
+OperasiPenguatkuasaan.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/OperasiPenguatkuasaan.java
+END
+Auditable.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/Auditable.java
+END
+PegawaiPenyiasat.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PegawaiPenyiasat.java
+END
+KodCaraPermohonan.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodCaraPermohonan.java
+END
+WakilKuasa.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/WakilKuasa.java
+END
+KodJenisPengenalan.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodJenisPengenalan.java
+END
+SejarahCaraBayaran.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/SejarahCaraBayaran.java
+END
+KonfigurasiSistem.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KonfigurasiSistem.java
+END
+AduanStrata.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/AduanStrata.java
+END
+PenyerahBarangOperasi.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PenyerahBarangOperasi.java
+END
+PermitSahLaku.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermitSahLaku.java
+END
+PermohonanTuntutan.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanTuntutan.java
+END
+KodKelapanganTanah.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodKelapanganTanah.java
+END
+PenyerahSokongan.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/1623/trunk/devel/etanahModel/src/main/java/etanah/model/PenyerahSokongan.java
+END
+KodKegunaanPetak.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodKegunaanPetak.java
+END
+PermohonanAduan.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/3865/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanAduan.java
+END
+PermohonanKertasKeputusan.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanKertasKeputusan.java
+END
+PemohonTanah.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PemohonTanah.java
+END
+NotisButiran.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/NotisButiran.java
+END
+KodLaporanEMMKN.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodLaporanEMMKN.java
+END
+SyaratPendudukan.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/SyaratPendudukan.java
+END
+AgensiKutipanDokumen.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/AgensiKutipanDokumen.java
+END
+SiasatanPerihalKemudahan.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/SiasatanPerihalKemudahan.java
+END
+SejarahHakmilik.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/SejarahHakmilik.java
+END
+Aduan.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/Aduan.java
+END
+KodVotDana.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/4625/trunk/devel/etanahModel/src/main/java/etanah/model/KodVotDana.java
+END
+Notis.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/Notis.java
+END
+AuditRekodHapus.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/AuditRekodHapus.java
+END
+KodKadarCukai.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodKadarCukai.java
+END
+KodJenisPihakBerkepentingan.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodJenisPihakBerkepentingan.java
+END
+PermohonanPihakMembantah.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanPihakMembantah.java
+END
+KandunganFolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KandunganFolder.java
+END
+HakmilikPermohonanB1.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/eTanah/!svn/ver/1623/trunk/devel/etanahModel/src/main/java/etanah/model/HakmilikPermohonanB1.java
+END
+PermitLPSRekod.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermitLPSRekod.java
+END
+PermohonanFasaGis.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanFasaGis.java
+END
+PermohonanUrusan.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/3390/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanUrusan.java
+END
+AmbilPampasan.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/4111/trunk/devel/etanahModel/src/main/java/etanah/model/AmbilPampasan.java
+END
+PermohonanPerbicaraanKehadiran.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanPerbicaraanKehadiran.java
+END
+KumpulanHakmilik.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KumpulanHakmilik.java
+END
+KodNegeri.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/eTanah/!svn/ver/1267/trunk/devel/etanahModel/src/main/java/etanah/model/KodNegeri.java
+END
+DasarTuntutanNotis.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/DasarTuntutanNotis.java
+END
+KodJenisSuratKuasa.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodJenisSuratKuasa.java
+END
+SejarahDokumenKewanganBayaran.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/SejarahDokumenKewanganBayaran.java
+END
+PenempatanPeserta.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PenempatanPeserta.java
+END
+KodCawangan.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/2068/trunk/devel/etanahModel/src/main/java/etanah/model/KodCawangan.java
+END
+KodStatusBarangRampasan.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodStatusBarangRampasan.java
+END
+KodStatusDokumenKewangan.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodStatusDokumenKewangan.java
+END
+InfoAudit.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/eTanah/!svn/ver/361/trunk/devel/etanahModel/src/main/java/etanah/model/InfoAudit.java
+END
+KodPeringkat.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/1418/trunk/devel/etanahModel/src/main/java/etanah/model/KodPeringkat.java
+END
+MenuItem.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/MenuItem.java
+END
+PortalPengguna.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PortalPengguna.java
+END
+PermohonanLaporanPohon.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanLaporanPohon.java
+END
+KodHartaBersama.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodHartaBersama.java
+END
+PermohonanAtasPerserahan.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanAtasPerserahan.java
+END
+BongkarKehadiran.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/BongkarKehadiran.java
+END
+KodKategoriAgensi.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodKategoriAgensi.java
+END
+Projek.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/eTanah/!svn/ver/3263/trunk/devel/etanahModel/src/main/java/etanah/model/Projek.java
+END
+SalinanKepada.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/SalinanKepada.java
+END
+PihakCawangan.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PihakCawangan.java
+END
+PermohonanAnsuran.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/5317/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanAnsuran.java
+END
+LampiranPerintah.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/LampiranPerintah.java
+END
+PenguatkuasaanBarangJual.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PenguatkuasaanBarangJual.java
+END
+PermohonanMahkamah.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/4210/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanMahkamah.java
+END
+KodDokumen.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/3104/trunk/devel/etanahModel/src/main/java/etanah/model/KodDokumen.java
+END
+ImejLaporan.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/ImejLaporan.java
+END
+Pembida.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/eTanah/!svn/ver/638/trunk/devel/etanahModel/src/main/java/etanah/model/Pembida.java
+END
+PermohonanSuratPembetulan.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanSuratPembetulan.java
+END
+PermohonanLaporanPendudukan.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanLaporanPendudukan.java
+END
+PortalLog.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/eTanah/!svn/ver/5293/trunk/devel/etanahModel/src/main/java/etanah/model/PortalLog.java
+END
+KodTransIspeks.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/4625/trunk/devel/etanahModel/src/main/java/etanah/model/KodTransIspeks.java
+END
+PermohonanPeguam.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanPeguam.java
+END
+PermohonanLaporanUsaha.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanLaporanUsaha.java
+END
+LelonganAwam.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/LelonganAwam.java
+END
+KodGelaran.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodGelaran.java
+END
+KodUrusan.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodUrusan.java
+END
+LaporanPemulihanTanah.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/LaporanPemulihanTanah.java
+END
+KodKategoriBangunan.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodKategoriBangunan.java
+END
+PermitItem.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermitItem.java
+END
+NoPt.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/eTanah/!svn/ver/1623/trunk/devel/etanahModel/src/main/java/etanah/model/NoPt.java
+END
+KodFlagPihak.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodFlagPihak.java
+END
+PermohonanKertasImej.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanKertasImej.java
+END
+KodLot.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodLot.java
+END
+PortalPengumuman.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/2523/trunk/devel/etanahModel/src/main/java/etanah/model/PortalPengumuman.java
+END
+KodCawanganJabatan.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodCawanganJabatan.java
+END
+KodStatusMohonPihak.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodStatusMohonPihak.java
+END
+KodAgensiKutipan.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodAgensiKutipan.java
+END
+PermohonanManual.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanManual.java
+END
+LogPenggunaApplikasi.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/LogPenggunaApplikasi.java
+END
+KodPerananOperasi.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodPerananOperasi.java
+END
+KodRizab.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodRizab.java
+END
+PermohonanSemakPelan.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/eTanah/!svn/ver/1504/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanSemakPelan.java
+END
+IntegrasiDokumen.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/IntegrasiDokumen.java
+END
+KodStatusEnkuiri.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodStatusEnkuiri.java
+END
+KodBank.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/eTanah/!svn/ver/2842/trunk/devel/etanahModel/src/main/java/etanah/model/KodBank.java
+END
+WakilKuasaPenerima.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/WakilKuasaPenerima.java
+END
+KodKeputusan.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodKeputusan.java
+END
+KodWarganegara.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/1459/trunk/devel/etanahModel/src/main/java/etanah/model/KodWarganegara.java
+END
+KodPengambilanTuntutan.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodPengambilanTuntutan.java
+END
+KodBatalDokumenKewangan.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodBatalDokumenKewangan.java
+END
+PortalTransaksi.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PortalTransaksi.java
+END
+PermohonanSemakPelanHakmilik.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/eTanah/!svn/ver/1503/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanSemakPelanHakmilik.java
+END
+SkimStrata.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/2552/trunk/devel/etanahModel/src/main/java/etanah/model/SkimStrata.java
+END
+SuratRujukanLuar.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/SuratRujukanLuar.java
+END
+KodJantina.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodJantina.java
+END
+WakilPihak.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/1325/trunk/devel/etanahModel/src/main/java/etanah/model/WakilPihak.java
+END
+WaranPihak.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/WaranPihak.java
+END
+SytJuruLelong.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/SytJuruLelong.java
+END
+KodPerserahan.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodPerserahan.java
+END
+KodUrusanHalang.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodUrusanHalang.java
+END
+PermohonanPlotSyaratNyata.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/eTanah/!svn/ver/1623/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanPlotSyaratNyata.java
+END
+PermitItemKuantiti.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermitItemKuantiti.java
+END
+KodCaraBayaranAgensi.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodCaraBayaranAgensi.java
+END
+KodStatusUlasanJabatanTeknikal.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodStatusUlasanJabatanTeknikal.java
+END
+PermohonanPermitButir.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanPermitButir.java
+END
+WakilKuasaPemberi.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/WakilKuasaPemberi.java
+END
+PenghantarNotis.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PenghantarNotis.java
+END
+KodKategoriItemRampasan.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodKategoriItemRampasan.java
+END
+Ansuran.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/Ansuran.java
+END
+KodDokumenIringan.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodDokumenIringan.java
+END
+PermohonanPihakHubungan.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanPihakHubungan.java
+END
+DokumenKewangan.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/DokumenKewangan.java
+END
+DokumenCapaian.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/DokumenCapaian.java
+END
+KodKategoriTanah.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/1248/trunk/devel/etanahModel/src/main/java/etanah/model/KodKategoriTanah.java
+END
+KodSyaratAm.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodSyaratAm.java
+END
+MenuCapaian.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/MenuCapaian.java
+END
+KodKategoriAkaun.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodKategoriAkaun.java
+END
+KodBahanBatu.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodBahanBatu.java
+END
+PermohonanCarian.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanCarian.java
+END
+DasarTuntutanCukaiHakmilik.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/DasarTuntutanCukaiHakmilik.java
+END
+KodKategoriPampasan.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodKategoriPampasan.java
+END
+NotisPenguatkuasaan.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/NotisPenguatkuasaan.java
+END
+PermohonanNota.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanNota.java
+END
+LanjutanTempoh.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/LanjutanTempoh.java
+END
+PermohonanHakmilikUrusanSebelum.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanHakmilikUrusanSebelum.java
+END
+PermohonanPermitImej.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanPermitImej.java
+END
+JabatanKerajaan.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/JabatanKerajaan.java
+END
+KodMatawang.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodMatawang.java
+END
+Akaun.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/eTanah/!svn/ver/2776/trunk/devel/etanahModel/src/main/java/etanah/model/Akaun.java
+END
+SejarahDokumen.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/SejarahDokumen.java
+END
+KodKementerian.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodKementerian.java
+END
+KodKegunaanBangunan.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/1460/trunk/devel/etanahModel/src/main/java/etanah/model/KodKegunaanBangunan.java
+END
+KodKegunaanRuangUdara.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodKegunaanRuangUdara.java
+END
+KodStatusLelongan.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodStatusLelongan.java
+END
+HakmilikKertas.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/HakmilikKertas.java
+END
+KodKumpulanHakmilik.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodKumpulanHakmilik.java
+END
+PermohonanPermitItem.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanPermitItem.java
+END
+KodBandarPekanMukim.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodBandarPekanMukim.java
+END
+KodInduk.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/eTanah/!svn/ver/3391/trunk/devel/etanahModel/src/main/java/etanah/model/KodInduk.java
+END
+EndorsCukaiB4K.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/1778/trunk/devel/etanahModel/src/main/java/etanah/model/EndorsCukaiB4K.java
+END
+TanahRizabPermohonan.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/eTanah/!svn/ver/1895/trunk/devel/etanahModel/src/main/java/etanah/model/TanahRizabPermohonan.java
+END
+PermohonanLaporanKandungan.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanLaporanKandungan.java
+END
+KumpulanAkaun.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KumpulanAkaun.java
+END
+BangunanPetakAksesori.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/BangunanPetakAksesori.java
+END
+PermohonanPihak.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/934/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanPihak.java
+END
+PermohonanPermit.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanPermit.java
+END
+BorangQ.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/BorangQ.java
+END
+PenyeliaPengguna.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PenyeliaPengguna.java
+END
+LogWS.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/eTanah/!svn/ver/4928/trunk/devel/etanahModel/src/main/java/etanah/model/LogWS.java
+END
+InfoAuditBaru.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/359/trunk/devel/etanahModel/src/main/java/etanah/model/InfoAuditBaru.java
+END
+Pihak.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/eTanah/!svn/ver/5319/trunk/devel/etanahModel/src/main/java/etanah/model/Pihak.java
+END
+PemohonHubungan.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PemohonHubungan.java
+END
+EnkuiriPenguatkuasaan.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/EnkuiriPenguatkuasaan.java
+END
+KodKeadaanTanah.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/4469/trunk/devel/etanahModel/src/main/java/etanah/model/KodKeadaanTanah.java
+END
+HakmilikWaris.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/HakmilikWaris.java
+END
+Lelongan.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/Lelongan.java
+END
+KodStatusTuntutanCukai.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodStatusTuntutanCukai.java
+END
+KodWarnaKP.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodWarnaKP.java
+END
+PermohonanPlotKpsn.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/1623/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanPlotKpsn.java
+END
+AduanTindakan.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/AduanTindakan.java
+END
+KodSyorUlasanJabatanTeknikal.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodSyorUlasanJabatanTeknikal.java
+END
+KodAgensi.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodAgensi.java
+END
+TugasanUtiliti.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/1418/trunk/devel/etanahModel/src/main/java/etanah/model/TugasanUtiliti.java
+END
+Permohonan.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/3599/trunk/devel/etanahModel/src/main/java/etanah/model/Permohonan.java
+END
+Enkuiri.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/Enkuiri.java
+END
+HakmilikSebelum.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/HakmilikSebelum.java
+END
+KertasRisalat.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/1561/trunk/devel/etanahModel/src/main/java/etanah/model/KertasRisalat.java
+END
+StorRampasan.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/StorRampasan.java
+END
+PermitRuangUdara.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermitRuangUdara.java
+END
+BangunanTingkat.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/BangunanTingkat.java
+END
+DokumenKewanganBayaran.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/DokumenKewanganBayaran.java
+END
+BarangRampasan.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/BarangRampasan.java
+END
+KodUnit.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodUnit.java
+END
+InfoMmkn.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/eTanah/!svn/ver/3405/trunk/devel/etanahModel/src/main/java/etanah/model/InfoMmkn.java
+END
+KodJnsPemohon.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/1403/trunk/devel/etanahModel/src/main/java/etanah/model/KodJnsPemohon.java
+END
+PermohonanPerserahan.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanPerserahan.java
+END
+PermohonanLaporanCerun.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanLaporanCerun.java
+END
+KodTransaksiTuntut.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodTransaksiTuntut.java
+END
+PermohonanHartaBersama.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanHartaBersama.java
+END
+PermohonanPembetulanUrusan.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/eTanah/!svn/ver/1518/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanPembetulanUrusan.java
+END
+IntegrasiPermohonanButir.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/IntegrasiPermohonanButir.java
+END
+PermohonanJUBL.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanJUBL.java
+END
+PermohonanPlotPelan.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/1623/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanPlotPelan.java
+END
+Integrasi.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/Integrasi.java
+END
+KodPeringkatPeranan.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/1623/trunk/devel/etanahModel/src/main/java/etanah/model/KodPeringkatPeranan.java
+END
+HakmilikUrusan.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/HakmilikUrusan.java
+END
+KodKlasifikasi.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodKlasifikasi.java
+END
+LupusPermit.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/LupusPermit.java
+END
+HakmilikPermohonanBaru.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/eTanah/!svn/ver/4246/trunk/devel/etanahModel/src/main/java/etanah/model/HakmilikPermohonanBaru.java
+END
+AduanLokasi.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/AduanLokasi.java
+END
+KodStatusDokumenCapai.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodStatusDokumenCapai.java
+END
+KodKeputusanMahkamah.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodKeputusanMahkamah.java
+END
+Pemohon.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/eTanah/!svn/ver/3863/trunk/devel/etanahModel/src/main/java/etanah/model/Pemohon.java
+END
+PermohonanAtasPihakBerkepentingan.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/eTanah/!svn/ver/150/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanAtasPihakBerkepentingan.java
+END
+KodTujuanUkur.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodTujuanUkur.java
+END
+PermohonanPlotSekatan.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/eTanah/!svn/ver/1623/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanPlotSekatan.java
+END
+KodSeksyen.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodSeksyen.java
+END
+KodStatusTanahLepasPengambilan.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodStatusTanahLepasPengambilan.java
+END
+ImejLaporanStrata.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/ImejLaporanStrata.java
+END
+SenaraiKodRujukan.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/SenaraiKodRujukan.java
+END
+HakmilikAsalPermohonan.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/HakmilikAsalPermohonan.java
+END
+HakmilikPihakBerkepentingan.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/eTanah/!svn/ver/3185/trunk/devel/etanahModel/src/main/java/etanah/model/HakmilikPihakBerkepentingan.java
+END
+BilCukai.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/eTanah/!svn/ver/2715/trunk/devel/etanahModel/src/main/java/etanah/model/BilCukai.java
+END
+HakmilikLama.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/HakmilikLama.java
+END
+PermohonanRayuan.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/2255/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanRayuan.java
+END
+BadanBerkanun.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/BadanBerkanun.java
+END
+KodUnitJabatan.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodUnitJabatan.java
+END
+KodSyaratNyata.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/2080/trunk/devel/etanahModel/src/main/java/etanah/model/KodSyaratNyata.java
+END
+PenjaminBarangRampasan.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PenjaminBarangRampasan.java
+END
+SyaratTambahanLelong.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/SyaratTambahanLelong.java
+END
+PermohonanSaksi.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanSaksi.java
+END
+PerbadananPengurusan.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PerbadananPengurusan.java
+END
+KodStatusPengguna.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodStatusPengguna.java
+END
+WakilKuasaHakmilik.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/WakilKuasaHakmilik.java
+END
+KodKelasTanah.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/1681/trunk/devel/etanahModel/src/main/java/etanah/model/KodKelasTanah.java
+END
+LanjutanBayaran.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/LanjutanBayaran.java
+END
+TransaksiHadapan.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/TransaksiHadapan.java
+END
+KodItemPermit.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodItemPermit.java
+END
+KodTindakanPenguatkuasaan.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodTindakanPenguatkuasaan.java
+END
+HakmilikPetakAksesori.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/eTanah/!svn/ver/1317/trunk/devel/etanahModel/src/main/java/etanah/model/HakmilikPetakAksesori.java
+END
+AliranBaru.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/AliranBaru.java
+END
+PihakAlamatTamb.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PihakAlamatTamb.java
+END
+KodDaerah.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodDaerah.java
+END
+SenaraiRujukan.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/SenaraiRujukan.java
+END
+KodKategoriTransaksi.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodKategoriTransaksi.java
+END
+KodSuku.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodSuku.java
+END
+PermohonanKutipanDokumen.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanKutipanDokumen.java
+END
+PermohonanPermitKand.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanPermitKand.java
+END
+KodPerhubunganHakmilik.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodPerhubunganHakmilik.java
+END
+Kehadiran.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/Kehadiran.java
+END
+AduanBayaran.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/3902/trunk/devel/etanahModel/src/main/java/etanah/model/AduanBayaran.java
+END
+TugasanUtiliti2.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/3697/trunk/devel/etanahModel/src/main/java/etanah/model/TugasanUtiliti2.java
+END
+KodBangsa.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodBangsa.java
+END
+KodStatusHakmilik.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodStatusHakmilik.java
+END
+TanahRizabPermohonanJenisRizab.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/TanahRizabPermohonanJenisRizab.java
+END
+HakmilikSebelumPermohonan.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/HakmilikSebelumPermohonan.java
+END
+Transaksi.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/eTanah/!svn/ver/2205/trunk/devel/etanahModel/src/main/java/etanah/model/Transaksi.java
+END
+KodKegunaanKenderaan.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodKegunaanKenderaan.java
+END
+KodTuntut.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodTuntut.java
+END
+KodJenisLaluan.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodJenisLaluan.java
+END
+PermohonanLaporanPelan.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanLaporanPelan.java
+END
+Pengguna.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/eTanah/!svn/ver/1434/trunk/devel/etanahModel/src/main/java/etanah/model/Pengguna.java
+END
+UrusanAliran.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/UrusanAliran.java
+END
+KodMaklumatInduk.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/3391/trunk/devel/etanahModel/src/main/java/etanah/model/KodMaklumatInduk.java
+END
+OperasiBarangPenguatkuasaan.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/OperasiBarangPenguatkuasaan.java
+END
+LelonganSuku.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/LelonganSuku.java
+END
+AduanSurat.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/3901/trunk/devel/etanahModel/src/main/java/etanah/model/AduanSurat.java
+END
+KodStatusPermohonan.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodStatusPermohonan.java
+END
+KodKutipan.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodKutipan.java
+END
+OperasiPenguatkuasaanPasukan.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/OperasiPenguatkuasaanPasukan.java
+END
+LogAkaunKewangan.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/LogAkaunKewangan.java
+END
+LaporanTandaSempadan.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/LaporanTandaSempadan.java
+END
+KodRujukan.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodRujukan.java
+END
+PermohonanPihakTidakBerkepentingan.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanPihakTidakBerkepentingan.java
+END
+BangunanPetak.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/5341/trunk/devel/etanahModel/src/main/java/etanah/model/BangunanPetak.java
+END
+KodKadarBayaran.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodKadarBayaran.java
+END
+PermohonanWaranItem.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanWaranItem.java
+END
+KodJenisPindahmilik.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/3391/trunk/devel/etanahModel/src/main/java/etanah/model/KodJenisPindahmilik.java
+END
+StatusTanahLepasPengambilan.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/StatusTanahLepasPengambilan.java
+END
+PermohonanStrata.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/982/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanStrata.java
+END
+Hakmilik.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/eTanah/!svn/ver/5341/trunk/devel/etanahModel/src/main/java/etanah/model/Hakmilik.java
+END
+PermohonanDokumen.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanDokumen.java
+END
+PermohonanTandatanganDokumen.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanTandatanganDokumen.java
+END
+KodJenisEnkuiri.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodJenisEnkuiri.java
+END
+FolderDokumen.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/FolderDokumen.java
+END
+PermohonanRujukanLuarPeranan.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanRujukanLuarPeranan.java
+END
+JteknikalDokumenTerima.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/JteknikalDokumenTerima.java
+END
+KodKategoriBayaran.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodKategoriBayaran.java
+END
+KodStatusPermit.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodStatusPermit.java
+END
+AduanPemantauan.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/AduanPemantauan.java
+END
+KodPerananRujukanLuar.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodPerananRujukanLuar.java
+END
+HakmilikUrusanSurat.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/HakmilikUrusanSurat.java
+END
+KodPemilikan.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodPemilikan.java
+END
+KodJadualKedua.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodJadualKedua.java
+END
+Waran.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/Waran.java
+END
+PenasihatUndang.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PenasihatUndang.java
+END
+PermohonanAktiviti.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanAktiviti.java
+END
+KodStatusTransaksiKewangan.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodStatusTransaksiKewangan.java
+END
+AlamatSurat.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/AlamatSurat.java
+END
+HakmilikPermohonan.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/3884/trunk/devel/etanahModel/src/main/java/etanah/model/HakmilikPermohonan.java
+END
+LaporanTanahSempadan.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/eTanah/!svn/ver/1896/trunk/devel/etanahModel/src/main/java/etanah/model/LaporanTanahSempadan.java
+END
+JuruLelong.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/JuruLelong.java
+END
+UlasanJabatanTeknikal.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/UlasanJabatanTeknikal.java
+END
+Versi4k.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/eTanah/!svn/ver/2665/trunk/devel/etanahModel/src/main/java/etanah/model/Versi4k.java
+END
+PermohonanTuntutanBayar.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanTuntutanBayar.java
+END
+PermohonanLaporanKawasan.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanLaporanKawasan.java
+END
+KodNotis.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodNotis.java
+END
+PermohonanSkim.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/2219/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanSkim.java
+END
+KodPenubuhanSyarikat.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/eTanah/!svn/ver/1346/trunk/devel/etanahModel/src/main/java/etanah/model/KodPenubuhanSyarikat.java
+END
+KodCaraPenghantaran.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodCaraPenghantaran.java
+END
+PermohonanBahanBatuan.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanBahanBatuan.java
+END
+BayaranPendudukan.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/BayaranPendudukan.java
+END
+KodTransaksi.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodTransaksi.java
+END
+PermohonanLaporanBangunan.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanLaporanBangunan.java
+END
+KodPanggilan.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodPanggilan.java
+END
+PermohonanPerbicaraan.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanPerbicaraan.java
+END
+PermohonanTuntutanButiran.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanTuntutanButiran.java
+END
+PermohonanDokumenIringan.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanDokumenIringan.java
+END
+SloganSurat.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/SloganSurat.java
+END
+KodKegunaanTanah.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/1247/trunk/devel/etanahModel/src/main/java/etanah/model/KodKegunaanTanah.java
+END
+PermohonanPenggunaDitolak.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanPenggunaDitolak.java
+END
+WarisOrangKenaSyak.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/WarisOrangKenaSyak.java
+END
+PermohonanKertasButiran.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanKertasButiran.java
+END
+SiriNoPt.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/SiriNoPt.java
+END
+PermohonanKelompok.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanKelompok.java
+END
+HakmilikAlamat.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/HakmilikAlamat.java
+END
+Penyerah.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/Penyerah.java
+END
+KodStrukturTanah.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodStrukturTanah.java
+END
+Peguam.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/Peguam.java
+END
+PermohonanBangunan.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/725/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanBangunan.java
+END
+KodJadualKetiga.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodJadualKetiga.java
+END
+KodKecerunanTanah.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodKecerunanTanah.java
+END
+KodJenisPermit.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodJenisPermit.java
+END
+PelaksanaWaran.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PelaksanaWaran.java
+END
+JuruRancangBerlesen.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/JuruRancangBerlesen.java
+END
+AuditData.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/AuditData.java
+END
+MesyuaratPenguatkuasaan.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/MesyuaratPenguatkuasaan.java
+END
+Dokumen.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/Dokumen.java
+END
+KodKategoriItemPermit.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodKategoriItemPermit.java
+END
+KodAliran.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodAliran.java
+END
+EnkuiriPenguatkuasaanKehadiran.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/EnkuiriPenguatkuasaanKehadiran.java
+END
+KodKeputusanPendakwaan.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodKeputusanPendakwaan.java
+END
+PermohonanKertasKandungan.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/eTanah/!svn/ver/1679/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanKertasKandungan.java
+END
+LaporanTanah.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/LaporanTanah.java
+END
+PenggunaPeranan.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PenggunaPeranan.java
+END
+KehadiranMesyuaratPenguatkuasaan.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KehadiranMesyuaratPenguatkuasaan.java
+END
+KodSekolahBantuanModal.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodSekolahBantuanModal.java
+END
+DasarTuntutanCukai.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/DasarTuntutanCukai.java
+END
+LogKaunter.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/LogKaunter.java
+END
+KodKawasanParlimen.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodKawasanParlimen.java
+END
+KodKegunaanPetakAksesori.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/eTanah/!svn/ver/1175/trunk/devel/etanahModel/src/main/java/etanah/model/KodKegunaanPetakAksesori.java
+END
+PermohonanRujukanLuarDokumen.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanRujukanLuarDokumen.java
+END
+PermohonanUkur.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanUkur.java
+END
+PermohonanPihakPendeposit.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanPihakPendeposit.java
+END
+PermitInfoPerbaharui.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermitInfoPerbaharui.java
+END
+PermohonanSyarikatLelong.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanSyarikatLelong.java
+END
+PermitStrukturDiluluskan.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermitStrukturDiluluskan.java
+END
+SiasatanPerihalBangunan.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/SiasatanPerihalBangunan.java
+END
+KodJawatan.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodJawatan.java
+END
+KodDokumenAgensi.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodDokumenAgensi.java
+END
+AkuanTerimaDeposit.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/AkuanTerimaDeposit.java
+END
+HakmilikAsal.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/HakmilikAsal.java
+END
+PermohonanRujukanLuar.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/eTanah/!svn/ver/1366/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanRujukanLuar.java
+END
+KodNegara.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodNegara.java
+END
+KodUOM.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/KodUOM.java
+END
+PermohonanHubungan.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/java/etanah/model/PermohonanHubungan.java
+END

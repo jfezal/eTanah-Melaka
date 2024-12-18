@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/5343/trunk/devel/etanahViewController/src/main/java/etanah/view/hasil/validator
+END
+AnsuranValidateDate.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/hasil/validator/AnsuranValidateDate.java
+END
+MaklumanNSValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/hasil/validator/MaklumanNSValidation.java
+END
+AnsuranTolak.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/hasil/validator/AnsuranTolak.java
+END
+AnsuranValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5340/trunk/devel/etanahViewController/src/main/java/etanah/view/hasil/validator/AnsuranValidation.java
+END
+MaklumanNotis.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/hasil/validator/MaklumanNotis.java
+END
+AnsuranLulusN9.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/eTanah/!svn/ver/5343/trunk/devel/etanahViewController/src/main/java/etanah/view/hasil/validator/AnsuranLulusN9.java
+END
+IntegrationEMMKNV2.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/hasil/validator/IntegrationEMMKNV2.java
+END
+MaklumanMlkValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5339/trunk/devel/etanahViewController/src/main/java/etanah/view/hasil/validator/MaklumanMlkValidation.java
+END
+NotisGantianValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/1587/trunk/devel/etanahViewController/src/main/java/etanah/view/hasil/validator/NotisGantianValidator.java
+END
+DepositTidakDiTuntut.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/hasil/validator/DepositTidakDiTuntut.java
+END
+RemisyenValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/hasil/validator/RemisyenValidation.java
+END
+PenguranganDendaValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/hasil/validator/PenguranganDendaValidator.java
+END
+PenguranganDendaValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/hasil/validator/PenguranganDendaValidation.java
+END

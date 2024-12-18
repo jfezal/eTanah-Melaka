@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/eTanah/!svn/ver/5163/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/strata/bngn_khas
+END
+maklumat_bangunan.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/4977/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/strata/bngn_khas/maklumat_bangunan.jsp
+END
+sediaSurat.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/5140/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/strata/bngn_khas/sediaSurat.jsp
+END
+kpsn_MMMKNView.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/5089/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/strata/bngn_khas/kpsn_MMMKNView.jsp
+END
+paparsuratPKBK.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/5000/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/strata/bngn_khas/paparsuratPKBK.jsp
+END
+kpsn_MMMKN.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/5120/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/strata/bngn_khas/kpsn_MMMKN.jsp
+END
+tambah_bangunan_khas.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/4977/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/strata/bngn_khas/tambah_bangunan_khas.jsp
+END
+update_bangunan_khas.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/5163/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/strata/bngn_khas/update_bangunan_khas.jsp
+END
+maklumat_bangunanReadOnly.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/eTanah/!svn/ver/4983/trunk/devel/etanahViewController/src/main/webapp/WEB-INF/jsp/strata/bngn_khas/maklumat_bangunanReadOnly.jsp
+END

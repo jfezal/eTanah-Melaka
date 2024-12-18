@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/eTanah/!svn/ver/5093/trunk/devel/eTanahClientWS/src/main/java/etanah/gpg/pgpfile
+END
+PGPExampleUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/eTanah/!svn/ver/4820/trunk/devel/eTanahClientWS/src/main/java/etanah/gpg/pgpfile/PGPExampleUtil.java
+END
+MyTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/4820/trunk/devel/eTanahClientWS/src/main/java/etanah/gpg/pgpfile/MyTest.java
+END
+PGPFileProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/eTanah/!svn/ver/4900/trunk/devel/eTanahClientWS/src/main/java/etanah/gpg/pgpfile/PGPFileProcessor.java
+END
+PGPUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eTanah/!svn/ver/4820/trunk/devel/eTanahClientWS/src/main/java/etanah/gpg/pgpfile/PGPUtils.java
+END
+DecryptService.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/eTanah/!svn/ver/5093/trunk/devel/eTanahClientWS/src/main/java/etanah/gpg/pgpfile/DecryptService.java
+END
+PGPUtilV2.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/4900/trunk/devel/eTanahClientWS/src/main/java/etanah/gpg/pgpfile/PGPUtilV2.java
+END
+DecryptServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/eTanah/!svn/ver/5093/trunk/devel/eTanahClientWS/src/main/java/etanah/gpg/pgpfile/DecryptServiceImpl.java
+END

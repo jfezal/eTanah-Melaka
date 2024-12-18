@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>etanah</artifactId>
+        <groupId>etanah</groupId>
+        <version>2.0-SNAPSHOT</version>
+        <relativePath>../etanahPom/pom.xml</relativePath>
+    </parent>
+    <groupId>etanah</groupId>
+    <artifactId>etanahModel</artifactId>
+    <version>2.0-SNAPSHOT</version>
+    <name>e-Tanah Model</name>
+
+    <build>
+        <defaultGoal>install</defaultGoal>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>              
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                        <systemProperties>
+                                <property>
+                                        <name>tangosol.coherence.clusterport</name>
+                                        <!-- PLEASE CHANGE THIS TO YOUR OWN UNIQUE PORT -->
+					<!-- letak aje pe2 value dari SEPULUH RIBU ke DUA PULUH RIBU ok -->
+					<!-- tapi jgn pakai value 10101 nih -->
+					<!-- VALID VALUE: FROM 10000 - 20000 -->
+                                        <value>10101</value>
+                                </property>
+                        </systemProperties>
+                </configuration>
+            </plugin>
+
+        </plugins>
+
+
+        <resources>
+          <resource>
+            <directory>src/main/resources</directory>
+            <filtering>true</filtering>
+          </resource>
+        </resources>
+
+        <testResources>
+          <testResource>
+            <directory>src/test/resources</directory>
+            <filtering>true</filtering>
+          </testResource>
+        </testResources>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>able</groupId>
+            <artifactId>able-lib</artifactId>
+            <version>0.1-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>slf4j-jdk14</artifactId>
+                    <groupId>org.slf4j</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!--<dependency>
+            <groupId>etanah</groupId>
+            <artifactId>etanahWorkflow</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>-->
+        <dependency>
+            <groupId>ojdbc</groupId>
+            <artifactId>ojdbc</artifactId>
+            <version>11.2.0.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>displaytag</groupId>
+            <artifactId>displaytag</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>bpm</groupId>
+            <artifactId>bpm-services</artifactId>
+            <version>1</version>
+        </dependency>
+        <dependency>
+            <groupId>bpm</groupId>
+            <artifactId>bpm-infra</artifactId>
+            <version>1</version>
+        </dependency>
+        <!-- jms-artifact: run with tomcat -->
+
+        <dependency>
+            <groupId>jms</groupId>
+            <artifactId>jms-artifact</artifactId>
+            <version>1</version>
+            <scope>provided</scope>
+        </dependency> 
+        <dependency>
+            <groupId>ldap</groupId>
+            <artifactId>ldap_lib</artifactId>
+            <version>1.0</version>
+        </dependency>        
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-jbosscache2</artifactId>
+			<version>3.3.2.GA</version>
+		</dependency>
+        <dependency>
+            <groupId>javax.annotation</groupId>
+            <artifactId>jsr250-api</artifactId>
+            <version>1.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+          <groupId>com.tangosol.coherence</groupId>
+          <artifactId>coherence-hibernate</artifactId>
+          <version>3.6</version>
+        </dependency>
+        <dependency>
+          <groupId>com.tangosol.coherence</groupId>
+          <artifactId>coherence</artifactId>
+          <version>3.6</version>
+        </dependency>
+        <!--<dependency>
+            <groupId>org.jlibrary</groupId>
+            <artifactId>jlibrary-server</artifactId>
+            <version>1.2</version>
+            <type>jar</type>
+        </dependency>-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.5.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>1.5.6</version>
+        </dependency>
+    </dependencies>
+
+<distributionManagement>
+    <snapshotRepository>
+        <id>Maven Repository Uploads</id>
+        <name>Maven Repository-snapshots</name>
+        <url>http://localhost:8188/artifactory/libs-snapshot-local</url>
+	<uniqueVersion>false</uniqueVersion>
+    </snapshotRepository>
+</distributionManagement>
+</project>
+
+
+

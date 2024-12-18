@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/resources
+END
+logging.properties
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/resources/logging.properties
+END
+treecache.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/resources/treecache.xml
+END
+tangosol-coherence-override.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eTanah/!svn/ver/3/trunk/devel/etanahModel/src/main/resources/tangosol-coherence-override.xml
+END

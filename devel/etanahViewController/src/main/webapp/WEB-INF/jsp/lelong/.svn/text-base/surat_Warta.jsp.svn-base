@@ -1,0 +1,79 @@
+<%-- 
+    Document   : surat_Warta
+    Created on : Oct 18, 2010, 4:52:26 PM
+    Author     : mazurahayati.yusop
+--%>
+
+<%@page contentType="text/html" pageEncoding="windows-1252"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib uri="http://displaytag.sf.net" prefix="display" %>
+<%@ include file="/WEB-INF/jsp/include/page_header.jspf" %>
+<script type="text/javascript">
+
+    function showReport(){
+        $.blockUI({
+            message: $('#displayBox'),
+            css: {
+                top:  ($(window).height() - 50) /2 + 'px',
+                left: ($(window).width() - 50) /2 + 'px',
+                width: '50px'
+            }
+        });
+        var url = '${pageContext.request.contextPath}/lelong/surat_Warta?genReport';
+        $.ajax({
+            type:"GET",
+            url : url,
+            dataType : 'html',
+            error : function(xhr, ajaxOptions, thrownError) {
+                alert('Terdapat masalah teknikal. Sila hubungi Pentadbir Sistem.');
+                $.unblockUI();
+            },
+            success : function(data) {
+                if(data.indexOf('Laporan telah dijana')==0){
+                    alert(data);
+                    $('#folder').click();
+                }else {
+                    alert(data);
+                    $('#urusan').click();
+                }
+                $.unblockUI();
+            }
+        });
+    }
+
+
+</script>
+<s:form beanclass="etanah.view.stripes.lelong.WartaActionBean">
+    <s:messages/>
+    <s:errors/>
+    <div class="subtitle">
+        <fieldset class="aras1">
+            <legend>
+                Warta 16H
+            </legend><br>
+            <c:if test="${semaWarta eq false}">
+                <p>
+                    <font size="2" color="Red">*</font> Sila Klik Butang Jana Dokumen Sebelum Selesai
+                </p>
+            </c:if>
+            <c:if test="${actionBean.view eq false}">
+                <p align="center"><br>
+                    <object type="application/pdf" width="1000" height="1200" data="${actionBean.iframeURL}#navpanes=0 &toolbar=0&messages=0"/>
+                </p>&nbsp;
+            </c:if>
+            <c:if test="${actionBean.view eq true}">
+                <p align="center"><br>
+                    <object type="application/pdf" data="${pageContext.request.contextPath}/lelong/view/${actionBean.idDokumen}#navpanes=0 &toolbar=0&messages=0" width="1000" height="1200"/>
+                    <%--<iframe src="${pageContext.request.contextPath}/lelong/surat_Warta?viewPdf#navpanes=0 &toolbar=0&messages=0" width="1000" height="1200" scrolling=yes/>--%>
+                </p>&nbsp;
+            </c:if>
+            <%--    <embed toolbar="0" src="${actionBean.iframeURL}">--%>
+            <c:if test="${semaWarta eq false}">
+                <p align="center">
+                    <s:button name="genReport" id="report" value="Jana Surat Warta" class="longbtn" onclick="showReport();"/>&nbsp;
+                </p>
+            </c:if>
+        </fieldset>
+    </div>
+</s:form>

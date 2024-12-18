@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<!--
+    Document   : bantahan_Ke_Mahkamah.xml
+    Created on : 30 May 2011, 11:58
+    Author     : massita @modified hazirah
+    Description:
+        Purpose of the document follows.
+-->
+<workflow id="http://xmlns.oracle.com/E_TANAH/ACQUISITION_MLK/HWACQCOURT_MLK">
+    <!--ptpengambilan-->
+    <stage id="01Semak_Permohonan" currentAction="Semakan Permohonan">
+        <txncode id="BMAHK">
+            <page id="1" title="Kemasukkan Permohonan">pengambilan/carianIdHakmilikBantahanMahkamah</page>
+            <page id="2" title="Maklumat Bantahan Mahkamah">/pengambilan/maklumatBantahanMahkamah?maklumatBantahanMahkamah</page>
+            <page id="3" title="Pendeposit">pengambilan/depositMahkamah</page>
+            <!--<page id="4" title="Borang O">pengambilan/rujukanPadaMahkamahCaterOneTT</page>-->
+            <page id="5" title="Masukkan Nama Penolong Kanan Pendaftar Mahkamah Tinggi">pengambilan/perintah_bm_2</page>
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <!--<page id="6" title="Akaun Deposit">pengambilan/depositBantahanMahkamah?showForm</page>
+            <page id="7" title="Bayaran Deposit">/kaunter/BayaranDepositBantahanMahkamah</page>
+            <page id="3" title="Rekod Penerimaan Deposit">pengambilan/rekodPenerimaanDeposit</page>-->
+            <!--<page id="3" title="Borang N">pengambilan/permohonan_supaya_bantahanCaterOneTT</page>-->
+            <!--<page id="5" title="Deraf Perintah">pengambilan/perintah_bm?showForm1</page>-->
+            <!--<page id="6" title="Perintah">pengambilan/perintah_bm?showForm2</page>-->
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <!--pptd-->
+    <stage id="02SemakanKedua" currentAction="Semakan Kedua dan Syorkan" advanceRule="true" pushback="true">
+        <txncode id="BMAHK">
+            <page id="2" title="Maklumat Bantahan Mahkamah">/pengambilan/maklumatBantahanMahkamah?maklumatBantahanMahkamah</page>
+            <page id="3" title="Pendeposit">pengambilan/depositMahkamah?showFormPapar</page>
+            <page id="5" title="Masukkan Nama Penolong Kanan Pendaftar Mahkamah Tinggi">pengambilan/perintah_bm_2</page>
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Tolak" value="T"/>
+                <outcome label="Lengkap" value="LK"/>
+            </outcomes>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="03JanaSrtTolak" currentAction="Jana Surat Tolak Permohonan">
+        <txncode id="BMAHK">
+            <page id="2" title="Maklumat Bantahan Mahkamah">/pengambilan/maklumatBantahanMahkamah?maklumatBantahanMahkamah</page>
+            <page id="3" title="Pendeposit">pengambilan/depositMahkamah?showFormPapar</page>
+            <page id="5" title="Masukkan Nama Penolong Kanan Pendaftar Mahkamah Tinggi">pengambilan/perintah_bm_2</page>
+            <page id="007" title="Tandatangan Manual">pengambilan/tandatangan_dokumenV2</page>
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQSrtTolakBMAHK_MLK.rdf" prefix="VDOC" code="STLK"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="04JanaSrtDeposit" currentAction="Jana dan Hantar Surat Mohon Bayar Deposit">
+        <txncode id="BMAHK">
+            <page id="2" title="Maklumat Bantahan Mahkamah">/pengambilan/maklumatBantahanMahkamah?maklumatBantahanMahkamah</page>
+            <page id="3" title="Pendeposit">pengambilan/depositMahkamah?showFormPapar</page>
+            <page id="5" title="Masukkan Nama Penolong Kanan Pendaftar Mahkamah Tinggi">pengambilan/perintah_bm_2</page>
+            <page id="007" title="Tandatangan Manual">pengambilan/tandatangan_dokumenV2</page>
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQSrtTMohonDepositBMAHK_MLK.rdf" prefix="VDOC" code="8SDI"/>
+                <report generator="ACQSrtTMohonDepositPmhnBMAHK_MLK.rdf" prefix="VDOC" code="8N"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptspoc-->
+    <stage id="05TerimaBayaran" currentAction="Terima Bayaran">
+        <txncode id="BMAHK">
+            <page id="2" title="Maklumat Bantahan Mahkamah">/pengambilan/maklumatBantahanMahkamah?maklumatBantahanMahkamah</page>
+            <page id="3" title="Pendeposit">pengambilan/depositMahkamah?showFormPapar</page>
+            <page id="5" title="Masukkan Nama Penolong Kanan Pendaftar Mahkamah Tinggi">pengambilan/perintah_bm_2</page>
+            <page id="6" title="Bayaran Deposit">/kaunter/BayaranPerihalPengambilan</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="06KpsnByrDeposit" currentAction="Keputusan Bayaran Deposit" advanceRule="true">
+        <txncode id="BMAHK">
+            <page id="2" title="Maklumat Bantahan Mahkamah">/pengambilan/maklumatBantahanMahkamah?maklumatBantahanMahkamah</page>
+            <page id="3" title="Pendeposit">pengambilan/depositMahkamah?showFormPapar</page>
+            <page id="5" title="Masukkan Nama Penolong Kanan Pendaftar Mahkamah Tinggi">pengambilan/perintah_bm_2</page>
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Setuju" value="BA"/>
+                <outcome label="Tidak Setuju" value="BB"/>
+            </outcomes>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="07CetakBrgO" currentAction="Cetak Borang O dan Salinan Dokumen">
+        <txncode id="BMAHK">
+            <page id="2" title="Maklumat Bantahan Mahkamah">/pengambilan/maklumatBantahanMahkamah?maklumatBantahanMahkamah</page>
+            <page id="3" title="Pendeposit">pengambilan/depositMahkamah?showFormPapar</page>
+            <page id="5" title="Masukkan Nama Penolong Kanan Pendaftar Mahkamah Tinggi">pengambilan/perintah_bm_2</page>
+            <page id="4" title="Borang O">pengambilan/rujukanPadaMahkamahCaterOneTT</page>
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <!--<report generator="ACQDocN_BMAHK_MLK.rdf" prefix="VDOC" code="N"/>-->
+                <report generator="ACQDocO_MLK.rdf" prefix="VDOC" code="O"/>
+                <report generator="ACQSrtIringanMahkBMAHK_MLK.rdf" prefix="VDOC" code="8MAN"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="08RekodSampaiTampal" currentAction="Rekod Bukti Penyampaian Surat">
+        <txncode id="BMAHK">
+            <page id="2" title="Maklumat Bantahan Mahkamah">/pengambilan/maklumatBantahanMahkamah?maklumatBantahanMahkamah</page>
+            <page id="3" title="Pendeposit">pengambilan/depositMahkamah?showFormPapar</page>
+            <page id="5" title="Masukkan Nama Penolong Kanan Pendaftar Mahkamah Tinggi">pengambilan/perintah_bm_2</page>
+            <page id="4" title="Borang O">pengambilan/rujukanPadaMahkamahCaterOneTT</page>
+            <page id="2" title="Rekod Bukti penyampaian">pengambilan/penerimaan_notis_borang_BMAHK?showFormMahkamah</page>
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="09SediaSrtTarikBalik" currentAction="Syor dan Sediakan Surat Permohonan Tarik Balik">
+        <txncode id="BMAHK">
+            <page id="2" title="Maklumat Bantahan Mahkamah">/pengambilan/maklumatBantahanMahkamah?maklumatBantahanMahkamah</page>
+            <page id="3" title="Pendeposit">pengambilan/depositMahkamah?showFormPapar</page>
+            <page id="5" title="Masukkan Nama Penolong Kanan Pendaftar Mahkamah Tinggi">pengambilan/perintah_bm_2</page>
+            <page id="007" title="Tandatangan Manual">pengambilan/tandatangan_dokumenV2</page>
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQSrtTTarikBalikBMAHK_MLK.rdf" prefix="VDOC" code="SPBTL"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--pptd-->
+    <stage id="10SemakanTandatangan" currentAction="Semakan dan Tandatangan" pushback="true">
+        <txncode id="BMAHK">
+            <page id="2" title="Maklumat Bantahan Mahkamah">/pengambilan/maklumatBantahanMahkamah?maklumatBantahanMahkamah</page>
+            <page id="3" title="Pendeposit">pengambilan/depositMahkamah?showFormPapar</page>
+            <page id="5" title="Masukkan Nama Penolong Kanan Pendaftar Mahkamah Tinggi">pengambilan/perintah_bm_2</page>
+            <page id="007" title="Tandatangan Manual">pengambilan/tandatangan_dokumenV2</page>
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQSrtTarikBalikBMAHK_MLK.rdf" prefix="VDOC" code="SPBTL"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="11JanaSrtMaklum" currentAction="Jana Surat Maklum Penambahan/Pengurangan" advanceRule="true">
+        <txncode id="BMAHK">
+            <page id="2" title="Maklumat Bantahan Mahkamah">/pengambilan/maklumatBantahanMahkamah?maklumatBantahanMahkamah</page>
+            <page id="3" title="Pendeposit">pengambilan/depositMahkamah?showFormPapar</page>
+            <page id="5" title="Masukkan Nama Penolong Kanan Pendaftar Mahkamah Tinggi">pengambilan/perintah_bm_2</page>
+            <page id="4" title="Borang O">pengambilan/rujukanPadaMahkamahCaterOneTT</page>
+            <page id="6" title="Rekod Bayaran Tuntutan kepada Pemohon">/pengambilan/rekodBayaranTuntutanToPemohon</page>
+            <page id="007" title="Tandatangan Manual">pengambilan/tandatangan_dokumenV2</page>
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQSrtArahByrBMAHK_MLK.rdf" prefix="VDOC" code="SEAP"/>
+            </reports>
+            <outcomes>
+                <outcome label="Sama/Tiada Perubahan Pampasan" value="AM"/>
+                <outcome label="Pengurangan Pampasan" value="K4"/>
+                <outcome label="Penambahan Pampasan" value="LT"/>
+            </outcomes>
+        </txncode>
+    </stage>
+
+    <!--pptd-->
+    <stage id="12SemakanTandatangan" currentAction="Semakan dan Tandatangan" pushback="true">
+        <txncode id="BMAHK">
+            <page id="2" title="Maklumat Bantahan Mahkamah">/pengambilan/maklumatBantahanMahkamah?maklumatBantahanMahkamah</page>
+            <page id="3" title="Pendeposit">pengambilan/depositMahkamah?showFormPapar</page>
+            <page id="5" title="Masukkan Nama Penolong Kanan Pendaftar Mahkamah Tinggi">pengambilan/perintah_bm_2</page>
+            <page id="4" title="Borang O">pengambilan/rujukanPadaMahkamahCaterOneTT</page>
+            <!--<page id="6" title="Rekod Penerimaan Bayaran Pampasan Tambahan">pengambilan/maklumat_hakmilikpengambilan?showForm</page>-->
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQSrtArahByrBMAHK_MLK.rdf" prefix="VDOC" code="SEAP"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="13RekodSampaiTampal" currentAction="Rekod Bukti Penyampaian Surat">
+        <txncode id="BMAHK">
+            <page id="2" title="Maklumat Bantahan Mahkamah">/pengambilan/maklumatBantahanMahkamah?maklumatBantahanMahkamah</page>
+            <page id="3" title="Pendeposit">pengambilan/depositMahkamah?showFormPapar</page>
+            <page id="5" title="Masukkan Nama Penolong Kanan Pendaftar Mahkamah Tinggi">pengambilan/perintah_bm_2</page>
+            <page id="4" title="Borang O">pengambilan/rujukanPadaMahkamahCaterOneTT</page>
+            <page id="2" title="Rekod Bukti penyampaian">pengambilan/penerimaan_notis_borang_BMAHK?showFormPemohon</page>
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="14AgensiByrPampasan" currentAction="Agensi Pembayaran Pampasan">
+        <txncode id="BMAHK">
+            <page id="2" title="Maklumat Bantahan Mahkamah">/pengambilan/maklumatBantahanMahkamah?maklumatBantahanMahkamah</page>
+            <page id="3" title="Pendeposit">pengambilan/depositMahkamah?showFormPapar</page>
+            <page id="5" title="Masukkan Nama Penolong Kanan Pendaftar Mahkamah Tinggi">pengambilan/perintah_bm_2</page>
+            <!--<page id="6" title="Pampasan">/pengambilan/pampasanPhlla</page>-->
+            <page id="6" title="Pampasan">/pengambilan/pampasanBMAHK</page>
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="15JanaSrtPeringatan" currentAction="Jana Surat Peringatan Kepada Agensi Pemohon">
+        <txncode id="BMAHK">
+            <page id="2" title="Maklumat Bantahan Mahkamah">/pengambilan/maklumatBantahanMahkamah?maklumatBantahanMahkamah</page>
+            <page id="3" title="Pendeposit">pengambilan/depositMahkamah?showFormPapar</page>
+            <page id="5" title="Masukkan Nama Penolong Kanan Pendaftar Mahkamah Tinggi">pengambilan/perintah_bm_2</page>
+            <!--<page id="6" title="Pampasan">/pengambilan/pampasanPhlla</page>-->
+            <page id="6" title="Pampasan">/pengambilan/pampasanBMAHK</page>
+            <page id="007" title="Tandatangan Manual">pengambilan/tandatangan_dokumenV2</page>
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQSrtTPeringatanBMAHK_MLK.rdf" prefix="VDOC" code="PER"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--pptd-->
+    <stage id="16SemakanTandatangan" currentAction="Semak dan Tandatangan" pushback="true">
+        <txncode id="BMAHK">
+            <page id="2" title="Maklumat Bantahan Mahkamah">/pengambilan/maklumatBantahanMahkamah?maklumatBantahanMahkamah</page>
+            <page id="3" title="Pendeposit">pengambilan/depositMahkamah?showFormPapar</page>
+            <page id="5" title="Masukkan Nama Penolong Kanan Pendaftar Mahkamah Tinggi">pengambilan/perintah_bm_2</page>
+            <!--<page id="6" title="Pampasan">/pengambilan/pampasanPhlla</page>-->
+            <page id="6" title="Pampasan">/pengambilan/pampasanBMAHK</page>
+            <page id="007" title="Tandatangan Manual">pengambilan/tandatangan_dokumenV2</page>
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQSrtTPeringatanBMAHK_MLK.rdf" prefix="VDOC" code="PER"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="17JenisBayaran" currentAction="Jenis Bayaran" advanceRule="true">
+        <txncode id="BMAHK">
+            <page id="2" title="Maklumat Bantahan Mahkamah">/pengambilan/maklumatBantahanMahkamah?maklumatBantahanMahkamah</page>
+            <page id="3" title="Pendeposit">pengambilan/depositMahkamah?showFormPapar</page>
+            <page id="5" title="Masukkan Nama Penolong Kanan Pendaftar Mahkamah Tinggi">pengambilan/perintah_bm_2</page>
+            <!--<page id="6" title="Pampasan">/pengambilan/pampasanPhlla</page>-->
+            <page id="6" title="Pampasan">/pengambilan/pampasanBMAHK</page>
+            <!--<page id="6" title="Rekod Bayaran Pampasan Kepada Tuan Tanah">/pengambilan/rekodBayaranToTuanTanah_Mahkamah</page>-->
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Terima EFT" value="KE"/>
+                <outcome label="Terima Cek" value="KC"/>
+            </outcomes>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="18TerimaCek" currentAction="Terima Cek">
+        <txncode id="BMAHK">
+            <page id="2" title="Maklumat Bantahan Mahkamah">/pengambilan/maklumatBantahanMahkamah?maklumatBantahanMahkamah</page>
+            <page id="3" title="Pendeposit">pengambilan/depositMahkamah?showFormPapar</page>
+            <page id="5" title="Masukkan Nama Penolong Kanan Pendaftar Mahkamah Tinggi">pengambilan/perintah_bm_2</page>
+            <!--<page id="6" title="Pampasan">/pengambilan/pampasanPhlla</page>-->
+            <page id="6" title="Pampasan">/pengambilan/pampasanBMAHK</page>
+            <page id="6" title="Rekod Bayaran Tuntutan kepada Pemohon">/pengambilan/rekodBayaranTuntutanToPemohon</page>
+            <page id="007" title="Tandatangan Manual">pengambilan/tandatangan_dokumenV2</page>
+            <!--<page id="2" title="Status Pengambilan Cek Oleh Tuan Tanah">/pengambilan/RekodAmbilCekSatuTuanTanah</page>-->
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQSrtAmbilCekBMAHK_MLK.rdf" prefix="VDOC" code="SBPC"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--pptd-->
+    <stage id="19SemakanTandatangan" currentAction="Semakan dan Tandatangan" pushback="true">
+        <txncode id="BMAHK">
+            <page id="2" title="Maklumat Bantahan Mahkamah">/pengambilan/maklumatBantahanMahkamah?maklumatBantahanMahkamah</page>
+            <page id="3" title="Pendeposit">pengambilan/depositMahkamah?showFormPapar</page>
+            <page id="5" title="Masukkan Nama Penolong Kanan Pendaftar Mahkamah Tinggi">pengambilan/perintah_bm_2</page>
+            <!--<page id="6" title="Pampasan">/pengambilan/pampasanPhlla</page>-->
+            <page id="6" title="Pampasan">/pengambilan/pampasanBMAHK</page>
+            <page id="6" title="Rekod Bayaran Tuntutan kepada Pemohon">/pengambilan/rekodBayaranTuntutanToPemohon</page>
+            <!--<page id="2" title="Status Pengambilan Cek Oleh Tuan Tanah">/pengambilan/RekodAmbilCekSatuTuanTanah</page>-->
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQSrtAmbilCekBMAHK_MLK.rdf" prefix="VDOC" code="SBPC"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="20RekodTarikh" currentAction="Rekod Tarikh Serah Cek dan Tarikh Terima Cek" pushback="true">
+        <txncode id="BMAHK">
+            <page id="2" title="Maklumat Bantahan Mahkamah">/pengambilan/maklumatBantahanMahkamah?maklumatBantahanMahkamah</page>
+            <page id="3" title="Pendeposit">pengambilan/depositMahkamah?showFormPapar</page>
+            <page id="5" title="Masukkan Nama Penolong Kanan Pendaftar Mahkamah Tinggi">pengambilan/perintah_bm_2</page>
+            <!--<page id="6" title="Pampasan">/pengambilan/pampasanPhlla</page>-->
+            <page id="6" title="Pampasan">/pengambilan/pampasanBMAHK</page>
+            <!--<page id="2" title="Status Pengambilan Cek Oleh Tuan Tanah">/pengambilan/RekodAmbilCekSatuTuanTanah</page>-->
+            <page id="6" title="Rekod Bayaran Tuntutan kepada Pemohon">/pengambilan/rekodBayaranTuntutanToPemohon</page>
+            <page id="2" title="Status Pengambilan Cek Oleh Pemohon">/pengambilan/RekodAmbilCekPemohon</page>
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="18_1TerimaEFT" currentAction="Rekod Bayaran EFT">
+        <txncode id="BMAHK">
+            <page id="2" title="Maklumat Bantahan Mahkamah">/pengambilan/maklumatBantahanMahkamah?maklumatBantahanMahkamah</page>
+            <page id="3" title="Pendeposit">pengambilan/depositMahkamah?showFormPapar</page>
+            <page id="5" title="Masukkan Nama Penolong Kanan Pendaftar Mahkamah Tinggi">pengambilan/perintah_bm_2</page>
+            <!--<page id="6" title="Pampasan">/pengambilan/pampasanPhlla</page>-->
+            <page id="6" title="Pampasan">/pengambilan/pampasanBMAHK</page>
+            <page id="6" title="Rekod Bayaran Tuntutan kepada Pemohon">/pengambilan/rekodBayaranTuntutanToPemohon?showForm2</page>
+            <page id="007" title="Tandatangan Manual">pengambilan/tandatangan_dokumenV2</page>
+            <!--<page id="1" title="Rekod Pembayaran Pampasan">pengambilan/akaunTerimaBayaran?showForm</page>-->
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQSrtAmbilCekBMAHK_MLK.rdf" prefix="VDOC" code="SBPC"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--pptd-->
+    <stage id="19_1SemakanTandatangan" currentAction="Semakan dan Tandatangan" pushback="true">
+        <txncode id="BMAHK">
+            <page id="2" title="Maklumat Bantahan Mahkamah">/pengambilan/maklumatBantahanMahkamah?maklumatBantahanMahkamah</page>
+            <page id="3" title="Pendeposit">pengambilan/depositMahkamah?showFormPapar</page>
+            <page id="5" title="Masukkan Nama Penolong Kanan Pendaftar Mahkamah Tinggi">pengambilan/perintah_bm_2</page>
+            <!--<page id="6" title="Pampasan">/pengambilan/pampasanPhlla</page>-->
+            <page id="6" title="Pampasan">/pengambilan/pampasanBMAHK</page>
+            <page id="6" title="Rekod Bayaran Tuntutan kepada Pemohon">/pengambilan/rekodBayaranTuntutanToPemohon?showForm2</page>
+            <page id="007" title="Tandatangan Manual">pengambilan/tandatangan_dokumenV2</page>
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQSrtAmbilCekBMAHK_MLK.rdf" prefix="VDOC" code="SBPC"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="20_1RekodTarikh" currentAction="Rekod Tarikh Serah Cek dan Tarikh Terima Cek" pushback="true">
+        <txncode id="BMAHK">
+            <page id="2" title="Maklumat Bantahan Mahkamah">/pengambilan/maklumatBantahanMahkamah?maklumatBantahanMahkamah</page>
+            <page id="3" title="Pendeposit">pengambilan/depositMahkamah?showFormPapar</page>
+            <page id="5" title="Masukkan Nama Penolong Kanan Pendaftar Mahkamah Tinggi">pengambilan/perintah_bm_2</page>
+            <!--<page id="6" title="Pampasan">/pengambilan/pampasanPhlla</page>-->
+            <page id="6" title="Pampasan">/pengambilan/pampasanBMAHK</page>
+            <page id="6" title="Rekod Bayaran Tuntutan kepada Pemohon">/pengambilan/rekodBayaranTuntutanToPemohon?showForm2</page>
+            <page id="2" title="Status Pengambilan Cek Oleh Pemohon">/pengambilan/RekodAmbilCekPemohon</page>
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQSrtAmbilCekBMAHK_MLK.rdf" prefix="VDOC" code="SBPC"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="21TerimaDokImbasan" currentAction="Terima Dokumen Imbasan">
+        <txncode id="BMAHK">
+            <page id="2" title="Maklumat Bantahan Mahkamah">/pengambilan/maklumatBantahanMahkamah?maklumatBantahanMahkamah</page>
+            <page id="3" title="Pendeposit">pengambilan/depositMahkamah?showFormPapar</page>
+            <page id="5" title="Masukkan Nama Penolong Kanan Pendaftar Mahkamah Tinggi">pengambilan/perintah_bm_2</page>
+            <!--<page id="6" title="Pampasan">/pengambilan/pampasanPhlla</page>-->
+            <page id="6" title="Pampasan">/pengambilan/pampasanBMAHK</page>
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <!--pthasil-->
+    <stage id="22PulangDeposit" currentAction="Rekod Bayaran Pemulangan Deposit">
+        <txncode id="BMAHK">
+            <page id="2" title="Maklumat Bantahan Mahkamah">/pengambilan/maklumatBantahanMahkamah?maklumatBantahanMahkamah</page>
+            <page id="3" title="Pendeposit">pengambilan/depositMahkamah?showFormPapar</page>
+            <page id="5" title="Masukkan Nama Penolong Kanan Pendaftar Mahkamah Tinggi">pengambilan/perintah_bm_2</page>
+            <!--<page id="6" title="Pampasan">/pengambilan/pampasanPhlla</page>-->
+            <page id="6" title="Pampasan">/pengambilan/pampasanBMAHK</page>
+            <page id="008" title="Maklumat Pendeposit">/pengambilan/depositMahkamahedit</page>
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="22RekodPulangDeposit" currentAction="Rekod Bayaran Pemulangan Deposit" finalize="true">
+        <txncode id="BMAHK">
+            <page id="2" title="Maklumat Bantahan Mahkamah">/pengambilan/maklumatBantahanMahkamah?maklumatBantahanMahkamah</page>
+            <page id="3" title="Pendeposit">pengambilan/depositMahkamah?showFormPapar</page>
+            <page id="5" title="Masukkan Nama Penolong Kanan Pendaftar Mahkamah Tinggi">pengambilan/perintah_bm_2</page>
+            <!--<page id="6" title="Pampasan">/pengambilan/pampasanPhlla</page>-->
+            <page id="6" title="Pampasan">/pengambilan/pampasanBMAHK</page>
+            <page id="008" title="Maklumat Pendeposit">/pengambilan/depositMahkamahedit</page>
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--ptpengambilan
+    <stage id="1Semak_BrgN" currentAction="Rekod Penerimaan Deposit,Borang O">
+        <txncode id="BMAHK">
+            <page id="6" title="Akaun Deposit">pengambilan/depositBantahanMahkamah?showForm</page>
+            <page id="7" title="Bayaran Deposit">/kaunter/BayaranDepositBantahanMahkamah</page>
+            <page id="3" title="Rekod Penerimaan Deposit">pengambilan/rekodPenerimaanDeposit</page>
+            <page id="1" title="Kemasukkan Permohonan">pengambilan/carianIdHakmilikBantahanMahkamah</page>
+            <page id="2" title="Maklumat Bantahan Mahkamah">/pengambilan/maklumatBantahanMahkamah?maklumatBantahanMahkamah</page>
+            <page id="3" title="Borang N">pengambilan/permohonan_supaya_bantahanCaterOneTT</page>
+            <page id="4" title="Borang O">pengambilan/rujukanPadaMahkamahCaterOneTT</page>
+            <page id="5" title="Masukkan Nama Penolong Kanan Pendaftar Mahkamah Tinggi">pengambilan/perintah_bm_2</page>
+            <page id="5" title="Deraf Perintah">pengambilan/perintah_bm?showForm1</page>
+            <page id="6" title="Perintah">pengambilan/perintah_bm?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQDocN_BMAHK_MLK.rdf" prefix="VDOC" code="N"/>
+                <report generator="ACQDocO_BMAHK_MLK.rdf" prefix="VDOC" code="O"/>
+            </reports>
+        </txncode>
+    </stage>
+    pptd
+    <stage id="2SemakUndangBrgO" pushback="true" currentAction="Rekod Penerimaan Deposit,Borang O">
+        <txncode id="BMAHK">
+            <page id="1" title="Maklumat Bantahan Mahkamah">/pengambilan/maklumatBantahanMahkamah?maklumatBantahanMahkamah</page>
+            <page id="2" title="Borang N">pengambilan/permohonan_supaya_bantahanCaterOneTT</page>
+            <page id="3" title="Borang O">pengambilan/rujukanPadaMahkamahCaterOneTT</page>
+            <page id="4" title="Deraf Perintah">pengambilan/perintah_bm?showForm1</page>
+            <page id="5" title="Perintah">pengambilan/perintah_bm?showForm2</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+
+    </stage>
+
+    ptpengambilan
+    <stage id="3SerahanRekodSampai" currentAction="Rekod bukti penerimaan borang O oleh pihak Mahkamah">
+        <txncode id="BMAHK">
+            <page id="1" title="Rekod Bukti penyampaian refer PTSP">pengambilan/penerimaan_notis_borang_n9?showFormMahkamah</page>
+            <page id="1" title="Maklumat Bantahan Mahkamah">/pengambilan/maklumatBantahanMahkamah?maklumatBantahanMahkamah</page>
+            <page id="2" title="Rekod Bukti penyampaian">pengambilan/penerimaan_notis_borang_BantahanMLK?showFormMahkamah</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+
+    </stage>
+
+    ptpengambilan
+    <stage id="4RekodKeputusan" advanceRule="true" currentAction="Rekod Keputusan Mahkamah">
+        <txncode id="BMAHK">
+            <page id="1" title="Maklumat Bantahan Mahkamah">/pengambilan/maklumatBantahanMahkamah?maklumatBantahanMahkamah</page>
+            <page id="2" title="rekod keputusan mahkamah">pengambilan/carianIdHakmilikBantahanMahkamah?showForm2</page>
+            <page id="2" title="Rekod Penerimaan Bayaran Pampasan Tambahan">pengambilan/maklumat_hakmilikpengambilan?showForm</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Ada Tambah" value="LT"/>
+                <outcome label="Kurang" value="K4"/>
+                <outcome label="Sama" value="AM"/>
+            </outcomes>
+        </txncode>
+    </stage>
+
+    mtpthasil1
+    <stage id="5JanaSuratBayar" currentAction="Jana Surat Arahan Pembayaran">
+        <txncode id="BMAHK">
+            <page id="1" title="Maklum Unit Pentadbiran">pengambilan/notifikasiMelaka?suratMintaUnitPentadbiranSediaSuratArahanBayaran</page>
+            <validator>validator</validator>
+            <instruction>Makluman kepada Pembantu Tadbir Kewangan</instruction>
+            <reports>
+                <report generator="ACQSrtArahByrBMAHK_MLK.rdf" prefix="VDOC" code="SEAP"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    ptpengambilan*tuan tanah dtg collect
+    <stage id="6RekodBayaran" advanceRule="true" currentAction="Rekod Pembayaran Pampasan Agensi/Pemohon">
+        <txncode id="BMAHK">
+            <page id="1" title="Rekod Pembayaran Pampasan">pengambilan/akaunTerimaBayaran?showForm</page>
+            <page id="1" title="Rekod Bayaran Pampasan Kepada Tuan Tanah">/pengambilan/rekodBayaranToTuanTanah_Mahkamah</page>
+            <page id="2" title="Status Pengambilan Cek Oleh Tuan Tanah">/pengambilan/RekodAmbilCekSatuTuanTanah</page>
+            <validator>validator</validator>
+            <instruction>Sila rekodkan pembayaran pampasan daripada pemohon kepada tuan tanah</instruction>
+            <reports>
+                <report generator="ACQSrtBeritahuAmbilCek_MLK.rdf" prefix="VDOC" code="SBPC"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    ptpengambilan*pemohon dtg collect cek
+    <stage id="7RekodBayaranTT" currentAction="Rekod Pembayaran Pampasan Tuan Tanah" finalize="true">
+        <txncode id="BMAHK">
+            <page id="1" title="Rekod Pembayaran Pampasan">pengambilan/akaunTerimaBayaran?showForm</page>
+            <page id="1" title="Rekod Bayaran Tuntutan kepada Pemohon">/pengambilan/rekodBayaranTuntutanToPemohon</page>
+            <page id="2" title="Status Pengambilan Cek Oleh Pemohon">/pengambilan/RekodAmbilCekPemohon</page>
+            <validator>validator</validator>
+            <instruction>Sila rekodkan tuntutan pembayaran daripada tuan tanah kepada pemohon</instruction>
+            <reports>
+                <report generator="ACQSrtBeritahuAmbilCekPemohon_MLK.rdf" prefix="VDOC" code="SACP"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    ptpengambilan..yg ini yg untuk sama and tiada perubahan
+    <stage id="8JanaSuratSama" currentAction="Jana surat mahkluman jumlah pampasan">
+        <txncode id="BMAHK">
+            <page id="1" title="Surat makluman jumlah pampasan">pengambilan/notifikasiMelaka?notifikasiSuratMaklumanJumlahPampasan</page>
+            <validator>validator</validator>
+            <instruction>sila klik pada button 'jana dokumen' untuk jana surat makluman jumlah pampasan</instruction>
+            <reports>
+                <report generator="ACQSrtPemberitahuanTawaranPampasan2_MLK.rdf" prefix="VDOC" code="SMJP"/>
+            </reports>
+        </txncode>
+    </stage>-->
+</workflow>

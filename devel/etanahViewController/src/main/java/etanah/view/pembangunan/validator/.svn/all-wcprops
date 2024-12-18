@@ -1,0 +1,341 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/eTanah/!svn/ver/3022/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator
+END
+ChartingFTValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/eTanah/!svn/ver/1003/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/ChartingFTValidator.java
+END
+PenyatuanSemakStatusValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/PenyatuanSemakStatusValidator.java
+END
+HakmilikUmpukanValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/HakmilikUmpukanValidator.java
+END
+ChartingTukarSyaratNotification.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/ChartingTukarSyaratNotification.java
+END
+SemakPindaanValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/SemakPindaanValidator.java
+END
+InitiateHKPSValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/InitiateHKPSValidator.java
+END
+ChartingNotification.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/ChartingNotification.java
+END
+BatalNotingValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/BatalNotingValidator.java
+END
+CetakNotis7GValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/CetakNotis7GValidator.java
+END
+InitiateHSPSValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/InitiateHSPSValidator.java
+END
+RegDoneHKValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/RegDoneHKValidator.java
+END
+UtilitiTugasanValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/eTanah/!svn/ver/1838/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/UtilitiTugasanValidator.java
+END
+KemasukanPermohonanNotification.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/eTanah/!svn/ver/2045/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/KemasukanPermohonanNotification.java
+END
+Endorsan7GValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/Endorsan7GValidator.java
+END
+ChartingAkhir.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/ChartingAkhir.java
+END
+PPTDKeputusanNotification.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/PPTDKeputusanNotification.java
+END
+CommonPushBackValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/eTanah/!svn/ver/1845/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/CommonPushBackValidator.java
+END
+UlasanPindaanYABNotification.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/eTanah/!svn/ver/1839/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/UlasanPindaanYABNotification.java
+END
+CheckTujuanAwamNotification.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/CheckTujuanAwamNotification.java
+END
+IntegrationEMMKNV2.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/IntegrationEMMKNV2.java
+END
+RegDoneHSValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/RegDoneHSValidator.java
+END
+InitiateHKSBValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/InitiateHKSBValidator.java
+END
+NSdevValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/NSdevValidator.java
+END
+SemakStatusTanahValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/SemakStatusTanahValidator.java
+END
+KeputusanNotification.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/eTanah/!svn/ver/2415/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/KeputusanNotification.java
+END
+DurationCheckingValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/DurationCheckingValidator.java
+END
+IntergrationMMKN.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/IntergrationMMKN.java
+END
+JabatanTeknikalValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/eTanah/!svn/ver/1844/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/JabatanTeknikalValidator.java
+END
+PostChartingSerahSemuaNotification.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/PostChartingSerahSemuaNotification.java
+END
+KeputusanValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/KeputusanValidation.java
+END
+CheckAsciiValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/CheckAsciiValidator.java
+END
+TerimaB1PANotification.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/TerimaB1PANotification.java
+END
+MelakaDEVValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/MelakaDEVValidator.java
+END
+PPKValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/PPKValidator.java
+END
+PTGNotification.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/PTGNotification.java
+END
+KemasukanPermohonanSBMSNotification.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/eTanah/!svn/ver/1842/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/KemasukanPermohonanSBMSNotification.java
+END
+PindaanMMKNValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/PindaanMMKNValidator.java
+END
+RekodKeputusanJKBBValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/eTanah/!svn/ver/3022/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/RekodKeputusanJKBBValidator.java
+END
+SuratKeputusanValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/SuratKeputusanValidator.java
+END
+CheckPTGStagesValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/CheckPTGStagesValidator.java
+END
+notaValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/notaValidator.java
+END
+EndorsanPembatalanValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/EndorsanPembatalanValidation.java
+END
+GenerateIdPerserahanWorkflow.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/GenerateIdPerserahanWorkflow.java
+END
+PembatalanNotification.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/PembatalanNotification.java
+END
+SerahBalikSebahagianValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/SerahBalikSebahagianValidator.java
+END
+PindaanValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/43/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/PindaanValidator.java
+END
+SemakHakmilikValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/SemakHakmilikValidator.java
+END
+TentuHakmilikUmpukanValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/TentuHakmilikUmpukanValidator.java
+END
+SemakHakmilikEndorsPelanTataturValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/eTanah/!svn/ver/1840/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/SemakHakmilikEndorsPelanTataturValidator.java
+END
+AnsuranValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/AnsuranValidation.java
+END
+UlasanPindaanNotification.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/eTanah/!svn/ver/2125/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/UlasanPindaanNotification.java
+END
+PindaanN9Validator.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/PindaanN9Validator.java
+END
+semakpermohonan.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/semakpermohonan.java
+END
+CheckKeputusanPSMTNotification.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/CheckKeputusanPSMTNotification.java
+END
+SemakPrahitungValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/SemakPrahitungValidator.java
+END
+GenerateIdPermohonan.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/pembangunan/validator/GenerateIdPermohonan.java
+END

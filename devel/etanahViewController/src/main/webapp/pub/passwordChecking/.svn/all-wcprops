@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/pub/passwordChecking
+END
+.hgignore
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/pub/passwordChecking/.hgignore
+END
+LICENCE
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/pub/passwordChecking/LICENCE
+END
+.hg_archival.txt
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/pub/passwordChecking/.hg_archival.txt
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/webapp/pub/passwordChecking/.project
+END

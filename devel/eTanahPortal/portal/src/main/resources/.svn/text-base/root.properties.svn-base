@@ -1,0 +1,8 @@
+blowfishKey = secret
+hibernate.dialect = org.hibernate.dialect.Oracle10gDialect
+hibernate.connection.driver_class = oracle.jdbc.OracleDriver
+#hibernate.connection.url = jdbc:oracle:thin:@192.168.188.15:1526/dev1speks
+#hibernate.connection.url = jdbc:oracle:thin:@175.143.52.101:1526/dev1speks
+hibernate.connection.url = jdbc:oracle:thin:@10.23.22.119:1526/dev1speks
+hibernate.connection.username = onespeks
+hibernate.connection.password = onespeks

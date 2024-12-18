@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/net/theta/client/service
+END
+ClientSemakanAkaunService.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/net/theta/client/service/ClientSemakanAkaunService.java
+END
+ClientUtilitiService.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/net/theta/client/service/ClientUtilitiService.java
+END
+ClientSemakanTukarGantiService.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/net/theta/client/service/ClientSemakanTukarGantiService.java
+END
+ClientStatusPermohonanService.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/net/theta/client/service/ClientStatusPermohonanService.java
+END

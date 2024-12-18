@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<workflow id="http://xmlns.oracle.com/bple_mlk/reg/hw_mlkperserahan">
+  <stage id="agih_tugas" finalize="false" distribute="true" currentAction="agihan">
+    <!--SCREEN DEFAULT (6)-->
+    <txncode id="SW" daysToComplete="2">
+      <page id="1" title="Agih Tugasan" >agihTugasan</page>
+      <instruction>Sila agihkan tugasan ini kepada yang berkenaan.</instruction>
+    </txncode>
+<!--    <txncode id="SB" daysToComplete="2">
+      <page id="1" title="Agih Tugasan">agihTugasan</page>
+      <instruction>Sila agihkan tugasan ini kepada yang berkenaan.</instruction>
+    </txncode>-->
+    <txncode id="SA" daysToComplete="2">
+      <page id="1" title="Agih Tugasan">agihTugasan</page>
+      <instruction>Sila agihkan tugasan ini kepada yang berkenaan.</instruction>
+    </txncode>
+  </stage>
+  <stage id="kemasukan" finalize="false" viewable="pendaftar" currentAction="kemasukan"
+         listener="etanah.view.daftar.validator.ReportValidator" pushback="true"
+         nextStageButton="Hantar Pendaftar"> <!--//TODO: Change to original user-->
+    <!--SCREEN DEFAULT (6)-->
+    <txncode id="SW">
+      <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan?paparanMaklumatPermohonanDaftar</page>
+      <page id="2" title="Maklumat Pemberi Dan Penerima">daftar/suratkuasawakil?maklumatPemPen</page>
+      <!--<page id="3" title="Senarai Hakmilik">daftar/suratkuasawakil?senaraiHakmilik</page>
+      <page id="4" title="Maklumat Suratkuasa">daftar/suratkuasawakil?maklumatSurat</page>
+      <page id="5" title="Bidang Kuasa">daftar/suratkuasawakil?bidangKuasa</page>-->
+      <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+      <outcomes>
+        <outcome label="Syor Daftar" value="SD"/>
+        <outcome label="Syor Tolak" value="ST"/>
+        <outcome label="Syor Gantung" value="SG"/>
+      </outcomes>
+      <!--<reports>
+          <report generator="REG_V_DOC_003.rdf" prefix="VDOC" code="VDOC"/>
+      </reports>-->
+    </txncode>
+<!--    <txncode id="SB">
+      <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan?paparanMaklumatPermohonanDaftar</page>
+      <page id="2" title="Maklumat Pemberi Dan Penerima">daftar/suratkuasawakil?maklumatPemPen</page>
+       <page id="3" title="Senarai Hakmilik">daftar/suratkuasawakil?senaraiHakmilik</page>
+      <page id="4" title="Maklumat Suratkuasa">daftar/suratkuasawakil?maklumatSurat</page>
+      <page id="5" title="Jenis Surat">daftar/suratkuasawakil?bidangKuasa</page>
+      <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+      <outcomes>
+        <outcome label="Syor Daftar" value="SD"/>
+        <outcome label="Syor Tolak" value="ST"/>
+        <outcome label="Syor Gantung" value="SG"/>
+      </outcomes>
+      <reports>
+          <report generator="REG_V_DOC_003.rdf" prefix="VDOC" code="VDOC"/>
+      </reports>
+    </txncode>-->
+    <txncode id="SA">
+      <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan?paparanMaklumatPermohonanDaftar</page>
+      <page id="2" title="Maklumat Pemberi Dan Penerima">daftar/suratkuasawakil?maklumatPemPen</page>
+      <!-- <page id="3" title="Senarai Hakmilik">daftar/suratkuasawakil?senaraiHakmilik</page>
+      <page id="4" title="Maklumat Suratkuasa">daftar/suratkuasawakil?maklumatSurat</page>
+      <page id="5" title="Bidang Kuasa">daftar/suratkuasawakil?bidangKuasa</page>-->
+      <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+      <outcomes>
+        <outcome label="Syor Daftar" value="SD"/>
+        <outcome label="Syor Tolak" value="ST"/>
+        <outcome label="Syor Gantung" value="SG"/>
+      </outcomes>
+      <!--<reports>
+          <report generator="REG_V_DOC_003.rdf" prefix="VDOC" code="VDOC"/>
+      </reports>-->
+    </txncode>
+
+
+  </stage>
+  <stage id="keputusan" finalize="true" listener="etanah.view.daftar.validator.SuratWakilValidation" report="false" nextStageButton="DAFTAR">
+    <!--listener="etanah.view.daftar.validator.NotadaftarValidation"-->
+    <!--SCREEN DEFAULT (6)-->
+    <txncode id="SW" >
+      <page id="1" title="Dokumen Verifikasi">common/maklumat_permohonan?showForm3</page>
+      <instruction>Sila buat semakan pada Dokumen Verifikasi (v-doc) beserta dokumen fizikal.</instruction>
+      <outcomes>
+        <outcome label="Daftar" value="D">
+          <report generator="REGSuratDaftar_Wakil.rdf" code="SD"/>
+        </outcome>
+        <outcome label="Tolak" value="T">
+          <report generator="REGSuratTolak_Wakil.rdf" code="ST"/>
+        </outcome>
+        <outcome label="Gantung" value="G">
+          <report generator="REGSuratGantung_Wakil.rdf" code="SGT"/>
+        </outcome>
+      </outcomes>
+      <!--<reports>
+      <report generator="REGB5DKDHDENS001.rdf" prefix="DHDE" code="HKE"/>
+      <report generator="REGB5DKDHKENS001.rdf" prefix="DHKE" code="HKK"/>
+      <report generator="REGB11BKDHKENS001.rdf" prefix="DHKE" code="HKK"/>
+      <report generator="REGB11BKDHDENS001.rdf" prefix="DHDE" code="HKE"/>
+      </reports>-->
+    </txncode>
+<!--    <txncode id="SB" >
+      <page id="1" title="Dokumen Verifikasi">common/maklumat_permohonan?showForm3</page>
+      <instruction>Sila buat semakan pada Dokumen Verifikasi (v-doc) beserta dokumen fizikal.</instruction>
+      <outcomes>
+        <outcome label="Daftar" value="D">
+          <report generator="REGSuratDaftar_Wakil.rdf" code="SD"/>
+        </outcome>
+        <outcome label="Tolak" value="T">
+          <report generator="REGSuratTolak_Wakil.rdf" code="ST"/>
+        </outcome>
+        <outcome label="Gantung" value="G">
+          <report generator="REGSuratGantung_Wakil.rdf" code="SGT"/>
+        </outcome>
+      </outcomes>
+      <reports>
+      <report generator="REGB5DKDHDENS001.rdf" prefix="DHDE" code="HKE"/>
+      <report generator="REGB5DKDHKENS001.rdf" prefix="DHKE" code="HKK"/>
+      <report generator="REGB11BKDHKENS001.rdf" prefix="DHKE" code="HKK"/>
+      <report generator="REGB11BKDHDENS001.rdf" prefix="DHDE" code="HKE"/>
+      </reports>
+    </txncode>-->
+    <txncode id="SA" >
+      <page id="1" title="Dokumen Verifikasi">common/maklumat_permohonan?showForm3</page>
+      <instruction>Sila buat semakan pada Dokumen Verifikasi (v-doc) beserta dokumen fizikal.</instruction>
+      <outcomes>
+        <outcome label="Daftar" value="D">
+          <report generator="REGSuratDaftar_Wakil.rdf" code="SD"/>
+        </outcome>
+        <outcome label="Tolak" value="T">
+          <report generator="REGSuratTolak_Wakil.rdf" code="ST"/>
+        </outcome>
+        <outcome label="Gantung" value="G">
+          <report generator="REGSuratGantung_Wakil.rdf" code="SGT"/>
+        </outcome>
+      </outcomes>
+      <!--<reports>
+      <report generator="REGB5DKDHDENS001.rdf" prefix="DHDE" code="HKE"/>
+      <report generator="REGB5DKDHKENS001.rdf" prefix="DHKE" code="HKK"/>
+      <report generator="REGB11BKDHKENS001.rdf" prefix="DHKE" code="HKK"/>
+      <report generator="REGB11BKDHDENS001.rdf" prefix="DHDE" code="HKE"/>
+      </reports>-->
+    </txncode>
+  </stage>
+</workflow>
+
+<!--danmmmmmmm wtF errorrrrrrrrr-->

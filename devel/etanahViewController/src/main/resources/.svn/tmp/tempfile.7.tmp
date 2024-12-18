@@ -1,0 +1,63 @@
+document.path=/nfs_apps/ISPEKS/
+
+# Security
+security.login.uri=/login
+security.ldap.url=
+security.ldap.user=
+security.ldap.password=
+
+# --- Report
+# Oracle report generator using command line (required by etanah.report.OrclCmdLineGenerator)
+report.generator.cmd=cmd.exe /c c:/DevSuiteHome/BIN/rwrun
+### Office
+#report.key=kicker
+#report.server.location=http://10.0.4.32:9001/reports/rwservlet
+#document.path=/srv/reportoutput
+
+### DC
+report.key=${report.server.key}
+report.server.location=${report.server.url}
+
+
+# -- DMS
+## Office
+#document.path=/srv/reportoutput
+## PROD
+#document.path=H:/tmp/
+document.path=/nfs_apps/dms/
+worm.path=
+
+# -- GIS Pelan path
+pelan.path=/nfs_apps/APP/
+gis.outbound.path=/nfs_apps/APP/gisOutbound
+gis.inbound.path=/nfs_apps/APP/gisInbound
+jteknikal.inbound.path=/nfs_apps/APP/jteknikalInbound
+
+
+
+# coherence flag
+# set to false to disable coherence in application
+coherence=false
+
+#/home/store/pub/app/reports/ -- xml path for deploy server
+# ---- Kernel ActionBean
+# for kernel to know which folder contains multiple xml files
+xml.source.path= c:/xml
+# tomcat -- for development
+server=weblogic
+signed.required=true
+# ---- BPEL
+# true  : to set either to use bpel process to get stage id
+# -false : to supply stage id using parameter
+bpel.workflow.engine = true
+# set the way task being initiated (if Tomcat=transit, if Weblogic=direct)
+bpel.taskInitiationStrategy=
+# set method to print :: JPedal, pdfp
+print.method = pdfp
+
+#kutipan agensi URL
+kutipan.agensi.location=${kutipan.agensi.url}
+kutipan.inbound.path=/nfs_apps/dms/agensi/
+
+# ---- END
+

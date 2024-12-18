@@ -1,0 +1,257 @@
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws
+END
+ArrayOfSenaraiBandarPekanMukim.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/ArrayOfSenaraiBandarPekanMukim.java
+END
+PengumumanForm.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/PengumumanForm.java
+END
+SenaraiBandarPekanMukim.class
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/SenaraiBandarPekanMukim.class
+END
+StatusTukarGanti.class
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/StatusTukarGanti.class
+END
+StatusSemakanAkaun.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/StatusSemakanAkaun.java
+END
+SenaraiDokumen.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/SenaraiDokumen.java
+END
+ArrayOfSenaraiKodSeksyen.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/ArrayOfSenaraiKodSeksyen.java
+END
+SenaraiKodSeksyen.class
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/SenaraiKodSeksyen.class
+END
+package-info.class
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/package-info.class
+END
+ArrayOfSenaraiKodDaerah.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/ArrayOfSenaraiKodDaerah.java
+END
+StatusPermohonan.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/StatusPermohonan.java
+END
+ArrayOfStatusSemakanAkaun.class
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/ArrayOfStatusSemakanAkaun.class
+END
+SenaraiBandarPekanMukim.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/SenaraiBandarPekanMukim.java
+END
+ArrayOfSenaraiDokumen.class
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/ArrayOfSenaraiDokumen.class
+END
+ObjectFactory.class
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/ObjectFactory.class
+END
+SenaraiKodSeksyen.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/SenaraiKodSeksyen.java
+END
+package-info.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/package-info.java
+END
+SenaraiKodDaerah.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/SenaraiKodDaerah.java
+END
+StatusSemakanAkaun.class
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/StatusSemakanAkaun.class
+END
+ArrayOfSenaraiUrusan.class
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/ArrayOfSenaraiUrusan.class
+END
+SenaraiDokumen.class
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/SenaraiDokumen.class
+END
+ArrayOfSenaraiKodDaerah.class
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/ArrayOfSenaraiKodDaerah.class
+END
+ObjectFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/ObjectFactory.java
+END
+ArrayOfSenaraiKodHakmilik.class
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/ArrayOfSenaraiKodHakmilik.class
+END
+ArrayOfSenaraiUrusan.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/ArrayOfSenaraiUrusan.java
+END
+SenaraiUrusan.class
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/SenaraiUrusan.class
+END
+ArrayOfPengumumanForm.class
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/ArrayOfPengumumanForm.class
+END
+SenaraiKodDaerah.class
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/SenaraiKodDaerah.class
+END
+StatusTukarGanti.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/StatusTukarGanti.java
+END
+ArrayOfSenaraiKodHakmilik.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/ArrayOfSenaraiKodHakmilik.java
+END
+SenaraiKodHakmilik.class
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/SenaraiKodHakmilik.class
+END
+SenaraiUrusan.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/SenaraiUrusan.java
+END
+ArrayOfStatusPermohonan.class
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/ArrayOfStatusPermohonan.class
+END
+ArrayOfSenaraiBandarPekanMukim.class
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/ArrayOfSenaraiBandarPekanMukim.class
+END
+ArrayOfPengumumanForm.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/ArrayOfPengumumanForm.java
+END
+PengumumanForm.class
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/PengumumanForm.class
+END
+ArrayOfStatusSemakanAkaun.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/ArrayOfStatusSemakanAkaun.java
+END
+ArrayOfSenaraiDokumen.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/ArrayOfSenaraiDokumen.java
+END
+ArrayOfSenaraiKodSeksyen.class
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/ArrayOfSenaraiKodSeksyen.class
+END
+SenaraiKodHakmilik.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/SenaraiKodHakmilik.java
+END
+ArrayOfStatusPermohonan.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/ArrayOfStatusPermohonan.java
+END
+StatusPermohonan.class
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/eTanah/!svn/ver/4859/trunk/devel/eTanahPortal/clientWebService/src/main/java/etanah/view/portal/service/ws/StatusPermohonan.class
+END

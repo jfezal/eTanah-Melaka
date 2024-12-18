@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<workflow id="http://xmlns.oracle.com/bpel_mlk/reg/hw_mlknotabetul">
+
+    <stage id="kemasukan" finalize="false" viewable="pendaftar" currentAction="Kemasukan" listener="etanah.view.daftar.validator.ReportValidator" nextStageButton="Hantar Pendaftar">
+        <txncode id="BETUL">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan?paparanMaklumatPermohonanDaftar</page>
+            <!--<page id="2" title="Maklumat Hakmilik">nota/pembetulan/senaraiHakmilik</page>-->
+            <page id="2" title="Maklumat Hakmilik Asas/Asal/Sebelum">daftar/pembetulan/betul?asasHakmilik</page>
+            <!--<page id="3" title="Maklumat Urusan SC/B/N">daftar/pembetulan/betul?senaraiUrusan</page>-->
+            <!--<page id="4" title="Maklumat Pihak">daftar/pembetulan_pihak</page>-->
+            <page id="5" title="Maklumat Nota">daftar/nota/nota_daftar</page>
+            <!--<page id="3" title="Maklumat Pihak Berkepentingan">daftar/pembetulan/PihakBerkepentingan</page>-->
+            <!--<page id="3" title="Maklumat Batal Endosan">daftar/pembetulan/betul?maklumatBatal</page>-->
+            <!--<page id="4" title="Maklumat Tarikh">daftar/pembetulan/betul?maklumatTarikhLuput</page>-->
+             <!--<page id="3" title="Maklumat Urusan SC/B/N">daftar/pembetulan/betul?maklumatUrusan</page>-->
+         <!--<page id="4" title="Maklumat Pihak Berkepentingan">daftar/pembetulan/betul?senaraiPemilik</page>-->
+            <!--<page id="5" title="Maklumat Urusan SC/B/N">daftar/pembetulan/betul?sebelumkiniHakmilik</page>-->
+            <!--<page id="5" title="Maklumat Hakmilik Pasangan GSA">daftar/pembetulan/betul?senaraiPemilik</page>-->
+            <!--<page id="5" title="Maklumat Tanah Rezab">daftar/pembetulan/betul?sebelumkiniHakmilik</page>-->
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Syor Daftar" value="SD"/>
+                <outcome label="Syor Tolak" value="ST"/>
+                <outcome label="Syor Gantung" value="SG"/>
+            </outcomes>
+            <reports>
+                <report generator="REGVDocBETUL.rdf" prefix="VDOC" code="VDOC"/>
+            </reports>
+        </txncode>
+        <txncode id="BETC">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan?paparanMaklumatPermohonanDaftar</page>
+            <page id="2" title="Maklumat Hakmilik">common/maklumat_hakmilik_permohonan?senaraiHakmilik</page>
+            <page id="3" title="Maklumat Cukai Hakmilik">daftar/pembetulan/betul?betulCukai</page>
+            <page id="4" title="Maklumat Nota">daftar/nota/nota_daftar</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Syor Daftar" value="SD"/>
+                <outcome label="Syor Tolak" value="ST"/>
+                <outcome label="Syor Gantung" value="SG"/>
+            </outcomes>
+            <reports>
+                <report generator="REGVDocBETC.rdf" prefix="VDOC" code="VDOC"/>
+            </reports>
+        </txncode>
+        <txncode id="BETLP">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan?paparanMaklumatPermohonanDaftar</page>
+            <page id="2" title="Maklumat Hakmilik">common/maklumat_hakmilik_permohonan?senaraiHakmilik</page>            
+            <page id="3" title="Maklumat Tarikh">daftar/pembetulan/betul?maklumatTarikhLuput</page>
+            <page id="4" title="Maklumat Nota">daftar/nota/nota_daftar</page>
+            <page id="5" title="Maklumat Status Hakmilik">daftar/pembetulan/betul?maklumatStatus</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Syor Daftar" value="SD"/>
+                <outcome label="Syor Tolak" value="ST"/>
+                <outcome label="Syor Gantung" value="SG"/>
+            </outcomes>
+            <reports>
+                <report generator="REGVDocBETLP.rdf" prefix="VDOC" code="VDOC"/>
+            </reports>
+        </txncode>
+        <txncode id="BETST">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan?paparanMaklumatPermohonanDaftar</page>
+            <page id="2" title="Maklumat Hakmilik">common/maklumat_hakmilik_permohonan?senaraiHakmilik</page>
+            <page id="3" title="Maklumat Status Hakmilik">daftar/pembetulan/betul?maklumatStatus</page>
+            <page id="4" title="Maklumat Nota">daftar/nota/nota_daftar</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Syor Daftar" value="SD"/>
+                <outcome label="Syor Tolak" value="ST"/>
+                <outcome label="Syor Gantung" value="SG"/>
+            </outcomes>
+            <reports>
+                <report generator="REGVDocBETST.rdf" prefix="VDOC" code="VDOC"/>
+            </reports>
+        </txncode>
+        <txncode id="BETSW">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan?paparanMaklumatPermohonanDaftar</page>
+            <page id="2" title="Maklumat Suratkuasa Wakil">daftar/pembetulan/SuratKuasaWakil?maklumatSuratKuasaWakil</page>
+            <page id="3" title="Maklumat Nota">daftar/nota/nota_daftar</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Syor Daftar" value="SD"/>
+                <outcome label="Syor Tolak" value="ST"/>
+                <outcome label="Syor Gantung" value="SG"/>
+            </outcomes>
+            <reports>
+                <report generator="REGVDocBETSW.rdf" prefix="VDOC" code="VDOC"/>
+            </reports>
+        </txncode>
+        <txncode id="BETPB">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan?paparanMaklumatPermohonanDaftar</page>
+            <page id="2" title="Maklumat Hakmilik">common/maklumat_hakmilik_permohonan?senaraiHakmilik</page>
+            <page id="3" title="Kemaskini Pihak Berkepentingan">daftar/pembetulan/PihakBerkepentingan</page>
+            <page id="3" title="Hapus Pihak Berkepentingan">/daftar/pembetulan/HapusPihakBerkepentinganActionBean</page>
+            <page id="3" title="Tambah Pihak Berkepentingan">/daftar/pembetulan/TambahPihakBerkepentinganActionBean</page>
+            <page id="4" title="Maklumat Waris">daftar/pembetulan/PihakBerkepentingan?showForm1</page>
+            <page id="5" title="Kemaskini Waris">daftar/pembetulan_pihak</page>
+            <page id="6" title="Maklumat Nota">daftar/nota/nota_daftar</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Syor Daftar" value="SD"/>
+                <outcome label="Syor Tolak" value="ST"/>
+                <outcome label="Syor Gantung" value="SG"/>
+            </outcomes>
+            <reports>
+                <report generator="REGVDocBETPB.rdf" prefix="VDOC" code="VDOC"/>
+            </reports>
+        </txncode>
+        <txncode id="BETP">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan?paparanMaklumatPermohonanDaftar</page>
+            <page id="2" title="Maklumat Hakmilik">common/maklumat_hakmilik_permohonan?senaraiHakmilik</page>
+            <page id="3" title="Maklumat Pelan">daftar/pembetulan/betul?maklumatPelan</page>
+            <page id="4" title="Maklumat Nota">daftar/nota/nota_daftar</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Syor Daftar" value="SD"/>
+                <outcome label="Syor Tolak" value="ST"/>
+                <outcome label="Syor Gantung" value="SG"/>
+            </outcomes>
+            <reports>
+                <report generator="REGVDocBETP.rdf" prefix="VDOC" code="VDOC"/>
+            </reports>
+        </txncode>
+        <txncode id="BETEN">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan?paparanMaklumatPermohonanDaftar</page>
+            <page id="2" title="Maklumat Hakmilik">common/maklumat_hakmilik_permohonan?senaraiHakmilik</page>
+            <page id="3" title="Maklumat Batal Endosan">daftar/pembetulan/betul?maklumatBatal</page>
+            <page id="4" title="Maklumat Nota">daftar/nota/nota_daftar</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Syor Daftar" value="SD"/>
+                <outcome label="Syor Tolak" value="ST"/>
+                <outcome label="Syor Gantung" value="SG"/>
+            </outcomes>
+            <reports>
+                <report generator="REGVDocBETEN.rdf" prefix="VDOC" code="VDOC"/>
+            </reports>
+        </txncode>
+
+        <txncode id="BETHM">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan?paparanMaklumatPermohonanDaftar</page>
+            <page id="2" title="Maklumat Hakmilik">common/maklumat_hakmilik_permohonan?senaraiHakmilik</page>
+            <page id="3" title="Maklumat Silap Endosan">daftar/pembetulan/betul?maklumatSilap</page>
+            <page id="4" title="Maklumat Nota">daftar/nota/nota_daftar</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Syor Daftar" value="SD"/>
+                <outcome label="Syor Tolak" value="ST"/>
+                <outcome label="Syor Gantung" value="SG"/>
+            </outcomes>
+            <reports>
+                <report generator="REGVDocBETHM.rdf" prefix="VDOC" code="VDOC"/>
+            </reports>
+        </txncode>
+
+        <txncode id="BET3K">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan?paparanMaklumatPermohonanDaftar</page>
+            <page id="2" title="Maklumat Hakmilik Induk">daftar/pembetulan/betulSTR?asasHmInduk</page>
+            <page id="4" title="Maklumat Perbadanan Pengurusan">daftar/pembetulan/betulSTR?pembetulanBdnUrus</page>
+            <page id="5" title="Maklumat Nota">daftar/nota/nota_daftar</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Syor Daftar" value="SD"/>
+                <outcome label="Syor Tolak" value="ST"/>
+                <outcome label="Syor Gantung" value="SG"/>
+            </outcomes>
+            <reports>
+                <report generator="REGVDocBETSTR.rdf" prefix="VDOC" code="VDOC"/>
+            </reports>
+        </txncode>
+        <txncode id="BET4K">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan?paparanMaklumatPermohonanDaftar</page>
+            <page id="2" title="Maklumat Hakmilik">daftar/pembetulan/betulSTR?asasHmSTR</page>
+            <page id="5" title="Maklumat Nota">daftar/nota/nota_daftar</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Syor Daftar" value="SD"/>
+                <outcome label="Syor Tolak" value="ST"/>
+                <outcome label="Syor Gantung" value="SG"/>
+            </outcomes>
+            <reports>
+                <report generator="REGVDocBET4KSTR.rdf" prefix="VDOC" code="VDOC"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="keputusan" finalize="true" listener="etanah.view.daftar.validator.PembetulanValidation" report="true" nextStageButton="DAFTAR">
+        <txncode id="BETUL" >
+            <page id="1" title="Dokumen Verifikasi">common/maklumat_permohonan?showForm3</page>
+            <page id="2" title="Maklumat Pembetulan">daftar/pembetulan/betul?rekod_pembetulan</page>
+            <instruction>Sila buat semakan pada Dokumen Verifikasi (v-doc) beserta dokumen fizikal.</instruction>
+            <outcomes>
+                <outcome label="Daftar" value="D">
+                    <report generator="REGSuratDaftar001_MLK.rdf" code="SD"/>
+                </outcome>
+                <outcome label="Tolak" value="T">
+                    <report generator="REGSuratTolak001_MLK.rdf" code="ST"/>
+                </outcome>
+                <outcome label="Gantung" value="G">
+                    <report generator="REGSuratGantung001_MLK.rdf" code="SGT"/>
+                </outcome>
+            </outcomes>
+        </txncode>
+        <txncode id="BETC" >
+            <page id="1" title="Dokumen Verifikasi">common/maklumat_permohonan?showForm3</page>
+            <page id="2" title="Maklumat Pembetulan">daftar/pembetulan/betul?rekod_pembetulan</page>
+            <instruction>Sila buat semakan pada Dokumen Verifikasi (v-doc) beserta dokumen fizikal.</instruction>
+            <outcomes>
+                <outcome label="Daftar" value="D">
+                    <report generator="REGSuratDaftar001_MLK.rdf" code="SD"/>
+                </outcome>
+                <outcome label="Tolak" value="T">
+                    <report generator="REGSuratTolak001_MLK.rdf" code="ST"/>
+                </outcome>
+                <outcome label="Gantung" value="G">
+                    <report generator="REGSuratGantung001_MLK.rdf" code="SGT"/>
+                </outcome>
+            </outcomes>
+        </txncode>
+        <txncode id="BETLP" >
+            <page id="1" title="Dokumen Verifikasi">common/maklumat_permohonan?showForm3</page>
+            <page id="2" title="Maklumat Pembetulan">daftar/pembetulan/betul?rekod_pembetulan</page>
+            <instruction>Sila buat semakan pada Dokumen Verifikasi (v-doc) beserta dokumen fizikal.</instruction>
+            <outcomes>
+                <outcome label="Daftar" value="D">
+                    <report generator="REGSuratDaftar001_MLK.rdf" code="SD"/>
+                </outcome>
+                <outcome label="Tolak" value="T">
+                    <report generator="REGSuratTolak001_MLK.rdf" code="ST"/>
+                </outcome>
+                <outcome label="Gantung" value="G">
+                    <report generator="REGSuratGantung001_MLK.rdf" code="SGT"/>
+                </outcome>
+            </outcomes>
+        </txncode>
+        <txncode id="BETST" >
+            <page id="1" title="Dokumen Verifikasi">common/maklumat_permohonan?showForm3</page>
+            <page id="2" title="Maklumat Pembetulan">daftar/pembetulan/betul?rekod_pembetulan</page>
+            <instruction>Sila buat semakan pada Dokumen Verifikasi (v-doc) beserta dokumen fizikal.</instruction>
+            <outcomes>
+                <outcome label="Daftar" value="D">
+                    <report generator="REGSuratDaftar001_MLK.rdf" code="SD"/>
+                </outcome>
+                <outcome label="Tolak" value="T">
+                    <report generator="REGSuratTolak001_MLK.rdf" code="ST"/>
+                </outcome>
+                <outcome label="Gantung" value="G">
+                    <report generator="REGSuratGantung001_MLK.rdf" code="SGT"/>
+                </outcome>
+            </outcomes>
+        </txncode>
+        <txncode id="BETSW" >
+            <page id="1" title="Dokumen Verifikasi">common/maklumat_permohonan?showForm3</page>
+            <page id="2" title="Maklumat Pembetulan">daftar/pembetulan/betul?rekod_pembetulan</page>
+            <instruction>Sila buat semakan pada Dokumen Verifikasi (v-doc) beserta dokumen fizikal.</instruction>
+            <outcomes>
+                <outcome label="Daftar" value="D">
+                    <report generator="REGSuratDaftar001_MLK.rdf" code="SD"/>
+                </outcome>
+                <outcome label="Tolak" value="T">
+                    <report generator="REGSuratTolak001_MLK.rdf" code="ST"/>
+                </outcome>
+                <outcome label="Gantung" value="G">
+                    <report generator="REGSuratGantung001_MLK.rdf" code="SGT"/>
+                </outcome>
+            </outcomes>
+        </txncode>
+        <txncode id="BETPB" >
+            <page id="1" title="Dokumen Verifikasi">common/maklumat_permohonan?showForm3</page>
+            <page id="2" title="Maklumat Pembetulan">daftar/pembetulan/betul?rekod_pembetulan</page>
+            <instruction>Sila buat semakan pada Dokumen Verifikasi (v-doc) beserta dokumen fizikal.</instruction>
+            <outcomes>
+                <outcome label="Daftar" value="D">
+                    <report generator="REGSuratDaftar001_MLK.rdf" code="SD"/>
+                </outcome>
+                <outcome label="Tolak" value="T">
+                    <report generator="REGSuratTolak001_MLK.rdf" code="ST"/>
+                </outcome>
+                <outcome label="Gantung" value="G">
+                    <report generator="REGSuratGantung001_MLK.rdf" code="SGT"/>
+                </outcome>
+            </outcomes>
+        </txncode>
+        <txncode id="BETP" >
+            <page id="1" title="Dokumen Verifikasi">common/maklumat_permohonan?showForm3</page>
+            <page id="2" title="Maklumat Pembetulan">daftar/pembetulan/betul?rekod_pembetulan</page>
+            <instruction>Sila buat semakan pada Dokumen Verifikasi (v-doc) beserta dokumen fizikal.</instruction>
+            <outcomes>
+                <outcome label="Daftar" value="D">
+                    <report generator="REGSuratDaftar001_MLK.rdf" code="SD"/>
+                </outcome>
+                <outcome label="Tolak" value="T">
+                    <report generator="REGSuratTolak001_MLK.rdf" code="ST"/>
+                </outcome>
+                <outcome label="Gantung" value="G">
+                    <report generator="REGSuratGantung001_MLK.rdf" code="SGT"/>
+                </outcome>
+            </outcomes>
+        </txncode>
+        <txncode id="BETEN" >
+            <page id="1" title="Dokumen Verifikasi">common/maklumat_permohonan?showForm3</page>
+            <page id="2" title="Maklumat Pembetulan">daftar/pembetulan/betul?rekod_pembetulan</page>
+            <instruction>Sila buat semakan pada Dokumen Verifikasi (v-doc) beserta dokumen fizikal.</instruction>
+            <outcomes>
+                <outcome label="Daftar" value="D">
+                    <report generator="REGSuratDaftar001_MLK.rdf" code="SD"/>
+                </outcome>
+                <outcome label="Tolak" value="T">
+                    <report generator="REGSuratTolak001_MLK.rdf" code="ST"/>
+                </outcome>
+                <outcome label="Gantung" value="G">
+                    <report generator="REGSuratGantung001_MLK.rdf" code="SGT"/>
+                </outcome>
+            </outcomes>
+        </txncode>
+        <txncode id="BETHM" >
+            <page id="1" title="Dokumen Verifikasi">common/maklumat_permohonan?showForm3</page>
+            <page id="2" title="Maklumat Pembetulan">daftar/pembetulan/betul?rekod_pembetulan</page>
+            <instruction>Sila buat semakan pada Dokumen Verifikasi (v-doc) beserta dokumen fizikal.</instruction>
+            <outcomes>
+                <outcome label="Daftar" value="D">
+                    <report generator="REGSuratDaftar001_MLK.rdf" code="SD"/>
+                </outcome>
+                <outcome label="Tolak" value="T">
+                    <report generator="REGSuratTolak001_MLK.rdf" code="ST"/>
+                </outcome>
+                <outcome label="Gantung" value="G">
+                    <report generator="REGSuratGantung001_MLK.rdf" code="SGT"/>
+                </outcome>
+            </outcomes>
+        </txncode>
+        <txncode id="BET3K" >
+            <page id="1" title="Dokumen Verifikasi">common/maklumat_permohonan?showForm3</page>
+            <page id="2" title="Maklumat Pembetulan">daftar/pembetulan/betul?rekod_pembetulan</page>
+            <page id="3" title="Jana Geran Berperingkat">strata/janaGeranNB</page>
+            <instruction>Sila buat semakan pada Dokumen Verifikasi (v-doc) beserta dokumen fizikal.</instruction>
+            <outcomes>
+                <outcome label="Daftar" value="D">
+                    <report generator="REGSuratDaftar001_MLK.rdf" code="SD"/>
+                </outcome>
+                <outcome label="Tolak" value="T">
+                    <report generator="REGSuratTolak001_MLK.rdf" code="ST"/>
+                </outcome>
+                <outcome label="Gantung" value="G">
+                    <report generator="REGSuratGantung001_MLK.rdf" code="SGT"/>
+                </outcome>
+            </outcomes>
+        </txncode>
+        <txncode id="BET4K" >
+            <page id="1" title="Dokumen Verifikasi">common/maklumat_permohonan?showForm3</page>
+            <page id="2" title="Maklumat Pembetulan">daftar/pembetulan/betul?rekod_pembetulan</page>
+            <instruction>Sila buat semakan pada Dokumen Verifikasi (v-doc) beserta dokumen fizikal.</instruction>
+            <outcomes>
+                <outcome label="Daftar" value="D">
+                    <report generator="REGSuratDaftar001_MLK.rdf" code="SD"/>
+                </outcome>
+                <outcome label="Tolak" value="T">
+                    <report generator="REGSuratTolak001_MLK.rdf" code="ST"/>
+                </outcome>
+                <outcome label="Gantung" value="G">
+                    <report generator="REGSuratGantung001_MLK.rdf" code="SGT"/>
+                </outcome>
+            </outcomes>
+        </txncode>
+    </stage>
+</workflow>

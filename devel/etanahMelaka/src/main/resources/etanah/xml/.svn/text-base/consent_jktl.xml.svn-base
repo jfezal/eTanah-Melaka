@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!--<workflow id = "http://xmlns.oracle.com/Workflow/ConsentMelaka/JKTL">-->
+<workflow id = "http://xmlns.oracle.com/Workflow/ConsentMelaka/JKTL_melaka">
+    <stage id="Stage1" currentAction="Kemasukan Maklumat/Cetakan" listener="etanah.view.consent.validator.PihakBerkepentinganValidation,etanah.view.consent.validator.SyerValidation,etanah.view.consent.validator.TanahLadangValidation,etanah.view.consent.validator.TandatanganValidation">
+        <txncode id="PMJTL" daysToComplete="2" >
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan</page>
+            <page id="04" title="Maklumat Jabatan Teknikal">consent/jabatan_teknikal</page>
+            <page id="05" title="Maklumat Tandatangan">consent/tandatangan</page>
+            <!--<page id="05" title="Jabatan Teknikal dan YB ADUN">pelupusan/sedia_jabatan</page>-->
+            <!--<page id="04" title="Maklumat Pindah Milik">consent/maklumat_pindahmilik</page>-->
+            <!--<page id="05" title="Laporan Tanah">common/laporan_tanah</page>-->
+            <!--<page id="06" title="Maklumat Kertas JKTL">consent/ulasan_tanah_ladang_melaka?showForm</page>-->
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat, imbas dokumen, pilih pegawai untuk menandatangani kemudian jana dan cetak dokumen yang berkenaan.</instruction>
+            <reports>
+                <report generator="CONSSrtUlasanTeknikal_MLK.rdf" code="SUT"/>
+            </reports>
+        </txncode>
+        <validator></validator>
+        <report></report>
+    </stage>
+    <stage id="Stage2" currentAction="Kemasukan Maklumat" pushback="true" listener="etanah.view.consent.validator.TanahLadangValidation">
+        <txncode id="PMJTL" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan</page>
+            <!--<page id="04" title="Maklumat Pindah Milik">consent/maklumat_pindahmilik</page>-->
+            <!--<page id="05" title="Laporan Tanah">common/laporan_tanah?showForm2</page>-->
+            <!--<page id="05" title="Maklumat Kertas JKTL">consent/ulasan_tanah_ladang_melaka?showFormUlasan</page>-->
+            <page id="04" title="Maklumat Laporan Tanah">consent/laporan_tanah_ladang</page>
+            <!--<page id="05" title="Laporan Tanah">pelupusan/laporan_tanahV2</page>-->
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+        <validator></validator>
+        <report></report>
+    </stage>
+    <stage id="Stage3" currentAction="Kemasukan Maklumat" pushback="true" listener="etanah.view.consent.validator.TanahLadangValidation">
+        <txncode id="PMJTL" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan</page>
+            <!--<page id="04" title="Maklumat Pindah Milik">consent/maklumat_pindahmilik</page>-->
+            <!--<page id="05" title="Laporan Tanah">common/laporan_tanah?showForm2</page>-->
+            <page id="04" title="Maklumat Laporan Tanah">consent/laporan_tanah_ladang?showForm2</page>
+            <page id="05" title="Maklumat Kertas JKTL">consent/ulasan_tanah_ladang_melaka?showFormUlasan</page>
+            <reports>
+                <report generator="CONS_LaporanTanah_MLK.rdf" code="LTG"/>
+            </reports>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat - maklumat yang berkenaan.</instruction>
+        </txncode>
+        <validator></validator>
+        <report></report>
+    </stage>
+    <stage id="Stage4" currentAction="Semakan Maklumat" pushback="true">
+        <txncode id="PMJTL" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <!--<page id="04" title="Maklumat Pindah Milik">consent/maklumat_pindahmilik?showForm2</page>-->
+            <!--<page id="05" title="Laporan Tanah">common/laporan_tanah?showForm2</page>-->
+            <page id="04" title="Maklumat Laporan Tanah">consent/laporan_tanah_ladang?showForm2</page>
+            <page id="05" title="Maklumat Kertas JKTL">consent/ulasan_tanah_ladang_melaka?showFormUlasan</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan.</instruction>
+            <outcomes>
+                <outcome label="Disemak" value="SM"/>
+            </outcomes>
+        </txncode>
+        <validator></validator>
+        <report></report>
+    </stage>
+    <stage id="Stage5" currentAction="Kemasukan Perakuan" pushback="true" listener="etanah.view.consent.validator.TanahLadangValidation">
+        <txncode id="PMJTL" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <!--<page id="04" title="Maklumat Pindah Milik">consent/maklumat_pindahmilik?showForm2</page>-->
+            <!--<page id="05" title="Laporan Tanah">common/laporan_tanah?showForm2</page>-->
+            <page id="04" title="Maklumat Laporan Tanah">consent/laporan_tanah_ladang?showForm2</page>
+            <page id="05" title="Maklumat Kertas JKTL">consent/ulasan_tanah_ladang_melaka?showFormUlasan</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan perakuan pada bahagian keputusan.</instruction>
+            <outcomes>
+                <outcome label="Peraku" value="P"/>
+                <outcome label="Tidak Peraku" value="TP"/>
+            </outcomes>
+        </txncode>
+        <validator></validator>
+        <report></report>
+    </stage>
+    <stage id = "Stage6" currentAction="Cetakan" listener="etanah.view.consent.validator.TanahLadangValidation,etanah.view.consent.validator.MesyuaratValidation,etanah.view.consent.validator.TandatanganValidation" pushback="true">
+        <txncode id="PMJTL" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <!--<page id="04" title="Maklumat Pindah Milik">consent/maklumat_pindahmilik?showForm2</page>-->
+            <!--<page id="05" title="Laporan Tanah">common/laporan_tanah?showForm2</page>-->
+            <page id="04" title="Maklumat Laporan Tanah">consent/laporan_tanah_ladang?showForm2</page>
+            <page id="05" title="Maklumat Kertas JKTL">consent/ulasan_tanah_ladang_melaka?showFormUlasan</page>
+            <page id="06" title="Maklumat Kertas Ringkas">consent/kertas_ringkas_jktlm</page>
+            <page id="07" title="Maklumat Mesyuarat">consent/maklumat_mesyuarat</page>
+            <page id="08" title="Maklumat Tandatangan">consent/tandatangan</page>
+            <validator>validator</validator>
+            <instruction>Sila pilih pegawai untuk menandatangani, masukkan maklumat mesyuarat kemudian jana dan cetak dokumen yang berkenaan.</instruction>
+            <reports>
+                <report generator="CONSDokLTL_PMT_TanahLadang_1_MLK.rdf" code="KKTL"/>
+                <report generator="CONSSrtPanggilMesyuarat_MLK.rdf" code="SPM"/>
+                <report generator="CONS_KrtsRgks_JTKL_MLK.rdf" code="KRTL"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="Stage7" currentAction="Kemasukan Keputusan" finalize="true" resultDateToInsert="true" advanceRule="true" pushback="true" listener="etanah.view.consent.validator.KeputusanValidation">
+        <txncode id="PMJTL" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <!--<page id="04" title="Maklumat Pindah Milik">consent/maklumat_pindahmilik?showForm2</page>-->
+            <!--<page id="04" title="Maklumat Mesyuarat">consent/maklumat_mesyuarat?showFormDisplay</page>-->
+            <!--<page id="05" title="Maklumat Keputusan">consent/keputusan</page>-->
+            <page id="04" title="Maklumat Keputusan">consent/keputusan_jktlm</page>
+            <!--            <outcomes>
+                <outcome label="Lulus" value="L"/>
+                <outcome label="Tolak" value="T"/>
+                <outcome label="Tangguh Mesyuarat" value="TQ"/>
+            </outcomes>-->
+            <validator>validator</validator>
+            <instruction>Sila masukkan keputusan bagi permohonan ini.</instruction>
+        </txncode>
+    </stage>
+    <stage id="Stage8" currentAction="Cetakan" report="true" listener="etanah.view.consent.validator.ReportValidator,etanah.view.consent.validator.TanahLadangValidation" pushback="true">
+        <txncode id="PMJTL" daysToComplete="2">
+            <page id="01" title="Maklumat Permohonan">consent/maklumat_permohonan</page>
+            <page id="02" title="Maklumat Tanah">consent/maklumat_hakmilik?showPaparanHakmilik</page>
+            <page id="03" title="Maklumat Pihak">consent/pihak_kepentingan?showFormDisplay</page>
+            <!--<page id="04" title="Maklumat Pindah Milik">consent/maklumat_pindahmilik?showForm2</page>-->
+            <!--<page id="04" title="Maklumat Mesyuarat">consent/maklumat_mesyuarat?showFormDisplay</page>-->
+            <page id="05" title="Maklumat Sijil JKTL">consent/tandatangan</page>
+            <validator>validator</validator>
+            <instruction>Sila jana dan cetak dokumen yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+</workflow>

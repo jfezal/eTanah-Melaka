@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<workflow id="http://xmlns.oracle.com/etanah/lelongMelaka/PPJP">
+
+    <stage id="rekodPermohonanBatal" currentAction="Maklumat Permohonan" listener="etanah.view.lelong.validator.RekodPermohonanBatalValidator">
+        <txncode id="PPBL" daysToComplete="2">
+            <page id="1" title="Senarai Urusan">lelong/permohonan_batal</page>
+            <page id="2" title="Pemohon">/lelong/maklumat_pemohon</page>
+            <page id="3" title="Permohonan">/lelong/maklumat_permohonan</page>
+            <page id="4" title="Maklumat Tanah/Pihak Berkepentingan">/lelong/pihak_berkepentingan?showForm4</page>
+             <page id="5" title="Maklumat Lelongan">/lelong/tangguh_tetap_tarikh_lelong?showFormBb</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan dan imbas Borang 16O.</instruction>
+        </txncode>
+    </stage>
+    <stage id="kpsnPermohonanBatal" advanceRule = "true" currentAction="Semak Permohonan" listener="etanah.view.lelong.validator.KpsnPermohonanBatalValidator">
+        <txncode id="PPBL" daysToComplete="2">
+            <page id="1" title="Pemohon">/lelong/maklumat_pemohon</page>
+            <page id="2" title="Permohonan">/lelong/maklumat_permohonan?showForm4</page>
+            <page id="3" title="Maklumat Tanah/Pihak Berkepentingan">/lelong/pihak_berkepentingan?tangguhBatal</page>
+            <page id="4" title="Maklumat Lelongan">/lelong/tangguh_tetap_tarikh_lelong?showFormBb1Batal</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan.</instruction>
+            <outcomes>
+                <outcome label="Lulus" value="L"/>
+                <outcome label="Tolak" value="T"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="lulusBatal" currentAction="Cetak Borang 16P" advanceRule = "true"  listener="etanah.view.lelong.validator.PermohoanBatalValidator">
+        <txncode id="PPBL" daysToComplete="2">
+            <page id="1" title="Pemohon">/lelong/maklumat_pemohon</page>
+            <page id="2" title="Permohonan">/lelong/maklumat_permohonan?showForm4</page>
+            <page id="3" title="Maklumat Tanah/Pihak Berkepentingan">/lelong/pihak_berkepentingan?tangguhBatal</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan. Sila Jana dan Cetak Borang 16P.</instruction>
+           <reports>
+                <report generator="LLGBorang16P_MLK.rdf" prefix="VDOC" code="16P"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="tolakBatal" currentAction="Cetak Surat Tolak Pembatalan (160)" advanceRule = "true" listener="etanah.view.lelong.validator.PermohoanBatalValidator">
+        <txncode id="PPBL" daysToComplete="2">
+            <page id="1" title="Pemohon">/lelong/maklumat_pemohon</page>
+            <page id="2" title="Permohonan">/lelong/maklumat_permohonan?showForm4</page>
+            <page id="3" title="Maklumat Tanah/Pihak Berkepentingan">/lelong/pihak_berkepentingan?tangguhBatal</page>
+
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan. Sila Jana dan Cetak Surat Tolak Pembatalan.</instruction>
+            <reports>
+                <report generator="LLGSuratTolakBatal_MLK.rdf" prefix="VDOC" code="STP"/>
+            </reports>
+        </txncode>
+    </stage>
+</workflow>

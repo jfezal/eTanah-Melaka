@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/5216/trunk/devel/etanahViewController/src/main/java/etanah/view/laporan
+END
+LaporanMaklumatUrusanMis.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/3621/trunk/devel/etanahViewController/src/main/java/etanah/view/laporan/LaporanMaklumatUrusanMis.java
+END
+HasilLaporanKutipanAgensi.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/laporan/HasilLaporanKutipanAgensi.java
+END
+HasilLaporanActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/laporan/HasilLaporanActionBean.java
+END
+LaporanPengeluaranKertasHakmilik.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/laporan/LaporanPengeluaranKertasHakmilik.java
+END
+SpocLaporanActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/eTanah/!svn/ver/5215/trunk/devel/etanahViewController/src/main/java/etanah/view/laporan/SpocLaporanActionBean.java
+END
+LaporanConvertHakmilik.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/laporan/LaporanConvertHakmilik.java
+END
+NSHasilSpocLaporanActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/laporan/NSHasilSpocLaporanActionBean.java
+END
+HasilLaporanTerimaanHarianAgensi.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/laporan/HasilLaporanTerimaanHarianAgensi.java
+END
+LaporanPrestasiRegActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/laporan/LaporanPrestasiRegActionBean.java
+END
+HasilLaporanMelakaActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/5216/trunk/devel/etanahViewController/src/main/java/etanah/view/laporan/HasilLaporanMelakaActionBean.java
+END
+LaporanHasilMelakaActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/laporan/LaporanHasilMelakaActionBean.java
+END
+KptregLaporanActionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/laporan/KptregLaporanActionBean.java
+END

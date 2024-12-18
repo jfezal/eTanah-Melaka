@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/eTanah/!svn/ver/4899/trunk/devel/eTanahPortal/portal/src/main/resources
+END
+StripesResources.properties
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/portal/src/main/resources/StripesResources.properties
+END
+orabpel.properties
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/2469/trunk/devel/eTanahPortal/portal/src/main/resources/orabpel.properties
+END
+user.properties
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/2837/trunk/devel/eTanahPortal/portal/src/main/resources/user.properties
+END
+log4j.properties
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/portal/src/main/resources/log4j.properties
+END
+mohd.faidzal.properties
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eTanah/!svn/ver/2476/trunk/devel/eTanahPortal/portal/src/main/resources/mohd.faidzal.properties
+END
+displaytag.properties
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eTanah/!svn/ver/4899/trunk/devel/eTanahPortal/portal/src/main/resources/displaytag.properties
+END
+osp.properties
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/portal/src/main/resources/osp.properties
+END
+oraptl.properties
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/2469/trunk/devel/eTanahPortal/portal/src/main/resources/oraptl.properties
+END
+portal.properties
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/4860/trunk/devel/eTanahPortal/portal/src/main/resources/portal.properties
+END
+able.properties
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/4860/trunk/devel/eTanahPortal/portal/src/main/resources/able.properties
+END
+hibernate.cfg.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eTanah/!svn/ver/3095/trunk/devel/eTanahPortal/portal/src/main/resources/hibernate.cfg.xml
+END
+root.properties
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eTanah/!svn/ver/2462/trunk/devel/eTanahPortal/portal/src/main/resources/root.properties
+END
+oraptl2.properties
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eTanah/!svn/ver/2837/trunk/devel/eTanahPortal/portal/src/main/resources/oraptl2.properties
+END

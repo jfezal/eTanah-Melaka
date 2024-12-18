@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/eTanah/!svn/ver/5448/trunk/devel/etanahViewController/src/main/java/etanah/view/daftar/validator
+END
+NotaPTvalidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/daftar/validator/NotaPTvalidation.java
+END
+ReportValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/5294/trunk/devel/etanahViewController/src/main/java/etanah/view/daftar/validator/ReportValidator.java
+END
+SuratWakilValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5165/trunk/devel/etanahViewController/src/main/java/etanah/view/daftar/validator/SuratWakilValidation.java
+END
+HsbmValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/4335/trunk/devel/etanahViewController/src/main/java/etanah/view/daftar/validator/HsbmValidation.java
+END
+HSPendaftarValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/1111/trunk/devel/etanahViewController/src/main/java/etanah/view/daftar/validator/HSPendaftarValidator.java
+END
+NotadaftarValidationV2.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/eTanah/!svn/ver/4527/trunk/devel/etanahViewController/src/main/java/etanah/view/daftar/validator/NotadaftarValidationV2.java
+END
+PembetulanValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5448/trunk/devel/etanahViewController/src/main/java/etanah/view/daftar/validator/PembetulanValidation.java
+END
+HsbmPTValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/eTanah/!svn/ver/1809/trunk/devel/etanahViewController/src/main/java/etanah/view/daftar/validator/HsbmPTValidation.java
+END
+ReportValidatorV2.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/daftar/validator/ReportValidatorV2.java
+END
+SyarikatMCLValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/daftar/validator/SyarikatMCLValidator.java
+END
+GenerateIdPerserahanWorkflow.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/daftar/validator/GenerateIdPerserahanWorkflow.java
+END
+SyerValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eTanah/!svn/ver/5/trunk/devel/etanahViewController/src/main/java/etanah/view/daftar/validator/SyerValidation.java
+END
+NotadaftarValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/4593/trunk/devel/etanahViewController/src/main/java/etanah/view/daftar/validator/NotadaftarValidation.java
+END
+PendaftaranValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/5030/trunk/devel/etanahViewController/src/main/java/etanah/view/daftar/validator/PendaftaranValidation.java
+END

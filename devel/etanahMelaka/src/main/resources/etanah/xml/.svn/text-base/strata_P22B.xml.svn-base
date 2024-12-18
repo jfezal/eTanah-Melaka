@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<workflow id="http://xmlns.oracle.com/etanah/StrataMelaka/PenguatkuasaanStrata">
+
+    <stage id="agihtugas" currentAction="Agih Tugasan" distribute="true">
+        <txncode id="P22B">
+            <page id="1" title="Agih Tugasan">strata/agihTugasanKuatKuasa</page>
+            <page id="2" title="Hakmilik">strata/maklumat_tanah?showButiranHakmilik</page>
+            <instruction>Sila agihkan tugasan ini kepada yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id = "g_sedialaporan" currentAction="Sedia Laporan" report="true" listener="etanah.view.strata.validator.PelanLokasiGISValidator">
+        <txncode id="P22B">
+            <page id="1" title="Aduan">strata/penguatkuasaan_strata</page> 
+            <page id="2" title="Hakmilik">strata/penguatkuasaan_strata?showHakmilik</page>
+            <page id="3" title="Bangunan">strata/kuatkuasa_bangunan</page>
+            <page id="4" title="Maklumat Sempadan">strata/laporanSempadan</page> 
+            <page id="4" title="Imej">strata/penguatkuasaan_strata?showImej</page>
+            <!--<page id="5" title="Pelan Lokasi">strata/gis?showPelanLokasi</page>-->
+            <page id="5" title="Pelan Lokasi">strata/mlk/gis?showPelanLokasi</page>
+            <page id="6" title="Ulasan">strata/penguatkuasaan_strata?showUlasan</page>          
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="STRLaporanAduan_MLK.rdf" prefix="VDOC" code="LTPS"/>
+                <report generator="STRLaporanRingkasan_MLK.rdf" prefix="VDOC" code="LRPS"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id = "semaklaporan" currentAction="Semak Laporan" advanceRule="true">
+        <txncode id="P22B">
+            <page id="1" title="Semak Laporan">strata/keputusanKuatkuasa</page>
+            <validator>validator</validator>
+            <instruction>Sila semak Laporan Tanah di tab 'Dokumen'.</instruction>
+        </txncode>
+    </stage>
+    <stage id = "janasurattolak" currentAction="Jana Surat Tolak" advanceRule="true" listener="etanah.view.strata.validator.SediaLaporValidator">
+        <txncode id="P22B">
+            <page id="1" title="Hasil Siasatan">strata/keputusanKuatkuasa</page>
+            <validator>validator</validator>
+            <instruction>Sila Klik Butang 'Jana Dokumen' dan semak Surat Tolak di tab 'Dokumen'.</instruction>
+            <reports>
+                <report generator="STRSTolakKes_MLK.rdf" prefix="VDOC" code="STPS"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id = "signsuratlantikan" currentAction="Surat Lantikan">
+        <txncode id="P22B">
+            <page id="1" title="Surat Lantikan">strata/jana?laporanTanahRuangUdara</page>
+            <validator>validator</validator>
+            <instruction>Sila Klik Butang 'Jana Dokumen'</instruction>
+            <reports>
+                <report generator="STRLantikIO_MLK.rdf" prefix="VDOC" code="SLPPS"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id = "sediakertassiasatan" currentAction="Sedia Kertas Siasatan">
+        <txncode id="P22B">
+            <page id="1" title="Senarai Semak Siasatan">strata/SemakKertasSiasatan</page>
+            <page id="2" title="Folio A">strata/SemakKertasSiasatanFoliA</page>
+            <page id="3" title="Folio B">strata/SemakKertasSiasatanFoliB</page>
+            <page id="4" title="Folio C">strata/SemakKertasSiasatanFoliC</page>
+            <page id="5" title="Folio D">strata/SemakKertasSiasatanFoliD</page>
+            <validator>validator</validator>
+            <instruction>Sila Memuat Naik Fail Siasatan.</instruction>
+        </txncode>
+    </stage>
+    <stage id = "perakuan" currentAction="Perakuan" pushback ="true">
+        <txncode id="P22B">
+            <page id="1" title="Senarai Semak Siasatan">strata/SemakKertasSiasatan</page>
+            <page id="2" title="Folio A">strata/SemakKertasSiasatanFoliA</page>
+            <page id="3" title="Folio B">strata/SemakKertasSiasatanFoliB</page>
+            <page id="4" title="Folio C">strata/SemakKertasSiasatanFoliC</page>
+            <page id="5" title="Folio D">strata/SemakKertasSiasatanFoliD</page>
+            <page id="6" title="Perakuan">strata/kuatkuasa_perakuan</page>
+            <instruction>Sila Semak dan Buat Perakuan Fail Siasatan.</instruction>
+        </txncode>
+    </stage>
+    <stage id = "janakertassiasatan" currentAction="Jana Kertas Siasatan" advanceRule="true" listener="etanah.view.strata.validator.SediaLaporValidator">
+        <txncode id="P22B">
+            <page id="1" title="Senarai Semak Siasatan">strata/SemakKertasSiasatan</page>
+            <page id="2" title="Folio A">strata/SemakKertasSiasatanFoliA</page>
+            <page id="3" title="Folio B">strata/SemakKertasSiasatanFoliB</page>
+            <page id="4" title="Folio C">strata/SemakKertasSiasatanFoliC</page>
+            <page id="5" title="Folio D">strata/SemakKertasSiasatanFoliD</page>
+            <page id="6" title="Perakuan">strata/kuatkuasa_perakuan?viewPerakuan</page>
+            <validator>validator</validator>
+            <instruction>Sila Klik Tab Dokumen Untuk Mencetak Fail Siasatan.</instruction>
+        </txncode>
+    </stage>
+
+</workflow>

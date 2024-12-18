@@ -1,0 +1,34 @@
+# database
+jdbc.user=etnsapp
+jdbc.pass=apps
+jdbc.url=jdbc:oracle:thin:@etns-dbs1-vip:1521:etanahns1
+
+# kutipan database
+kutipan.agensi.url=jdbc:oracle:thin:@10.66.128.25:1521/etnsstg
+
+# hibernate datasource                                                                                                                                           
+# must use WebLogic datasource to use TCPS
+datasource.name=jdbc/eTanahNS
+
+# bpel
+# using HTTPS
+bpel.server.url=https://etns-wfs-vip:8005
+bpel.server.t3=t3://etns-wfs-vip:8001
+bpel.client.type=REMOTE
+
+# ldap
+#ldap.server.url=etns-ldp-vip
+ldap.server.url=etns-wfs1
+ldap.server.port=7001
+ldap.domain=etnsWorkflow
+
+# etanah2
+etanah.version=etanah2-ns
+etanah.negeri=05
+coherence=false
+
+# report server
+# using HTTPS
+report.server.url=https://etns-rep-vip:9005/reports/rwservlet
+report.server.key=etns
+

@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/eTanah/!svn/ver/5345/trunk/devel/etanahViewController/src/main/java/etanah/view/portal/service/ws
+END
+SenaraiUrusan.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eTanah/!svn/ver/2450/trunk/devel/etanahViewController/src/main/java/etanah/view/portal/service/ws/SenaraiUrusan.java
+END
+PengumumanForm.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/2522/trunk/devel/etanahViewController/src/main/java/etanah/view/portal/service/ws/PengumumanForm.java
+END
+PerkhidmatanTalianService.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/eTanah/!svn/ver/4830/trunk/devel/etanahViewController/src/main/java/etanah/view/portal/service/ws/PerkhidmatanTalianService.java
+END
+SenaraiKodSeksyen.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eTanah/!svn/ver/2522/trunk/devel/etanahViewController/src/main/java/etanah/view/portal/service/ws/SenaraiKodSeksyen.java
+END
+StatusSemakanAkaun.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/4739/trunk/devel/etanahViewController/src/main/java/etanah/view/portal/service/ws/StatusSemakanAkaun.java
+END
+SenaraiDokumen.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/eTanah/!svn/ver/2456/trunk/devel/etanahViewController/src/main/java/etanah/view/portal/service/ws/SenaraiDokumen.java
+END
+SenaraiKodDaerah.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/2454/trunk/devel/etanahViewController/src/main/java/etanah/view/portal/service/ws/SenaraiKodDaerah.java
+END
+UtilitiSetupService.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eTanah/!svn/ver/5345/trunk/devel/etanahViewController/src/main/java/etanah/view/portal/service/ws/UtilitiSetupService.java
+END
+IPerkhidmatanTalianService.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/eTanah/!svn/ver/4830/trunk/devel/etanahViewController/src/main/java/etanah/view/portal/service/ws/IPerkhidmatanTalianService.java
+END
+StatusPermohonan.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/2501/trunk/devel/etanahViewController/src/main/java/etanah/view/portal/service/ws/StatusPermohonan.java
+END
+SenaraiKodHakmilik.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eTanah/!svn/ver/2452/trunk/devel/etanahViewController/src/main/java/etanah/view/portal/service/ws/SenaraiKodHakmilik.java
+END
+SenaraiBandarPekanMukim.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/eTanah/!svn/ver/2453/trunk/devel/etanahViewController/src/main/java/etanah/view/portal/service/ws/SenaraiBandarPekanMukim.java
+END
+StatusTukarGanti.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/eTanah/!svn/ver/2409/trunk/devel/etanahViewController/src/main/java/etanah/view/portal/service/ws/StatusTukarGanti.java
+END
+IUtilitiSetupService.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eTanah/!svn/ver/5345/trunk/devel/etanahViewController/src/main/java/etanah/view/portal/service/ws/IUtilitiSetupService.java
+END
