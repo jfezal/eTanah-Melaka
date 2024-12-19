@@ -1,1 +1,0 @@
-Access the etanah web service at <a href="QuitRentAgentService">QuitRentAgentService</a>
