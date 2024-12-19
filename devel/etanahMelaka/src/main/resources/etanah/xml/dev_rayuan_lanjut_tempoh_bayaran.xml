@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<!--
+    Document   : dev_rayuan_lanjut_tempoh_bayaran.xml
+    Created on : December 8, 2010, 11:48 AM
+    Author     : nursyazwani
+    Modified   : khairul.hazwan
+    Description:
+        Purpose of the document follows.
+-->
+
+<workflow id="http://xmlns.oracle.com/etanahdev/Bpel_RayuanLanjutTempoh/Ht_RayuanLanjutTempoh">
+<!--<workflow id="http://xmlns.oracle.com/etanahdev/DevMLK/RayuanLanjutTempohBayaran">-->
+<!--Rayuan Lanjut Tempoh Bayaran - MMKN -->
+    
+    <stage id="maklumanarahan" currentAction="Makluman dan Arahan PTD">
+        <txncode id="RLTB">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon</page>
+            <page id="5" title="Rayuan">pelupusan/maklumat_rayuan</page>
+            <page id="6" title="Makluman/Arahan">pembangunan/melaka/MaklumanArahan</page>
+            <page id="7" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan makluman/arahan untuk tindakan seterusnya.</instruction>
+        </txncode>
+    </stage>
+    <stage id="sediarisalatmmkn" currentAction="Sedia Risalat MMKN">
+        <txncode id="RLTB">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>        
+            <page id="5" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="6" title="Makluman/Arahan">pembangunan/melaka/MaklumanArahan?showForm2</page>
+            <page id="7" title="Tujuan Rayuan">pembangunan/sebab_pembangunan</page>
+            <page id="8" title="Kertas MMKN">pembangunan/melaka/Kertas_MMKN</page>
+            <page id="9" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat-maklumat pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+    <stage id="semakderafperakuan" currentAction="Semak Risalat MMKN" pushback="true">
+        <txncode id="RLTB">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="6" title="Kertas MMKN">pembangunan/melaka/Kertas_MMKN?showForm3</page>
+            <page id="7" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat-maklumat yang dipaparkan dan masukkan deraf perakuan.</instruction>
+            <reports>
+                <report generator="DEVKMMKNPTD_MLK.rdf" prefix="VDOC" code="MMKND"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="perakuanmmknptd" currentAction="Perakuan PTD" pushback="true">
+        <txncode id="RLTB">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="6" title="Kertas MMKN">pembangunan/melaka/Kertas_MMKN?showForm3</page>
+            <page id="7" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan perakuan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Peraku" value="P"/>
+                <outcome label="Tidak Peraku" value="TP"/>
+            </outcomes>
+            <reports>
+                <report generator="DEVKMMKNPTD_MLK.rdf" prefix="VDOC" code="MMKND"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="cetakrisalatmmkn" currentAction="Cetak Risalat MMKN">
+        <txncode id="RLTB">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="6" title="Kertas MMKN">pembangunan/melaka/Kertas_MMKN?showForm2</page>
+            <!--<page id="7" title="Tandatangan PTD">pembangunan/tarikhTandantangan</page>-->
+            <page id="7" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila cetak Risalat MMKN.</instruction>
+            <reports>
+                <report generator="DEVKMMKNPTD_MLK.rdf" prefix="VDOC" code="MMKND"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="terimarisalatmmkn" currentAction="Terima dan Semak Risalat MMKN">
+        <txncode id="RLTB">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="6" title="Kertas MMKN">pembangunan/melaka/Kertas_MMKN</page>
+            <page id="7" title="Ringkasan MMKN">pembangunan/melaka/RingkasanMMKN</page>
+            <page id="8" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat-maklumat yang dipaparkan.</instruction>
+            <reports>
+                <report generator="DEVRMMKN_MLK.rdf" prefix="VDOC" code="RMN"/>
+                <report generator="DEVKMMKNPTG_MLK.rdf" prefix="VDOC" code="MMKNG"/>              
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="semakrisalatmmkn" currentAction="Semak Risalat MMKN" pushback="true">
+        <txncode id="RLTB">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="6" title="Kertas MMKN">pembangunan/melaka/Kertas_MMKN?showForm3</page>
+            <page id="7" title="Ringkasan MMKN">pembangunan/melaka/RingkasanMMKN?showForm2</page>
+            <page id="8" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat-maklumat yang dipaparkan.</instruction>
+            <reports>
+                <report generator="DEVRMMKN_MLK.rdf" prefix="VDOC" code="RMN"/>
+                <report generator="DEVKMMKNPTG_MLK.rdf" prefix="VDOC" code="MMKNG"/>              
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="semakderafrisalatmmkn" currentAction="Semak Risalat MMKN" pushback="true">
+        <txncode id="RLTB">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="6" title="Kertas MMKN">pembangunan/melaka/Kertas_MMKN?showForm3</page>
+            <page id="7" title="Ringkasan MMKN">pembangunan/melaka/RingkasanMMKN?showForm2</page>
+            <page id="8" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat-maklumat yang dipaparkan.</instruction>     
+            <reports>               
+                <report generator="DEVRMMKN_MLK.rdf" prefix="VDOC" code="RMN"/>
+                <report generator="DEVKMMKNPTG_MLK.rdf" prefix="VDOC" code="MMKNG"/>              
+            </reports>                     
+        </txncode>
+    </stage>
+    <stage id="derafperakuanrisalatmmkn" currentAction="Deraf Perakuan PTG" advanceRule="true" pushback="true">
+        <txncode id="RLTB">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="6" title="Kertas MMKN">pembangunan/melaka/Kertas_MMKN?showForm3</page>
+            <page id="7" title="Ringkasan MMKN">pembangunan/melaka/RingkasanMMKN?showForm2</page>
+            <page id="8" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat-maklumat yang dipaparkan dan masukkan deraf perakuan Pengarah Tanah dan Galian. Sila ke Tab Keputusan untuk memasukkan sama ada Kertas MMKN perlu pindaan atau tidak.</instruction>
+            <outcomes>
+                <outcome label="Pindaan" value="TL"/>
+                <outcome label="Tiada Pindaan" value="LK"/>
+            </outcomes>
+            <reports>
+                <report generator="DEVRMMKN_MLK.rdf" prefix="VDOC" code="RMN"/>
+                <report generator="DEVKMMKNPTG_MLK.rdf" prefix="VDOC" code="MMKNG"/>                           
+            </reports>
+        </txncode>
+    </stage>
+       
+    <!--<stage id="perakuanmmknptg" currentAction="Perakuan PTG" advanceRule="true" listener="etanah.view.pembangunan.validator.IntergrationMMKN">-->
+    <stage id="perakuanmmknptg" currentAction="Perakuan PTG" advanceRule="true" pushback="true" listener="etanah.view.pembangunan.validator.IntegrationEMMKNV2">
+        <txncode id="RLTB">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="6" title="Kertas MMKN">pembangunan/melaka/Kertas_MMKN?showForm3</page>
+            <page id="7" title="Ringkasan MMKN">pembangunan/melaka/RingkasanMMKN?showForm2</page>
+            <page id="8" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan perakuan Pengarah Tanah dan Galian.</instruction>
+            <outcomes>
+                <outcome label="Peraku" value="P"/>
+                <outcome label="Tidak Peraku" value="TP"/>
+                <outcome label="Tidak Lengkap/Ada Pindaan PTD" value="TL"/>
+            </outcomes>
+            <reports>
+                <report generator="DEVRMMKN_MLK.rdf" prefix="VDOC" code="RMN"/>
+                <report generator="DEVKMMKNPTG_MLK.rdf" prefix="VDOC" code="MMKNG"/>              
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="rekodkpsnmmkncetaksurat" currentAction="Rekod Keputusan MMKN dan Cetak Surat Keputusan">
+        <txncode id="RLTB">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="6" title="Kertas MMKN">pembangunan/melaka/Kertas_MMKN?showForm2</page>      
+            <page id="7" title="Ringkasan MMKN">pembangunan/melaka/RingkasanMMKN?showForm2</page>     
+            <page id="8" title="Keputusan MMKN">pembangunan/melaka/rekod_keputusan_MMK</page>
+            <page id="9" title="Tandatangan PTG">pembangunan/tarikhTandantangan?showForm2</page>
+            <page id="10" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila cetak Risalat MMKN dan masukkan keputusan MMKN pada ruangan yang disediakan.</instruction>
+            <reports>
+               <report generator="DEVRMMKN_MLK.rdf" prefix="VDOC" code="RMN"/>
+               <report generator="DEVKMMKNPTG_MLK.rdf" prefix="VDOC" code="MMKNG"/>
+               <report generator="DEVSrtKpsnMMKN_MLK.rdf" prefix="VDOC" code="SKM"/>
+               <!--<report generator="DEVSrtKpsnRPPPTG_MLK.rdf" prefix="VDOC" code="SRPPG"/>-->
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="terimakeputusanmmkn" currentAction="Terima Keputusan MMKN Daripada PTG" advanceRule="true" listener="etanah.view.pembangunan.validator.PindaanValidator">
+        <txncode id="RLTB">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="6" title="Keputusan MMKN">pembangunan/melaka/rekod_keputusan_MMK?viewKeputusan</page>
+            <page id="7" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak keputusan MMKN di tab Keputusan MMKN.</instruction>
+        </txncode>
+    </stage>
+    <stage id="cetaksuratkelulusan" currentAction="Cetak Surat Kelulusan">
+        <txncode id="RLTB">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="6" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila jana Surat Kelulusan untuk Pemohon.</instruction>
+            <reports>
+                <report generator="DEVSrtLulusRLTB_MLK.rdf" prefix="VDOC" code="SLRY"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="semakhantarsuratkelulusan" currentAction="Semak Surat Kelulusan" pushback="true" advanceRule="true" listener="etanah.view.pembangunan.validator.PindaanValidator">
+        <txncode id="RLTB">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="6" title="Tandatangan PTD">pembangunan/tarikhTandantangan</page>
+            <page id="7" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak Surat Kelulusan untuk Pemohon.</instruction>
+            <reports>
+                <report generator="DEVSrtLulusRLTB_MLK.rdf" prefix="VDOC" code="SLRY"/>
+            </reports>
+        </txncode>
+    </stage>
+    
+    <!--tolak-->
+    <stage id="cetaksurattolak" currentAction="Semak dan Cetak Surat Kelulusan MMKN">
+        <txncode id="RLTB">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="6" title="Tandatangan PTD">pembangunan/tarikhTandantangan</page>
+            <page id="7" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila jana Surat Penolakan Rayuan untuk Pemohon.</instruction>
+            <reports>
+                <report generator="DEVSrtTolak_MLK.rdf" prefix="VDOC" code="STLK"/> 
+            </reports>
+        </txncode>
+    </stage>
+      
+    <!--Pindaan-->   
+    <stage id="terimapindaan" currentAction="Terima Pindaan Dari PTG" advanceRule="true" distribute="true">
+         <txncode id="RLTB">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="6" title="Ulasan">pembangunan/ulasanPindaan</page>
+            <page id="7" title="Kertas MMKN">pembangunan/melaka/Kertas_MMKN</page>
+            <page id="8" title="Ringkasan MMKN">pembangunan/melaka/RingkasanMMKN</page>
+            <!--<page id="8" title="Agihan Tugas">pembangunan/agihan_tugas?showForm3</page>-->
+            <page id="9" title="Agihan Tugas">pembangunan/agihan_tugas?showForm13</page>
+            <page id="10" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak dan buat keputusan terhadap pindaan.</instruction>
+            <outcomes>
+                <outcome label="Pindaan Diteruskan" value="TL"/>
+                <outcome label="Tiada Pindaan" value="LK"/>
+            </outcomes>
+        </txncode>
+    </stage>   
+    <stage id="pindaankertasmmkn" currentAction="Pindaan Kertas MMKN">
+         <txncode id="RLTB">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="6" title="Ulasan">pembangunan/ulasanPindaan</page>
+            <page id="7" title="Kertas MMKN">pembangunan/melaka/Kertas_MMKN</page>
+            <page id="8" title="Ringkasan MMKN">pembangunan/melaka/RingkasanMMKN</page>
+            <page id="9" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak dan buat pindaan yang berkaitan.</instruction>
+        </txncode>
+    </stage>
+    <stage id="semakpindaanmmkn" currentAction="Semak Kertas MMKN" advanceRule="true" pushback="true" listener="etanah.view.pembangunan.validator.PindaanMMKNValidator">
+         <txncode id="RLTB">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <!--<page id="6" title="Risalat MMKN">pembangunan/melaka/risalatMMKN</page>-->
+            <page id="6" title="Ulasan">pembangunan/ulasanPindaan</page>
+            <page id="7" title="Kertas MMKN">pembangunan/melaka/Kertas_MMKN?showForm3</page>
+            <page id="8" title="Ringkasan MMKN">pembangunan/melaka/RingkasanMMKN?showForm2</page>
+            <page id="9" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak dan buat pindaan yang berkaitan.</instruction>
+        </txncode>
+    </stage>
+    <stage id="membuatpindaan" currentAction="Pindaan Kertas MMKN" advanceRule="true" listener="etanah.view.pembangunan.validator.PindaanValidator">
+        <txncode id="RLTB">
+            <page id="1" title="Maklumat Permohonan">common/maklumat_permohonan</page>
+            <page id="2" title="Maklumat Tanah">pembangunan/maklumat_hakmilik?showForm2</page>
+            <page id="3" title="Maklumat Pihak Berkepentingan">pembangunan/pihak_berkepentingan?getSenaraiHakmilikKepentingan</page>
+            <page id="4" title="Maklumat Pemohon">pembangunan/pihak_berkepentingan?getSenaraiPemohon2</page>
+            <page id="5" title="Rayuan">pelupusan/maklumat_rayuan?viewForm</page>
+            <page id="6" title="Kertas MMKN">pembangunan/melaka/Kertas_MMKN</page>
+            <page id="7" title="Ringkasan MMKN">pembangunan/melaka/RingkasanMMKN?showForm2</page>
+            <page id="8" title="Nota/Kertas Minit">/pembangunan/melaka/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila buat pindaan yang sepatutnya pada Kertas MMKN.</instruction>
+        </txncode>
+    </stage>
+</workflow>

@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<workflow id="http://xmlns.oracle.com/E_TANAH/ACQ_NS09/HWACQIZINLALU">
+    <!--ptptdpengambilan1-->
+    <stage id="01Kemasukan" currentAction="Kemasukan Permohonan" listener="etanah.view.pengambilan.validator.MaklumanPermohonanNotification">
+        <txncode id="PTNB">
+            <page id="1" title="Permohonan">pengambilanmodule?showForm</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="4" title="Pemohon">pengambilan/pengambilan_pemohon</page>
+            <page id="5" title="Maklumat Permohonan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <!--tptd1-->
+    <stage id="04AgihanTugas" currentAction="Agihan Tugas ke Pelukis Pelan" distribute="true" pushback="true">
+        <txncode id="PTNB">
+            <page id="1" title="Permohonan">pengambilanmodule?showForm</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="4" title="Pemohon">pengambilan/pengambilan_pemohon</page>
+            <page id="5" title="Maklumat Permohonan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <page id="7" title="Agihan Tugasan">pengambilan/agihTugasan?AgihKePPelan1</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila agihkan tugasan ini kepada yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <!--ptd1-->
+    <stage id="g_charting_permohonan" currentAction="Laporan Pelukis Pelan dan Charting Kemasukan" pushback="true">
+        <txncode id="PTNB">
+            <page id="1" title="Permohonan">pengambilanmodule?showForm</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="4" title="Pemohon">pengambilan/pengambilan_pemohon</page>
+            <page id="5" title="Maklumat Permohonan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <!--<page id="6" title="Pelukis Pelan">pengambilan/maklumat_tambahan?showForm</page>-->
+            <page id="10" title="Laporan Pelukis Pelan">pengambilan/laporan_pelukis_pelan</page>
+            <page id="9" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQLaporanPelukisPelan_MLK.rdf" prefix="VDOC" code="LPE"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptptgpengambilan1-->
+    <stage id="05SemakAgih" currentAction="Semakan Laporan Pelukis Pelan dan Agihan Tugasan" distribute="true" pushback="true">
+        <txncode id="PTNB">
+            <page id="1" title="Permohonan">pengambilanmodule?showForm</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="4" title="Pemohon">pengambilan/pengambilan_pemohon</page>
+            <page id="5" title="Maklumat Permohonan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <!--<page id="7" title="Pelukis Pelan Pengambilan">pengambilan/maklumat_tambahan?showForm</page>-->
+            <page id="10" title="Laporan Pelukis Pelan">pengambilan/laporan_pelukis_pelan</page>
+            <page id="8" title="Agihan Tugasan">pengambilan/agihTugasan?pptanahptd</page>
+            <page id="9" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQLaporanPelukisPelan_MLK.rdf" prefix="VDOC" code="LPE"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--tptg1-->
+    <stage id="06LaporanTanah" currentAction="Laporan Tanah" pushback="true">
+        <txncode id="PTNB">
+            <page id="1" title="Permohonan">pengambilanmodule?showForm</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="4" title="Pemohon">pengambilan/pengambilan_pemohon</page>
+            <page id="5" title="Maklumat Permohonan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <!--<page id="7" title="Pelukis Pelan Pengambilan">pengambilan/maklumat_tambahan?showForm</page>-->
+            <page id="10" title="Laporan Pelukis Pelan">pengambilan/laporan_pelukis_pelan</page>
+            <!--<page id="8" title="Laporan Tanah Pengambilan">/pengambilan/laporanTanahPengambilan</page>-->
+    <!--<page id="8" title="Laporan Tanah">pengambilan/laporan_tanahV2</page>-->
+            <page id="003" title="Laporan Tanah">pengambilan/laporan_tanahV2</page>
+            <!--<page id="003" title="Laporan Tanah Pengambilan V2">/pengambilan/laporan_tanahV2</page>-->
+    <!--<page id="9" title="Imej Laporan">pengambilan/muat_naik_imej?showMuatNaikImej</page>-->
+            <page id="10" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQLT_MLK.rdf" prefix="VDOC" code="LT"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptg1-->
+    <stage id="07Semakan" currentAction="Semakan Laporan Pelukis Pelan dan Laporan Tanah" pushback="true">
+        <txncode id="PTNB" >
+            <page id="1" title="Permohonan">pengambilanmodule?showForm</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="4" title="Pemohon">pengambilan/pengambilan_pemohon</page>
+            <page id="5" title="Maklumat Permohonan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <!--<page id="7" title="Pelukis Pelan Pengambilan">pengambilan/maklumat_tambahan?showForm</page>-->
+            <page id="10" title="Laporan Pelukis Pelan">pengambilan/laporan_pelukis_pelan</page>
+            <!--<page id="7" title="Laporan Tanah Pengambilan">/pengambilan/laporanTanahPengambilan</page>-->
+            <page id="003" title="Laporan Tanah">pengambilan/laporan_tanahV2</page>
+            <!--<page id="7" title="Imej Laporan">pengambilan/muat_naik_imej?showMuatNaikImej</page>-->
+            <page id="10" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQLT_MLK.rdf" prefix="VDOC" code="LT"/>
+            </reports>
+        </txncode>
+    </stage>
+
+
+    <stage id="08KemukaJadual" currentAction="Kemuka Jadual 1, Seksyen 11(2) ABE 1990">
+        <txncode id="PTNB">
+            <page id="1" title="Permohonan">pengambilanmodule?showForm</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="4" title="Pemohon">pengambilan/pengambilan_pemohon</page>
+            <page id="5" title="Maklumat Permohonan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <!--<page id="7" title="Pelukis Pelan">pengambilan/maklumat_tambahan?showForm</page>-->
+            <page id="10" title="Laporan Pelukis Pelan">pengambilan/laporan_pelukis_pelan</page>
+            <page id="003" title="Laporan Tanah">pengambilan/laporan_tanahV2</page>
+            <page id="007" title="Tandatangan Manual">pengambilan/tandatangan_dokumenV2</page>
+            <!--<page id="7" title="Laporan Tanah">/pengambilan/laporanTanahPengambilan</page>-->
+            <!--<page id="003" title="Laporan Tanah Pengambilan V2">/pengambilan/laporan_tanahV2</page>-->
+            <!--<page id="7" title="Imej Laporan">pengambilan/muat_naik_imej?showMuatNaikImej</page>-->
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila Jana Jadual Pertama pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQJadual1_ELE_MLK.rdf" prefix="VDOC" code="8ELW"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--kpptanahptg1-->
+    <stage id="09TetapkanTarikh" currentAction="Tetapkan Tarikh Siasatan">
+        <txncode id="PTNB">
+            <page id="1" title="Permohonan">pengambilanmodule?showForm</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="4" title="Pemohon">pengambilan/pengambilan_pemohon</page>
+            <page id="5" title="Maklumat Permohonan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <!--<page id="7" title="Pelukis Pelan">pengambilan/maklumat_tambahan?showForm</page>
+            <page id="7" title="Laporan Tanah">/pengambilan/laporanTanahPengambilan</page>-->
+            <page id="10" title="Laporan Pelukis Pelan">pengambilan/laporan_pelukis_pelan</page>
+            <page id="003" title="Laporan Tanah">pengambilan/laporan_tanahV2</page>
+            <!--<page id="7" title="Imej Laporan">pengambilan/muat_naik_imej?showMuatNaikImej</page>-->
+            <page id="1" title="Tarikh Perbicaraan/Siasatan">pengambilan/borang2A_notisMengenaiSiasatan</page>
+            <page id="007" title="Tandatangan Manual">pengambilan/tandatangan_dokumenV2</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQPanggilBicara_ELE_MLK.rdf" prefix="VDOC" code="NSST"/>
+            </reports>
+        </txncode>
+    </stage>
+
+
+    <stage id="10TerimaLaporan" currentAction="Kemuka Surat Permohonan untuk tetapkan tarikh siasatan">
+        <txncode id="PTNB">
+            <page id="1" title="Permohonan">pengambilanmodule?showForm</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="4" title="Pemohon">pengambilan/pengambilan_pemohon</page>
+            <page id="5" title="Maklumat Permohonan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <!--<page id="7" title="Pelukis Pelan">pengambilan/maklumat_tambahan?showForm</page>
+            <page id="7" title="Laporan Tanah">/pengambilan/laporanTanahPengambilan</page>-->
+            <page id="10" title="Laporan Pelukis Pelan">pengambilan/laporan_pelukis_pelan</page>
+            <page id="003" title="Laporan Tanah">pengambilan/laporan_tanahV2</page>
+            <!--<page id="7" title="Imej Laporan">pengambilan/muat_naik_imej?showMuatNaikImej</page>-->
+            <page id="1" title="Tarikh Perbicaraan/Siasatan">pengambilan/borang2A_notisMengenaiSiasatan</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila imbas Surat Permohonan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQPanggilBicara_ELE_MLK.rdf" prefix="VDOC" code="NSST"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--kpptanahptg1-->
+    <stage id="11TetapkanPampasan" currentAction="Terima permohonan" advanceRule="true" listener="etanah.view.pengambilan.validator.EndorsanPHHL">
+        <txncode id="PTNB">
+            <page id="1" title="Permohonan">pengambilanmodule?showForm</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="4" title="Pemohon">pengambilan/pengambilan_pemohon</page>
+            <page id="5" title="Maklumat Permohonan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <!--            <page id="11" title="Nota Siasatan">/pengambilan/nota_siasatan</page>-->
+            <!--<page id="11" title="Nota Siasatan 831A">/pengambilan/nota_siasatan</page>-->
+            <page id="11" title="Nota Siasatan">/pengambilan/nota_siasatan1</page>
+            <!--<page id="11" title="Tab Nota Siasatan">/pengambilan/tab_notasiasatan</page>-->
+            <page id="6" title="Pampasan">/pengambilan/pampasanPhlla</page>
+            <page id="1" title="Rekod Bayaran Pampasan">/pengambilan/rekodBayaranToTuanTanah_PHLL</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Tiada Bantahan" value="XT"/>
+                <outcome label="Ada Bantahan" value="AB"/>
+            </outcomes>
+            <reports>
+                <report generator="ACQNotaBicara_ELE_MLK.rdf" prefix="VDOC" code="NSIA"/>
+                <report generator="ACQBrgKiraan_ELE_MLK.rdf" prefix="VDOC" code="8CAL"/>
+                <report generator="ACQJadual3_ELE_MLK.rdf" prefix="VDOC" code="8ELZ"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--pengarahptg1-->
+    <stage id="12SediakanMMKN" currentAction="Sedia Kertas MMKN">
+        <txncode id="PTNB" >
+            <page id="1" title="Permohonan">pengambilanmodule?showForm</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="4" title="Pemohon">pengambilan/pengambilan_pemohon</page>
+            <page id="5" title="Maklumat Permohonan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <page id="5" title="Kertas MMKN">/pengambilan/mmknizinlalu_mlk</page>
+            <page id="007" title="Tandatangan Manual">pengambilan/tandatangan_dokumenV2?showFormForPTGPTD</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQMMKN_IZINLALU_MLK.rdf" prefix="VDOC" code="MMKN"/>
+                <report generator="ACQRisalatMMKN_IZINLALU_MLK.rdf" prefix="VDOC" code="8PAQ"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptptgpengambilan1-->
+    <stage id="13SemakSyorMMKN" currentAction="Semakan Kertas MMKN" pushback="true">
+        <txncode id="PTNB">
+            <page id="1" title="Permohonan">pengambilanmodule?showForm</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="4" title="Pemohon">pengambilan/pengambilan_pemohon</page>
+            <page id="5" title="Maklumat Permohonan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <page id="5" title="Kertas MMKN">/pengambilan/mmknizinlalu_mlk</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQMMKN_IZINLALU_MLK.rdf" prefix="VDOC" code="MMKN"/>
+                <report generator="ACQRisalatMMKN_IZINLALU_MLK.rdf" prefix="VDOC" code="8PAQ"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptptdpengambilan1-->
+    <stage id="14PerakuanMMKN" currentAction="Perakuan Kertas MMKN">
+        <txncode id="PTNB">
+            <page id="1" title="Permohonan">pengambilanmodule?showForm</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="4" title="Pemohon">pengambilan/pengambilan_pemohon</page>
+            <page id="5" title="Maklumat Permohonan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <page id="5" title="Kertas MMKN">/pengambilan/mmknizinlalu_mlk</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQMMKN_IZINLALU_MLK.rdf" prefix="VDOC" code="MMKN"/>
+                <report generator="ACQRisalatMMKN_IZINLALU_MLK.rdf" prefix="VDOC" code="8PAQ"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--tptd1-->
+    <stage id="15TerimaMMKN" currentAction="Terima dan Semak Kertas MMKN" pushback="true">
+        <txncode id="PTNB">
+            <page id="1" title="Permohonan">pengambilanmodule?showForm</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="4" title="Pemohon">pengambilan/pengambilan_pemohon</page>
+            <page id="5" title="Maklumat Permohonan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <page id="5" title="Kertas MMKN">/pengambilan/mmknizinlalu_mlk?showForm2</page>
+            <page id="6" title="Rekod Keputusan MMKN">pengambilan/rekod_keputusan</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila agihkan tugasan ini kepada yang berkenaan.</instruction>
+            <reports>
+                <report generoutor="ACQMMKN_IZINLALU_MLK.rdf" prefix="VDOC" code="MMKN"/>
+                <report generator="ACQRisalatMMKN_IZINLALU_MLK.rdf" prefix="VDOC" code="8PAQ"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptptdpengambilan1-->
+    <stage id="16SemakanMMKN" currentAction="Semakan Kertas MMKN" pushback="true">
+        <txncode id="PTNB">
+            <page id="1" title="Permohonan">pengambilanmodule?showForm</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="4" title="Pemohon">pengambilan/pengambilan_pemohon</page>
+            <page id="5" title="Maklumat Permohonan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <page id="5" title="Kertas MMKN">/pengambilan/mmknizinlalu_mlk?showForm2</page>
+            <page id="6" title="Rekod Keputusan MMKN">pengambilan/rekod_keputusan</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQMMKN_IZINLALU_MLK.rdf" prefix="VDOC" code="MMKN"/>
+                <report generator="ACQRisalatMMKN_IZINLALU_MLK.rdf" prefix="VDOC" code="8PAQ"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--tptd-->
+    <stage id="17SemakanMMKN" currentAction="Semakan Kertas MMKN" pushback="true">
+        <txncode id="PTNB">
+            <page id="1" title="Permohonan">pengambilanmodule?showForm</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="4" title="Pemohon">pengambilan/pengambilan_pemohon</page>
+            <page id="5" title="Maklumat Permohonan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <page id="5" title="Kertas MMKN">/pengambilan/mmknizinlalu_mlk?showForm2</page>
+            <page id="6" title="Rekod Keputusan MMKN">pengambilan/rekod_keputusan</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQMMKN_IZINLALU_MLK.rdf" prefix="VDOC" code="MMKN"/>
+                <report generator="ACQRisalatMMKN_IZINLALU_MLK.rdf" prefix="VDOC" code="8PAQ"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptptdpengambilan1-->
+    <stage id="18SemakanMMKN" currentAction="Semakan Kertas MMKN" advanceRule="true" pushback="true">
+        <txncode id="PTNB">
+            <page id="1" title="Permohonan">pengambilanmodule?showForm</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="4" title="Pemohon">pengambilan/pengambilan_pemohon</page>
+            <page id="5" title="Maklumat Permohonan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <page id="5" title="Kertas MMKN">/pengambilan/mmknizinlalu_mlk?showForm2</page>
+            <page id="6" title="Rekod Keputusan MMKN">pengambilan/rekod_keputusan</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Pindaan Draf ke PTD" value="AT"/>
+                <outcome label="Tiada Pindaan" value="XN"/>
+                <outcome label="Pindaan Draf ke PT MMKN" value="AN"/>
+            </outcomes>
+            <reports>
+                <report generator="ACQMMKN_IZINLALU_MLK.rdf" prefix="VDOC" code="MMKN"/>
+                <report generator="ACQRisalatMMKN_IZINLALU_MLK.rdf" prefix="VDOC" code="8PAQ"/>
+            </reports>
+        </txncode>
+    </stage>
+<!--listener="etanah.view.pengambilan.validator.IntegrationEMMKNValidator"-->
+    <stage id="19PerakuanMMKN" currentAction="Perakuan Kertas MMKN" pushback="true" listener="etanah.view.pengambilan.validator.IntegrationEMMKNV2">
+        <txncode id="PTNB">
+            <page id="1" title="Permohonan">pengambilanmodule?showForm</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="4" title="Pemohon">pengambilan/pengambilan_pemohon</page>
+            <page id="5" title="Maklumat Permohonan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <page id="5" title="Kertas MMKN">/pengambilan/mmknizinlalu_mlk?showForm2</page>
+            <page id="6" title="Rekod Keputusan MMKN">pengambilan/rekod_keputusan</page>
+            <page id="007" title="Tandatangan Manual">pengambilan/tandatangan_dokumenV2?showFormForPTGPTD</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila agihkan tugasan ini kepada yang berkenaan.</instruction>
+            <reports>
+                <report generator="ACQMMKN_IZINLALU_MLK.rdf" prefix="VDOC" code="MMKN"/>
+                <report generator="ACQRisalatMMKN_IZINLALU_MLK.rdf" prefix="VDOC" code="8PAQ"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="17_1KemasukanMMKN" currentAction="Perakuan Kertas MMKN">
+        <txncode id="PTNB">
+            <page id="1" title="Permohonan">pengambilanmodule?showForm</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="4" title="Pemohon">pengambilan/pengambilan_pemohon</page>
+            <page id="5" title="Maklumat Permohonan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <page id="5" title="Kertas MMKN">/pengambilan/mmknizinlalu_mlk?showForm2</page>
+            <page id="6" title="Rekod Keputusan MMKN">pengambilan/rekod_keputusan</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila agihkan tugasan ini kepada yang berkenaan.</instruction>
+            <reports>
+                <report generator="ACQMMKN_IZINLALU_MLK.rdf" prefix="VDOC" code="MMKN"/>
+                <report generator="ACQRisalatMMKN_IZINLALU_MLK.rdf" prefix="VDOC" code="8PAQ"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="20RekodKeputusanMMKN" currentAction="Rekod Keputusan MMKN" advanceRule="true">
+        <txncode id="PTNB">
+            <page id="1" title="Permohonan">pengambilanmodule?showForm</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="4" title="Pemohon">pengambilan/pengambilan_pemohon</page>
+            <page id="5" title="Maklumat Permohonan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <page id="6" title="Rekod Keputusan MMKN">pengambilan/rekod_keputusan</page>
+            <page id="6" title="Tandatangan Dokumen">pelupusan/tandatangan_dokumenV2?showFormForPTG</page>
+            <!--<page id="6" title="Keputusan MMKN22222222">pelupusan/rekod_keputusanV2</page>-->
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Lulus" value="L"/>
+                <outcome label="Tolak" value="T"/>
+            </outcomes>
+            <reports>
+                <!--<report generator="ACQSrtKpsnMMk_ELE_MLK.rdf" prefix="VDOC" code="MMKN"/>-->
+                <!--<report generator="DISSrtKpsnMMKNBMBTL_MLK.rdf" prefix="VDOC" code="SKM"/>-->
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="21MaklumKeputusanMMKN" currentAction="Maklum Keputusan MMKN" pushback="true">
+        <txncode id="PTNB">
+            <page id="1" title="Permohonan">pengambilanmodule?showForm</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="4" title="Pemohon">pengambilan/pengambilan_pemohon</page>
+            <page id="5" title="Maklumat Permohonan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <page id="1" title="Rekod Keputusan MMKN">pengambilan/rekod_keputusan</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQSrtKpsnMMKNBMBTL_MLK.rdf" prefix="VDOC" code="SKM"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="22TerimaKeputusanMMKN" currentAction="Terima Keputusan MMKN" pushback="true">
+        <txncode id="PTNB">
+            <page id="1" title="Permohonan">pengambilanmodule?showForm</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="4" title="Pemohon">pengambilan/pengambilan_pemohon</page>
+            <page id="5" title="Maklumat Permohonan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <page id="1" title="Rekod Keputusan MMKN">pengambilan/rekod_keputusan</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <!--ptptdpengambilan1-->
+    <stage id="23MaklumanKeputusanMMKN" currentAction="Maklum Keputusan MMKN">
+        <txncode id="PTNB">
+            <page id="1" title="Permohonan">pengambilanmodule?showForm</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="4" title="Pemohon">pengambilan/pengambilan_pemohon</page>
+            <page id="5" title="Maklumat Permohonan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <page id="1" title="Rekod Keputusan MMKN">pengambilan/rekod_keputusan</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <!--tptd-->
+    <stage id="24SuratKeputusanMMKN" currentAction="Keputusan MMKN">
+        <txncode id="PTNB">
+            <page id="1" title="Permohonan">pengambilanmodule?showForm</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="4" title="Pemohon">pengambilan/pengambilan_pemohon</page>
+            <page id="5" title="Maklumat Permohonan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <page id="1" title="Rekod Keputusan MMK">pengambilan/rekod_keputusan</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <!--ptptdpengambilan1-->
+    <stage id="25KeputusanTNB" currentAction="Rekod Keputusan TNB" advanceRule="true">
+        <txncode id="PTNB">
+            <page id="1" title="Permohonan">pengambilanmodule?showForm</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="4" title="Pemohon">pengambilan/pengambilan_pemohon</page>
+            <page id="5" title="Maklumat Permohonan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <page id="1" title="Rekod Bayaran Pampasan">/pengambilan/rekodBayaranToTuanTanah_PHLL</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Pemegang Lesen-Lulus" value="UL"/>
+                <outcome label="Pemegang Lesen-Tolak" value="JT"/>
+            </outcomes>
+        </txncode>
+    </stage>
+
+    <stage id="26AgihanTugas" currentAction="Agih Tugasan" distribute="true">
+        <txncode id="PTNB">
+            <page id="1" title="Permohonan">pengambilanmodule?showForm</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="4" title="Pemohon">pengambilan/pengambilan_pemohon</page>
+            <page id="5" title="Maklumat Permohonan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <page id="7" title="Agihan Tugasan">pengambilan/agihTugasan?AgihKePPelan1</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+    <stage id="g_charting_keputusan" currentAction="Penyediaan Charting Keputusan" advanceRule="true" listener="etanah.view.pengambilan.validator.EndorsanPHHL">
+        <txncode id="PTNB">
+            <page id="1" title="Permohonan">pengambilanmodule?showForm</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="4" title="Pemohon">pengambilan/pengambilan_pemohon</page>
+            <page id="5" title="Maklumat Permohonan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <page id="10" title="Laporan Pelukis Pelan">pengambilan/laporan_pelukis_pelan</page>
+            <!--<page id="6" title="Pelukis Pelan">pengambilan/maklumat_tambahan?showForm</page>-->
+            <page id="9" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Charting Tolak" value="CP"/>
+                <outcome label="Charting Kelulusan" value="CL"/>
+            </outcomes>
+        </txncode>
+    </stage>
+
+    <stage id="Endorsan" currentAction="Endorsan" pushback="true" finalize="true">
+        <txncode id="PTNB">
+            <page id="1" title="Permohonan">pengambilanmodule?showForm</page>
+            <page id="2" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="4" title="Pemohon">pengambilan/pengambilan_pemohon</page>
+            <page id="5" title="Maklumat Permohonan">pengambilan/maklumat_pendudukanSementara?showForm</page>
+            <!--<page id="8" title="Laporan Pelukis Pelan">pengambilan/maklumat_tambahan?showForm</page>
+            <page id="7" title="Laporan Tanah">/pengambilan/laporanTanahPengambilan</page>-->
+            <page id="10" title="Laporan Pelukis Pelan">pengambilan/laporan_pelukis_pelan</page>
+            <page id="003" title="Laporan Tanah">pengambilan/laporan_tanahV2</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+
+</workflow>
+

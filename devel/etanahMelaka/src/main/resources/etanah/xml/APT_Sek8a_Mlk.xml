@@ -1,0 +1,905 @@
+<workflow id="http://xmlns.oracle.com/Sek8APT/Bpel_Sek8A_1Main/sek8a_main">
+
+    <stage id="kemasukan" currentAction="Kemasukan Permohonan" listener="etanah.view.stripes.pengambilan.sek8a.validator.KemasukanValidator" report="true">
+        <txncode id="831">
+            <page id="1" title="Permohonan">pengambilan/common/maklumat_asas</page>
+            <page id="2" title="Tanah">pengambilan/pindaan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pemohon">/pengambilan/pengambilan_pemohon</page>
+            <page id="4" title="Pengambilan">pengambilan/maklumat_pengambilan?showForm</page>
+            <page id="5" title="Tandatangan Manual">/pengambilan/tandatangan_manual?suratKemasukanForm</page>
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+    <stage id="semak_kemasukan" currentAction="Semakan Permohonan" pushback="true">
+        <txncode id="831">
+            <page id="1" title="Permohonan">pengambilan/common/maklumat_asas</page>
+            <page id="2" title="Tanah">pengambilan/pindaan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pemohon">/pengambilan/pengambilan_pemohon</page>
+            <page id="4" title="Pengambilan">pengambilan/maklumat_pengambilan?showForm</page>
+            <page id="5" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="semak_kemasukan_ADO" currentAction="Semakan Permohonan" pushback="true" listener="etanah.view.stripes.pengambilan.sek8a.validator.SemakKemasukanADOValidator">
+        <txncode id="831">
+            <page id="1" title="Permohonan">pengambilan/common/maklumat_asas</page>
+            <page id="2" title="Tanah">pengambilan/pindaan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Pemohon">/pengambilan/pengambilan_pemohon</page>
+            <page id="4" title="Pengambilan">pengambilan/maklumat_pengambilan?showForm</page>
+            <page id="5" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="agihan_tugas" currentAction="Agihan Tugas" distribute="true" pushback="true">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Agihan Tugasan">pengambilan/agihTugasan?AgihKePPelan1</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="g_charting_permohonan" currentAction="Kemasukan Laporan Pelukis Pelan dan Charting" pushback="true">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Laporan Pelukis Pelan">/common/laporan/pelan/java/LaporanPelukisPelanNewActionBean?showForm</page> 
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQLaporanPelukisPelanSEK4_MLK.rdf" prefix="VDOC" code="LPE"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="g_semak_charting" currentAction="Semak kemasukan pelukis pelan" distribute="true" pushback="true">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Laporan Pelukis Pelan">/common/laporan/pelan/java/LaporanPelukisPelanNewActionBean?showForm</page> 
+            <page id="3" title="Agihan Tugasan Laporan Tanah">pengambilan/agihTugasan?semakCharting</page>
+            <page id="4" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQLaporanPelukisPelanSEK4_MLK.rdf" prefix="VDOC" code="LPE"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="laporan_tanah" currentAction="Penyedian Laporan Tanah" pushback="true" listener="etanah.view.stripes.pengambilan.sek8a.validator.JanaBorangCDLaporanTanahValidator" report="true">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="004" title="Laporan Tanah">/laporanTanah</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+    <stage id="semak_laporanTanah" currentAction="Semak Penyediaan Laporan Tanah" pushback="true" listener="etanah.view.stripes.pengambilan.sek8a.validator.SemakLaporanTanah8AValidator" report="true">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+             <page id="004" title="Laporan Tanah">/laporanTanah</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="agihan_tugas_ptg" currentAction="Agihan Laporan Tanah PTG">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="3" title="Agihan Tugasan Laporan Tanah PTG">pengambilan/agihTugasan?pptanahptg_831bc</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="laporan_tanah_ptg" currentAction="Sedia Laporan Tanah" listener="etanah.view.stripes.pengambilan.sek4.validator.LaporanTanahPTGValidator" report="true">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Laporan Tanah">/laporanTanah</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="semak_laporanTanah_ptg" currentAction="Terima dan Semak Laporan Tanah PTG" listener="etanah.view.stripes.pengambilan.sek8a.validator.SemakLaporanTanahPTGValidator" report="true">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Laporan Tanah">/laporanTanah</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>              
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="rekod_kpsn_mmkn" currentAction="Keputusan MMKN dan Deraf Surat Maklum" distribute="true">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Keputusan MMK">/pengambilan/common/rekodKpsnMMKActionBean</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="rekod_surat_kpsn" currentAction="Draf Surat Maklum Pemohon" report="true">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Keputusan MMK">/pengambilan/common/rekodKpsnMMKActionBean?showFormView</page>
+            <page id="3" title="Tandatangan Manual">/pengambilan/tandatangan_manual?suratMakluman</page>
+            <page id="5" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQSrtMaklumPemohon_MLK.rdf" prefix="VDOC" code="8MAK"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="semak_tandatangan" currentAction="Semak dan Tandatangan Surat Maklum Pemohon">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Keputusan MMK">/pengambilan/common/rekodKpsnMMKActionBean?showFormView</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="cetak_surat" currentAction="Cetak Surat Maklum Pemohon">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Keputusan MMK">/pengambilan/common/rekodKpsnMMKActionBean?showFormView</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila Cetak Borang Surat Makluman pada Tab 'Dokumen' yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="g_charting_keputusan" currentAction="Charting Keputusan" report="true">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Laporan Pelukis Pelan">/common/laporan/pelan/java/LaporanPelukisPelanNewActionBean?showForm</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila Charting Keputusan dengan menekan butang 'Charting' yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQLaporanPelukisPelanSEK4_MLK.rdf" prefix="VDOC" code="LPE"/>
+            </reports>
+        </txncode>
+    </stage>
+   
+    <stage id="semak_BorangD" currentAction="Semak Borang D" advanceRule="true" listener="etanah.view.stripes.pengambilan.sek8a.validator.SemakBorangDTandatanganValidator" report="true">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Borang C dan D">/pengambilan/borang_cd</page>
+            <!-- MASUKKAN TAB DI TANDA TANGAN UNTUK BORANG D-->
+            <page id="5" title="Tandatangan Manual">/pengambilan/tandatangan_manual?borangDForm</page>
+            <page id="2" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila Jana 'Borang D' yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>            
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="Tandatgn_BorangD" currentAction="Semak dan Tandatangan Borang D" listener="etanah.view.stripes.pengambilan.sek8a.validator.TandatanganBorangDValidator">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Borang C dan D">/pengambilan/borang_cd</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila Semak Dan Cetak Borang Borang D pada Tab 'Dokumen' yang telah disediakan.</instruction>
+            
+        </txncode>
+    </stage>
+    <stage id="Terima_Warta" currentAction="Terima Warta" advanceRule="true">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Warta Seksyen 8">/pengambilan/common/wartaSeksyen4</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="pindaan_kptsn" currentAction="Ada Pindaan" advanceRule="true" listener="etanah.view.stripes.pengambilan.sek8a.validator.PindaanKeputusanValidator">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Tanah">pengambilan/pindaan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila membuat Pindaan Keputusan di Tab Keputusan.</instruction>
+            <outcomes>
+                <outcome label="Tiada Pindaan" value="XN"/>
+                <outcome label="Pembetulan Warta" value="PW"/>
+                <outcome label="Pindaan Maklumat Tanah" value="PQ"/>
+            </outcomes>
+        </txncode>
+    </stage>
+   
+    <stage id="semak_warta" currentAction="Makluman Pembetulan Warta" listener="etanah.view.stripes.pengambilan.sek8a.validator.SemakBorangDTandatanganValidator" report="true">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Borang C dan D">/pengambilan/borang_cd</page>
+            <!-- MASUKKAN TAB DI TANDA TANGAN UNTUK BORANG D-->
+            <page id="5" title="Tandatangan Manual">/pengambilan/tandatangan_manual?borangSuratDForm</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="semak_warta_ptg" currentAction="Pembetulan Warta" listener="etanah.view.stripes.pengambilan.sek8a.validator.SemakBorangDTandatanganValidator" report="true">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Borang C dan D">/pengambilan/borang_cd</page>
+            <page id="3" title="Tandatangan Manual">/pengambilan/tandatangan_manual?borangSuratDForm</page>
+            <page id="4" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="sah_tandatangan_warta" currentAction="Pengesahan dan Tandatangan Pembetulan Warta">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Borang C dan D">/pengambilan/borang_cd</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="hantar_warta_cetak" currentAction="Cetak Pembetulan Warta">
+        <txncode id="831">
+            <!--ADDED VALIDATOR INITIATE KE PINDAAN-->
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Borang C dan D">/pengambilan/borang_cd</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    
+    <stage id="kemaskini_maklumat" currentAction="Kemaskini Maklumat Permohonan" distribute="true">
+        <txncode id="831">
+            <page id="1" title="Permohonan">pengambilan/common/maklumat_asas</page>
+            <page id="2" title="Tanah">pengambilan/pindaan/maklumat_hakmilikpengambilan?showForm</page>
+            <page id="5" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>  
+     
+    <stage id="Sedia_surat_EndorsanD" currentAction="Sedia Surat Penandaan Atas Tanah Dan Endorsan Borang D" listener="etanah.view.stripes.pengambilan.sek8.validator.SediaSuratBorangDValidator">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Borang C dan D">/pengambilan/borang_cd</page>
+            <page id="3" title="Tandatangan Manual">/pengambilan/tandatangan_manual?suratEndorsan</page>
+            <page id="4" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak dan tandatangan dokumen yang berkaitan didalam Tab 'Dokumen'.</instruction>
+            <reports>
+                <report generator="ACQSrtPenandaanAtasTanah_MLK.rdf" prefix="VDOC" code="8TAN"/>
+                <!--<report generator="ACQSrtEndorsBorgD_MLK.rdf" prefix="VDOC" code="SEBD"/>-->
+                
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="laporan_tanah_lengkap" currentAction="Sedia Laporan Tanah Lengkap" listener="etanah.view.stripes.pengambilan.sek8.validator.LaporanTanahLengkapValidator" report="true">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="004" title="Laporan Tanah">/laporanTanah</page>
+            <page id="3" title="Pihak Berkepentigan">/pengambilan/penerima_borang_f</page>
+            <page id="4" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="semak_tandatangan_lt" currentAction="Semak Laporan Tanah Lengkap" listener="etanah.view.stripes.pengambilan.sek8.validator.LaporanTanahLengkapValidator" report="true">
+        <txncode id="831">
+            <!-- ENDORSAN BORANG D-->
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="004" title="Laporan Tanah">/laporanTanah</page>
+            <page id="3" title="Pihak Berkepentigan">/pengambilan/penerima_borang_f</page>
+            <page id="3" title="Perbicaraan">/pengambilan/perbicaraan</page>
+            <page id="5" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak dan tandatangan dokumen yang berkaitan didalam Tab 'Dokumen'.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="hantar_sedia_surat" currentAction="Sedia Surat Panggilan Siasatan" listener="etanah.view.stripes.pengambilan.sek8.validator.SediaSuratEFValidator">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="4" title="Pihak Berkepentigan">/pengambilan/penerima_borang_f</page>
+            <page id="5" title="Tandatangan Manual">/pengambilan/tandatangan_manual?borangEF</page>
+
+            <page id="6" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak dan tandatangan dokumen yang berkaitan didalam Tab 'Dokumen'.</instruction>
+            <reports>
+                <report generator="ACQSrtNotaSiasatan_MLK.rdf" prefix="VDOC" code="SIIE"/>
+                <report generator="ACQDocE_MLK.rdf" prefix="VDOC" code="E"/>
+                <report generator="ACQDocF_MLK.rdf" prefix="VDOC" code="F"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="semak_tandatanganEF" currentAction="Semak dan Tandatangan Borang EF" listener="etanah.view.stripes.pengambilan.sek8a.validator.SemakTandatanganEFValidator">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Pihak Berkepentigan">/pengambilan/penerima_borang_f</page>
+            <page id="4" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak dan tandatangan Surat Iringan, Borang E dan Borang F dan Dokumen yang berkaitan didalam Tab 'Dokumen'.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    
+    <stage id="Endorsan_BorangD" currentAction="Endorsan Borang D" advanceRule="true">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    
+    <stage id="NotisBorangEF_tampal" currentAction="Keluarkan Surat Notis Borang E dan F dan Draf Memo Penampalan">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <!-- ============Skrin Notis Tampal EF Per PIHAK Berkepentingan===================!-->
+            <page id="4" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+     
+    <stage id="SediaBrgI" currentAction="Penyediaan Borang I" pushback="true">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Borang I">/pengambilan/common/RekodBorangIActionBean</page>    
+            <page id="3" title="Tandatangan Manual">/pengambilan/tandatangan_manual?suratIringanI</page>        
+            <page id="4" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak dan tandatangan dokumen yang berkaitan didalam Tab 'Dokumen'.</instruction>
+            <reports>
+                <report generator="ACQSrtIringanBorangI_MLK.rdf" prefix="VDOC" code="SIII"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="TandatanganI" currentAction="Tandatang Borang I">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Borang I">/pengambilan/common/RekodBorangIActionBean</page>       
+            <page id="4" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila cetak dan tandatangan Borang I.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="SemakRekod" currentAction="Terima Dan Semakan Borang I Dari PTD">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Borang I">/pengambilan/common/RekodBorangIActionBean</page>
+            <page id="4" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak dokumen yang berkaitan didalam Tab 'Dokumen'.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="SemakBrgI" currentAction="Semakan Borang I">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Borang I">/pengambilan/common/RekodBorangIActionBean</page>
+            <page id="4" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak dan tandatangan dokumen yang berkaitan didalam Tab 'Dokumen'.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="PertimbanganBrgI" currentAction="Kelulusan Borang I">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Borang I">/pengambilan/common/RekodBorangIActionBean</page> 
+            <page id="4" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak dan tandatangan dokumen yang berkaitan didalam Tab 'Dokumen'.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="TerimaBrgI" currentAction="Terima Borang I">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Borang I">/pengambilan/common/RekodBorangIActionBean</page> 
+            <page id="4" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak dokumen yang berkaitan didalam Tab 'Dokumen'.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="MaklumBorangI" currentAction="Makluman Borang I">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Borang I">/pengambilan/common/RekodBorangIActionBean</page> 
+            <page id="4" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak dokumen yang berkaitan didalam Tab 'Dokumen'.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="SediaBrgKJ" currentAction="Penyediaan Borang K dan Borang J (Jika Perlu)" listener="etanah.view.stripes.pengambilan.sek8a.validator.SemakBorangJKTandatanganValidator" report="true">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Borang J">/pengambilan/common/RekodBorangIActionBean?showFormBorangJ</page>
+            <page id="3" title="Tandatangan Manual">/pengambilan/tandatangan_manual?suratIringanJK</page>             
+            <page id="4" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>  
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="TandatanganBrgKJ" currentAction="Tandatangan Borang K dan Borang J">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Borang J">/pengambilan/common/RekodBorangIActionBean?showFormBorangJ</page>
+            <page id="4" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="KemukakanBrgK" currentAction="Kemuka Borang K" listener="etanah.view.stripes.pengambilan.sek8a.validator.KemukaBorangKValidator">
+        <txncode id="831">
+            <!--ADDED VALIDATOR INITIATE KE PERBICARAAN-->
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Borang J">/pengambilan/common/RekodBorangIActionBean?showFormBorangJ</page>           
+            <page id="4" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <!--INITIATE NOTING BORANG K KE PENDAFTARAN DAN INSERT KE TUGASAN_UTILITY UNTUK TAMPALBORANG K-->
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>              
+            </reports>
+        </txncode>
+    </stage>
+
+    
+    <stage id="NotisBrgK_tampal" currentAction="Keluarkan Notis Borang K">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="4" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="CetakNotaSiasatan" currentAction="Cetak Nota Siasatan">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="5" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQBrgSiasatKosong_MLK.rdf" prefix="VDOC" code="8PAS"/>                   
+            </reports>
+        </txncode>
+    </stage>
+    
+    <stage id="Perbicaraan" currentAction="Perbicaraan" advanceRule="true" listener="etanah.view.stripes.pengambilan.sek8.validator.PerbicaraanValidator">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="3" title="Perbicaraan">/pengambilan/sesi_perbicaraan</page>
+            <page id="5" title="Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    
+    <stage id="SediaBrgGH" currentAction="Penyediaan Borang G dan Borang H" listener="etanah.view.stripes.pengambilan.sek8.validator.SediaBorangGHValidator" report="true">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Sedia Borang GH">/pengambilan/sesi_perbicaraan</page>
+            <page id="3" title="Tandatangan Manual">/pengambilan/tandatangan_manual?sediaGH</page>
+            <page id="4" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="SemakanGHTandatangan" currentAction="Semakan Borang G H dan Tandatangan">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Sedia Borang GH">/pengambilan/common/RekodBorangIActionBean?showFormBorangJ</page>
+            <page id="4" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="KemukaBrgH" currentAction="Kemukakan Borang H Kepada Agensi">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="4" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    
+    <stage id="sediabaucer" currentAction="Penyediaan Baucer Bayaran" listener="etanah.view.stripes.pengambilan.sek8.validator.SediaBaucerValidator">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Borang G dan H">/pengambilan/sesi_perbicaraan</page>
+            <page id="3" title="Pampasan">/pengambilan/pampasanTambahan</page>             
+            <page id="4" title="Tandatangan Manual">/pengambilan/tandatangan_manual?baucer</page>
+            <page id="5" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQSrtDepositTambahan_MLK.rdf" prefix="VDOC" code="8DEP"/>  
+                <report generator="ACQBorang2_MLK.rdf" prefix="VDOC" code="8BRG2"/>  
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="JanaBorangM" currentAction="Jana Borang M" pushback="true">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    
+    <stage id="TerimaKeputusanTikaian" currentAction="Terima Keputusan Pertikaian Dari Mahkamah">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+   
+   
+    <stage id="KemasukanMaklumatAward" currentAction="Penerimaan Tawaran Award" distribute="true">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Rekod Terimaan Bayaran">/pengambilan/rekod_bayaran_sedia_surat</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQSrtAmbilCek8_MLK" prefix="VDOC" code="SBPC"/> 
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="RekodByrn_SediaBrgKL" currentAction="Rekod Bayaran dan Sediakan Borang K dan L" advanceRule="true" listener="etanah.view.stripes.pengambilan.sek8.validator.SediaSuratKLValidator">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Rekod Serahan Cek">/pengambilan/aduan_kerosakan/rekod_terima_cek</page>
+            <page id="3" title="Tandatangan Manual">/pengambilan/tandatangan_manual?borangKL</page>
+            <page id="4" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQDocK_MLK.rdf" prefix="VDOC" code="K"/>  
+                <report generator="ACQDocL_MLK.rdf" prefix="VDOC" code="L"/> 
+                <report generator="ACQSrtByrnPampasan_MLK.rdf" prefix="VDOC" code="8WAA"/> 
+                <report generator="ACQAkuanPenerimaan_MLK.rdf" prefix="VDOC" code="APC"/> 
+                              
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="Semak_TandatgnBrgKL" currentAction="Semakan dan Tandatangan Borang K L">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Rekod Serahan Cek">/pengambilan/aduan_kerosakan/rekod_terima_cek</page>
+            <page id="4" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    
+    <stage id="EndorseBrgK" currentAction="Endorsan Borang K" listener="etanah.view.stripes.pengambilan.sek8.validator.EndorsanBorangKValidator">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="3" title="Maklumat Borang K">/pengambilan/sedia_borangK</page>
+            <page id="4" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    
+    <stage id="DapatkanSijilUkur" currentAction="Dapatkan Sijil Pengecualian Ukur dari PTG" listener="etanah.view.stripes.pengambilan.sek8.validator.SijilUkurValidator">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Sijil Pembebasan Ukur">pembangunan/melaka/sijilPengecualianUkur</page>
+            <page id="3" title="Tandatangan Manual">/pengambilan/tandatangan_manual?sijilUkur</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQSrtKecualiUkurPTG_MLK.rdf" prefix="VDOC" code="8SPU"/>  
+                <report generator="ACQBorangPU_MLK.rdf" prefix="VDOC" code="PU"/>    
+                <!--PENGAMBILAN BC-->
+                <report generator="ACQSrtMohonSijilLembagaUkur_MLK.rdf" prefix="VDOC" code="SMPU"/>                                  
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="TerimaSijilUkur" currentAction="Terima Permohonan Sijil Pengecualian Ukur">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Sijil Pembebasan Ukur">pembangunan/melaka/sijilPengecualianUkur</page>
+            <page id="3" title="Tandatangan Manual">/pengambilan/tandatangan_manual?terimaSijilUkur</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQSijilPengecualianByrnUkur_MLK.rdf" prefix="VDOC" code="SPU"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="SemakanSijilUkur" currentAction="Semakan Permohonan Sijil Pengecualian Ukur">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Sijil Pembebasan Ukur">pembangunan/melaka/sijilPengecualianUkur</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="TandatanganSijilPengecualian" currentAction="Tandatangan Permohonan Sijil Pengecualian Ukur" listener="etanah.view.stripes.pengambilan.sek8.validator.TandatanganSijilValidator">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Sijil Pembebasan Ukur">pembangunan/melaka/sijilPengecualianUkur</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="HntrSijilPengecualian" currentAction="Hantar Sijil Pengecualian Ukur">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Sijil Pembebasan Ukur">pembangunan/melaka/sijilPengecualianUkur</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="TerimaSijilUkurPTG" currentAction="Terima Sijil Lembaga juru Ukur Dari Juru ukur Berlesen">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Sijil Pembebasan Ukur">pembangunan/melaka/sijilPengecualianUkur</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="AgihanTugasPU" currentAction="Agihan Tugasan Sedia PU Dan Terima Sijil Lembaga Ukur PTG" distribute="true">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Agihan Tugasan Sedia PU">pengambilan/agihTugasan?semakCharting</page>     
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="g_penyediaan_pu" currentAction="Penyediaan PU">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Sedia PU">pengambilan/permohonan_ukur</page>     
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="g_sahkan_pu" currentAction="Sahkan PU">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Sedia PU">pengambilan/permohonan_ukur</page>     
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="g_hantar_pu" currentAction="Hantar PU" listener="etanah.view.stripes.pengambilan.sek8.validator.HantarPermohonanUkurValidator">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Sedia PU">pengambilan/permohonan_ukur</page>     
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQSrtIringanPU_MLK" prefix="VDOC" code="SIPU"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="g_terima_pa_b1" currentAction="Terima PA dan B1" distribute="true">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+                        <page id="2" title="Terima PA B1">/pengambilan/terima_pelan_pa</page>
+
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="AgihanTugasPAB1" currentAction="Agihan Tugasan PA dan B1" distribute="true">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Agihan Tugasan Sedia PA B1">pengambilan/agihTugasan?semakCharting</page> 
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="g_semak_pa_b1" currentAction="Semak PA dan B1">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <page id="2" title="Pelan PA">/pengambilan/pelan_pa</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="SemakLaporanPAB1" currentAction="Semakan Laporan Keluasan Tanah" listener="etanah.view.stripes.pengambilan.sek8.validator.SemakBezaLuasAmbilValidator">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+                         <page id="2" title="Pelan PA">/pengambilan/pelan_pa</page>
+
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    
+    <stage id="WartaSemula" currentAction="Buat Pewartaan Semula">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="DrafWarta" currentAction="Sedia Draf Pewartaan Semula">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="SemakanWarta" currentAction="Semakan Warta Pembetulan">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="TandatgnDrafWarta" currentAction="Tandatangan Draf Warta Pembetulan" distribute="true">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="TerimaWartaPembetulan" currentAction="Terima Warta Lebihan Keluasan">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="SediaSuratWartaLebihan" currentAction="Penyediaan Surat - Tambahan faedah 5% Dari Terima borang H dan Faedah 5% Borang K Di Keluarkan">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="RekodBayaranPampasan" currentAction="Rekod Bayaran Pampasan" advanceRule="true">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage>
+    
+    <stage id="DaftarHakmilik" currentAction="Daftar Hakmilik Sambungan Dan Terima Pelan B1" advanceRule="true">
+        <txncode id="831">
+            <page id="1" title="Permohonan Pengambilan">/pengambilan/common/summaryPermohonan</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+            </reports>
+        </txncode>
+    </stage> 
+
+
+</workflow>
+
+

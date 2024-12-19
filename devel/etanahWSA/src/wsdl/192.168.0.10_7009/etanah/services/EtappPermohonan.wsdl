@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions
+    
+     targetNamespace="http://localhost:8080/EtappPermohonan"
+     xmlns:ns2="http://form.ws.etapp.view.etanah"
+     xmlns:ns1="http://ws.etapp.view.etanah"
+     xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding"
+     xmlns:tns="http://localhost:8080/EtappPermohonan"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/"
+     xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"
+     xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/"
+     xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"
+    >
+    <wsdl:types>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://localhost:8080/EtappPermohonan">
+<xsd:element name="generatePermohonan">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in4" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in5" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in6" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in7" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in8" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in9" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="generatePermohonanResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns1:MaklumatPermohonan"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="sijilPembebasanUkurMyEtaPP">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="ns2:ArrayOfLampiranMyEtaPP"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="sijilPembebasanUkurMyEtaPPResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="daftarPermohonanMyEtaPPBorangAMMk">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns2:MaklumatPermohonanSek4MyEtaPP"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns2:ArrayOfHakmilikPermohonanMyEtaPP"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns2:LampiranMyEtaPP"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="ns2:ArrayOfLampiranMyEtaPP"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="daftarPermohonanMyEtaPPBorangAMMkResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="maklumanPenghantaranPUMyEtaPP">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="ns2:ArrayOfLampiranMyEtaPP"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="maklumanPenghantaranPUMyEtaPPResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="endorsBorangDMaklumatWartaMyEtaPP">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="ns2:ArrayOfLampiranMyEtaPP"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="endorsBorangDMaklumatWartaMyEtaPPResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="borangCdanMMKMyEtaPP">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns2:LampiranMyEtaPP"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns2:ArrayOfLampiranMyEtaPP"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="borangCdanMMKMyEtaPPResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="daftarPermohonanSek8MyEtaPP">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns2:MaklumatPermohonanSek8MyEtaPP"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns2:ArrayOfHakmilikPermohonanMyEtaPP"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns2:LampiranMyEtaPP"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="ns2:ArrayOfLampiranMyEtaPP"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="daftarPermohonanSek8MyEtaPPResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="maklumatHakmilik">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="maklumatHakmilikResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns2:MaklumatHakmilikMyEtaPP"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="endorsBorangKMyEtaPP">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="ns2:ArrayOfLampiranMyEtaPP"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="endorsBorangKMyEtaPPResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="maklumatWartaBorangBMyEtaPP">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="ns2:ArrayOfLampiranMyEtaPP"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="maklumatWartaBorangBMyEtaPPResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://ws.etapp.view.etanah">
+<xsd:complexType name="MaklumatPermohonan">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="idPermohonan" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="maklumatPenyerah" nillable="true" type="ns1:MaklumatPenyerah"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="MaklumatPenyerah">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="alamat1" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="alamat2" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="alamat3" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="alamat4" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="kodNegeri" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="nama" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="poskod" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://form.ws.etapp.view.etanah">
+<xsd:complexType name="ArrayOfLampiranMyEtaPP">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="LampiranMyEtaPP" nillable="true" type="ns2:LampiranMyEtaPP"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="LampiranMyEtaPP">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="bytesEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="docTypeEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="filenameEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="kodDokumenEtaPP" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="MaklumatPermohonanSek4MyEtaPP">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="alamat1EtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="alamat2EtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="alamat3EtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="alamat4EtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="id_agensi_myetappEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="id_kementerian_myetappEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="jenis_pengambilanEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="jenis_projek_pengambilanEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="kodAgensiEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="kodKementerianEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="kodNegeriEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="kod_daerah_pengambilanEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="kod_negeri_pengambilanEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="nama_agensiEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="nama_daerah_pengambilanEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="nama_kementerianEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="nama_negeri_pengambilanEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="no_fail_jkptgEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="no_rujukan_surat_kjpEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="poskodEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="tarikh_permohonanEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="tarikh_surat_kjpEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="tujuanEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="tujuan_dalam_englishEtaPP" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ArrayOfHakmilikPermohonanMyEtaPP">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="HakmilikPermohonanMyEtaPP" nillable="true" type="ns2:HakmilikPermohonanMyEtaPP"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="HakmilikPermohonanMyEtaPP">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="id_hakmilikEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="kod_luas_ambilEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="kod_luas_asalEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="kod_unit_hakmilikEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="luas_ambilEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="luas_asalEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="no_fail_jkptgEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="no_hakmilikEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="no_lotEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="no_wartaEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="status_borangkEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="tarikh_borangkEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="tarikh_wartaEtaPP" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="MaklumatPermohonanSek8MyEtaPP">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="alamat1EtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="alamat2EtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="alamat3EtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="alamat4EtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="id_agensi_myetappEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="id_kementerian_myetappEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="jenis_pengambilanEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="jenis_projek_pengambilanEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="kodAgensiEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="kodKementerianEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="kodNegeriEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="kod_daerah_pengambilanEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="kod_negeri_pengambilanEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="nama_agensiEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="nama_daerah_pengambilanEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="nama_kementerianEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="nama_negeri_pengambilanEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="no_fail_jkptgEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="no_rujukan_surat_kjpEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="poskodEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="tarikh_permohonanEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="tarikh_surat_kjpEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="tujuanEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="tujuan_dalam_englishEtaPP" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="MaklumatHakmilikMyEtaPP">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="KAVEATEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="NO_PERSERAHAN_GADAIANEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="NO_PERSERAHAN_KAVEATEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="NO_PERSERAHAN_PAJAKANEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="PAJAKANEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="catatanEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="idDaerahEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="idHakmilikEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="idJenisHakmilikEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="idKategoriEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="idKodLot" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="idLuasEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="idMukimEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="idNegeriEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="idSeksyenEtapp" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="jenisTanahEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="listPemilikEtaPP" nillable="true" type="ns2:ArrayOfPemilikEtaPP"/>
+<xsd:element minOccurs="0" name="luasEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="noHakmilikEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="noPTEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="noPerserahanEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="sekatanEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="statusPemilikanEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="syaratNyataEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="tanggunganEtaPP" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ArrayOfPemilikEtaPP">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="PemilikEtaPP" nillable="true" type="ns2:PemilikEtaPP"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="PemilikEtaPP">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="BAEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="BBEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="idJenisPengenalanEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="jenisPBEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="namaPemilikEtaPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="noPengenalanEtaPP" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="generatePermohonanRequest">
+        <wsdl:part name="parameters" element="tns:generatePermohonan"/>
+    </wsdl:message>
+    <wsdl:message name="generatePermohonanResponse">
+        <wsdl:part name="parameters" element="tns:generatePermohonanResponse"/>
+    </wsdl:message>
+    <wsdl:message name="sijilPembebasanUkurMyEtaPPRequest">
+        <wsdl:part name="parameters" element="tns:sijilPembebasanUkurMyEtaPP"/>
+    </wsdl:message>
+    <wsdl:message name="sijilPembebasanUkurMyEtaPPResponse">
+        <wsdl:part name="parameters" element="tns:sijilPembebasanUkurMyEtaPPResponse"/>
+    </wsdl:message>
+    <wsdl:message name="daftarPermohonanMyEtaPPBorangAMMkRequest">
+        <wsdl:part name="parameters" element="tns:daftarPermohonanMyEtaPPBorangAMMk"/>
+    </wsdl:message>
+    <wsdl:message name="daftarPermohonanMyEtaPPBorangAMMkResponse">
+        <wsdl:part name="parameters" element="tns:daftarPermohonanMyEtaPPBorangAMMkResponse"/>
+    </wsdl:message>
+    <wsdl:message name="maklumanPenghantaranPUMyEtaPPRequest">
+        <wsdl:part name="parameters" element="tns:maklumanPenghantaranPUMyEtaPP"/>
+    </wsdl:message>
+    <wsdl:message name="maklumanPenghantaranPUMyEtaPPResponse">
+        <wsdl:part name="parameters" element="tns:maklumanPenghantaranPUMyEtaPPResponse"/>
+    </wsdl:message>
+    <wsdl:message name="endorsBorangDMaklumatWartaMyEtaPPRequest">
+        <wsdl:part name="parameters" element="tns:endorsBorangDMaklumatWartaMyEtaPP"/>
+    </wsdl:message>
+    <wsdl:message name="endorsBorangDMaklumatWartaMyEtaPPResponse">
+        <wsdl:part name="parameters" element="tns:endorsBorangDMaklumatWartaMyEtaPPResponse"/>
+    </wsdl:message>
+    <wsdl:message name="borangCdanMMKMyEtaPPRequest">
+        <wsdl:part name="parameters" element="tns:borangCdanMMKMyEtaPP"/>
+    </wsdl:message>
+    <wsdl:message name="borangCdanMMKMyEtaPPResponse">
+        <wsdl:part name="parameters" element="tns:borangCdanMMKMyEtaPPResponse"/>
+    </wsdl:message>
+    <wsdl:message name="daftarPermohonanSek8MyEtaPPRequest">
+        <wsdl:part name="parameters" element="tns:daftarPermohonanSek8MyEtaPP"/>
+    </wsdl:message>
+    <wsdl:message name="daftarPermohonanSek8MyEtaPPResponse">
+        <wsdl:part name="parameters" element="tns:daftarPermohonanSek8MyEtaPPResponse"/>
+    </wsdl:message>
+    <wsdl:message name="maklumatHakmilikRequest">
+        <wsdl:part name="parameters" element="tns:maklumatHakmilik"/>
+    </wsdl:message>
+    <wsdl:message name="maklumatHakmilikResponse">
+        <wsdl:part name="parameters" element="tns:maklumatHakmilikResponse"/>
+    </wsdl:message>
+    <wsdl:message name="endorsBorangKMyEtaPPRequest">
+        <wsdl:part name="parameters" element="tns:endorsBorangKMyEtaPP"/>
+    </wsdl:message>
+    <wsdl:message name="endorsBorangKMyEtaPPResponse">
+        <wsdl:part name="parameters" element="tns:endorsBorangKMyEtaPPResponse"/>
+    </wsdl:message>
+    <wsdl:message name="maklumatWartaBorangBMyEtaPPRequest">
+        <wsdl:part name="parameters" element="tns:maklumatWartaBorangBMyEtaPP"/>
+    </wsdl:message>
+    <wsdl:message name="maklumatWartaBorangBMyEtaPPResponse">
+        <wsdl:part name="parameters" element="tns:maklumatWartaBorangBMyEtaPPResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="EtappPermohonanPortType">
+        <wsdl:operation name="generatePermohonan">
+            <wsdl:input name="generatePermohonanRequest" message="tns:generatePermohonanRequest"/>
+            <wsdl:output name="generatePermohonanResponse" message="tns:generatePermohonanResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="sijilPembebasanUkurMyEtaPP">
+            <wsdl:input name="sijilPembebasanUkurMyEtaPPRequest" message="tns:sijilPembebasanUkurMyEtaPPRequest"/>
+            <wsdl:output name="sijilPembebasanUkurMyEtaPPResponse" message="tns:sijilPembebasanUkurMyEtaPPResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="daftarPermohonanMyEtaPPBorangAMMk">
+            <wsdl:input name="daftarPermohonanMyEtaPPBorangAMMkRequest" message="tns:daftarPermohonanMyEtaPPBorangAMMkRequest"/>
+            <wsdl:output name="daftarPermohonanMyEtaPPBorangAMMkResponse" message="tns:daftarPermohonanMyEtaPPBorangAMMkResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="maklumanPenghantaranPUMyEtaPP">
+            <wsdl:input name="maklumanPenghantaranPUMyEtaPPRequest" message="tns:maklumanPenghantaranPUMyEtaPPRequest"/>
+            <wsdl:output name="maklumanPenghantaranPUMyEtaPPResponse" message="tns:maklumanPenghantaranPUMyEtaPPResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="endorsBorangDMaklumatWartaMyEtaPP">
+            <wsdl:input name="endorsBorangDMaklumatWartaMyEtaPPRequest" message="tns:endorsBorangDMaklumatWartaMyEtaPPRequest"/>
+            <wsdl:output name="endorsBorangDMaklumatWartaMyEtaPPResponse" message="tns:endorsBorangDMaklumatWartaMyEtaPPResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="borangCdanMMKMyEtaPP">
+            <wsdl:input name="borangCdanMMKMyEtaPPRequest" message="tns:borangCdanMMKMyEtaPPRequest"/>
+            <wsdl:output name="borangCdanMMKMyEtaPPResponse" message="tns:borangCdanMMKMyEtaPPResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="daftarPermohonanSek8MyEtaPP">
+            <wsdl:input name="daftarPermohonanSek8MyEtaPPRequest" message="tns:daftarPermohonanSek8MyEtaPPRequest"/>
+            <wsdl:output name="daftarPermohonanSek8MyEtaPPResponse" message="tns:daftarPermohonanSek8MyEtaPPResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="maklumatHakmilik">
+            <wsdl:input name="maklumatHakmilikRequest" message="tns:maklumatHakmilikRequest"/>
+            <wsdl:output name="maklumatHakmilikResponse" message="tns:maklumatHakmilikResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="endorsBorangKMyEtaPP">
+            <wsdl:input name="endorsBorangKMyEtaPPRequest" message="tns:endorsBorangKMyEtaPPRequest"/>
+            <wsdl:output name="endorsBorangKMyEtaPPResponse" message="tns:endorsBorangKMyEtaPPResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="maklumatWartaBorangBMyEtaPP">
+            <wsdl:input name="maklumatWartaBorangBMyEtaPPRequest" message="tns:maklumatWartaBorangBMyEtaPPRequest"/>
+            <wsdl:output name="maklumatWartaBorangBMyEtaPPResponse" message="tns:maklumatWartaBorangBMyEtaPPResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="EtappPermohonanHttpBinding" type="tns:EtappPermohonanPortType">
+        <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="generatePermohonan">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="generatePermohonanRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="generatePermohonanResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="sijilPembebasanUkurMyEtaPP">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="sijilPembebasanUkurMyEtaPPRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="sijilPembebasanUkurMyEtaPPResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="daftarPermohonanMyEtaPPBorangAMMk">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="daftarPermohonanMyEtaPPBorangAMMkRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="daftarPermohonanMyEtaPPBorangAMMkResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="maklumanPenghantaranPUMyEtaPP">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="maklumanPenghantaranPUMyEtaPPRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="maklumanPenghantaranPUMyEtaPPResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="endorsBorangDMaklumatWartaMyEtaPP">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="endorsBorangDMaklumatWartaMyEtaPPRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="endorsBorangDMaklumatWartaMyEtaPPResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="borangCdanMMKMyEtaPP">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="borangCdanMMKMyEtaPPRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="borangCdanMMKMyEtaPPResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="daftarPermohonanSek8MyEtaPP">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="daftarPermohonanSek8MyEtaPPRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="daftarPermohonanSek8MyEtaPPResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="maklumatHakmilik">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="maklumatHakmilikRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="maklumatHakmilikResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="endorsBorangKMyEtaPP">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="endorsBorangKMyEtaPPRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="endorsBorangKMyEtaPPResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="maklumatWartaBorangBMyEtaPP">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="maklumatWartaBorangBMyEtaPPRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="maklumatWartaBorangBMyEtaPPResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="EtappPermohonan">
+        <wsdl:port name="EtappPermohonanHttpPort" binding="tns:EtappPermohonanHttpBinding">
+            <wsdlsoap:address location="http://192.168.0.10:7009/etanah/services/EtappPermohonan"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

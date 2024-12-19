@@ -1,0 +1,444 @@
+/* ThemeOfficeMenu Style Sheet */
+.ThemeOfficeMenu{
+    text-shadow: #627d9c 1px 1px 0px;   
+}
+.ThemeOfficeMenu,.ThemeOfficeSubMenuTable
+{
+	font-family:    Tahoma, sans-serif;
+	font-size:	13px;
+
+	padding:	0;
+
+	white-space:	nowrap;
+	cursor:		default;      
+}
+
+.ThemeOfficeSubMenu
+{
+	position:	absolute;
+	visibility:	hidden;
+	overflow:	hidden;
+
+	padding:	0px;
+	
+        /*border-left:#dee6ef solid 2px;
+        border-right:#dee6ef solid 2px;*/
+       
+
+	/*background:transparent ;*/
+        background-color:#dee6ef;
+
+        
+         box-shadow:0px 2px 10px #627d9c;
+	-moz-box-shadow: 0px 2px 10px #627d9c;
+	-webkit-box-shadow: 0px 2px 10px #627d9c;
+        filter: progid:DXImageTransform.Microsoft.Shadow(color='#627d9c', Direction=145, Strength=1);
+
+       /* -moz-box-shadow: 0 0 5px 5px #888;
+        -webkit-box-shadow: 0 0 5px 5px#888;
+        box-shadow: 0 0 5px 5px #888;*/
+
+	
+
+       
+      
+}
+
+.ThemeOfficeSubMenuShadow
+{
+	/*z-index:	-1;
+	position:	absolute;
+	top:		9px;
+	left:		9px;
+	width:		100%;
+	height:		300em;
+	background-color:	blue;
+	opacity:	0.5;
+	border:		2px;
+	margin:		0;*/
+       
+}
+
+.ThemeOfficeSubMenuTable
+{
+	/*border:		1px solid Black;
+        border-top:0px;*/
+	/*background-color: rgb(0,0,132);*/
+       
+        /*position:absolute;*/
+        
+	padding:	0px;
+	margin:		0px 2px 2px 0px;
+         /*border-left:#dee6ef solid 2px;
+        border-right:#dee6ef solid 2px;*/
+        
+        background-color:#dee6ef;
+        /*border-left:black solid 1px;
+        border-right:black solid 1px;
+        border-bottom:black solid 1px;*/
+        
+        
+       
+}
+
+.ThemeOfficeMainItem,.ThemeOfficeMainItemHover,.ThemeOfficeMainItemActive,
+.ThemeOfficeMenuItem,.ThemeOfficeMenuItemHover,.ThemeOfficeMenuItemActive
+{
+	border:		0;
+	cursor:		default;
+	white-space:	nowrap;
+        
+       
+        
+}
+
+/* common background color to both horizontal and vertical menus */
+
+.ThemeOfficeMainItem
+{
+	/*background-color:	#EFEBDE;*/
+       
+        color:#fff;
+        font-size: 1.2em;
+        height:32px;
+        background-image:url("../images/headerbg.gif"); background-repeat: repeat-x;
+        
+    /*background-position: right top;*/
+        
+        
+    
+      
+}
+/*main item hover*/
+.ThemeOfficeMainItemHover,.ThemeOfficeMainItemActive
+{
+	/*background-color:	#C6D3EF;*/
+       /*background-color:Black;*/
+        font-size: 1.2em;
+        color:white; 
+        height:100%;
+        background-image:url("../images/hoverbg5.gif"); background-repeat: no-repeat;
+        background-position: center top;
+        /*border:		1px solid Black;
+        border-bottom:0px;*/
+        text-shadow: none;
+    
+        
+        
+  
+}
+
+/* horizontal main menu */
+.topLeft{
+
+background-image:url("../images/topleft.gif"); background-repeat: no-repeat;
+background-position: left top;
+width:5px;
+    
+}
+.topRight{
+    background-image:url("../images/topright.gif"); background-repeat: no-repeat;
+    background-position: right top;
+    width:5px;
+}
+.separator{
+    width:15px;
+    color:white;
+}
+.ThemeOfficeMainItem
+{
+	padding:	0;
+	border:		0;
+        margin-right:10px;
+        height:32px;
+       /* background-image:url("../images/headerbg.gif");
+        background-repeat: repeat-x;*/
+       
+        
+        
+        
+        
+}
+
+td.ThemeOfficeMainItemHover,td.ThemeOfficeMainItemActive
+{
+	padding:	0px;
+	/*border:		1px solid #3169C6;*/
+        /*border:1px;
+        border-style: solid;
+        border-color:Black;*/
+        height:32px;
+        background-image:url("../images/hoverbg5.gif"); background-repeat: no-repeat;
+        background-position: center top;
+        
+        
+}
+
+.ThemeOfficeMainFolderLeft,.ThemeOfficeMainItemLeft
+{
+    /*background-color:	inherit;*/
+    /*background-image:url("../images/topleft.gif"); background-repeat: no-repeat;
+    background-position: left top;
+    padding-top:7px;
+    padding-bottom:10px;*/
+    
+    background:transparent ;
+    white-space:	nowrap;
+    /*height:32px;
+    padding:0px;
+    border:0px;*/
+}
+.ThemeOfficeMainFolderText,.ThemeOfficeMainItemText
+{
+ background:transparent ;
+
+     /*background-image:url("../images/headerbg.gif");
+        background-repeat: repeat-x;
+        height:32px;
+        padding-top:7px;
+    padding-bottom:10px;*/
+        
+    /*background-color:	inherit;*/
+	white-space:	nowrap;
+        
+}
+.ThemeOfficeMainFolderRight,.ThemeOfficeMainItemRight
+{
+background:transparent ;
+
+    /*background-image:url("../images/topright.gif"); background-repeat: no-repeat;
+    background-position: right top;*/
+    white-space:	nowrap;
+  /*  height:32px;
+    padding-top:7px;
+    padding-bottom:10px;*/
+    
+}
+
+/* vertical main menu sub components */
+
+td.ThemeOfficeMainFolderLeft,
+td.ThemeOfficeMainItemLeft
+{
+	padding:	3px 2px 3px 1px;
+
+	border:		0;
+	background-color:	inherit;
+	white-space:	nowrap;
+        
+}
+
+td.ThemeOfficeMainFolderText,
+td.ThemeOfficeMainItemText
+{
+	padding:	3px 5px 3px 5px;
+
+	border:		0;
+	background-color:	inherit;
+	white-space:	nowrap;
+         
+        
+}
+
+td.ThemeOfficeMainItemRight,
+td.ThemeOfficeMainFolderRight
+{
+	padding:	3px 1px 3px 0px;
+
+	border:		0;
+	background-color:	inherit;
+	white-space:	nowrap;
+}
+
+
+tr.ThemeOfficeMainItemHover td.ThemeOfficeMainFolderLeft,
+tr.ThemeOfficeMainItemActive td.ThemeOfficeMainFolderLeft,
+tr.ThemeOfficeMainItemHover td.ThemeOfficeMainItemLeft,
+tr.ThemeOfficeMainItemActive td.ThemeOfficeMainItemLeft
+{
+	padding:	2px 2px 2px 0px;
+
+	/*border-width:	1px 0px 1px 1px;
+	border-style:	solid;
+	border-color:	#3169C6;*/
+}
+
+tr.ThemeOfficeMainItemHover td.ThemeOfficeMainFolderText,
+tr.ThemeOfficeMainItemActive td.ThemeOfficeMainFolderText,
+tr.ThemeOfficeMainItemHover td.ThemeOfficeMainItemText,
+tr.ThemeOfficeMainItemActive td.ThemeOfficeMainItemText 
+{
+	padding:	2px 5px 2px 5px;
+
+	/*border-width:	1px 0px 1px 0px;
+	border-style:	solid;
+	border-color:	#3169C6;*/
+        
+}
+
+tr.ThemeOfficeMainItemHover td.ThemeOfficeMainFolderRight,
+tr.ThemeOfficeMainItemActive td.ThemeOfficeMainFolderRight,
+tr.ThemeOfficeMainItemHover td.ThemeOfficeMainItemRight,
+tr.ThemeOfficeMainItemActive td.ThemeOfficeMainItemRight
+{
+	padding:	2px 0px 2px 0px;
+
+	/*border-width:	1px 1px 1px 0px;
+	border-style:	solid;
+	border-color:	#3169C6;*/
+}
+
+/* sub menu sub components */
+
+.ThemeOfficeMenuItem
+{
+	/*background-color:	white;
+        background-image:url("../images/headerbg.gif");
+        background-repeat: repeat-x;*/
+        background:inherit;
+        color:Black; 
+        font-family: Tahoma;
+        font-size:1.2em;
+}
+
+.ThemeOfficeMenuItemHover,.ThemeOfficeMenuItemActive
+{
+	background-image:url("../images/orangehover.gif"); background-repeat: repeat-x;
+        font-family: Tahoma;
+        font-size:1.2em;
+        color:White;
+        height:23px;
+        text-shadow: orange 1px 1px 0px;
+
+        
+}
+
+.ThemeOfficeMenuFolderLeft,
+.ThemeOfficeMenuItemLeft
+{
+	padding:	3px 3px 3px 2px;
+	border:		0;
+
+	white-space:	nowrap;
+        background:transparent;
+        /*background-image:url("../images/headerbg.gif"); background-repeat: repeat-x;
+        background-position: center top;*/
+
+	/*background-color:	#EFEFDE;*/
+        
+}
+
+.ThemeOfficeMenuFolderText,
+.ThemeOfficeMenuItemText
+{
+	padding:	3px 5px 3px 5px;
+	border:		0;
+
+	white-space:	nowrap;
+        font-size:	13px;
+}
+
+.ThemeOfficeMenuFolderRight,
+.ThemeOfficeMenuItemRight
+{
+	padding:	3px 1px 3px 0px;
+	border:		0;
+
+	white-space:	nowrap;
+        background:transparent;
+       
+}
+
+.ThemeOfficeMenuItemHover .ThemeOfficeMenuFolderLeft,
+.ThemeOfficeMenuItemActive .ThemeOfficeMenuFolderLeft,
+.ThemeOfficeMenuItemHover .ThemeOfficeMenuItemLeft,
+.ThemeOfficeMenuItemActive .ThemeOfficeMenuItemLeft
+{
+	padding:	2px 3px 2px 1px;
+
+	
+      
+        background-image:url("../images/orangehover.gif");
+        background-repeat: repeat-x;
+        color:black;
+
+	/*border-width:	1px 0px 1px 1px;
+	border-style:	solid;
+	border-color:	#3169C6;*/
+}
+
+.ThemeOfficeMenuItemHover .ThemeOfficeMenuFolderText,
+.ThemeOfficeMenuItemActive .ThemeOfficeMenuFolderText,
+.ThemeOfficeMenuItemHover .ThemeOfficeMenuItemText,
+.ThemeOfficeMenuItemActive .ThemeOfficeMenuItemText
+{
+	padding:	2px 5px 2px 5px;
+
+	/*border-width:	1px 0px 1px 0px;
+	border-style:	solid;
+	border-color:	#3169C6;*/
+}
+
+.ThemeOfficeMenuItemHover .ThemeOfficeMenuFolderRight,
+.ThemeOfficeMenuItemActive .ThemeOfficeMenuFolderRight,
+.ThemeOfficeMenuItemHover .ThemeOfficeMenuItemRight,
+.ThemeOfficeMenuItemActive .ThemeOfficeMenuItemRight
+{
+	padding:	2px 0px 2px 0px;
+        
+
+	/*border-width:	1px 1px 1px 0px;
+	border-style:	solid;
+	border-color:	#3169C6;*/
+        background-image:url("../images/orangehover.gif");
+        background-repeat: repeat-x;
+    
+}
+
+/* menu splits */
+
+td.ThemeOfficeMenuSplit
+{
+	margin:		0px;
+	padding:	0px;
+	border:		0px;
+}
+
+div.ThemeOfficeMenuSplit
+{
+	/*margin:		3px;
+	height:		1px;
+	overflow:	hidden;
+	background-color:	inherit;
+	border-top:	1px solid #C6C3BD;*/
+}
+
+/* image shadow animation */
+
+/*
+	seq1:	image for normal
+	seq2:	image for hover and active
+
+	To use, in the icon field, input the following:
+	<img class="seq1" src="normal.gif" /><img class="seq2" src="hover.gif" />
+*/
+
+.ThemeOfficeMenuItem img.seq1
+{
+	display:	inline;
+        
+}
+
+.ThemeOfficeMenuItemHover seq2,
+.ThemeOfficeMenuItemActive seq2
+{
+	display:	inline;
+        
+}
+
+.ThemeOfficeMenuItem .seq2,
+.ThemeOfficeMenuItemHover .seq1,
+.ThemeOfficeMenuItemActive .seq1
+{
+	display:	none;
+}

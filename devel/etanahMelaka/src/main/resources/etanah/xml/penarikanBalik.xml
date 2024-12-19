@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!--
+    Document   : penarikanBalikMelaka.xml
+    Created on : April 15, 2010, 11:26 AM
+    Author     : massita
+    Description:
+        Purpose of the document follows.
+-->
+
+<workflow id="http://xmlns.oracle.com/ACQ_MLK01/ACQ_MLK01/HWACQPENARIKAN_BALIK">
+
+    <!--PTPengambilan-->
+    <!--listener="etanah.view.pengambilan.validator.KertasMMKPenarikanBalikValidator"-->
+    <stage id="01BorangK" advanceRule="true" currentAction="Carian Permohonan Terdahulu">
+        <txncode id="PBA">
+            <page id="1" title="Carian Permohonan Terdahulu" >pengambilan/penarikanBalik?showForm</page>
+            <!--<page id="3" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm2</page>-->
+            <page id="2" title="Borang MMKN Melaka" >pengambilan/borang_mmkn_penarikanBalik?showForm</page>
+            <!--<page id="2" title="Borang MMKN Melaka new NS" >pengambilan/mmk_ns_PB_new?showForm</page>-->
+            <page id="3" title="Semakan Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="4" title="Semakan Pihak Berkepentingan">pengambilan/pihak_berkepentingan_Terdahulu</page>
+            <page id="5" title="Semakan Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <!--<page id="6" title="Semakan Laporan Tanah">pengambilan/laporanTanahPengambilan_sblm</page>-->
+            <page id="6" title="Semakan Laporan Tanah">pengambilan/laporan_tanahV2_sblm</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <!--<page id="3" title="test">pengambilan/status_penerimaan_pampasan</page>-->
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <!--jika borang k telah dikeluarkan sediakan surat penolakan penarikan balik bkk nnt-->
+            <outcomes>
+                <outcome label="Borang K Diterima" value="BW"/>
+                <outcome label="Borang K Tidak Diterima" value="BV"/>
+            </outcomes>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="02SediaSrtTolak" currentAction="Sediakan Surat penolakan permohonan Penarikan Balik">
+        <txncode id="PBA">
+            <page id="1" title="Carian Permohonan Terdahulu" >pengambilan/penarikanBalik?showForm</page>
+            <page id="2" title="Borang MMKN Melaka" >pengambilan/borang_mmkn_penarikanBalik?showForm</page>
+            <page id="3" title="Semakan Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="4" title="Semakan Pihak Berkepentingan">pengambilan/pihak_berkepentingan_Terdahulu</page>
+            <page id="5" title="Semakan Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <!--<page id="6" title="Semakan Laporan Tanah">pengambilan/laporanTanahPengambilan_sblm</page>-->
+            <page id="6" title="Semakan Laporan Tanah">pengambilan/laporan_tanahV2_sblm</page>
+            <page id="007" title="Tandatangan Manual">pengambilan/tandatangan_dokumenV2</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <!--jika borang k telah dikeluarkan sediakan surat penolakan penarikan balik bkk nnt-->
+            <reports>
+                <report generator="ACQSrtTolakPBA_MLK.rdf" prefix="VDOC" code="STLK"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="03SediaDrafPB" currentAction="Sediakan Draf Kertas Penarikan Balik">
+        <txncode id="PBA">
+            <page id="1" title="Carian Permohonan Terdahulu" >pengambilan/penarikanBalik?showForm</page>
+            <page id="2" title="Borang MMKN Melaka" >pengambilan/borang_mmkn_penarikanBalik?showForm</page>
+            <page id="3" title="Semakan Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="4" title="Semakan Pihak Berkepentingan">pengambilan/pihak_berkepentingan_Terdahulu</page>
+            <page id="5" title="Semakan Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <!--<page id="6" title="Semakan Laporan Tanah">pengambilan/laporanTanahPengambilan_sblm</page>-->
+            <page id="6" title="Semakan Laporan Tanah">pengambilan/laporan_tanahV2_sblm</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <!--jika borang k telah dikeluarkan sediakan surat penolakan penarikan balik bkk nnt-->
+            <reports>
+                <report generator="ACQKertasMMKNPB_MLK.rdf" prefix="VDOC" code="MMKN"/>
+                <report generator="ACQSUMMMKNbaru_MLK.rdf" prefix="VDOC" code="8PAQ"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--kptpengambilan-->
+    <stage id="04SemakDraf" pushback="true" currentAction="Semakan Draf Kertas Penarikan Balik">
+        <txncode id="PBA">
+            <!--<page id="6" title="Borang MMKN Melaka" >pengambilan/borang_mmkn</page>-->
+        <!--<page id="6" title="Borang MMKN Melaka1" >pengambilan/borang_mmkn_sek4?showForm</page>-->
+        <!--<page id="1" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm2</page>-->
+            <page id="2" title="Borang MMKN Melaka" >pengambilan/borang_mmkn_penarikanBalik?showForm</page>
+            <page id="3" title="Semakan Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="4" title="Semakan Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="5" title="Semakan Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <!--<page id="6" title="Semakan Laporan Tanah">pengambilan/laporanTanahPengambilan_sblm</page>-->
+            <page id="6" title="Semakan Laporan Tanah">pengambilan/laporan_tanahV2_sblm</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQKertasMMKNPB_MLK.rdf" prefix="VDOC" code="MMKN"/>
+                <report generator="ACQSUMMMKNbaru_MLK.rdf" prefix="VDOC" code="8PAQ"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--pptd-->
+    <stage id="05SemakSyorDraf" currentAction="Semak Draf Kertas Penarikan Balik dan syor kepada Pentadbir">
+        <txncode id="PBA">
+            <!--<page id="1" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm2</page>-->
+            <page id="2" title="Borang MMKN Melaka" >pengambilan/borang_mmkn_penarikanBalik?showForm</page>
+            <page id="3" title="Semakan Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="4" title="Semakan Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="5" title="Semakan Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <!--<page id="6" title="Semakan Laporan Tanah">pengambilan/laporanTanahPengambilan_sblm</page>-->
+            <page id="6" title="Semakan Laporan Tanah">pengambilan/laporan_tanahV2_sblm</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQKertasMMKNPB_MLK.rdf" prefix="VDOC" code="MMKN"/>
+                <report generator="ACQSUMMMKNbaru_MLK.rdf" prefix="VDOC" code="8PAQ"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptd-->
+    <stage id="14PerakuanMMKN" currentAction="Pertimbangkan Draf MMKN di PTD">
+        <txncode id="PBA">
+            <!--<page id="1" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm2</page>-->
+            <page id="2" title="Borang MMKN Melaka" >pengambilan/borang_mmkn_penarikanBalik?showForm</page>
+            <page id="3" title="Semakan Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="4" title="Semakan Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="5" title="Semakan Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <!--<page id="6" title="Semakan Laporan Tanah">pengambilan/laporanTanahPengambilan_sblm</page>-->
+            <page id="6" title="Semakan Laporan Tanah">pengambilan/laporan_tanahV2_sblm</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQKertasMMKNPB_MLK.rdf" prefix="VDOC" code="MMKN"/>
+                <report generator="ACQSUMMMKNbaru_MLK.rdf" prefix="VDOC" code="8PAQ"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptmmkn-->
+    <stage id="15TerimaMMKN" currentAction="Terima Kertas MMKN">
+        <txncode id="PBA">
+            <!--<page id="1" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm2</page>-->
+            <page id="2" title="Borang MMKN Melaka" >pengambilan/borang_mmkn_penarikanBalik?showForm2</page>
+            <page id="3" title="Semakan Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="4" title="Semakan Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="5" title="Semakan Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <!--<page id="6" title="Semakan Laporan Tanah">pengambilan/laporanTanahPengambilan_sblm</page>-->
+            <page id="6" title="Semakan Laporan Tanah">pengambilan/laporan_tanahV2_sblm</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQKertasMMKNPB_MLK.rdf" prefix="VDOC" code="MMKN"/>
+                <report generator="ACQSUMMMKNbaru_MLK.rdf" prefix="VDOC" code="8PAQ"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--kptmmkn-->
+    <stage id="16SemakanMMKN" currentAction="Semakan Kertas MMKN">
+        <txncode id="PBA">
+            <!--<page id="1" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm2</page>-->
+            <page id="2" title="Borang MMKN Melaka" >pengambilan/borang_mmkn_penarikanBalik?showForm2</page>
+            <page id="3" title="Semakan Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="4" title="Semakan Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="5" title="Semakan Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <!--<page id="6" title="Semakan Laporan Tanah">pengambilan/laporanTanahPengambilan_sblm</page>-->
+            <page id="6" title="Semakan Laporan Tanah">pengambilan/laporan_tanahV2_sblm</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQKertasMMKNPB_MLK.rdf" prefix="VDOC" code="MMKN"/>
+                <report generator="ACQSUMMMKNbaru_MLK.rdf" prefix="VDOC" code="8PAQ"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--pptgmmkn-->
+    <stage id="17SemakanMMKN" currentAction="Semakan Kertas MMKN">
+        <txncode id="PBA">
+            <!--<page id="1" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm2</page>-->
+            <page id="2" title="Borang MMKN Melaka" >pengambilan/borang_mmkn_penarikanBalik?showForm2</page>
+            <page id="3" title="Semakan Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="4" title="Semakan Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="5" title="Semakan Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <!--<page id="6" title="Semakan Laporan Tanah">pengambilan/laporanTanahPengambilan_sblm</page>-->
+            <page id="6" title="Semakan Laporan Tanah">pengambilan/laporan_tanahV2_sblm</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQKertasMMKNPB_MLK.rdf" prefix="VDOC" code="MMKN"/>
+                <report generator="ACQSUMMMKNbaru_MLK.rdf" prefix="VDOC" code="8PAQ"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--tptg-->
+    <stage id="18SemakanMMKN" currentAction="Semakan Kertas MMKN">
+        <txncode id="PBA">
+            <!--<page id="1" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm2</page>-->
+            <page id="2" title="Borang MMKN Melaka" >pengambilan/borang_mmkn_penarikanBalik?showForm2</page>
+            <page id="3" title="Semakan Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="4" title="Semakan Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="5" title="Semakan Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <!--<page id="6" title="Semakan Laporan Tanah">pengambilan/laporanTanahPengambilan_sblm</page>-->
+            <page id="6" title="Semakan Laporan Tanah">pengambilan/laporan_tanahV2_sblm</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQKertasMMKNPB_MLK.rdf" prefix="VDOC" code="MMKN"/>
+                <report generator="ACQSUMMMKNbaru_MLK.rdf" prefix="VDOC" code="8PAQ"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptg-->
+    <stage id="19PerakuanMMKN" currentAction="Perakuan MMKN" listener="etanah.view.pengambilan.validator.IntegrationEMMKNV2">
+        <txncode id="PBA">
+            <!--<page id="1" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm2</page>-->
+            <page id="2" title="Borang MMKN Melaka" >pengambilan/borang_mmkn_penarikanBalik?showForm2</page>
+            <page id="3" title="Semakan Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="4" title="Semakan Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="5" title="Semakan Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <!--<page id="6" title="Semakan Laporan Tanah">pengambilan/laporanTanahPengambilan_sblm</page>-->
+            <page id="6" title="Semakan Laporan Tanah">pengambilan/laporan_tanahV2_sblm</page>
+            <page id="007" title="Tandatangan Manual">pengambilan/tandatangan_dokumenV2?showFormForPTGPTD</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQKertasMMKNPB_MLK.rdf" prefix="VDOC" code="MMKN"/>
+                <report generator="ACQSUMMMKNbaru_MLK.rdf" prefix="VDOC" code="8PAQ"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--pptgmmkn-->
+    <stage id="17_1KemasukanMMKN" currentAction="Terima Keputusan MMKN">
+        <txncode id="PBA">
+            <!--<page id="1" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm2</page>-->
+            <page id="2" title="Borang MMKN Melaka" >pengambilan/borang_mmkn_penarikanBalik?showForm2</page>
+            <page id="3" title="Semakan Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="4" title="Semakan Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="5" title="Semakan Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <!--<page id="6" title="Semakan Laporan Tanah">pengambilan/laporanTanahPengambilan_sblm</page>-->
+            <page id="6" title="Semakan Laporan Tanah">pengambilan/laporan_tanahV2_sblm</page>
+            <page id="004" title="Keputusan MMKN">pelupusan/mesyuarat</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQKertasMMKNPB_MLK.rdf" prefix="VDOC" code="MMKN"/>
+                <report generator="ACQSUMMMKNbaru_MLK.rdf" prefix="VDOC" code="8PAQ"/>
+                <report generator="ACQSrtKSPNMMKNPBA_PTG_MLK.rdf" prefix="VDOC" code="8KUT"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptmmkn-->
+    <stage id="20RekodKeputusanMMKN" currentAction="Rekod Keputusan MMKN" advanceRule="true">
+        <txncode id="PBA">
+            <!--<page id="1" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm2</page>-->
+            <page id="2" title="Borang MMKN Melaka" >pengambilan/borang_mmkn_penarikanBalik?showForm2</page>
+            <page id="3" title="Semakan Tanah">pengambilan/maklumat_hakmilikpengambilanTerdahulu?showForm2</page>
+            <page id="4" title="Semakan Pihak Berkepentingan">pengambilan/pihak_berkepentingan</page>
+            <page id="5" title="Semakan Pemohon">/pengambilan/pengambilan_pemohonTerdahulu</page>
+            <!--<page id="6" title="Semakan Laporan Tanah">pengambilan/laporanTanahPengambilan_sblm</page>-->
+            <page id="6" title="Semakan Laporan Tanah">pengambilan/laporan_tanahV2_sblm</page>
+            <page id="004" title="Keputusan MMKN">pelupusan/mesyuarat?viewKeputusan</page>
+            <page id="7" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <outcomes>
+                <outcome label="Lulus" value="L"/>
+                <outcome label="Tolak" value="T"/>
+            </outcomes>
+            <reports>
+                <report generator="ACQKertasMMKNPB_MLK.rdf" prefix="VDOC" code="MMKN"/>
+                <report generator="ACQSUMMMKNbaru_MLK.rdf" prefix="VDOC" code="8PAQ"/>
+                <report generator="ACQSrtKSPNMMKNPBA_PTG_MLK.rdf" prefix="VDOC" code="8KUT"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--pppkptg-->
+    <stage id="06SediaDrafWarta" currentAction="Penyediaan Draf Warta dan Surat Iringan">
+        <txncode id="PBA">
+            <!--<page id="1" title="Notifikasi">pengambilan/notifikasiMelaka?showForm1</page>-->
+            <page id="1" title="Jana Surat Iringan untuk ditandatangani PTG">pengambilan/drafWartaPB</page>
+            <page id="2" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila tekan butang 'Jana Dokumen' dan Sila draf surat dan hantarkan kepada Percetakan Warta</instruction>
+            <reports>
+                <!--<report generator="ACQSrtDaftarEndosBorangD_MLK.rdf" prefix="VDOC" code="SKAN"/>-->
+                <report generator="ACQKenyataanAmNegeri_MLK.rdf" prefix="VDOC" code="SKAN"/>
+                <report generator="ACQSrtBatalPB_MLK.rdf" prefix="VDOC" code="DWPB"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptg-->
+    <stage id="07CetakTanganWarta" currentAction="Cetak Tandatangan Warta">
+        <txncode id="PBA">
+            <!--<page id="1" title="Notifikasi">pengambilan/notifikasiMelaka?showForm1</page>-->
+            <page id="1" title="Jana Surat Iringan untuk ditandatangani PTG">pengambilan/drafWartaPB</page>
+            <page id="007" title="Tandatangan Manual">pengambilan/tandatangan_dokumenV2?showFormForPTGPTD</page>
+            <page id="2" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila tekan butang 'Jana Dokumen' dan Sila draf surat dan hantarkan kepada Percetakan Warta</instruction>
+            <reports>
+                <!--<report generator="ACQSrtDaftarEndosBorangD_MLK.rdf" prefix="VDOC" code="SKAN"/>-->
+                <report generator="ACQKenyataanAmNegeri_MLK.rdf" prefix="VDOC" code="SKAN"/>
+                <report generator="ACQSrtBatalPB_MLK.rdf" prefix="VDOC" code="DWPB"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--pppkptg-->
+    <stage id="08HantarkePNB" currentAction="Terima Surat Iringan dan Warta">
+        <txncode id="PBA">
+            <!--<page id="1" title="Notifikasi">pengambilan/notifikasiMelaka?showForm1</page>-->
+            <page id="1" title="Jana Surat Iringan untuk ditandatangani PTG">pengambilan/drafWartaPB</page>
+            <page id="2" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila tekan butang 'Jana Dokumen' dan Sila draf surat dan hantarkan kepada Percetakan Warta</instruction>
+            <reports>
+                <!--<report generator="ACQSrtDaftarEndosBorangD_MLK.rdf" prefix="VDOC" code="SKAN"/>-->
+                <report generator="ACQKenyataanAmNegeri_MLK.rdf" prefix="VDOC" code="SKAN"/>
+                <report generator="ACQSrtBatalPB_MLK.rdf" prefix="VDOC" code="DWPB"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--PTPTGPengambilan-->
+    <stage id="09RekodTerimaWarta" currentAction="Semak dan Rekod Penerimaan Warta">
+        <txncode id="PBA">
+            <!--<page id="3" title="Rekod Keputusan MMKN" >pengambilan/rekodKeputusan?showForm</page>-->
+            <page id="004" title="Keputusan MMKN">pelupusan/mesyuarat?viewKeputusan</page>
+            <page id="2" title="Rekod Warta">pengambilan/terima_warta?showForm</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="10SemakWarta" currentAction="Semak Warta Penarikan Balik">
+        <txncode id="PBA">
+            <!--<page id="3" title="Semakan Warta">/pengambilan/terima_warta</page>-->
+            <page id="1" title="Semakan Warta">pengambilan/terima_warta?showForm2</page>
+            <page id="2" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <!--pptd-->
+    <stage id="11SemakHakmilik" currentAction="Semakan Hakmilik" listener="etanah.view.pengambilan.validator.PengambilanEndorsanPB">
+        <txncode id="PBA">
+            <page id="1" title="Semakan Hakmilik" >pengambilan/SemakanHakmilik</page>
+            <page id="2" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <!--<page id="2" title="Semakan Hakmilik" >hasil/pertanyaan_hakmilik?refreshpage</page>-->
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="13SediaSrtHadirBicara" currentAction="Penyediaan Surat Perbicaraan">
+        <txncode id="PBA">
+            <page id="1" title="Tetapkan Tarikh">pengambilan/penerimaan_borang_sblm</page>
+            <page id="2" title="Penyediaan Surat Perbicaraan Gantirugi" >pengambilan/PenyediaanSuratPerbicaraan</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila tekan butang 'Jana Dokumen' untuk penyediaan surat untuk Perbicaraan Kos Gantirugi</instruction>
+            <reports>
+                <!--<report generator="ACQSuratPanggilBicara_MLK.rdf" prefix="VDOC" code="SPBG"/>-->
+                <report generator="ACQSuratPanggilBicaraPB_MLK.rdf" prefix="VDOC" code="SPBG"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--pptd-->
+    <stage id="14TandatgnSrt" currentAction="Tandatangan Surat Perbicaraan Kos Gantirugi">
+        <txncode id="PBA">
+            <page id="1" title="Tetapkan Tarikh">pengambilan/penerimaan_borang_sblm</page>
+            <page id="2" title="Penyediaan Surat Perbicaraan Gantirugi" >pengambilan/PenyediaanSuratPerbicaraan</page>
+            <page id="007" title="Tandatangan Manual">pengambilan/tandatangan_dokumenV2</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila tekan butang 'Jana Dokumen' untuk penyediaan surat untuk Perbicaraan Kos Gantirugi</instruction>
+            <reports>
+                <!--<report generator="ACQSuratPanggilBicara_MLK.rdf" prefix="VDOC" code="SPBG"/>-->
+                <report generator="ACQSuratPanggilBicaraPB_MLK.rdf" prefix="VDOC" code="SPBG"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="15HantarSrtBicara" currentAction="Hantar Surat Perbicaraan Kos Gantirugi">
+        <txncode id="PBA">
+            <page id="1" title="Tetapkan Tarikh">pengambilan/penerimaan_borang_sblm</page>
+            <page id="2" title="Penyediaan Surat Perbicaraan Gantirugi" >pengambilan/PenyediaanSuratPerbicaraan</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila tekan butang 'Jana Dokumen' untuk penyediaan surat untuk Perbicaraan Kos Gantirugi</instruction>
+            <reports>
+                <!--<report generator="ACQSuratPanggilBicara_MLK.rdf" prefix="VDOC" code="SPBG"/>-->
+                <report generator="ACQSuratPanggilBicaraPB_MLK.rdf" prefix="VDOC" code="SPBG"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="16RekodSampaiTampal" currentAction="Rekod Bukti Penyampaian Surat">
+        <txncode id="PBA">
+            <page id="1" title="Tandatangan Surat Perbicaraan" >pengambilan/PenyediaanSuratPerbicaraan?showForm1</page>
+            <page id="2" title="Rekod Penghantaran Penyampaian Notis">pengambilan/penerimaan_notis_borang_PBA?showFormPP</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <!--<page id="3" title="Rekod Penghantaran Penyampaian Notis lelong">lelong/kemasukkan_rekod_16H</page>-->
+            <validator>validator</validator>
+            <instruction>Hantar kepada penghantar notis surat perbicaraan kos gantirugi yang ditandatangani PTD</instruction>
+        </txncode>
+    </stage>
+
+    <!--pptd-->
+    <stage id="14TentukanKos" currentAction="Perbicaraan untuk menentukan kos gantirugi" advanceRule="true">
+        <txncode id="PBA">
+            <!--<page id="1" title="Tanah edit">pengambilan/maklumat_hakmilikpengambilan?showForm</page>-->
+            <!--<page id="1" title="Tanah">pengambilan/maklumat_hakmilikpengambilan?showForm2</page>-->
+            <page id="1" title="Keputusan Perbicaraan Kos Gantirugi" >pengambilan/gantiRugiNS?showFormTptd</page>
+            <page id="2" title="Jana Laporan Pampasan Tuntutan Kos Gantirugi" >pengambilan/keputusanPampasan</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat kos gantirugi dan sila tekan butang 'Jana Dokumen' untuk Jana Laporan Pampasan Tuntutan Kos Gantirugi</instruction>
+            <outcomes>
+                <outcome label="Tiada Gantirugi" value="XG"/>
+                <outcome label="Ada Gantirugi (3(1)(a))" value="2A"/>
+                <outcome label="Ada Gantirugi (3(1)(b)/(c))" value="1B"/>
+            </outcomes>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="A01MaklumTiada" currentAction="Maklum kepada Agensi bahawa Tiada gantirugi">
+        <txncode id="PBA">
+            <page id="1" title="Tiada Gantirugi" >pengambilan/tiadaGantiRugi</page>
+            <!--<page id="2" title="Gantirugi 3(1)(a)" >pengambilan/bayaranPampasan31aPB?showForm</page>-->
+            <!--<page id="3" title="Draf Surat Penyediaan bayaran ">pengambilan/MaklumSediaBayaran?showForm</page>-->
+            <!--<page id="4" title="Gantirugi 3(1)(b)/(c)" >pengambilan/pengiraan_baki_deposit?showForm</page>-->
+            <page id="007" title="Tandatangan Manual">pengambilan/tandatangan_dokumenV2</page>
+            <page id="5" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <!--<page id="4" title="Gantirugip (3(1)(b)/(c))" >pengambilan/bayaranPampasan?showForm</page>-->
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQSrtTiadaGantirugi_MLK.rdf" prefix="VDOC" code="STG"/>
+                <!--<report generator="ACQSrtArahByrPB_MLK.rdf" prefix="VDOC" code="SEAP"/>-->
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="B01DrafSrtPemohon" currentAction="Draf surat kepada agensi pemohon untuk penyediaan bayaran dan cetak">
+        <txncode id="PBA">
+            <!--<page id="1" title="Tiada Gantirugi" >pengambilan/tiadaGantiRugi</page>-->
+            <page id="1" title="Gantirugi 3(1)(a)" >pengambilan/bayaranPampasan31aPB?showForm</page>
+            <page id="3" title="Draf Surat Penyediaan bayaran ">pengambilan/MaklumSediaBayaran?showForm</page>
+            <page id="2" title="Rekod Pembayaran Cek" >pengambilan/RekodPembayaranCek?showForm</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <!--<page id="2" title="Gantirugi (3(1)(b)/(c))" >pengambilan/BayaranPampasan?showForm</page>-->
+            <validator>validator</validator>
+            <instruction>Sila rekodkan pembayaran dari agensi pemohon</instruction>
+            <reports>
+                <report generator="ACQSrtPenyediaanBayaranPBA_MLK.rdf" prefix="VDOC" code="SBPM"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="B02RekodBayaran" currentAction="Terima dan rekod pembayaran">
+        <txncode id="PBA">
+            <!--<page id="1" title="Tiada Gantirugi" >pengambilan/tiadaGantiRugi</page>-->
+             <!--<page id="2" title="Rekod Pembayaran Cek" >pengambilan/RekodPembayaranCek?showForm</page>-->
+            <page id="1" title="Gantirugi 3(1)(a)" >pengambilan/bayaranPampasan31aPB?showForm</page>
+            <page id="3" title="Draf Surat Penyediaan bayaran ">pengambilan/MaklumSediaBayaran?showForm</page>
+            <page id="2" title="Rekod Pembayaran Cek" >pengambilan/RekodPembayaranCek?showForm</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <!--<page id="4" title="Gantirugi (3(1)(b)/(c))" >pengambilan/BayaranPampasan?showForm</page>-->
+             <!--<page id="5" title="Rekod Pembayaran Cek" >pengambilan/RekodPembayaranCek?showForm</page>-->
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat pada ruangan yang telah disediakan.</instruction>
+            <reports>
+                <report generator="ACQSrtPenyediaanBayaranPBA_MLK.rdf" prefix="VDOC" code="SBPM"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <!--ptpengambilan-->
+    <stage id="C01PotonganDeposit" currentAction="Bayar melalui potongan deposit" finalize="true">
+        <txncode id="PBA">
+            <page id="1" title="Gantirugi 3(1)(b)/(c)" >pengambilan/pengiraan_baki_deposit</page>
+            <page id="2" title="Rekod Pembayaran Cek" >pengambilan/RekodPembayaranCek?showForm</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <!--pthasil-->
+    <stage id="C02CekHasil" currentAction="Terima baki deposit">
+        <txncode id="PBA">
+            <page id="1" title="Gantirugi 3(1)(b)/(c)" >pengambilan/pengiraan_baki_deposit</page>
+            <page id="2" title="Rekod Pembayaran Cek" >pengambilan/RekodPembayaranCek?showForm</page>
+            <page id="3" title="Nota/Kertas Minit">/pengambilan/notaBaru</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+</workflow>

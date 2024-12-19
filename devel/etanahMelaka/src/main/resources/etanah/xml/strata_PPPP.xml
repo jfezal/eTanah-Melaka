@@ -1,0 +1,48 @@
+<!--Pendaftaran Sijil Perbadanan Pengurusan-->
+<?xml version="1.0" encoding="windows-1252" ?>
+<workflow id="http://xmlns.oracle.com/etanah/StrataMelaka/SijilMC">
+   
+   <stage id="agihtugas" finalize="false" distribute="true" currentAction="Agih Tugasan">
+        <txncode id="PPPP">
+            <page id="1" title="Agih Tugasan">strata/agihTugasan</page>
+            <page id="2" title="Penyerah">strata/maklumat_penyerah</page>
+            <instruction>Sila agihkan tugasan ini kepada yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id = "kemasukansediasijil" listener="etanah.view.strata.validator.SijilPerbadananValidator" currentAction="Kemasukan" >
+        <txncode id="PPPP">
+            <!--<page id="1" title="Hakmilik">strata/maklumat_tanah?showForm2</page>-->
+            <page id="1" title="Hakmilik">strata/maklumat_tanah_phpp?showForm3</page>
+            <page id="2" title="Penyerah">strata/maklumat_penyerah</page>
+            <page id="3" title="Pemohon / Perbadanan Pengurusan">strata/sijil_perbadanan</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id = "semaksijil" currentAction="Semak Kemasukan" pushback="true" listener="etanah.view.strata.validator.SijilPerbadananValidator">
+        <txncode id="PPPP">
+            <!--<page id="1" title="Hakmilik">strata/maklumat_tanah?showForm2</page>-->
+            <page id="1" title="Hakmilik">strata/maklumat_tanah_phpp?showForm3</page>
+            <page id="3" title="Pemohon / Perbadanan Pengurusan">strata/sijil_perbadanan?showForm2</page>
+            <instruction>Sila semak maklumat permohonan. Sekiranya terdapat kesalahan, sila klik butang 'Semak Semula' dan tugasan akan diagihkan semula ke Pembantu Tadbir. Jika tidak, klik butang 'Selesai' untuk dihantar tugasan ke peringkat seterusnya.</instruction>
+            <reports>
+                <report generator="STRSijilMC_MLK.rdf" prefix="VDOC" code="SMC"/>
+            </reports>
+            </txncode>
+    </stage>
+    <stage id = "semaksijiltphgt" finalize="true" currentAction="Semak Sijil">
+        <txncode id="PPPP">
+            <!--<page id="1" title="Hakmilik">strata/maklumat_tanah?showForm2</page>-->
+            <page id="1" title="Hakmilik">strata/maklumat_tanah_phpp?showForm3</page>
+            <page id="3" title="Pemohon / Perbadanan Pengurusan">strata/sijil_perbadanan?showForm2</page>
+            <instruction>Sila semak Sijil Perbadanan Pengurusan.</instruction>
+            <reports>
+                <report generator="STRSijilMC_MLK.rdf" prefix="VDOC" code="SMC"/>
+            </reports>
+        </txncode>
+    </stage>
+
+
+</workflow>

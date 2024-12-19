@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<workflow id="http://xmlns.oracle.com/etanah/lelongMelaka/tangguh">
+
+    <stage id="rekodTangguh" currentAction="Kemasukan Permohonan" advanceRule ="true" listener="etanah.view.lelong.validator.RekodPermohonanBatalValidator">
+        <txncode id="PPTL" daysToComplete="2">
+            <page id="1" title="Senarai Urusan">lelong/keputusan_tangguh_batal</page>
+            <page id="2" title="Pemohon">/lelong/maklumat_pemohon</page>
+            <page id="3" title="Permohonan">/lelong/maklumat_permohonan</page>
+            <page id="4" title="Maklumat Tanah/Pihak Berkepentingan">/lelong/pihak_berkepentingan?showForm4</page>
+            <page id="5" title="Maklumat Lelongan">/lelong/tangguh_tetap_tarikh_lelong?showFormBb</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan dan imbas Borang 16O.</instruction>
+        </txncode>
+    </stage>
+    <stage id="kpsnTangguh" currentAction="Semakan Permohonan" advanceRule ="true" listener="etanah.view.lelong.validator.KeputusanTangguhValidator">
+        <txncode id="PPTL" daysToComplete="2">
+            <page id="1" title="Pemohon">/lelong/maklumat_pemohon</page>
+            <page id="2" title="Permohonan">/lelong/maklumat_permohonan?showForm4</page>
+            <page id="3" title="Maklumat Tanah/Pihak Berkepentingan">/lelong/pihak_berkepentingan?tangguhBatal</page>
+             <page id="4" title="Maklumat Lelongan">/lelong/tangguh_tetap_tarikh_lelong</page>
+            <!--<page id="5" title="Maklumat Jurulelong">/lelong/Memasukkan_Maklumat_JurulelongBerlesen</page>-->
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan.</instruction>
+            <outcomes>
+                <outcome label="Lulus" value="L"/>
+                <outcome label="Tolak" value="T"/>
+            </outcomes>
+        </txncode>
+    </stage>
+
+    <stage id ="suratLulusTangguh" currentAction="Cetak Borang 16P" advanceRule ="true" listener="etanah.view.lelong.validator.KpsnTangguhValidator">
+        <txncode id="PPTL" daysToComplete="2">
+            <page id="1" title="Pemohon">/lelong/maklumat_pemohon</page>
+            <page id="2" title="Permohonan">/lelong/maklumat_permohonan?showForm4</page>
+            <page id="3" title="Maklumat Tanah/Pihak Berkepentingan">/lelong/pihak_berkepentingan?tangguhBatal</page>
+            <page id="4" title="Maklumat Lelongan">/lelong/tangguh_tetap_tarikh_lelong?showFormBb</page>
+            <!--<page id="5" title="Maklumat Jurulelong">/lelong/Memasukkan_Maklumat_JurulelongBerlesen?showForm2PPTL</page>-->
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan dan Jana Borang 16P.</instruction>
+            <reports>
+                <report generator="LLGBorang16P_MLK.rdf" prefix="VDOC" code="16P"/>
+            </reports>
+        </txncode>
+    </stage>
+    
+        <stage id="lantikanPelelong" currentAction="Perlantikan Jurulelong" advanceRule ="true" listener="etanah.view.lelong.validator.LantikanPelelongValidator">
+        <txncode id="PPTL">
+            <page id="1" title="Pemohon">/lelong/maklumat_pemohon</page>
+            <page id="2" title="Permohonan">/lelong/maklumat_permohonan?showForm4</page>
+            <page id="3" title="Maklumat Tanah/Pihak Berkepentingan">/lelong/pihak_berkepentingan?tangguhBatal</page>
+            <!--<page id="4" title="Semak Rekod Bidaan">/lelong/keputusan_bidaan?showForm1</page>-->
+           <page id="4" title="Maklumat Lelongan">/lelong/tangguh_tetap_tarikh_lelong?showFormBb</page>
+           <page id="5" title="Maklumat Jurulelong">/lelong/Memasukkan_Maklumat_JurulelongBerlesen?showForm2PPTL</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat-maklumat yang berkaitan.</instruction>
+            <outcomes>
+                <outcome label="Pentadbir Tanah" value="PH"/>
+                <outcome label="Jurulelong Berlesen" value="JL"/>
+            </outcomes>
+        </txncode>
+    </stage>
+
+    <stage id="sediaPerisytiharan" currentAction="Penyediaan Perisytiharan Jualan" advanceRule ="true" listener="etanah.view.lelong.validator.SemakPerisytiharanTgghValidator">
+        <txncode id="PPTL" daysToComplete = "">
+            <page id="1" title="Pemohon">/lelong/maklumat_pemohon?showForm</page>
+            <page id="2" title="Permohonan">/lelong/maklumat_permohonan?showFormA</page>
+            <page id="3" title="Maklumat Tanah/Pihak Berkepentingan">/lelong/pihak_berkepentingan?showForm3</page>
+            <page id="4" title="Maklumat Lelongan">/lelong/tangguh_tetap_tarikh_lelong?showFormBb</page>
+            <page id="8" title="Perisytiharan Jualan">/lelong/Memasukkan_Maklumat_JurulelongBerlesen?showFormPerihalTanah</page>
+            <validator>validator</validator>
+            <instruction>Sila Jana Dan Cetak Perisytiharan Jualan Pada Tab Urusan.</instruction>
+<!--            <reports>
+                <report generator="LLGIsytiharJual_MLK.rdf" prefix="VDOC" code="PJ"/>
+            </reports>-->
+        </txncode>
+    </stage>
+
+  <!--  <stage id="rekodBidaan" currentAction="Rekod Bidaan" advanceRule ="true" listener="etanah.view.lelong.validator.RekodBidaanValidator">
+        <txncode id="PPTL">
+            <page id="1" title="Pemohon">/lelong/maklumat_pemohon?showForm</page>
+            <page id="2" title="Permohonan">/lelong/maklumat_permohonan?showFormA</page>
+            <page id="3" title="Maklumat Tanah/Pihak Berkepentingan">/lelong/pihak_berkepentingan?showForm3</page>
+            <page id="4" title="Kemasukan Rekod Bidaan">/lelong/keputusan_bidaan</page>
+            <page id="5" title="Memorandum Jualan">/lelong/printah_jual_melaka</page>
+            <page id="6" title="Komisyen Jualan">/lelong/komisyen_Jualan?showForm3</page>
+            <validator>validator</validator>
+            <instruction>Sila Masukan Keputusan. Masukkan maklumat rekod bidaan jika ada pembida.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="semakPembida" currentAction="Semak Pembida dan cetak Kontrak Jualan" advanceRule ="true" listener="etanah.view.lelong.validator.SemakPembidaValidator">
+        <txncode id="PPTL">
+            <page id="1" title="Pemohon">/lelong/maklumat_pemohon?showForm</page>
+            <page id="2" title="Permohonan">/lelong/maklumat_permohonan?showFormA</page>
+            <page id="3" title="Maklumat Tanah/Pihak Berkepentingan">/lelong/pihak_berkepentingan?showForm3</page>
+            <page id="4" title="Semak Rekod Bidaan">/lelong/keputusan_bidaan?showForm1</page>
+            <page id="5" title="Keputusan">/lelong/keputusan_lelong</page>
+            <page id="6" title="Maklumat Jurulelong">/lelong/Memasukkan_Maklumat_JurulelongBerlesen?showForm4</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat-maklumat yang berkaitan.</instruction>
+            <outcomes>
+                <outcome label="Lelongan Seterusnya(Pentadbir Tanah)" value="LS"/>
+                <outcome label="Lelongan Seterusnya(Jurulelong Berlesen)" value="AA"/>
+                <outcome label="Rujuk Mahkamah" value="RM"/>
+            </outcomes>
+        </txncode>
+    </stage>
+
+    <stage id="cetakSuratLantikan" currentAction="Cetak Surat Lantikan Jurulelong Berlesen" advanceRule ="true" listener="etanah.view.lelong.validator.SuratLantikanValiDator">
+        <txncode id="PPTL" daysToComplete = "">
+            <page id="1" title="Pemohon">/lelong/maklumat_pemohon?showForm</page>
+            <page id="2" title="Permohonan">/lelong/maklumat_permohonan?showFormA</page>
+            <page id="3" title="Maklumat Tanah/Pihak Berkepentingan">/lelong/pihak_berkepentingan?showForm3</page>
+            <page id="4" title="Tarikh Lelongan">/lelong/keputusan_perintah?showFormBb</page>
+            <page id="5" title="Maklumat Jurulelong">/lelong/Memasukkan_Maklumat_JurulelongBerlesen?showForm3</page>
+            <validator>validator</validator>
+            <instruction>Sila Cetak Surat Lantikan Pelelong Berlesen</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="cetakSuratBakiBidaan" currentAction="Cetak Surat Pembayaran Baki" advanceRule = "true" listener="etanah.view.lelong.validator.CetakSuratValidator">
+        <txncode id="PPTL" daysToComplete = "2">
+            <page id="1" title="Pemohon">/lelong/maklumat_pemohon?showForm</page>
+            <page id="2" title="Permohonan">/lelong/maklumat_permohonan?showFormA</page>
+            <page id="3" title="Maklumat Tanah/Pihak Berkepentingan">/lelong/pihak_berkepentingan?showForm3</page>
+            <page id="4" title="Pembayaran Baki">/lelong/bayaranbakiflow</page>
+            <page id="5" title="Semak Rekod Bidaan">/lelong/keputusan_bidaan?showForm3</page>
+            <validator>validator</validator>
+            <instruction>Cetak Surat Pembayaran Baki sekiranya baki belum dijelaskan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id="sediaCetak16I" currentAction="Cetak Borang 16I" advanceRule ="true" listener="etanah.view.lelong.validator.Cetak16IValaidator">
+        <txncode id="PPTL" daysToComplete = "2">
+            <page id="1" title="Pemohon">/lelong/maklumat_pemohon?showForm</page>
+            <page id="2" title="Permohonan">/lelong/maklumat_permohonan?showFormA</page>
+            <page id="3" title="Maklumat Tanah/Pihak Berkepentingan">/lelong/pihak_berkepentingan?showForm3</page>
+            <page id="4" title="Semak Rekod Bidaan">/lelong/keputusan_bidaan?showForm4</page>
+            <validator>validator</validator>
+            <instruction>Sila Muat Naik 16Q Terlebih Dahulu Sebelum Jana Dan Cetak Borang 16I tersebut. </instruction>
+            <reports>
+                <report generator="LLGBorang16I_MLK.rdf" prefix="VDOC" code="16I"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="sediaSijilRujuk" currentAction="Sedia Sijil Rujukan Mahkamah" listener="etanah.view.lelong.validator.SijilRujukValidator">
+        <txncode id="PPTL">
+            <page id="1" title="Pemohon">/lelong/maklumat_pemohon?showForm</page>
+            <page id="2" title="Permohonan">/lelong/maklumat_permohonan?showFormA</page>
+            <page id="3" title="Maklumat Tanah/Pihak Berkepentingan">/lelong/pihak_berkepentingan?showForm3</page>
+            <page id="4" title="Semakan">/lelong/maklumat_lelongan_awam?showForm4</page>
+            <page id="5" title="Semak Rekod Bidaan">/lelong/keputusan_bidaan?showForm1</page>
+            <validator>validator</validator>
+            <instruction>Sila Jana Sijil Rujukan Mahkamah</instruction>
+            <reports>
+                <report generator="LLGSijilRujuk_MLK.rdf" prefix="VDOC" code="RM"/>
+            </reports>
+        </txncode>
+    </stage>
+
+    <stage id="cetakSijilRujuk" currentAction="Sila Semak Dan Cetak Sijil Rujukan Mahkamah" advanceRule ="true" listener="etanah.view.lelong.validator.SemakSijilRujukValodator">
+        <txncode id="PPTL">
+            <page id="1" title="Pemohon">/lelong/maklumat_pemohon?showForm</page>
+            <page id="2" title="Permohonan">/lelong/maklumat_permohonan?showFormA</page>
+            <page id="3" title="Maklumat Tanah/Pihak Berkepentingan">/lelong/pihak_berkepentingan?showForm3</page>
+            <page id="4" title="Semakan">/lelong/maklumat_lelongan_awam?showForm4A</page>
+            <page id="5" title="Semak Rekod Bidaan">/lelong/keputusan_bidaan?showForm1</page>
+            <validator>validator</validator>
+            <instruction>Sila Semak Dan Cetak Sijil Rujukan Mahkamah</instruction>
+        </txncode>
+    </stage>
+
+    -->
+    <stage id="kmskJurulelong" currentAction="Kemasukan Jurulelong" advanceRule ="true" listener="etanah.view.lelong.validator.KemasukanJurulelongValidator">
+        <txncode id="PPTL">
+            <page id="1" title="Pemohon">/lelong/maklumat_pemohon?showForm</page>
+            <page id="2" title="Permohonan">/lelong/maklumat_permohonan?showFormA</page>
+            <page id="3" title="Maklumat Tanah/Pihak Berkepentingan">/lelong/pihak_berkepentingan?showForm3</page>
+            <page id="4" title="Maklumat Lelongan">/lelong/tangguh_tetap_tarikh_lelong?showFormBb</page>
+            <page id="5" title="Maklumat Jurulelong">/lelong/Memasukkan_Maklumat_JurulelongBerlesen?showFormStageJurulelongPPTL</page>
+            <!--<page id="6" title="Agihan Tugas">/lelong/agihanTugasJurulelong?showFormPPTL</page>-->
+            <validator>validator</validator>
+            <instruction>Sila Pilih atau Daftarkan Jurulelong Yang Baru Pada Tab Maklumat Keputusan</instruction>
+            <!--            <outcomes>
+                <outcome label="Ada Pembida Untuk Setiap Hakmilik" value="AP"/>
+                <outcome label="Ada dan Tiada Pembida Untuk Setiap Hakmilik" value="TB"/>
+            </outcomes>-->
+        </txncode>
+    </stage>
+    <stage id="cetakSuratTolak" currentAction="Cetak Surat Tolak Penangguhan Lelongan(160)" advanceRule ="true" listener="etanah.view.lelong.validator.KpsnTangguhValidator">
+        <txncode id="PPTL" daysToComplete="2">
+            <page id="1" title="Pemohon">/lelong/maklumat_pemohon</page>
+            <page id="2" title="Permohonan">/lelong/maklumat_permohonan?showForm4</page>
+            <page id="3" title="Maklumat Tanah/Pihak Berkepentingan">/lelong/pihak_berkepentingan?tangguhBatal</page>
+            <page id="4" title="Keputusan Permohonan">/lelong/maklumat_enkuiri?showForm6</page>
+            <validator>validator</validator>
+            <instruction>Sila semak maklumat - maklumat yang berkenaan.</instruction>
+            <reports>
+                <report generator="LLGSuratTolakPenangguhan_MLK.rdf" prefix="VDOC" code="STP"/>
+            </reports>
+        </txncode>
+    </stage>
+
+</workflow>

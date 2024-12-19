@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://192.168.0.10:7009/etanah/services/EtappPermohonan?wsdl" uri="wsdl/192.168.0.10_7009/etanah/services/EtappPermohonan.wsdl"/>
+    <system systemId="http://192.168.0.10:7009/etanah/services/Bayaran_Online?wsdl" uri="wsdl/192.168.0.10_7009/etanah/services/Bayaran_Online.wsdl"/>
+    <system systemId="http://192.168.0.10:7009/etanah/services/CarianPersendirian_Online?wsdl" uri="wsdl/192.168.0.10_7009/etanah/services/CarianPersendirian_Online.wsdl"/>
+    <system systemId="http://192.168.0.10:7009/etanah/services/CukaiPetakOnline?wsdl" uri="wsdl/192.168.0.10_7009/etanah/services/CukaiPetakOnline.wsdl"/>
+    <system systemId="http://192.168.0.10:7009/etanah/services/CarianEnquiry?wsdl" uri="wsdl/192.168.0.10_7009/etanah/services/CarianEnquiry.wsdl"/>
+</catalog>

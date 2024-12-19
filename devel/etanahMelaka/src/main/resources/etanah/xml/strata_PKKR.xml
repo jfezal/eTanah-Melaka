@@ -1,0 +1,93 @@
+<!--Permohonan Klasifikasi Bangunan Kos Rendah-->
+<?xml version="1.0" encoding="windows-1252" ?>
+<workflow id="http://xmlns.oracle.com/etanah/StrataMelaka/BangunanKosRendah">
+    <stage id="agihtugas" distribute="true" currentAction="Agih Tugasan">
+        <txncode id="PKKR">
+            <page id="1" title="Agih Tugasan">strata/agihTugasan</page>
+            <page id="2" title="Penyerah">strata/maklumat_penyerah</page>
+            <instruction>Sila agihkan tugasan ini kepada yang berkenaan.</instruction>
+        </txncode>
+    </stage>
+    <stage id = "kemasukan" listener="etanah.view.strata.validator.BangunanKosRendahValidator" currentAction="Kemasukan">
+        <txncode id="PKKR">
+            <page id="1" title="Penyerah">strata/maklumat_penyerah</page>
+            <page id="2" title="Pemohon">strata/kemasukan_pemohon</page>
+            <page id="3" title="Hakmilik">strata/maklumat_tanah?showForm2</page>
+            <page id="4" title="Bangunan">strata/bangunanPKKR</page>
+            <validator>validator</validator>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id = "drafkertasmmk" listener="etanah.view.strata.validator.KertasMMK" currentAction="Draf Kertas MMK">
+        <txncode id="PKKR">
+            <page id="1" title="Kertas MMK">strata/kertas_MMK</page>
+            <instruction>Sila semak draf Kertas MMK dan masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+        </txncode>
+    </stage>
+
+    <stage id = "semakkertasmmk" currentAction="Semak Kertas MMK" pushback="true">
+        <txncode id="PKKR">
+            <page id="1" title="Kertas MMK">strata/kertas_MMK?showForm2</page>
+            <instruction>Sila semak draf Kertas MMK dan sekiranya terdapat perubahan, sila klik butang 'Semak Semula' untuk dihantar semula. </instruction>
+        </txncode>
+    </stage>
+    <stage id = "perakuan" currentAction="Perakuan PTG">
+        <txncode id="PKKR">
+            <page id="1" title="Kertas MMK">strata/kertas_MMK?showForm3</page>
+            <instruction>Sila semak Kertas MMK.</instruction>
+            <!--<outcomes>
+                <outcome label=" Lulus" value="L">
+                  --><!--  <reports>
+                        <report generator="STR_AktaHakmilikStrata_MLK.rdf" prefix="VDOC" code="MCN"/>
+                        <report generator="STR_S_Lulus_Bgn_Kos_Rendah.rdf" prefix="VDOC" code="SKL"/>
+                    </reports>--><!--
+                </outcome>
+                <outcome label=" Tolak" value="T">
+                    <reports>
+                        <report generator="STR_S_Tolak_Bgn_Kos_Rendah.rdf" prefix="VDOC" code="ST"/>
+                    </reports>
+                </outcome>
+            </outcomes>-->
+        </txncode>
+    </stage>
+    <stage id = "keputusan" currentAction="Perakuan PTG" listener="etanah.view.strata.validator.IntegrationEMMKNV2" report = "true">
+        <txncode id="PKKR">
+            <!--<page id="1" title="Kertas MMK">strata/kertas_MMK?showKemasukanTarikh</page>-->
+            <page id="1" title="Kertas MMK">strata/kertas_MMK?showForm3</page>
+            <instruction>Sila semak Kertas MMK.</instruction>
+            <reports>
+                <report generator="STRKertasMMKN_MLK.rdf" prefix="VDOC" code="MMKN"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id = "keputusanmmk" currentAction="Kemasukan keputusan e-MMKN" listener="etanah.view.strata.validator.NotifikasiKeputusanMMK">
+        <txncode id="PKKR">
+            <page id="1" title="Kertas MMK">strata/keputusan_mmk?keputusanMmk</page>
+            <instruction>Sila masukkan maklumat yang berkaitan pada ruangan yang telah disediakan.</instruction>
+            <!--            <outcomes>
+                <outcome label=" Lulus" value="L">
+                    <reports>
+                     <report generator="STRSLulusBgnKosRendah_MLK.rdf" prefix="VDOC" code="SKL"/>
+                     <report generator="STRBHKosRendah_MLK.rdf" prefix="VDOC" code="SKL"/>
+                    </reports>
+                </outcome>
+                <outcome label=" Tolak" value="T">
+                    <reports>
+                     <report generator="STRSTolakBgnKosRendah_MLK.rdf" prefix="VDOC" code="ST"/>
+                    </reports>
+                </outcome>
+            </outcomes>-->
+        </txncode>
+    </stage>
+    <stage id = "sediasijil" currentAction="Penyediaan Sijil" report="true" listener="etanah.view.strata.validator.JanaReportValidator">
+        <txncode id="PKKR">
+            <page id="1" title="Jana Surat">strata/PKKR?paparsuratPKKR</page>
+            <instruction>Sila klik butang 'Jana Dokumen'.</instruction>
+            <reports>
+
+            </reports>
+
+        </txncode>
+    </stage>
+</workflow>

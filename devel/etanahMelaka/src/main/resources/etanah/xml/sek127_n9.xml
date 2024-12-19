@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : sek127_n9.xml
+    Created on : November 10, 2010, 3:46 PM
+    Author     : Administrator
+    Description:
+        Purpose of the document follows.
+-->
+
+<workflow id="http://xmlns.oracle.com/etanah/project_n9/sek127">
+
+        --- SEKSYEN 127 ---
+
+    <stage id="Maklum_aduan" currentAction="Maklum Aduan">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <instruction>Sila semak maklumat aduan yang telah dimasukkan dan beri arahan.</instruction>
+            <outcomes ulasanOnly="true" title="Arahan/Keputusan"/>
+        </txncode>
+    </stage>
+    <stage id="agihan_tugasan" currentAction="Agihan Tugas">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Agihan Tugas">/penguatkuasaan/agih_tugasan</page>
+            <instruction>Sila semak maklumat aduan yang telah dimasukkan dan beri arahan.</instruction>
+            <outcomes ulasanOnly="false" title="Arahan/Keputusan"/>
+        </txncode>
+    </stage>
+    <stage id="masuk_laporanSiasatan" currentAction="Sedia Laporan Siasatan">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm</page>
+            <page id="4" title="Laporan Tanah">/penguatkuasaan/laporan_tanah</page>
+            <instruction>Sila semak arahan dan sediakan laporan siasatan.</instruction>
+            <outcomes ulasanOnly = "false" Title="Keputusan/Arahan"/>
+        </txncode>
+    </stage>
+    <stage id="semak_syorCadangan" finalize="true" currentAction="Semak Laporan dan Syorkan Cadangan">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm2</page>
+            <page id="4" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <instruction>Sila semak laporan yang disediakan dan masukkan keputusan/arahan.</instruction>
+            <outcomes>
+                <outcome label="Lengkap" value="LK"/>
+                <outcome label="Tidak Lengkap" value="TL"/>
+            </outcomes>
+        </txncode>
+    </stage>
+        <stage id="terimaLaporan_syortindakan" finalize="true" currentAction="Semak Laporan dan Syorkan Cadangan">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm2</page>
+            <page id="4" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <instruction>Sila semak laporan yang disediakan dan masukkan keputusan/arahan.</instruction>
+            <outcomes>
+                <outcomes ulasanOnly = "true" Title="Syor"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="terimapenilaian_arahTindakan" currentAction="Terima penilaian dan arahkan Tindakan">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm2</page>
+            <page id="4" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+           <!-- <page id="5" title="Borang 7A">/penguatkuasaan/maklumat_borang7A?showForm</page>
+            <page id="6" title="Borang 7E">/penguatkuasaan/maklumat_laporan_enkuiri?showForm</page>
+            <page id="7" title="Keputusan Enkuiri">/penguatkuasaan/kehadiran_enkuiri?showForm</page>
+            <page id="8" title="Surat Perintah Denda">/penguatkuasaan/surat_perintah?showForm</page>
+            <page id="9" title="Remedi Tambahan">/penguatkuasaan/remedi_tambahan?showForm</page>
+       -->     <!--
+            7A,
+            7E(enkuiri)/keputusan enkuiri/surat perintah denda,
+            7B(Enkuiri)/Keputusan Enkuiri/MMKN/.8A/.Remedi Tambahan/.Perintah Kos Remedi(kos dan agensi yg terlibat),
+            -->
+            <instruction>Sila semak maklumat yang berkaitan dan masukkan syor/ulasan.</instruction>
+            <outcomes>
+                <outcome label="Ada Kes" value="AK"/>
+                <outcome label="Tiada Kes" value="TK"/>
+            </outcomes>
+        </txncode>
+    </stage>
+        <stage id="borang7E_enkuiri_suratDenda" currentAction="Pilih Tindakan">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <page id="3" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm2</page>
+            <page id="4" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <page id="5" title="Borang 7A">/penguatkuasaan/maklumat_borang7A?showForm</page>
+            <page id="6" title="Borang 7E">/penguatkuasaan/maklumat_laporan_enkuiri?showForm</page>
+            <page id="7" title="Keputusan Enkuiri">/penguatkuasaan/kehadiran_enkuiri?showForm</page>
+            <page id="8" title="Surat Perintah Denda">/penguatkuasaan/surat_perintah?showForm</page>
+            <page id="9" title="Remedi Tambahan">/penguatkuasaan/remedi_tambahan?showForm</page>
+            <!--
+            7A,
+            7E(enkuiri)/keputusan enkuiri/surat perintah denda,
+            7B(Enkuiri)/Keputusan Enkuiri/MMKN/.8A/.Remedi Tambahan/.Perintah Kos Remedi(kos dan agensi yg terlibat),
+            -->
+            <instruction>Sila semak maklumat yang berkaitan dan masukkan syor/ulasan.</instruction>
+            <outcomes>
+                <outcome label="Denda" value="DD"/>
+                <outcome label="Remedi" value="RE"/>
+                <outcome label="Perampasan" value="PE"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="Maklum_denda" currentAction="Maklum Perintah Denda">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <!--<page id="3" title="Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm</page>-->
+            <page id="4" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm2</page>
+            <page id="5" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <page id="7" title="Borang 7E">/penguatkuasaan/maklumat_laporan_enkuiri?showForm2</page>
+            <page id="8" title="Keputusan Enkuiri">/penguatkuasaan/kehadiran_enkuiri?showForm2</page>
+            <page id="9" title="Surat Perintah Denda">/penguatkuasaan/surat_perintah?showForm2</page>
+            <instruction>Sila semak maklumat yang berkaitan dan masukkan syor/ulasan.</instruction>
+            <outcomes ulasanOnly="false" title="Arahan/Keputusan"/>
+        </txncode>
+    </stage>
+    <stage id="Maklum_statusBayaran" currentAction="Maklum status bayaran">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <!--<page id="3" title="Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm</page>-->
+            <page id="4" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm2</page>
+            <page id="5" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <!--<page id="6" title="Borang 7E/Keputusan Enkuiri/Surat Perintah Denda"></page>-->
+            <!--<page id="7" title="Laporan Pemantauan">/penguatkuasaan/maklumat_pemantauan?showForm</page>-->
+            <page id="9" title="Surat Perintah Denda">/penguatkuasaan/surat_perintah?showForm2</page>
+            <instruction>Sila semak maklumat yang berkaitan dan masukkan syor/ulasan.</instruction>
+            <outcomes>
+                <outcome label="Telah Bayar" value="DB"/>
+                <outcome label="Tak bayar" value="LB"/>
+
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="masukkan_laporanPemantauan1" currentAction="Masukkan Laporan">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <!--<page id="3" title="Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm</page>-->
+            <page id="4" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm2</page>
+            <page id="5" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <!--<page id="6" title="Borang 7E/Keputusan Enkuiri/Surat Perintah Denda"></page>-->
+            <page id="7" title="Laporan Pemantauan">/penguatkuasaan/maklumat_pemantauan?showForm2</page>
+            <!--<page id="8" title="Perintah Denda Tambahan">/penguatkuasaan/perintah_Denda?showForm</page>-->
+            <instruction>Sila semak maklumat yang berkaitan dan masukkan syor/ulasan.</instruction>
+           <outcomes ulasanOnly="true" title="Arahan/Keputusan"/>
+        </txncode>
+    </stage> <!-- stage 10-->
+    <stage id="buatKeputusan_janaSurat1" currentAction="Buat Keputusan ">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <!--<page id="3" title="Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm</page>-->
+            <page id="4" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm2</page>
+            <page id="5" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <!--<page id="6" title="Borang 7E/Keputusan Enkuiri/Surat Perintah Denda"></page>-->
+            <page id="7" title="Laporan Pemantauan">/penguatkuasaan/maklumat_pemantauan?showForm2</page>
+            <page id="8" title="Perintah Denda Tambahan">/penguatkuasaan/perintah_Denda?showForm</page>
+            <instruction>Sila semak maklumat yang berkaitan dan masukkan syor/ulasan.</instruction>
+            <outcomes>
+                <outcome label="Terus Langgar Syarat" value="TE"/>
+                <outcome label="Henti Langgar Syarat" value="BE"/>
+
+            </outcomes>
+             <reports>
+                <report generator="ENF_Borang2A.rdf" prefix="VDOC" code="PDT"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="maklum_dendaTambahan" currentAction="Maklumkan Denda Tambahan">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <!--<page id="3" title="Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm</page>-->
+            <page id="4" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm2</page>
+            <page id="5" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <!--<page id="6" title="Borang 7E/Keputusan Enkuiri/Surat Perintah Denda"></page>-->
+            <page id="8" title="Laporan Pemantauan">/penguatkuasaan/maklumat_pemantauan?showForm2</page>
+            <page id="7" title="Perintah Denda Tambahan">/penguatkuasaan/perintah_Denda?showForm2</page>
+            <instruction>Sila semak maklumat yang berkaitan dan masukkan syor/ulasan.</instruction>
+            <outcomes ulasanOnly="false" title="Arahan/Keputusan"/>
+        </txncode>
+    </stage>
+    <stage id="maklum_bayaranDenda" currentAction="Makluman Bayaran Denda">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <!--<page id="3" title="Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm</page>-->
+            <page id="4" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm2</page>
+            <page id="5" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <!--<page id="6" title="Borang 7E/Keputusan Enkuiri/Surat Perintah Denda"></page>-->
+            <!--<page id="7" title="Perintah Denda Tambahan"></page>-->
+            <page id="8" title="Laporan Pemantauan">/penguatkuasaan/maklumat_pemantauan?showForm2</page>
+            <page id="7" title="Perintah Denda Tambahan">/penguatkuasaan/perintah_Denda?showForm2</page>
+            <instruction>Sila semak maklumat yang berkaitan dan masukkan syor/ulasan.</instruction>
+            <outcomes>
+                <outcomes ulasanOnly="false" title="Arahan/Keputusan"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="masukkan_laporanPemantauan2" currentAction="Masukkan laporan pemantauan">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <!--<page id="3" title="Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm</page>-->
+            <page id="4" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm2</page>
+            <page id="5" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <!--<page id="6" title="Borang 7E/Keputusan Enkuiri/Surat Perintah Denda"></page>-->
+            <page id="7" title="Perintah Denda Tambahan">/penguatkuasaan/perintah_Denda?showForm2</page>
+            <page id="8" title="Laporan Pemantauan">/penguatkuasaan/maklumat_pemantauan?showForm</page>
+            <instruction>Sila semak maklumat yang berkaitan dan masukkan syor/ulasan.</instruction>
+            <outcomes ulasanOnly="true" title="Arahan/Keputusan"/>
+        </txncode>
+    </stage>
+    <stage id="maklumPemantauan_signBorang7F" currentAction="Maklumkan pelanggaran tambahan">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <!--<page id="3" title="Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm</page>-->
+            <page id="4" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm2</page>
+            <page id="5" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <!--<page id="6" title="Borang 7E/Keputusan Enkuiri/Surat Perintah Denda"></page>-->
+            <page id="7" title="Perintah Denda Tambahan">/penguatkuasaan/perintah_Denda?showForm</page>
+            <page id="8" title="Laporan Pemantauan">/penguatkuasaan/maklumat_pemantauan?showForm</page>
+            <instruction>Sila semak maklumat yang berkaitan dan masukkan syor/ulasan.</instruction>
+            <outcomes>
+                <outcome label="Terus Langgar Syarat" value="TE"/>
+                <outcome label="Henti Langgar Syarat" value="BE"/>
+
+            </outcomes>
+             <reports>
+                <report generator="ENF_Borang2A.rdf" prefix="VDOC" code="7F"/>
+            </reports>
+        </txncode>
+    </stage>
+    <stage id="maklum_pemantauanTambahan" currentAction="Maklum pemantauan tambahan">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <!--<page id="3" title="Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm</page>-->
+            <page id="4" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm2</page>
+            <page id="5" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <!--<page id="6" title="Borang 7E/Keputusan Enkuiri/Surat Perintah Denda"></page>-->
+            <page id="7" title="Perintah Denda Tambahan">/penguatkuasaan/perintah_Denda?showForm</page>
+            <page id="8" title="Laporan Pemantauan">/penguatkuasaan/maklumat_pemantauan?showForm2</page>
+            <instruction>Sila semak maklumat yang berkaitan dan masukkan syor/ulasan.</instruction>
+            <outcomes ulasanOnly="true" title="Arahan/Keputusan"/>
+        </txncode>
+    </stage><!--link to borang 7F-->
+    <stage id="masukkan_laporanPemantauan3" currentAction="Masukkan maklumat pemantauan">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <!--<page id="3" title="Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm</page>-->
+            <page id="4" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm2</page>
+            <page id="5" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <!--<page id="6" title="Borang 7A">/penguatkuasaan/maklumat_borang7A?showForm2</page>-->
+            <page id="7" title="Laporan Pemantauan">/penguatkuasaan/maklumat_pemantauan?showForm</page>
+            <instruction>Sila semak maklumat yang berkaitan dan masukkan syor/ulasan.</instruction>
+            <outcomes ulasanOnly="true" title="Arahan/Keputusan"/>
+        </txncode>
+    </stage>
+    <!--Lengkap/tak lengkap-->
+    <stage id="semak_syorCadangan" currentAction="Semak dan Syor Cadangan">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <!--<page id="3" title="Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm</page>-->
+            <page id="4" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm2</page>
+            <page id="5" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <!--<page id="6" title="Borang 7A"></page>-->
+            <page id="7" title="Laporan Pemantauan">/penguatkuasaan/maklumat_pemantauan?showForm</page>
+            <instruction>Sila semak maklumat yang berkaitan dan masukkan syor/ulasan.</instruction>
+            <!--<outcomes ulasanOnly="false" title="Arahan/Keputusan"/>-->
+            <outcomes>
+                <outcome label="Lengkap" value="LK"/>
+                <outcome label="Tidak Lengkap" value="TL"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="terima_buatRemidi_signBorang7A" currentAction="Semak Laporan">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <!--<page id="3" title="Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm</page>-->
+            <page id="4" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm2</page>
+            <page id="5" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <page id="7" title="Laporan Pemantauan">/penguatkuasaan/maklumat_pemantauan?showForm2</page>
+            <page id="5" title="Borang 7A">/penguatkuasaan/maklumat_borang7A?showForm</page>
+            <instruction>Sila semak maklumat yang berkaitan dan masukkan syor/ulasan.</instruction>
+            <outcomes>
+                <outcome label="Remedi" value="RE"/>
+                <outcome label="Perampasan" value="PE"/>
+                <outcome label="Tamat" value="TM"/>
+
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="maklum_pemantauan1" currentAction="Maklum Pemantauan">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <!--<page id="3" title="Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm</page>-->
+            <page id="4" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm2</page>
+            <page id="5" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <page id="6" title="Laporan Pemantauan">/penguatkuasaan/maklumat_pemantauan?showForm2</page>
+            <page id="5" title="Borang 7A">/penguatkuasaan/maklumat_borang7A?showForm2</page>
+            <!--<page id="7" title="Borang 7B/Keputusan Enkuiri/MMKN"></page>-->
+            <!--<page id="8" title="Borang 8A"></page>-->
+            <instruction>Sila semak maklumat yang berkaitan dan masukkan syor/ulasan.</instruction>
+            <outcomes ulasanOnly="false" title="Arahan/Keputusan"/>
+        </txncode>
+    </stage>
+    <stage id="masukkan_laporanPemantauan4" currentAction="Masukkan Laporan Pemantauan">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <!--<page id="3" title="Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm</page>-->
+            <page id="4" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm2</page>
+            <page id="5" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <page id="5" title="Borang 7A">/penguatkuasaan/maklumat_borang7A?showForm2</page>
+            <page id="6" title="Laporan Pemantauan">/penguatkuasaan/maklumat_pemantauan?showForm2</page>
+            <!--<page id="7" title="Borang 7B/Keputusan Enkuiri/MMKN"></page>-->
+            <!--<page id="8" title="Borang 8A"></page>-->
+            <instruction>Sila semak maklumat yang berkaitan dan masukkan syor/ulasan.</instruction>
+            <outcomes ulasanOnly="true" title="Arahan/Keputusan"/>
+        </txncode>
+    </stage>
+    <!--Lengkap /tak lengkap-->
+    <stage id="semak_syorCadangan2" currentAction="Semak dan Syorkan Cadangan">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <!--<page id="3" title="Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm</page>-->
+            <page id="4" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm2</page>
+            <page id="5" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <page id="6" title="Laporan Pemantauan">/penguatkuasaan/maklumat_pemantauan?showForm2</page>
+            <!--<page id="7" title="Borang 7B/Keputusan Enkuiri/MMKN"></page>-->
+            <!--<page id="8" title="Remedi Tambahan">/penguatkuasaan/remedi_tambahan?showForm2</page>-->
+            <instruction>Sila semak maklumat yang berkaitan dan masukkan syor/ulasan.</instruction>
+            <!--<outcomes ulasanOnly="true" title="Arahan/Keputusan"/>-->
+            <outcomes>
+                <outcome label="Lengkap" value="LK"/>
+                <outcome label="Tidak Lengkap" value="TL"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <!--link to 7B,
+    mmk,remedi tambahan-->
+    <stage id="terima_perampasan_borang7B_drafmmk" currentAction="Sedia Laporan">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <!--<page id="3" title="Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm</page>-->
+            <page id="4" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm2</page>
+            <page id="5" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <!--<page id="6" title="Borang 7B/Keputusan Enkuiri/MMKN"></page>-->
+            <page id="7" title="Remedi Tambahan"></page>
+            <page id="8" title="Laporan Pemantauan">/penguatkuasaan/maklumat_pemantauan?showForm</page>
+            <instruction>Sila semak maklumat yang berkaitan dan masukkan syor/ulasan.</instruction>
+                        <outcomes>
+                <outcome label="Remedi" value="RE"/>
+                <outcome label="Perampasan" value="PE"/>
+                <outcome label="Perintah Perampasan" value="PP"/>
+                <outcome label="Lanjut Tempoh Remedi" value="LT"/>
+                <outcome label="Pemilikan sementara" value="PS"/>
+
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="maklum_perintah_perampasan" currentAction="Maklum Perintah perampasan">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <!--<page id="3" title="Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm</page>-->
+            <page id="4" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm2</page>
+            <page id="5" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <!--<page id="6" title="Borang 7B/Keputusan Enkuiri/MMKN"></page>-->
+            <!--<page id="7" title="Remedi Tambahan"></page>-->
+            <page id="8" title="Laporan Pemantauan">/penguatkuasaan/maklumat_pemantauan?showForm2</page>
+            <instruction>Sila semak maklumat yang berkaitan dan masukkan syor/ulasan.</instruction>
+            <outcomes ulasanOnly="true" title="Arahan/Keputusan"/>
+        </txncode>
+    </stage>
+    <!--8A-->
+    <stage id="masukkan_borang8A_suratPBN" currentAction="Masukkan borang 8A">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <!--<page id="3" title="Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm</page>-->
+            <page id="4" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm2</page>
+            <page id="5" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <!--<page id="6" title="Borang 7B/Keputusan Enkuiri/MMKN"></page>-->
+            <!--<page id="7" title="Remedi Tambahan"></page>-->
+            <page id="8" title="Laporan Pemantauan">/penguatkuasaan/maklumat_pemantauan?showForm2</page>
+            <instruction>Sila semak maklumat yang berkaitan dan masukkan syor/ulasan.</instruction>
+            <outcomes ulasanOnly="true" title="Arahan/Keputusan"/>
+        </txncode>
+    </stage>
+    <!--8A-->
+    <stage id="semak_Borang8A" currentAction="Semak Borang 8A">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <!--<page id="3" title="Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm</page>-->
+            <page id="4" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm2</page>
+            <page id="5" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <!--<page id="6" title="Borang 7B/Keputusan Enkuiri/MMKN"></page>-->
+            <!--<page id="7" title="Perintah Kos Remedi"></page>-->
+            <page id="8" title="Laporan Pemantauan">/penguatkuasaan/maklumat_pemantauan?showForm2</page>
+            <instruction>Sila semak maklumat yang berkaitan dan masukkan syor/ulasan.</instruction>
+            <outcomes ulasanOnly="false" title="Arahan/Keputusan"/>
+        </txncode>
+    </stage>
+    <!--8A-->
+    <stage id="maklum_Borang8A" currentAction="Maklum Borang 8A">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <!--<page id="3" title="Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm</page>-->
+            <page id="4" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm2</page>
+            <page id="5" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <!--<page id="6" title="Borang 7B/Keputusan Enkuiri/MMKN"></page>-->
+            <page id="7" title="Perintah Kos Remedi"></page>
+            <page id="8" title="Laporan Pemantauan">/penguatkuasaan/maklumat_pemantauan?showForm2</page>
+            <instruction>Sila semak maklumat yang berkaitan dan masukkan syor/ulasan.</instruction>
+            <outcomes ulasanOnly="true" title="Arahan/Keputusan"/>
+        </txncode>
+    </stage>
+    <!--8A,MMK,keputusan lulus/tolak-->
+    <stage id="keputusan_rayuan" currentAction="Keputusan Rayuan">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <!--<page id="3" title="Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm</page>-->
+            <page id="4" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm2</page>
+            <page id="5" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <!--<page id="6" title="Borang 7B/Keputusan Enkuiri/MMKN"></page>-->
+            <!--<page id="7" title="Perintah Kos Remedi"></page>-->
+            <!--<page id="8" title="Laporan Pemantauan">/penguatkuasaan/maklumat_pemantauan?showForm</page>-->
+            <!--Di sini ppt hanya perlu check on the ground samada remedi atau tak dan buat catatan-->
+            <instruction>Sila semak maklumat yang berkaitan dan masukkan syor/ulasan.</instruction>
+            <!--<outcomes ulasanOnly="true" title="Arahan/Keputusan"/>-->
+            <outcomes>
+                <outcome label="Tiada Rayuan" value="TY"/>
+                <outcome label="MMK Lulus" value="L"/>
+                <outcome label="MMK Tolak" value="T"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="maklum_pemantauan2" currentAction="Maklumkan Pemantauan">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <!--<page id="3" title="Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm</page>-->
+            <page id="4" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm2</page>
+            <page id="5" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <!--<page id="6" title="Borang 7B/Keputusan Enkuiri/MMKN"></page>-->
+            <!--<page id="7" title="Perintah Kos Remedi"></page>-->
+            <!--<page id="8" title="Laporan Pemantauan">/penguatkuasaan/maklumat_pemantauan?showForm</page>-->
+            <page id="7" title="Remedi Tambahan"></page>
+            <instruction>Sila semak maklumat yang berkaitan dan masukkan syor/ulasan.</instruction>
+           <outcomes ulasanOnly="false" title="Arahan/Keputusan"/>
+        </txncode>
+    </stage>
+    <stage id="masukkan_laporanPemantauan6" currentAction="Masukkan Laporan Pemantauan">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <!--<page id="3" title="Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm</page>-->
+            <page id="4" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm2</page>
+            <page id="5" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <!--<page id="6" title="Borang 7B/Keputusan Enkuiri/MMKN"></page>-->
+            <page id="7" title="Remedi Tambahan"></page>
+            <page id="8" title="Laporan Pemantauan">/penguatkuasaan/maklumat_pemantauan?showForm</page>
+            <instruction>Sila semak maklumat yang berkaitan dan masukkan syor/ulasan.</instruction>
+          <outcomes ulasanOnly="true" title="Arahan/Keputusan"/>
+        </txncode>
+    </stage>
+    <!--lengkap /x lengkap-->
+        <stage id="semak_syorCadangan3" currentAction="Semak dan Syorkan Pemantauan">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <!--<page id="3" title="Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm</page>-->
+            <page id="4" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm2</page>
+            <page id="5" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <!--<page id="6" title="Borang 7B/Keputusan Enkuiri/MMKN"></page>-->
+            <page id="7" title="Perintah Kos Remedi"></page>
+            <!--<page id="8" title="Laporan Pemantauan">/penguatkuasaan/maklumat_pemantauan?showForm</page>-->
+            <instruction>Sila semak maklumat yang berkaitan dan masukkan syor/ulasan.</instruction>
+          <!--<outcomes ulasanOnly="true" title="Arahan/Keputusan"/>-->
+            <outcomes>
+                <outcome label="Lengkap" value="LK"/>
+                <outcome label="Tidak Lengkap" value="TL"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <!--remedi/tak remedi-->
+    <stage id="buatKeputusan_perampasan_ulasan" currentAction="Buat Keputusan,perampasan serta ulasan">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <!--<page id="3" title="Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm</page>-->
+            <page id="4" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm2</page>
+            <page id="5" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <!--<page id="6" title="Borang 7B/Keputusan Enkuiri/MMKN"></page>-->
+            <page id="7" title="Perintah Kos Remedi"></page>
+            <!--<page id="8" title="Laporan Pemantauan">/penguatkuasaan/maklumat_pemantauan?showForm</page>-->
+            <instruction>Sila semak maklumat yang berkaitan dan masukkan syor/ulasan.</instruction>
+          <!--<outcomes ulasanOnly="true" title="Arahan/Keputusan"/>-->
+            <outcomes>
+                <outcome label="Remedi" value="RE"/>
+                <outcome label="Tak Remedi" value="TR"/>
+            </outcomes>
+        </txncode>
+    </stage>
+    <stage id="maklum_pemilikanSementara" currentAction="Maklumkan Pemilikan Sementara">
+        <txncode id="127">
+            <page id="1" title="Aduan">/penguatkuasaan/senarai_aduan?showForm2</page>
+            <page id="2" title="Lokasi Aduan">/penguatkuasaan/maklumat_lokasi_aduan?showForm2</page>
+            <!--<page id="3" title="Orang Yang Disyaki">/penguatkuasaan/maklumat_orang_disyaki?showForm</page>-->
+            <page id="4" title="Pemilik">/penguatkuasaan/maklumat_tanah?showForm2</page>
+            <page id="5" title="Laporan Tanah">/penguatkuasaan/laporan_tanah?showForm2</page>
+            <!--<page id="6" title="Borang 7B/Keputusan Enkuiri/MMKN"></page>-->
+            <!--<page id="7" title="Perintah Kos Remedi"></page>-->
+            <!--<page id="8" title="Laporan Pemantauan">/penguatkuasaan/maklumat_pemantauan?showForm</page>-->
+            <instruction>Sila semak maklumat yang berkaitan dan masukkan syor/ulasan.</instruction>
+          <outcomes ulasanOnly="false" title="Arahan/Keputusan"/>
+        </txncode>
+    </stage>
+ </workflow>

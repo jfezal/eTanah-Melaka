@@ -1,0 +1,41 @@
+<coherence>
+  <license-config>
+    <license-mode>dev</license-mode>
+  </license-config>
+
+  <management-config>
+      <managed-nodes>all</managed-nodes>
+  </management-config>
+
+  <cluster-config>
+   <!-- disable cache store in this coherence instance (coherence-hibernate) -->
+    <services>
+      <service id="3">
+        <init-params>
+          <init-param id="4">
+            <param-name>local-storage</param-name>
+            <param-value system-property="tangosol.coherence.distributed.localstorage">false</param-value>
+          </init-param>
+        </init-params>
+      </service>
+    </services>
+
+    <unicast-listener>
+      <well-known-addresses>
+        <socket-address id="1">
+          <!-- ALWAYS localhost -->
+          <address system-property="tangosol.coherence.wka">localhost</address>
+          <!-- PLEASE CHANGE THE VALUE TO YOUR OWN UNIQUE PORT AND
+               SAME AS IN YOUR COHERENCE CACHE SERVER AND BELOW
+               VALID VALUE: FROM 10000 to 20000 -->
+          <port system-property="tangosol.coherence.wka.port">10101</port>
+        </socket-address>
+      </well-known-addresses>
+        <!-- PLEASE CHANGE THE VALUE OF localport TO BE THE SAME AS THE VALUE IN pom.xml 
+             AND YOUR COHERENCE CACHE SERVER tangosol-coherence-override.xml
+             VALID VALUE: FROM 10000 to 20000 -->
+        <port system-property="tangosol.coherence.localport">10101</port>
+        <port-auto-adjust system-property="tangosol.coherence.localport.adjust">true</port-auto-adjust>
+     </unicast-listener>
+  </cluster-config>
+</coherence>
